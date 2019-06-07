@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AlertsRoot Version="1.0">
+  <Protocol>HART</Protocol>
+  <Manufacturer>38</Manufacturer>
+  <DeviceType>9816</DeviceType>
+  <DeviceRevision>2</DeviceRevision>
+  <DDRevision>6</DDRevision>
+  <VariableList>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>03</BytePosition>
+      <Label>
+        </Label>
+      <Name>TODO_Find_Name</Name>
+      <AlertList>
+        <Alert>
+          <Value>256</Value>
+          <AlarmString>Device Not Responding</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>
+          </ExtendedHelpText>
+          <DDHelpText>
+          </DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0001000000000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>0</BytePosition>
+      <Label>Device Status</Label>
+      <Name>device_status</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Primary Variable Out of Limits</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1.Verify if the transmitter range is appropriate for the process conditions
+2. Verify if the sensor is properly connected and there are no signs of corrosion
+3.Check sensor calibration
+If the situation persists, replace the sensor or the device</ExtendedHelpText>
+          <DDHelpText>The Process Variable is outside the operating range of the transmitter.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Non-Primary Variable Out of Limits</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Verify if the process or environmental condition (ambient temperature, for example) is within the sensor operating range.
+2. If the variable is ambient temperature, verify if heat tracing is working properly, if eventual heat shields are in place etc.
+3-Consider filtering this alert out, as detailed alerts will give more accurate information.</ExtendedHelpText>
+          <DDHelpText>A non Primary Variable exceeded the sensor operating range limits.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Loop Current Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Not Applicable</ExtendedHelpText>
+          <DDHelpText>Not Applicable</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Loop Current Fixed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Not Applicable</ExtendedHelpText>
+          <DDHelpText>Not Applicable</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>More Status Available</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Check the detailed alert for more information.
+2. Consider filtering this alert out as the detailed alerts will give more accurate information.</ExtendedHelpText>
+          <DDHelpText>Indication that there are one or more additional active alerts with more detailed information.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Cold Start</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action is required - the condition will clear itself.</ExtendedHelpText>
+          <DDHelpText>The device was powered up or has undergone reset or power cycle since the last communication with this device.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Configuration Changed</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Verify that the configuration change of the transmitter was intended and expected. 
+2. Connect a HART primary master such as AMS or similar maintenance package and synchronize the database.
+3. Consider filtering this alert out, as the system normally handles the configuration changed mechanism internally.</ExtendedHelpText>
+          <DDHelpText>A change in configuration has taken place with this device. The host system will usually acknowledge this change to clear this status condition.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>4000000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>Device Malfunction</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Check detailed alert for more information.
+2. Consider filtering this alert out, as the detailed alerts will give more accurate information.</ExtendedHelpText>
+          <DDHelpText>This alert is set when the device has a problem. Detailed alert(s) will inform what may be wrong.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>8000000000000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>1</BytePosition>
+      <Label>Device Specific Status 0</Label>
+      <Name>device_specific_status_0</Name>
+      <AlertList>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>Electronics Failure: Non Volatile Memory Non-Correctable Error</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1.  Reset the device  (Service Tools/Maintenance/Other)
+2. Reconfirm all configuration items of the device.
+3. If the condition persists, replace the electronics.</ExtendedHelpText>
+          <DDHelpText>An electronics error that could impact the device measurement reading has occurred.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>8000000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Electronics Failure: Non-Volatile Correctable Error</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Reset the device  (Service Tools/Maintenance/Other).
+2. Reconfirm all configuration items in the device.
+3. If the condition persists, replace the electronics.</ExtendedHelpText>
+          <DDHelpText>A failure has been detected in the device memory and/or electronics.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>4000000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Electronics Warning: Non-Volatile Memory Non Correctable Warning</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>The device has detected an electronics error that does not currently impact the device measurement reading.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>Electronics Warning: Non-Volatile Memory Correctable Warning</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>The device has detected an electronics error that does not currently impact the device measurement reading.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Electronics Failure : Non-Volatile Write Error</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>A failure has been detected in the device memory and/or electronics.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Database Memory Warning</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1.  Reset the device  (Service Tools/Maintenance/Other)
+2.  Reconfirm all configuration items in the device
+3.  If logging dynamic data not needed, this advisory can be safely ignored
+4.  If the condition persists, replace the electronics</ExtendedHelpText>
+          <DDHelpText>The device has failed to write to the database memory.  Any data written during this time may have been lost.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Electronics Failure : RAM Error</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>A failure has been detected in the device memory and/or electronics.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Electronics Failure : ROM Error</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>A failure has been detected in the device memory and/or electronics.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000001000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>2</BytePosition>
+      <Label>Device Specific Status 1</Label>
+      <Name>device_specific_status_1</Name>
+      <AlertList>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>Radio Internal Communication Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Reset the device  (Service Tools/Maintenance/Other)
+2. If the condition persists, replace the electronics.</ExtendedHelpText>
+          <DDHelpText>The wireless radio has detected a failure or stopped communicating.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>8000000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Supply Voltage Low</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Replace the Power Module.</ExtendedHelpText>
+          <DDHelpText>The supply voltage is too low for the device to broadcast updates.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>4000000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Button Stuck</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1.  Check the buttons for obstructions
+2.  Reset the device  (Service Tools/Maintenance/Other)
+3.  If the condition persists, replace the transmitter</ExtendedHelpText>
+          <DDHelpText>A button on the Electronics Board is detected as stuck in the active position.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>2000000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>Supply Voltage Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1.  Replace the power module. 
+2. If the condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>The supply voltage of this device is less than the failure limit.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Electronics Temperature Exceeded Critical Limits</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Verify environmental temperature is within the temperature's range.
+2. Remote mount the transmitter away from process and environmental conditions.
+3. Reset the device  (Service Tools/Maintenance/Other)
+4. If the condition persists, replace the electronics.</ExtendedHelpText>
+          <DDHelpText>The electronics temperature has exceeded the transmitter's critical range.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Electronics Board Temperature Beyond Limits</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Verify environmental temperature is within the temperature's range.
+2. Remote mount the transmitter away from process and environmental conditions.
+3. Reset the device  (Service Tools/Maintenance/Other)
+4. If the condition persists, replace the electronics.</ExtendedHelpText>
+          <DDHelpText>The electronics temperature has exceeded the transmitter's maximum range.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Radio Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Reset the device  (Service Tools/Maintenance/Other)
+2. If the condition persists, replace the electronics.</ExtendedHelpText>
+          <DDHelpText>The wireless radio has detected a failure or stopped communicating.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000002000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>3</BytePosition>
+      <Label>Device Specific Status 2</Label>
+      <Name>device_specific_status_2</Name>
+      <AlertList>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>High Power Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>High Power Active - The device is operating in a mode that consumes excessive power. If batteries are used to power this device, they may wear out prematurely.</ExtendedHelpText>
+          <DDHelpText>Device configured with High Power</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>8000000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Invalid Configuration</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Click on details for more information.
+2. Correct the parameter that has a configuration error.
+3. Reset the device  (Service Tools/Maintenance/Other).
+4. If the condition persists, replace the electronics.</ExtendedHelpText>
+          <DDHelpText>The device has detected a configuration error based on a change to the device.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>4000000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Wireless Publish Failure</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Obtaining the bandwidth may take some time depending on the configured update rates and other devices in the network.  Wait several minutes to see if the error resolves itself.
+2. There may be too many devices attached to the wirelessHART network, or the update rates may be too fast.  Try using a different network, or slowing down the update rate on one or more devices.</ExtendedHelpText>
+          <DDHelpText>The device is not able to publish process measurements to the wireless gateway.  This is most often because the device has not joined the wireless network with enough bandwidth.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000003000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>4</BytePosition>
+      <Label>Device Specific Status 3</Label>
+      <Name>device_specific_status_3</Name>
+      <AlertList>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>Sensor Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1.) Check the sensor wiring and connections.
+2.) Reconfirm sensor configuration.
+3.) Replace the sensor.
+4.) If the condition persists, please contact a service center.</ExtendedHelpText>
+          <DDHelpText>The device has detected an open, short, or too much resistance for this sensor</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>8000000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>No Sensor Updates</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>
+1.) Reset the Device by selecting Tools/Maintenance/Other or by pulling the power module
+2.) If the condition persists, please contact a service center.</ExtendedHelpText>
+          <DDHelpText>Sensor electronics is not sending measurement updates to the microprocessor</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>4000000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Sensor Out of Limits</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1.)Verify if process is under abnormal conditions
+2.) Check if the selected sensor is appropriate for the application. If not, replace the sensor
+3.)If the situation persists, contact service center</ExtendedHelpText>
+          <DDHelpText>The process temperature is outside the sensor allowed operating limits.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>2000000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>Sensor Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1.)Verify if process is under abnormal conditions
+2.) Check if the selected sensor is appropriate for the application. If not, replace the sensor
+3.)If the situation persists, contact service center</ExtendedHelpText>
+          <DDHelpText>The process temperature is outside the sensor operating limits and has saturated at an endpoint. The measurement is no longer tracking the process temperature.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>1000000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Terminal Temperature Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1.)  Reset the device  by selecting Service Tools/Maintenance/Other or by removing Power Module
+2.) If the condition persists, please contact a service center.</ExtendedHelpText>
+          <DDHelpText>The terminal temperature is invalid or can not be read.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0800000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>No Terminal Temperature Updates</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>
+1.) Reset the Device by selecting Tools/Maintenance/Other or by pulling the power module
+2.) If the condition persists, please contact a service center.</ExtendedHelpText>
+          <DDHelpText>Terminal Temperature measurement is not sending measurement updates to the microprocessor</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Terminal Temperature Out of Limits</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1.) Verify the installation conditions
+2.) If the transmitter is installed directly on the sensor, consider changing it to remote installation
+3.) If the transmitter is installed away from the sensor, consider changing it to another location or using heat shields between the device and the heat source (furnaces, hot pipes, etc.).</ExtendedHelpText>
+          <DDHelpText>The terminal temperature is outside the allowable operating limits. That will shorten  electronics life or damage it and  cause process temperature measurement errors</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Terminal Temperature Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1.) Verify the installation conditions
+2.) If the transmitter is installed directly on the sensor, consider changing it to remote installation
+3.) If the transmitter is installed away from the sensor, consider changing it to another location or using heat shields between the device and the heat source (furnaces, hot pipes, etc.).</ExtendedHelpText>
+          <DDHelpText>The terminal temperature is outside the allowable operating limits and it is saturated at an endpoint. The actual temperature may be higher or lower than indicated. That will shorten  electronics life or damage it and  cause process temperature measurement errors</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000004000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>6</BytePosition>
+      <Label>Device Specific Status 5</Label>
+      <Name>device_specific_status_5</Name>
+      <AlertList>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>LO LO Alarm</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Verify that the process variable is within user specified limits.
+2. Reconfirm the user defined alarm limit.
+3. If not needed, disable this alert.</ExtendedHelpText>
+          <DDHelpText>The primary variable has surpassed the user defined limit.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>8000000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>LO Alarm</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Verify that the process variable is within user specified limits.
+2. Reconfirm the user defined alarm limit.
+3. If not needed, disable this alert.</ExtendedHelpText>
+          <DDHelpText>The primary variable has surpassed the user defined limit.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>4000000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>HI Alarm</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Verify that the process variable is within user specified limits.
+2. Reconfirm the user defined alarm limit.
+3. If not needed, disable this alert.</ExtendedHelpText>
+          <DDHelpText>The primary variable has surpassed the user defined limit.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>2000000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>HI HI Alarm</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Verify that the process variable is within user specified limits.
+2. Reconfirm the user defined alarm limit.
+3. If not needed, disable this alert.</ExtendedHelpText>
+          <DDHelpText>The primary variable has surpassed the user defined limit.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>1000000006000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>7</BytePosition>
+      <Label>Extended Field Device Status</Label>
+      <Name>extended_fld_device_status</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Maintenance Required</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Check other alerts that can give more detailed information.</ExtendedHelpText>
+          <DDHelpText>Alert indicates that the device needs maintenance soon. If this condition is ignored, the device may eventually fail. This indicates a degraded condition, but the device is still able to sense or control. </DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000007000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Device Variable Alert</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>One or more device variables has unexpected status.</ExtendedHelpText>
+          <DDHelpText>This alert indicates that one of the Device Variables is in an Alarm or Warning State. The host should identify the Device Variable(s) causing this to be set using the Device Variable Status indicators.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000007000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Critical Power Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>Replace the Power Module.</ExtendedHelpText>
+          <DDHelpText>This alert indicates that the power is becoming critically low. The device will sustain its network connection for as long as the remaining power is sufficient to power the radio.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000007000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>9</BytePosition>
+      <Label>Standardized Status 0</Label>
+      <Name>standardized_status_0</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Device Variable Simulation Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Verify that simulation is no longer required.
+2. Disable Simulation Mode in Service Tools.
+3. Reset the device.</ExtendedHelpText>
+          <DDHelpText>The device is in simulation mode and one or more of its Device Variables are not representative of the process.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000009000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Non-Volatile Memory Defect</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>The Non-Volatile memory check is invalid or maybe corrupt.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000009000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Volatile Memory Defect</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>The volatile (RAM) memory check is invalid or maybe corrupt.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000009000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Watchdog Reset Executed</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>If the alert repeats, replace electronics</ExtendedHelpText>
+          <DDHelpText>A watchdog reset has been performed by the electronics</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000009000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>Power Supply Conditions Out of Range</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Replace the Power Module.</ExtendedHelpText>
+          <DDHelpText>The power source voltage is outside its allowable range.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>1000000009000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Environmental Conditions Out of Range</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1.) Verify the installation conditions
+2.) If the transmitter is installed directly on the sensor, consider changing it to remote installation
+3.) If the transmitter is installed away from the sensor, consider changing it to another location or using heat shields between the device and the heat source (furnaces, hot pipes, etc.).</ExtendedHelpText>
+          <DDHelpText>An internal or environmental condition is beyond acceptable limits.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>2000000009000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Electronic Defect  </AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Confirm and correct all configuration parameters.
+2. Restore device to default settings under Service Tools-&gt;Maintenance-&gt;Reset/Restore.
+3. Perform a Device Reset.
+4. If condition persists, replace the transmitter.</ExtendedHelpText>
+          <DDHelpText>A hardware problem not related to the sensor has been detected.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>4000000009000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>13</BytePosition>
+      <Label>Standardized Status 3</Label>
+      <Name>standardized_status_3</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Capacity Denied</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Obtaining the bandwidth may take some time depending on the configured update rates and other devices in the network.  Wait several minutes to see if the error resolves itself.
+2. There may be too many devices attached to the wirelessHART network, or the update rates may be too fast.  Try using a different network, or slowing down the update rate on one or more devices.</ExtendedHelpText>
+          <DDHelpText>The device does not have the communication bandwidth required to support the Burst Messaging specified.</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>010000000D000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Bandwidth Allocation Pending</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Obtaining the bandwidth may take some time depending on the configured update rates and other devices in the network.  Wait several minutes to see if the error resolves itself.
+2. There may be too many devices attached to the wirelessHART network, or the update rates may be too fast.  Try using a different network, or slowing down the update rate on one or more devices.</ExtendedHelpText>
+          <DDHelpText>The device has asked for bandwidth from the Network Manager and is awaiting Network Manager response.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>040000000D000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Block Transfer Pending</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Verify the host system configuration.</ExtendedHelpText>
+          <DDHelpText>The device has a data set (e.g. a waveform) awaiting transfer to the host application or gateway.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>080000000D000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+  </VariableList>
+</AlertsRoot>

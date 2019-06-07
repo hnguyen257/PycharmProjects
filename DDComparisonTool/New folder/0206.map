@@ -1,0 +1,121 @@
+;Map File
+[IDENTIFICATION]
+Manufacturer=26
+Model=2658
+Device Revision=2
+DD Revision=6
+Map File Format Version=1
+Use for CalMgmt=Yes
+Use for Export=Yes
+
+[PARAMETER MAP]
+input block Upper Range Value=ItemArray!dynamic_variables!Element!0!Member!RANGING!Member!UPPER_RANGE_VALUE
+input block Lower Range Value=ItemArray!dynamic_variables!Element!0!Member!RANGING!Member!LOWER_RANGE_VALUE
+input block Units Code=ItemArray!dynamic_variables!Element!0!Member!DEVICE_VARIABLE!Member!DIGITAL_UNITS
+Probe Type=Param!sensor_1_type
+Damping Value=Param!sensor1DampingValue
+Transfer Function Code=Param!transfer_function
+Tag=Param!tag
+Message=Param!message
+Descriptor=Param!descriptor
+
+[PARAMETER SPECIAL INFO]
+output block Upper Range Value=No Associated Parameter
+output block Lower Range Value=No Associated Parameter
+output block Units Code=No Associated Parameter
+Probe Connect=No Associated Parameter
+Cold Junction Compensation=No Associated Parameter
+Number of Wires=No Associated Parameter
+
+[DEFAULT PARAMETER VALUES]
+output block Upper Range Value=20.0
+output block Lower Range Value=4.0
+output block Units Code=39
+Probe Connect=1
+Cold Junction Compensation=1
+Number of Wires=2
+
+[INPUT BLOCK TYPE]
+;Generic=1,TempRtd=2,TempTC=3,Frequency=4,Pressure=5,Multivariable=99
+Input block=99
+Parameter for current PV=sensor_1_type
+
+[OUTPUT BLOCK TYPE]
+;Generic=1,TempRtd=2,TempTC=3,Frequency=4,Pressure=5,Multivariable=99
+Output block=1
+
+[input block Units Code DD to Common Map]
+32=degC
+33=degF
+34=degR
+35=Kelvin
+36=mV
+37=Ohm
+
+[Transfer Function Code DD to Common Map]
+0=Linear
+1=Square root
+
+[DUAL MODE INPUT BLOCK TYPE DD TO COMMON MAP]
+1=2
+2=2
+3=2
+16=2
+4=2
+5=2
+6=2
+7=2
+8=1
+10=1
+11=1
+12=1
+13=1
+14=1
+15=1
+0=1
+128=1
+129=3
+130=3
+131=3
+132=3
+133=3
+134=3
+135=3
+136=3
+137=3
+140=3
+141=3
+143=1
+250=1
+
+[Probe Type DD to Common Map]
+1=RTD Pt  100    a: 0.003850
+2=RTD Pt  100    a: 0.003920
+3=RTD Pt  200    a: 0.003850
+16=RTD Pt  200    a: 0.003920
+4=RTD Pt 1000    a: 0.003850
+5=RTD Ni  120    a: 0.006720
+6=RTD Cu   10    a: 0.004270  (?? Standard ??)
+7=RTD Pt 1000    a: 0.003850
+8=Calibrated: will supply Calendar-VanDeusen parameters
+10=Not used
+11=RTD Cu 100   a: 0.004280
+12=Not used
+13=RTD Cu 100   a: 0.004280
+14=Not used
+15=Not used
+0=Ohms
+128=milliVolts
+129=TC Type B (Pt30Rh-Pt6Rh) (IEC 584 etc.)
+130=TC Type E (Ni10Cr-Cu45Ni) (IEC 584 etc.)
+131=TC Type J (Fe-Cu45Ni) (IEC 584 etc.)
+132=TC Type K (Ni10Cr-Ni5) (IEC 584 etc.)
+133=TC Type N (Ni14CrSi-NiSi) (IEC 584 etc.)
+134=TC Type R (Pt13Rh-Pt) (IEC 584 etc.)
+135=TC Type S (Pt10Rh-Pt) (IEC 584 etc.)
+136=TC Type T (Cu-Cu45Ni) (IEC 584 etc.)
+137=TC Type L (Fe-CuNi) (DIN 43710)
+140=TC Type U (Cu-CuNi) (DIN 43710)
+141=TC Type W5, Omega type C (W5-W26Rh)(ASTM E 988)
+143=Not used
+250=Not used

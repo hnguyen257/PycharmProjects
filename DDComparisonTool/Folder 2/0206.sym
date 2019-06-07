@@ -1,0 +1,2684 @@
+variable        batteryLS                 enumerated      16448 
+variable        nps_pipe_conduction_coeff float           17198 
+member          PARAM520                  parameter       3221266696 
+member          PARAM521                  parameter       3221266697 
+menu            terminal_block_failure_375                 17055 
+method          method_lock_unlock                        17503 
+menu            electronics_warning_non_window                 17805 
+member          TREND_VALUE_6_DEVICE_FAMILY_STATUS collection      4541 (std) 
+variable        uint16_var_blk_char       unsigned        2147548933 
+variable        dummy_R0                  float           17464 
+menu            terminal_temp_exceeded_limits_375                 17062 
+member          TREND_VALUE_6_QUALITY_STATUS collection      17170 
+variable        devSpec_loopCurrentUnits  enumerated      17361 
+variable        burst_mode_control_code   enumerated      2032 (std,imp) 
+member          TREND_VALUE_10_QUALITY_STATUS collection      17182 
+menu            configure_msg1_window_1                   17470 
+menu            configure_msg1_window_2                   17471 
+member          blk_profile_rev           record          3221290759 
+menu            configure_msg1_window_3                   17472 
+variable        sensor1_upper_sensor_limit float           16405 
+command         read_burst_mode_configuration                 4195 (std,imp) 
+menu            configure_msg1_window_4                   17473 
+menu            sensor_calibration_no_offset_375                 16742 
+variable        physical_signaling_codes  enumerated      2033 (std,imp) 
+command         high_power_refresh_cmd                    16530 
+command         write_network_tag                         14026 (std,imp) 
+member          TREND_VALUE_9_DEVICE_FAMILY_STATUS collection      4553 (std) 
+variable        alert_8_setpoint          float           16578 
+array           IO_card0                  collection      4354 (std) 
+menu            group_join_details_RO                     16916 
+array           IO_card1                  collection      4355 (std) 
+variable        neighbor_count            unsigned        14005 (std,imp) 
+menu            wireless_manual_setup_375                 16754 
+menu            guided_setup_2_non_window_s                 17689 
+member          TREND_VALUE_5_QUALITY_STATUS collection      17167 
+source          sensor_gauge_source                       16970 
+method          electronics_failure_non_window_history_description                 17509 
+member          TREND_VALUE_11_QUALITY_STATUS collection      17185 
+image           img_event_notification                    17587 
+menu            grp_view_configuration_burst3_33                 17656 
+method          button_stuck_375_history_description                 17132 
+variable        devSpec_pcntRng_family    enumerated      17381 
+member          TREND_VALUE_4_DEVICE_FAMILY_STATUS collection      4533 (std) 
+variable        date                      date            166 (std,mand,imp) 
+variable        not_received_nonce_counter_values unsigned        14045 (std,imp) 
+menu            operating_parameters_375                  16737 
+menu            guided_setup_1_non_window_s                 17688 
+member          BACK_RECEIVED             collection      4335 (std) 
+variable        radio_upgrade_code        enumerated      17217 
+member          TREND_VALUE_4_QUALITY_STATUS collection      17164 
+menu            group_sensor                              16778 
+variable        trim_point_codes          enumerated      2047 (std,imp) 
+image           imgElectronicsWarning_non_window                 17577 
+member          blk_num_params            record          3221290761 
+variable        devSpec_loopCurrentLSL    float           17368 
+member          STANDARDIZED_STATUS_2_LATCHED_VALUE collection      4677 (std) 
+member          EXTENDED_FLD_DEVICE_STATUS_LATCHED_VALUE collection      4673 (std) 
+variable        join_mode_codes           enumerated      2258 (std,imp) 
+method          method_find_device                        17547 
+command         read_country_code                         4699 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_15_MASK collection      4656 (std) 
+member          LIMIT_STATUS              collection      248 (std) 
+menu            device_display_manual_setup_375                 16759 
+variable        battery_upper_sensor_limit float           16439 
+menu            view_configure_msg3_window_1                 17495 
+member          COMMAND_NUMBER_ENUMERATED collection      4382 (std) 
+menu            view_configure_msg3_window_2                 17496 
+variable        device_profile_codes      enumerated      2257 (std,imp) 
+menu            view_configure_msg3_window_3                 17497 
+variable        devSpec_loopCurrent_family enumerated      17366 
+menu            view_configure_msg3_window_4                 17498 
+command         write_tag_descriptor_date                 186 (std,mand,imp) 
+member          STAT_STX_CNT              collection      4267 (std) 
+variable        dev_operating_mode_mask   bit-enumerated  2297 (std,imp) 
+menu            broadcast_info_non_window_s_1                 17707 
+menu            broadcast_info_non_window_s_2                 17708 
+member          TREND_VALUE_3_QUALITY_STATUS collection      17161 
+menu            broadcast_info_non_window_s_3                 17709 
+menu            failed_alerts_non_window                  17762 
+menu            broadcast_info_non_window_s_4                 17710 
+menu            broadcast_info_non_window_s_5                 17711 
+variable        ambientLS                 enumerated      16467 
+member          DEVICE_STATUS_LATCHED_VALUE collection      4666 (std) 
+variable        operatingMode             enumerated      2160 (std,imp) 
+menu            broadcast_info_non_window_s_6                 17712 
+menu            broadcast_info_non_window_s_7                 17713 
+image           imgElectronicsWarning_375                 17094 
+variable        lowerRange_value          float           235 (std,imp) 
+menu            hi_alarm_375_history                      17085 
+menu            view_data_history_table_modal                 17597 
+method          method_disable_advanced_broadcasting_non_window_s                 17542 
+variable        detected_nl_mic_failures  unsigned        14042 (std,imp) 
+menu            group_supply_voltage_vow                  16864 
+variable        alert_5_setpoint          float           16554 
+variable        byte_count                unsigned        1022 (std) 
+menu            wireless_dev_info_manual_setup_375                 16763 
+menu            electronics_temp_exceeded_limits_375_history                 17079 
+variable        device_status_mask        bit-enumerated  2267 (std,imp) 
+menu            db_memory_warning_non_window                 17675 
+variable        status_output             enumerated      2147548930 
+command         read_event_notification_summary                 4692 (std,imp) 
+member          TREND_VALUE_11_DEVICE_FAMILY_STATUS collection      4561 (std) 
+menu            group_device_display                      16813 
+variable        eventNumber               index           4763 (std,imp) 
+variable        ambientDrilled_value      float           16471 
+chart           ambient_gauge_chart_drilled                 16903 
+menu            group_last_trim_point                     16922 
+member          PARAM500                  parameter       3221266676 
+member          TREND_VALUE_5_DEVICE_FAMILY_STATUS collection      4537 (std) 
+variable        message                   packed-ascii    164 (std,mand,imp) 
+menu            alerts_375                                16736 
+member          PARAM501                  parameter       3221266677 
+member          PARAM502                  parameter       3221266678 
+member          SUB_DEVICE_MANUFACTUER                    4219 (std) 
+member          LOWER_ENDPOINT_VALUE                      4087 (std) 
+method          hi_alarm_375_history_description                 17126 
+member          PARAM503                  parameter       3221266679 
+variable        keep_alive_min_time       time_value      14033 (std,imp) 
+member          SENSOR_UNIT                               6003 (std) 
+member          PARAM504                  parameter       3221266680 
+variable        company_identification_code enumerated      2031 (std,imp) 
+member          PARAM505                  parameter       3221266681 
+member          TREND_VALUE_9_QUALITY_STATUS collection      17179 
+chart           fast_chart                                16535 
+member          PARAM506                  parameter       3221266682 
+menu            group_temp_basic_setup                    16954 
+member          PARAM507                  parameter       3221266683 
+member          PARAM508                  parameter       3221266684 
+variable        failed_event_notification_non_window_s bit-enumerated  17402 
+member          PARAM509                  parameter       3221266685 
+variable        max_update_time_event     time_value      4804 (std,imp) 
+menu            broadcast_config_msg3_9_non_window_s                 17742 
+menu            group_trending                            17615 
+variable        failed_event_notification bit-enumerated  17399 
+variable        event_notification_retry_time_event time_value      4803 (std,imp) 
+variable        device_specific_status_1_mask bit-enumerated  4718 (std,imp) 
+member          TREND_VALUE_0_DEVICE_FAMILY_STATUS collection      4517 (std) 
+command         clear_latched_status                      16593 
+variable        percentDrilledRange       float           16425 
+variable        fast_value                float           16387 
+member          TREND_VALUE_8_QUALITY_STATUS collection      17176 
+variable        model_number_I            packed-ascii    16582 
+variable        burst_message_trigger_mode enumerated      2264 (std,imp) 
+member          TREND_VALUE_10_FAMILY_STATUS collection      17183 
+variable        standardized_status_0_codes enumerated      2241 (std,imp) 
+method          radio_failure_375_history_description                 17106 
+variable        event_status_codes        enumerated      2248 (std,imp) 
+menu            maintenance_root_menu                     17663 
+member          EVENT_NOTIFICATION_CONTROL collection      4636 (std) 
+menu            group_lock_status                         17621 
+member          TREND_DIGITAL_UNITS       collection      4510 (std) 
+menu            alert_setup_window                        16819 
+variable        battery_write_dev_var_code enumerated      17356 
+variable        primary_variable_code_DB  index           16709 
+variable        cjc_digital_value_DB      float           16633 
+variable        compat_burst_trig_units_1 enumerated      17301 
+variable        compat_burst_trig_units_2 enumerated      17318 
+variable        standardized_status_2_h   bit-enumerated  16606 
+variable        ambient_minimum_span      float           16461 
+menu            group_optional                            17603 
+member          DEVICE_SPECIFIC_STATUS_19_MASK collection      4660 (std) 
+axis            terminal_temp_axis                        17001 
+menu            overview_375                              16411 
+variable        ambient_lower_sensor_limit float           16460 
+variable        measured_stem_data_quality enumerated      17205 
+command         write_burst_trigger                       4437 (std,imp) 
+method          configure_fixed_supply_voltage                 16717 
+menu            simulate_non_window                       17757 
+member          TREND_VALUE_10_DEVICE_FAMILY_STATUS collection      4557 (std) 
+variable        device_specific_status_3_h bit-enumerated  16598 
+method          electronics_warning_375_description                 17109 
+member          DEVICE_SPECIFIC_STATUS_16_LATCHED_VALUE collection      4682 (std) 
+command         perform_self_test                         4137 (std,imp) 
+array           dynamic_variables         collection      172 (std,mand) 
+chart           terminal_temp_gauge_chart_original                 16978 
+member          HI_SET_PT                 collection      17453 
+member          TREND_VALUE_5_FAMILY_STATUS collection      17168 
+image           img648BlueClassic                         16950 
+menu            electronics_temp_device_temps_manual_setup_375                 16764 
+member          STANDARDIZED_STATUS_2_MASK collection      4652 (std) 
+variable        cjcClassification         enumerated      16482 
+member          LO_DEAD_BAND              collection      17458 
+member          CLASSIFICATION            collection      218 (std) 
+variable        dummy_variable_unsigned_3 unsigned        17392 
+variable        current_time              time_value      4441 (std,imp) 
+member          BURST_UNIT                collection      4396 (std) 
+method          method_clear_alert_history                 16714 
+menu            hi_alarm_non_window_history                 17780 
+menu            group_percent_of_range_setup                 16814 
+command         read_final_assembly_number                 184 (std,mand,imp) 
+variable        sensor_1_trim_units       enumerated      16407 
+member          TREND_VALUE_1_DEVICE_FAMILY_STATUS collection      4521 (std) 
+method          warning_message                           4119 (std,imp) 
+variable        compat_burst_vars_7_0     index           17285 
+variable        compat_burst_vars_7_1     index           17299 
+variable        pcntRngStatus             bit-enumerated  16422 
+variable        compat_burst_vars_7_2     index           17316 
+menu            group_hart_output_setting                 16969 
+member          DAQ                       collection      213 (std) 
+menu            group_simulation_active                   16846 
+variable        devSpec_pcntRng_family_status enumerated      17379 
+method          radio_failure_375_description                 17105 
+menu            group_advisory_act                        16838 
+variable        battery_digital_units     enumerated      16437 
+member          DEVICE_SPECIFIC_STATUS_1_MASK collection      4643 (std) 
+variable        alert_7_name              packed-ascii    16573 
+variable        measured_stem_temperature float           17204 
+command         read_dynamic_variable_classification                 220 (std,imp) 
+image           imgWCStatus                               16940 
+chart           percent_of_range_gauge_chart_drilled                 16907 
+menu            terminal_block_failure                    16876 
+member          PARAM20                   parameter       3221266195 
+member          PARAM21                   parameter       3221266196 
+member          DEVICE_SPECIFIC_STATUS_5_LATCHED_VALUE collection      4672 (std) 
+menu            manual_setup_other_page                   16788 
+member          PARAM22                   parameter       3221266197 
+member          PARAM23                   parameter       3221266198 
+record          DIGVAL_RECORD80                           2147549024 
+menu            device_root_menu                          1020 (std) 
+member          PARAM24                   parameter       3221266199 
+record          DIGVAL_RECORD81                           2147549025 
+menu            simulation_active_non_window_history                 17784 
+member          PARAM25                   parameter       3221266200 
+record          DIGVAL_RECORD82                           2147549026 
+variable        lock_device_codes         enumerated      2044 (std,imp) 
+member          PARAM26                   parameter       3221266201 
+record          DIGVAL_RECORD83                           2147549027 
+method          lo_lo_alarm_375_description                 17129 
+method          AM_snsr_1_trim                            16408 
+member          PARAM27                   parameter       3221266202 
+record          DIGVAL_RECORD84                           2147549028 
+menu            configuration_error_non_window_history                 17778 
+unit            ambient_temp_relation                     16682 
+member          PARAM28                   parameter       3221266203 
+record          DIGVAL_RECORD85                           2147549029 
+member          PARAM29                   parameter       3221266204 
+record          DIGVAL_RECORD86                           2147549030 
+record          DIGVAL_RECORD87                           2147549031 
+variable        __sensor_upper_limit      float           959 (std) 
+variable        device_id                 unsigned        161 (std,mand,imp) 
+record          DIGVAL_RECORD88                           2147549032 
+record          DIGVAL_RECORD89                           2147549033 
+variable        device_specific_status_4_drilled bit-enumerated  17038 
+member          SOURCE_DEVICE_TYPE                        4214 (std) 
+member          PARAM10                   parameter       3221266185 
+member          PARAM11                   parameter       3221266186 
+member          blk_class                 record          3221290754 
+variable        advisory_event_notification bit-enumerated  17401 
+method          alert6_config                             16728 
+member          PARAM12                   parameter       3221266187 
+collection      quaternary_variable       collection      245 (std,imp) 
+member          PARAM13                   parameter       3221266188 
+record          DIGVAL_RECORD70                           2147549014 
+member          PARAM14                   parameter       3221266189 
+record          DIGVAL_RECORD71                           2147549015 
+member          PARAM15                   parameter       3221266190 
+record          DIGVAL_RECORD72                           2147549016 
+variable        devSpec_pcntRng_update_period time_value      17386 
+member          PARAM16                   parameter       3221266191 
+record          DIGVAL_RECORD73                           2147549017 
+variable        network_tag               ascii           14025 (std,imp) 
+member          PARAM17                   parameter       3221266192 
+record          DIGVAL_RECORD74                           2147549018 
+method          db_memory_warning_non_window_description                 17528 
+member          PARAM18                   parameter       3221266193 
+record          DIGVAL_RECORD75                           2147549019 
+variable        device_specific_status_14 bit-enumerated  4145 (std,imp) 
+member          PARAM19                   parameter       3221266194 
+member          blk_execution_time        record          3221290760 
+record          DIGVAL_RECORD76                           2147549020 
+variable        device_specific_status_15 bit-enumerated  4146 (std,imp) 
+record          DIGVAL_RECORD77                           2147549021 
+variable        device_specific_status_16 bit-enumerated  4147 (std,imp) 
+record          DIGVAL_RECORD78                           2147549022 
+variable        device_specific_status_17 bit-enumerated  4148 (std,imp) 
+variable        burst_command_number      enumerated      4093 (std,imp) 
+record          DIGVAL_RECORD79                           2147549023 
+variable        device_specific_status_18 bit-enumerated  4149 (std,imp) 
+variable        batteryLSL                float           17352 
+variable        device_specific_status_19 bit-enumerated  4150 (std,imp) 
+variable        device_specific_status_1_latched_value bit-enumerated  4735 (std,imp) 
+image           imgLOLOAlarm                              16850 
+member          PARAM40                   parameter       3221266215 
+member          DEVICE_STATUS_MASK        collection      4641 (std) 
+member          PARAM41                   parameter       3221266217 
+member          TREND_VALUE_7_DEVICE_FAMILY_STATUS collection      4545 (std) 
+member          TREND_VALUE_2_QUALITY_STATUS collection      17158 
+method          alert5_config                             16727 
+member          PARAM42                   parameter       3221266218 
+variable        min_broadcast_update_period unsigned        17033 
+member          PARAM43                   parameter       3221266219 
+record          DIGVAL_RECORD60                           2147549004 
+member          PARAM44                   parameter       3221266220 
+record          DIGVAL_RECORD61                           2147549005 
+variable        lock_device_status_code   bit-enumerated  4208 (std,imp) 
+variable        device_specific_status_20 bit-enumerated  4151 (std,imp) 
+variable        standardized_status_0_drilled bit-enumerated  17042 
+member          PARAM45                   parameter       3221266221 
+record          DIGVAL_RECORD62                           2147549006 
+variable        device_specific_status_21 bit-enumerated  4152 (std,imp) 
+member          PARAM46                   parameter       3221266222 
+record          DIGVAL_RECORD63                           2147549007 
+variable        device_specific_status_22 bit-enumerated  4153 (std,imp) 
+member          VOLTAGE_UNITS             collection      16669 
+member          PARAM47                   parameter       3221266223 
+record          DIGVAL_RECORD64                           2147549008 
+variable        device_specific_status_23 bit-enumerated  4154 (std,imp) 
+member          PARAM48                   parameter       3221266224 
+record          DIGVAL_RECORD65                           2147549009 
+variable        device_specific_status_24 bit-enumerated  4155 (std,imp) 
+image           imgSurfaceMeasurementStatus                 17591 
+member          TREND_VALUE_11_TREND_VALUE collection      17184 
+member          PARAM49                   parameter       3221266225 
+record          DIGVAL_RECORD66                           2147549010 
+variable        sensor_trim_point_supported enumerated      17021 
+member          blk_num_display_lists     record          3221290763 
+record          DIGVAL_RECORD67                           2147549011 
+menu            manual_setup_non_window                   17690 
+record          DIGVAL_RECORD68                           2147549012 
+variable        calculated_process_family_status enumerated      17215 
+record          DIGVAL_RECORD69                           2147549013 
+variable        recover_time              time_value      14031 (std,imp) 
+member          PARAM30                   parameter       3221266205 
+member          PARAM31                   parameter       3221266206 
+variable        update_rate_method_local  enumerated      17135 
+method          alert8_config                             16730 
+member          PARAM32                   parameter       3221266207 
+menu            group_db_memory_warning                   16839 
+member          PARAM33                   parameter       3221266208 
+record          DIGVAL_RECORD50                           2147548994 
+collection      primary_variable          collection      242 (std,imp) 
+member          TREND_VALUE_1_QUALITY_STATUS collection      17155 
+member          PARAM34                   parameter       3221266209 
+record          DIGVAL_RECORD51                           2147548995 
+variable        advertising_period        time_value      14016 (std,imp) 
+member          CJC_UNITS                 collection      17445 
+member          PARAM35                   parameter       3221266210 
+record          DIGVAL_RECORD52                           2147548996 
+member          PARAM36                   parameter       3221266211 
+record          DIGVAL_RECORD53                           2147548997 
+member          CAPTURE_MODE                              4212 (std) 
+member          PARAM37                   parameter       3221266212 
+record          DIGVAL_RECORD54                           2147548998 
+variable        alert_6_var_assign        enumerated      16560 
+member          PARAM38                   parameter       3221266213 
+record          DIGVAL_RECORD55                           2147548999 
+variable        operating_mode_code       enumerated      2035 (std,imp) 
+collection      cjc_temperature           variable        16434 
+member          PARAM39                   parameter       3221266214 
+record          DIGVAL_RECORD56                           2147549000 
+record          DIGVAL_RECORD57                           2147549001 
+method          supply_voltage_failure_375_description                 17107 
+record          DIGVAL_RECORD58                           2147549002 
+record          DIGVAL_RECORD59                           2147549003 
+menu            alerts_non_window                         17751 
+member          ANALOG_CHANNEL_SATURATED1_MASK collection      4651 (std) 
+member          TREND_VALUE_3_DATA_QUALITY collection      4527 (std) 
+command         read_loop_configuration                   219 (std,imp) 
+variable        response_preambles        unsigned        4066 (std,imp) 
+menu            OnlineWindow_display                      7024 (std) 
+method          alert7_config                             16729 
+variable        burst_message_trigger_mode_codes enumerated      2245 (std,imp) 
+record          DIGVAL_RECORD1                            2147548945 
+member          TREND_VALUE_0_QUALITY_STATUS collection      17152 
+record          DIGVAL_RECORD2                            2147548946 
+record          DIGVAL_RECORD3                            2147548947 
+record          DIGVAL_RECORD4                            2147548948 
+record          DIGVAL_RECORD5                            2147548949 
+record          DIGVAL_RECORD6                            2147548950 
+record          DIGVAL_RECORD7                            2147548951 
+record          DIGVAL_RECORD8                            2147548952 
+record          DIGVAL_RECORD9                            2147548953 
+member          TREND_VALUE_8_DATA_QUALITY collection      4547 (std) 
+variable        pcntRngPDQ                enumerated      16418 
+variable        burst_message_number      index           4839 (std,imp) 
+member          DRILLED_PERCENT_RANGE     collection      16426 
+member          TERMINAL_LIMIT            source          17003 
+menu            simulate_window                           16774 
+member          RAPID_DIGITAL_VALUE       collection      17147 
+command         reset_battery_life                        16678 
+menu            group_lo_alarm_config                     16828 
+menu            supply_voltage_failure_375_history                 17076 
+member          TREND_VALUE_9_DATA_QUALITY collection      4551 (std) 
+value-array     trend_array                               4447 (std) 
+source          nps_surface_measurement_source                 17567 
+image           imgHIHIAlarm_375                          17096 
+menu            electronics_failure_non_window                 17666 
+command         write_network_access_mode                 14053 (std,imp) 
+collection      cjc_temperature_DB        variable        16706 
+variable        alert_5_units             enumerated      16553 
+variable        nps_pipe_material_local   enumerated      17341 
+method          device_variable_trim_1                    17545 
+menu            device_information_short_cut_dialog                 16941 
+menu            lo_alarm_non_window_history                 17781 
+variable        loop_flags                bit-enumerated  231 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_21_MASK collection      4662 (std) 
+menu            group_sensor_1                            16794 
+variable        wireless_module_device_type enumerated      14058 (std,imp) 
+member          TREND_VALUE_6_DATA_QUALITY collection      4539 (std) 
+method          return_to_normal_and_original_output_ambient                 17539 
+command         request_active_advertising                 14018 (std,imp) 
+record          DIGVAL_RECORD90                           2147549034 
+record          DIGVAL_RECORD91                           2147549035 
+record          DIGVAL_RECORD92                           2147549036 
+menu            wireless_non_window_s                     17697 
+variable        trend_value_0_data_quality_10 enumerated      17270 
+record          DIGVAL_RECORD93                           2147549037 
+variable        trend_value_0_data_quality_11 enumerated      17274 
+record          DIGVAL_RECORD94                           2147549038 
+collection      __SENSOR                  variable        950 (std) 
+record          DIGVAL_RECORD95                           2147549039 
+variable        device_type               enumerated      154 (std,mand,imp) 
+variable        sensor1DrilledPDQ         enumerated      16520 
+variable        sensor1Drilled_value      float           16401 
+record          DIGVAL_RECORD96                           2147549040 
+variable        standardized_status_0_mask bit-enumerated  2269 (std,imp) 
+method          terminal_block_failure_375_description                 17101 
+record          DIGVAL_RECORD97                           2147549041 
+method          return_to_normal                          4118 (std,imp) 
+menu            configuration_error_375_history                 17083 
+record          DIGVAL_RECORD98                           2147549042 
+unit            scaling_units_relation                    241 (std,imp) 
+variable        devSpec_loopCurrentUnits_rapid enumerated      17375 
+variable        battery_family            enumerated      17350 
+record          DIGVAL_RECORD99                           2147549043 
+menu            grp_configuration_burst3_9                 17640 
+command         write_write_protect_flag                  16657 
+array           burstVariables            collection      16390 
+member          MSG3_6var                 collection      17442 
+menu            data_history_trend_page_disabled                 17596 
+unit            term_temp_gauge_relation                  17015 
+unit            __digital_units_relation                  971 (std) 
+member          UPDATE_PERIOD             collection      4383 (std) 
+variable        compat_burst_cmd_1        enumerated      17287 
+variable        compat_burst_cmd_2        enumerated      17304 
+variable        quaternary_variable_code  index           4226 (std,imp) 
+member          BURST_MODE_SELECT         collection      4385 (std) 
+command         read_device_variables                     4180 (std,imp) 
+member          TREND_VALUE_4_DATA_QUALITY collection      4531 (std) 
+member          EVENT_STATUS              collection      4635 (std) 
+member          PARAM90                   parameter       3221266266 
+member          SOURCE_SLOT_NUMBER                        4217 (std) 
+member          MSG3_5var                 collection      17441 
+member          PARAM91                   parameter       3221266267 
+member          PARAM92                   parameter       3221266268 
+menu            power_non_window_s                        17704 
+menu            manual_setup_security_page                 17606 
+menu            group_electronics_warning_history                 16866 
+member          PARAM93                   parameter       3221266269 
+image           imgTerminalBlockFailure_non_window                 17574 
+member          PARAM94                   parameter       3221266270 
+member          PARAM95                   parameter       3221266271 
+variable        percentRange_rapid        float           17390 
+member          PARAM96                   parameter       3221266272 
+member          PARAM97                   parameter       3221266273 
+member          PARAM98                   parameter       3221266274 
+variable        country_code              enumerated      4697 (std,imp) 
+array           configurableDeviceVariables collection      16415 
+member          PARAM99                   parameter       3221266275 
+refresh         __pv_unit_refresh                         977 (std) 
+variable        simulate_battery_digital_value float           17223 
+menu            guided_setup_page                         16776 
+command         read_database_mode                        16638 
+variable        time_stamp_drilled        time_value      16424 
+member          TREND_VALUE_5_DATA_QUALITY collection      4535 (std) 
+menu            view_broadcast_config_msg3_33_non_window_s                 17727 
+image           imgElectronicsWarning                     16865 
+member          MSG3_8var                 collection      17444 
+command         write_pv_range_values                     4007 (std,imp) 
+variable        compat_burst_trig_class_1 enumerated      17300 
+variable        compat_burst_trig_class_2 enumerated      17317 
+member          ANALOG_CHANNEL_FLAGS      collection      217 (std) 
+menu            lo_alarm_page                             16822 
+variable        hardware_revision         unsigned        159 (std,mand,imp) 
+variable        analog_channel_saturated1_mask bit-enumerated  2273 (std,imp) 
+member          TERMINAL_VALUE_GAUGE      chart           16975 
+member          TREND_VALUE_2_DATA_QUALITY collection      4523 (std) 
+variable        sensor_1_special_snsr_coeff_0 float           16512 
+member          blk_parent_class          record          3221290755 
+variable        devSpec_loopCurrent_data_quality enumerated      17362 
+variable        sensor_1_special_snsr_coeff_1 float           16514 
+member          TWO_WIRE_OFFSET           collection      16511 
+command         flush_delayed_responses                   4205 (std,imp) 
+variable        sensor_1_special_snsr_coeff_2 float           16516 
+variable        advertised_neighbors_number unsigned        14017 (std,imp) 
+variable        sensor_1_special_snsr_coeff_3 float           16518 
+variable        sensor_1_trim_point       float           16392 
+command         read_join_status                          14013 (std,imp) 
+variable        devSpec_pcntRng_limit_status enumerated      17378 
+menu            primary_variable_non_window                 17808 
+menu            hi_hi_alarm_alert_setup_hh                 17692 
+member          MSG3_7var                 collection      17443 
+variable        ambientDampingValue       float           16463 
+member          TREND_VALUE_11_FAMILY_STATUS collection      17186 
+menu            group_maintenance                         16837 
+image           simulated_status_top                      17588 
+variable        cjcFamily                 enumerated      16483 
+chart           ambient_gauge_chart_original                 16984 
+command         write_alert_info                          16609 
+command         read_pv_current_and_percent_range                 176 (std,mand,imp) 
+variable        time_set_codes            enumerated      2250 (std,imp) 
+member          PARAM60                   parameter       3221266236 
+command         write_device_variable_trim_point                 4176 (std,imp) 
+member          PARAM61                   parameter       3221266237 
+axis            ambient_axis                              17004 
+member          PARAM62                   parameter       3221266238 
+menu            reset_restore_page                        17599 
+member          PARAM63                   parameter       3221266239 
+record          DIGVAL_RECORD40                           2147548984 
+variable        standardized_status_1_h   bit-enumerated  16604 
+member          PARAM64                   parameter       3221266240 
+record          DIGVAL_RECORD41                           2147548985 
+menu            group_wireless_radio                      16933 
+member          PARAM65                   parameter       3221266241 
+record          DIGVAL_RECORD42                           2147548986 
+menu            electronics_failure_375_history                 17072 
+member          PARAM66                   parameter       3221266242 
+record          DIGVAL_RECORD43                           2147548987 
+member          MSG3_2var                 collection      17438 
+menu            group_terminal_temperature                 16802 
+method          power_warning                             16586 
+variable        cjcDrilledPDQ             enumerated      16490 
+member          PARAM67                   parameter       3221266243 
+record          DIGVAL_RECORD44                           2147548988 
+command         write_device_variable_sensor_serial_number                 4185 (std,imp) 
+member          PARAM68                   parameter       3221266244 
+record          DIGVAL_RECORD45                           2147548989 
+menu            group_device_display_1                    17616 
+member          PARAM69                   parameter       3221266245 
+record          DIGVAL_RECORD46                           2147548990 
+record          DIGVAL_RECORD47                           2147548991 
+member          SHED_TIME                                 4218 (std) 
+method          lo_lo_alarm_non_window_history_description                 17558 
+image           imgSensorStatus1_drilled                  16904 
+record          DIGVAL_RECORD48                           2147548992 
+menu            broadcast_config_msg1_33_non_window_s                 17735 
+variable        alert_5_mode              enumerated      16550 
+record          DIGVAL_RECORD49                           2147548993 
+member          TREND_VALUE_0_DATA_QUALITY collection      4515 (std) 
+member          ANALOG_VALUE              collection      193 (std) 
+variable        cjcPDQ                    enumerated      16484 
+variable        physical_signaling_code   enumerated      171 (std,mand,imp) 
+member          PARAM50                   parameter       3221266226 
+menu            group_terminal_temperature_limits                 16808 
+variable        device_specific_status_4_h bit-enumerated  16599 
+member          PARAM51                   parameter       3221266227 
+menu            terminal_block_failure_non_window_history                 17769 
+member          PARAM52                   parameter       3221266228 
+collection      secondary_variable        collection      243 (std,imp) 
+variable        comm_status               bit-enumerated  152 (std,mand,imp) 
+member          PARAM53                   parameter       3221266229 
+record          DIGVAL_RECORD30                           2147548974 
+member          DEVICE_SPECIFIC_STATUS_19_LATCHED_VALUE collection      4685 (std) 
+member          PARAM54                   parameter       3221266230 
+record          DIGVAL_RECORD31                           2147548975 
+variable        dummy_variable_time       time_value      17393 
+member          PARAM55                   parameter       3221266231 
+record          DIGVAL_RECORD32                           2147548976 
+member          SOURCE_DEVICE_ID                          4215 (std) 
+member          PARAM56                   parameter       3221266232 
+record          DIGVAL_RECORD33                           2147548977 
+method          pre_send_configuration_method                 1007 (std) 
+source          nps_calculated_measurement_source                 17565 
+member          SENSOR_VALUE_GAUGE        chart           16537 
+member          PARAM57                   parameter       3221266233 
+record          DIGVAL_RECORD34                           2147548978 
+variable        time_set                  enumerated      4439 (std,imp) 
+menu            PWA_Failed                                17658 
+member          TREND_VALUE_4_FAMILY_STATUS collection      17165 
+member          PARAM58                   parameter       3221266234 
+record          DIGVAL_RECORD35                           2147548979 
+member          MSG3_1var                 collection      17437 
+variable        sensor_1_upper_trim_point_value float           16409 
+member          PARAM59                   parameter       3221266235 
+record          DIGVAL_RECORD36                           2147548980 
+menu            dev_info_manual_setup_375                 16758 
+record          DIGVAL_RECORD37                           2147548981 
+variable        analog_channel_fixed1_latched_value bit-enumerated  2282 (std,imp) 
+menu            group_all_variables_temp_sensor                 16967 
+record          DIGVAL_RECORD38                           2147548982 
+record          DIGVAL_RECORD39                           2147548983 
+member          TREND_VALUE_1_DATA_QUALITY collection      4519 (std) 
+menu            group_button_stuck                        16845 
+menu            group_sensor_limits_RO                    16799 
+member          HI_ALERT_MODE             collection      17451 
+member          PARAM80                   parameter       3221266256 
+variable        final_assembly_number     unsigned        169 (std,mand,imp) 
+member          STEM_MEAS                 chart           17570 
+variable        battery_classification    enumerated      17349 
+variable        search_timestamp          unsigned        16620 
+member          PARAM81                   parameter       3221266257 
+variable        universal_revision        unsigned        156 (std,mand,imp) 
+menu            other_information_page                    16948 
+member          PARAM82                   parameter       3221266258 
+menu            PWA_Maintenance                           17659 
+variable        nps_pipe_material         enumerated      17195 
+variable        sensor_1_trim_choice      enumerated      17020 
+source          supply_warn_source                        16990 
+member          PARAM83                   parameter       3221266259 
+record          DIGVAL_RECORD20                           2147548964 
+member          PARAM84                   parameter       3221266260 
+record          DIGVAL_RECORD21                           2147548965 
+unit            nps_calculated_measurement_units                 17224 
+member          PARAM85                   parameter       3221266261 
+record          DIGVAL_RECORD22                           2147548966 
+member          PARAM86                   parameter       3221266262 
+record          DIGVAL_RECORD23                           2147548967 
+menu            group_hi_hi_alarm_history                 16855 
+member          PARAM87                   parameter       3221266263 
+record          DIGVAL_RECORD24                           2147548968 
+member          TREND_VALUE_7_QUALITY_STATUS collection      17173 
+member          PARAM88                   parameter       3221266264 
+record          DIGVAL_RECORD25                           2147548969 
+variable        device_specific_status_0  bit-enumerated  4139 (std,imp) 
+menu            history_alerts_non_window                 17760 
+member          PARAM89                   parameter       3221266265 
+record          DIGVAL_RECORD26                           2147548970 
+variable        device_specific_status_1  bit-enumerated  4140 (std,imp) 
+array           transmitter_variables     collection      4109 (std) 
+record          DIGVAL_RECORD27                           2147548971 
+variable        device_specific_status_2  bit-enumerated  4141 (std,imp) 
+member          MSG3_4var                 collection      17440 
+record          DIGVAL_RECORD28                           2147548972 
+variable        device_specific_status_3  bit-enumerated  4142 (std,imp) 
+variable        battery_damping           float           17354 
+record          DIGVAL_RECORD29                           2147548973 
+variable        device_specific_status_4  bit-enumerated  4143 (std,imp) 
+variable        time_stamp                time_value      254 (std,imp) 
+variable        device_specific_status_5  bit-enumerated  4144 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_21_LATCHED_VALUE collection      4687 (std) 
+member          START_CURRENT             collection      16674 
+member          PARAM70                   parameter       3221266246 
+menu            percent_range_operating_parameters_non_window                 17813 
+member          PARAM71                   parameter       3221266247 
+member          PERCENT_LIMIT             source          17823 
+menu            maintenance_alerts_375                    17050 
+member          PARAM72                   parameter       3221266248 
+variable        analog_channel_saturated1_latched_value bit-enumerated  2281 (std,imp) 
+member          PARAM73                   parameter       3221266249 
+record          DIGVAL_RECORD10                           2147548954 
+member          PARAM74                   parameter       3221266250 
+record          DIGVAL_RECORD11                           2147548955 
+member          PARAM75                   parameter       3221266251 
+record          DIGVAL_RECORD12                           2147548956 
+variable        join_process_status_codes enumerated      2254 (std,imp) 
+variable        material_code             enumerated      2028 (std,imp) 
+variable        compat_burst_vars_2_0     index           17280 
+member          PARAM76                   parameter       3221266252 
+record          DIGVAL_RECORD13                           2147548957 
+method          device_variable_trim_reset                 4227 (std,imp) 
+variable        compat_burst_vars_2_1     index           17294 
+member          PARAM77                   parameter       3221266253 
+record          DIGVAL_RECORD14                           2147548958 
+variable        compat_burst_vars_2_2     index           17311 
+variable        trend_value_0_limit_status_10 enumerated      17271 
+array           compat_burst_messages     collection      17145 
+member          PARAM78                   parameter       3221266254 
+record          DIGVAL_RECORD15                           2147548959 
+variable        trend_value_0_limit_status_11 enumerated      17275 
+member          PARAM79                   parameter       3221266255 
+record          DIGVAL_RECORD16                           2147548960 
+record          DIGVAL_RECORD17                           2147548961 
+collection      __INPT                    variable        951 (std) 
+record          DIGVAL_RECORD18                           2147548962 
+variable        physical_layer_type_codes enumerated      2048 (std,imp) 
+variable        fast_units                enumerated      16386 
+record          DIGVAL_RECORD19                           2147548963 
+member          FAMILY_STATUS             collection      4775 (std,imp) 
+member          MSG3_3var                 collection      17439 
+member          DRILLED_DATA_QUALITY      collection      16427 
+image           imgTerminalBlockFailure_375                 17091 
+member          OACK_RECEIVED             collection      4334 (std) 
+unit            sensor_gauge_relation                     17014 
+variable        battery_digital_value_DB  float           16637 
+array           deviceVariables           collection      269 (std) 
+variable        trend_value_0_1           float           17233 
+variable        trend_value_0_2           float           17237 
+variable        devSpec_pcntRng_write_dev_var_code enumerated      17387 
+variable        trend_value_0_3           float           17241 
+chart           chart_calculated_surface_stem_measurement                 17564 
+variable        trend_value_0_4           float           17245 
+variable        trend_value_0_5           float           17249 
+variable        trend_value_0_device_family_status_1 enumerated      17236 
+command         write_burst_command_number                 4094 (std,imp) 
+variable        trend_value_0_6           float           17253 
+variable        trend_value_0_device_family_status_2 enumerated      17240 
+variable        trend_value_0_7           float           17257 
+variable        trend_value_0_device_family_status_3 enumerated      17244 
+member          SUB_DEVICE_MISSING        collection      4845 (std,imp) 
+variable        trend_value_0_8           float           17261 
+variable        trend_value_0_device_family_status_4 enumerated      17248 
+variable        device_specific_status_5_drilled bit-enumerated  17039 
+member          IDENT                     collection      4794 (std,imp) 
+variable        trend_value_0_9           float           17265 
+variable        trend_value_0_device_family_status_5 enumerated      17252 
+variable        trend_value_0_device_family_status_6 enumerated      17256 
+variable        trend_value_0_device_family_status_7 enumerated      17260 
+variable        trend_value_0_data_quality_1 enumerated      17234 
+command         burst_mode_control                        4096 (std,imp) 
+variable        trend_value_0_device_family_status_8 enumerated      17264 
+variable        trend_value_0_data_quality_2 enumerated      17238 
+member          TEMP_LIMIT                source          17006 
+menu            sensor_calibration_with_offset_375                 16741 
+method          lo_alarm_non_window_description                 17555 
+variable        trend_value_0_device_family_status_9 enumerated      17268 
+variable        trend_value_0_data_quality_3 enumerated      17242 
+variable        trend_value_0_data_quality_4 enumerated      17246 
+member          DEVICE_SPECIFIC_STATUS_0_LATCHED_VALUE collection      4667 (std) 
+image           imgCalculatedMeasurementStatus                 17592 
+variable        batteryUSL                float           17351 
+variable        trend_value_0_data_quality_5 enumerated      17250 
+variable        trend_value_0_data_quality_6 enumerated      17254 
+menu            group_hi_alarm                            16842 
+variable        trend_value_0_data_quality_7 enumerated      17258 
+variable        transfer_function         enumerated      8068 (std,imp) 
+variable        device_family_status      enumerated      2054 (std,imp) 
+variable        trend_value_0_data_quality_8 enumerated      17262 
+method          db_memory_warning_375_history_description                 17120 
+variable        trend_value_0_data_quality_9 enumerated      17266 
+command         write_burst_period                        4436 (std,imp) 
+variable        fast_lower_limit          float           16385 
+member          STAT_ACK_CNT              collection      4268 (std) 
+member          EVENT_REPORT              collection      4762 (std,imp) 
+method          radio_failure_non_window_history_description                 17515 
+variable        update_period_local_time  time_value      17396 
+variable        device_specific_status_0_latched_value bit-enumerated  4734 (std,imp) 
+member          TREND_VALUE_7_LIMIT_STATUS collection      4544 (std) 
+menu            hi_hi_alarm_375_history                   17084 
+variable        batteryDampingValue       float           16443 
+menu            guided_setup_configure_375                 16747 
+menu            electronics_temp_device_temps_manual_setup_non_window                 17701 
+command         read_dynamic_variables_and_pv_current                 177 (std,mand,imp) 
+menu            group_smart_power                         16793 
+member          PERCENT_SOURCE            source          17013 
+menu            group_primary_purpose_variables                 16937 
+menu            device_temps_manual_setup_375                 16757 
+menu            group_electronics_warning                 16860 
+menu            group_initial_setup                       17602 
+variable        standardized_status_3_drilled bit-enumerated  17045 
+method          return_to_normal_and_original_output_termt                 16722 
+variable        fast_upper_limit          float           16384 
+command         read_alert_info                           16608 
+variable        wireless_module_hardware_revision unsigned        14057 (std,imp) 
+source          terminal_gauge_source_drilled                 16979 
+variable        lock_device_code          enumerated      4207 (std,imp) 
+variable        event_status              bit-enumerated  2265 (std,imp) 
+method          electronics_warning_non_window_description                 17518 
+method          std_CheckWriteProtect                     1016 (std) 
+variable        network_id                unsigned        14022 (std,imp) 
+menu            PWA_Advisory                              17660 
+menu            device_alerts_history_page                 16835 
+variable        sensor_1_trim_point_supported bit-enumerated  16406 
+menu            operating_parameters_2_non_window_s                 17824 
+command         read_sensor_configuration                 17140 
+menu            view_menu                                 1009 (std) 
+method          hi_hi_alarm_375_history_description                 17124 
+method          AM_snsr_1_config                          16695 
+menu            group_write_protection_device_info                 17629 
+member          EXTENDED_FLD_DEVICE_STATUS_MASK collection      4648 (std) 
+variable        alert_8_direction         enumerated      16576 
+method          event_notification_read_action                 17540 
+menu            terminal_block_failure_non_window                 17667 
+member          SUPPLY_FAIL_GAUGE         chart           16989 
+unit            cjc_drill_relation                        16691 
+menu            tertiary_variable_non_window                 17810 
+menu            history_alerts_375                        16745 
+menu            group_find_new_devices                    16927 
+method          button_stuck_non_window_description                 17532 
+menu            electronics_temp_exceeded_limits_non_window_history                 17774 
+variable        lock_device_status_codes  enumerated      2046 (std,imp) 
+menu            group_non_intrusive_custom_setup                 17612 
+command         read_network_id                           14024 (std,imp) 
+menu            terminal_temp_exceeded_limits_non_window_history                 17775 
+command         read_model_string                         16644 
+menu            hi_hi_alarm_non_window_history                 17779 
+menu            grp_view_configuration_burst3_9                 17655 
+menu            process_sensor_manual_setup_375                 16755 
+collection      sensor1_measurement       variable        16414 
+menu            device_identification_page                 17622 
+image           imgSupplyVoltageFailure_non_window                 17576 
+menu            sensor_has_exceeded_limits_non_window                 17671 
+member          TREND_VALUE_3_TREND_VALUE collection      17160 
+menu            group_configuration_error                 16840 
+source          percent_of_range_source_drilled                 16999 
+variable        batteryCur_rsrvd          enumerated      16663 
+variable        __sensor_lower_limit      float           958 (std) 
+member          TREND_VALUE_10_TREND_VALUE collection      17181 
+variable        measured_surface_temperature float           17208 
+variable        detected_dll_mic_failures unsigned        14041 (std,imp) 
+variable        receive_signal_level      integer         14032 (std,imp) 
+menu            no_active_alerts_375                      17052 
+menu            group_data_collection                     16817 
+source          fast_limit_source                         16538 
+variable        pcntRngLS                 enumerated      16420 
+menu            grp_advisory_event_notification                 17645 
+variable        update_period             time_value      4798 (std,imp) 
+variable        cjcDrilled_value          float           16489 
+variable        join_retry_timer          time_value      14008 (std,imp) 
+member          TREND_CLASSIFICATION      collection      4509 (std) 
+menu            supply_voltage_low_non_window                 17674 
+variable        device_variable_code_codes enumerated      2246 (std,imp) 
+menu            group_variable_history                    17617 
+menu            device_options_page_non_window_s                 17686 
+method          supply_voltage_failure_non_window_history_description                 17517 
+member          _MNG_VALUE                record          3221290752 
+chart           terminal_temp_gauge_chart                 16871 
+variable        background_period         float           1025 (std) 
+member          SUPPLY_VALUE_GAUGE        chart           16987 
+menu            group_HART_lock                           17619 
+variable        model_number_III          packed-ascii    16584 
+method          terminal_temp_exceeded_limits_non_window_history_description                 17525 
+variable        sensor_1_min_trim_diff    float           16510 
+menu            group_lo_alarm                            16843 
+unit            ambient_drill_relation                    16690 
+menu            service_tools_375                         16413 
+member          DEVICE_SPECIFIC_STATUS_16_MASK collection      4657 (std) 
+variable        device_flags              bit-enumerated  160 (std,mand,imp) 
+menu            group_simulation_active_history                 16847 
+command         write_battery_info                        17024 
+source          ambient_limit_source                      16982 
+variable        shed_time                 time_value      14015 (std,imp) 
+collection      batteryLife               variable        17324 
+member          TREND_DEVICE_VARIABLE_CODE collection      4508 (std) 
+source          percent_of_range_limit_source                 17562 
+method          electronics_warning_375_history_description                 17110 
+variable        devSpec_loopCurrent_serialNum unsigned        17373 
+menu            group_hi_hi_alarm_config                  16824 
+menu            offline_root_menu                         1002 (std) 
+menu            routine_maintenance_non_window_s                 17785 
+variable        pcntRngDrilledStatus      bit-enumerated  16423 
+menu            sensor_calibration_with_offset_non_window                 17786 
+variable        aoPDQ                     enumerated      16431 
+variable        loop_alarm_code           enumerated      236 (std,imp) 
+member          DIGITAL_UNITS             collection      190 (std) 
+collection      __ANALOG                  variable        952 (std) 
+refresh         fast_upper_limit_relation                 17023 
+variable        transmitter_revision      unsigned        157 (std,imp) 
+menu            hi_hi_alarm_alert_setup_375                 16750 
+method          network_warning                           16703 
+member          HI_DEAD_BAND              collection      17454 
+command         read_a_to_d_conversion_info                 16646 
+variable        alert_6_units             enumerated      16563 
+variable        join_key_1                unsigned        14000 (std,imp) 
+menu            simulation_active_375                     17071 
+variable        join_key_2                unsigned        14001 (std,imp) 
+member          MAXIMUM_LOWER_TRIM_POINT  collection      4197 (std) 
+variable        join_key_3                unsigned        14002 (std,imp) 
+variable        join_key_4                unsigned        14003 (std,imp) 
+method          supply_voltage_failure_non_window_description                 17516 
+member          UPPER_ENDPOINT_VALUE                      4086 (std) 
+member          ALERT_MODE                collection      9057 (std,imp) 
+unit            sensor1_drill_relation                    16692 
+image           imgUpdateRate                             17138 
+variable        device_status_latched_value bit-enumerated  2275 (std,imp) 
+unit            analog_output_rapid_relation                 17794 
+method          return_to_normal_and_original_output_sensor                 16723 
+variable        time_interval_setup       unsigned        16399 
+menu            simulate_375                              16740 
+menu            broadcast_config_msg2_unknown_non_window_s                 17737 
+command         read_unique_identifier_with_long_tag                 223 (std,imp) 
+method          method_fast_updates                       16715 
+variable        extended_fld_device_status_DB bit-enumerated  16611 
+member          SENSOR_CONN               collection      16505 
+method          lo_alarm_375_history_description                 17128 
+method          configure_fixed_ambient_temp                 16719 
+variable        device_specific_status_2_mask bit-enumerated  4719 (std,imp) 
+member          TREND_VALUE_0             collection      4514 (std) 
+member          TREND_VALUE_1             collection      4518 (std) 
+variable        standardized_status_0_h   bit-enumerated  16603 
+member          TREND_VALUE_2             collection      4522 (std) 
+unit            ambient_gauge_relation                    17016 
+member          TREND_VALUE_3             collection      4526 (std) 
+variable        nps_pipe_schedule_local   enumerated      17343 
+member          TREND_VALUE_4             collection      4530 (std) 
+variable        private_label_distributor enumerated      168 (std,mand,imp) 
+member          TREND_VALUE_5             collection      4534 (std) 
+method          supply_voltage_low_non_window_history_description                 17527 
+variable        batteryCapUnits           enumerated      16659 
+command         event_notification_control                 4695 (std,imp) 
+member          TREND_VALUE_6             collection      4538 (std) 
+image           imgSensorFailure_375                      17092 
+image           imgNoFastUpdates                          17030 
+member          TREND_VALUE_7             collection      4542 (std) 
+member          TREND_VALUE_8             collection      4546 (std) 
+image           imgSensorStatus0_drilled                  16906 
+command         write_event_notification_bit_mask                 4693 (std,imp) 
+member          TREND_VALUE_9             collection      4550 (std) 
+image           Alert8Img                                 16831 
+menu            manual_setup_device_temperature_page                 16785 
+variable        cjc_minimum_span          float           16479 
+variable        sensor1DrilledStatus      bit-enumerated  16522 
+refresh         trend_refresh                             17232 
+variable        device_specific_status_5_h bit-enumerated  16600 
+member          DEVICE_SPECIFIC_STATUS_18_LATCHED_VALUE collection      4684 (std) 
+variable        pcntRngDrilledPDQ         enumerated      16419 
+variable        compat_burst_mode_0       enumerated      17278 
+member          STATS                     collection      4795 (std,imp) 
+variable        compat_burst_mode_1       enumerated      17288 
+variable        compat_burst_mode_2       enumerated      17305 
+menu            view_broadcast_config_msg1_9_non_window_s                 17718 
+member          TREND_VALUE_3_FAMILY_STATUS collection      17162 
+variable        standardized_status_2_latched_value bit-enumerated  2279 (std,imp) 
+method          simulation_active_375_history_description                 17134 
+method          send_warning                              5017 (std,imp) 
+member          TREND_VALUE_2_DEVICE_FAMILY_STATUS collection      4525 (std) 
+method          electronics_warning_non_window_history_description                 17519 
+menu            process_variables_root_menu                 1019 (std) 
+menu            group_supply_voltage_vow_history                 16874 
+variable        devSpec_loopCurrent_limit_status enumerated      17363 
+member          BURST_VAR                 collection      4714 (std,imp) 
+menu            mapped_variables_non_window                 17807 
+method          terminal_temp_exceeded_limits_375_description                 17115 
+command         write_database_mode                       16639 
+variable        battery_life_DB           unsigned        16617 
+member          blk_dd_reference          record          3221290756 
+variable        sensor1Drilled_units      enumerated      16402 
+menu            terminal_temp_device_temps_manual_setup_non_window                 17702 
+variable        analog_channel_flags      enumerated      2050 (std,imp) 
+unit            percent_range_rapid_relation                 17793 
+menu            view_broadcast_config_msg2_9_non_window_s                 17722 
+variable        batteryDrilledLS          enumerated      16455 
+variable        fast_limit                enumerated      16389 
+member          STANDARDIZED_STATUS_3_MASK collection      4653 (std) 
+menu            grp_failed_event_notification                 17643 
+member          DEVICE_SPECIFIC_STATUS_20_LATCHED_VALUE collection      4686 (std) 
+menu            update_rate_msg1                          17736 
+command         read_network_access_mode                  14054 (std,imp) 
+menu            update_rate_msg2                          17740 
+variable        advisory_event_notification_non_window_s bit-enumerated  17405 
+variable        batteryDrilled_value      float           16452 
+menu            update_rate_msg3                          17744 
+source          terminal_gauge_source                     16974 
+command         write_cps_model_string_2                  16643 
+variable        tertiary_variable_code_DB index           16711 
+menu            configure_non_window                      17192 
+command         read_non_intrusive_dynamic_data                 17202 
+variable        __analog_value            float           961 (std) 
+variable        devSpec_loopCurrentMinSpan float           17369 
+variable        compat_burst_vars_1_0     index           17279 
+menu            calibrate_sensor_short_cut_dialog                 16942 
+variable        compat_burst_vars_1_1     index           17293 
+member          TREND_VALUE_1_TREND_VALUE collection      17154 
+variable        standardized_status_2_DB  bit-enumerated  16615 
+variable        compat_burst_vars_1_2     index           17310 
+menu            service_tools_non_window                  17193 
+method          lo_lo_alarm_375_history_description                 17130 
+member          EVENT_DEBOUNCE_INTERVAL   collection      4640 (std) 
+menu            button_stuck_375                          17070 
+variable        devSpec_pcntRng_units_rapid enumerated      17389 
+menu            group_electronics_temp_exceeded_limits                 16862 
+menu            sensor1_failure_non_window                 17668 
+variable        analog_output_numbers_code enumerated      2036 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_3_LATCHED_VALUE collection      4670 (std) 
+menu            radio_failure_history                     16887 
+menu            broadcast_config_msg3_33_non_window_s                 17743 
+menu            wireless_msg_1                            16767 
+menu            wireless_msg_2                            16768 
+menu            wireless_msg_3                            16769 
+unit            sensor_1_trim_relation                    16680 
+command         read_real_time_clock                      4446 (std,imp) 
+menu            active_alerts_non_window                  17761 
+menu            group_revision_numbers                    16930 
+variable        sensor1_serial_number     unsigned        16495 
+variable        cjc_digital_units_DB      enumerated      16632 
+variable        batteryFamily             enumerated      16445 
+variable        standardized_status_1_DB  bit-enumerated  16613 
+member          DEVICE_SPECIFIC_STATUS_2_MASK collection      4644 (std) 
+member          LO_DIRECTION              collection      17456 
+variable        alert_8_name              packed-ascii    16580 
+member          SOURCE_MANUFACTURER                       4213 (std) 
+member          UPPER_TRIM_POINT          collection      4199 (std) 
+variable        device_variable_classification_codes enumerated      2043 (std,imp) 
+menu            group_join_diagnostics                    16953 
+menu            terminal_block_failure_history                 16883 
+menu            group_electronics_temperature                 16801 
+menu            broadcast_config_msg1_unknown_non_window_s                 17733 
+menu            group_tertiary_info                       16966 
+variable        configure_variable_code   index           16416 
+menu            simulation_active_non_window                 17767 
+variable        cjc_lower_sensor_limit    float           16478 
+array           trimDeviceVariables       collection      16393 
+unit            supply_gauge_relation                     17017 
+variable        standardized_status_0_DB  bit-enumerated  16612 
+method          method_configure_advanced_broadcasting                 17469 
+member          PARAM210                  parameter       3221266386 
+member          PARAM211                  parameter       3221266387 
+member          PARAM212                  parameter       3221266388 
+method          method_find_device_non_window1                 17550 
+variable        device_specific_status_2_drilled bit-enumerated  17036 
+member          PARAM213                  parameter       3221266389 
+refresh         fast_lower_limit_relation                 17022 
+member          PARAM214                  parameter       3221266390 
+method          method_setup_not_used_sensor_parameters                 17340 
+member          PARAM215                  parameter       3221266391 
+member          PARAM216                  parameter       3221266392 
+variable        analog_channel_fixed_codes enumerated      2263 (std,imp) 
+member          UPDATE_RATE_1             collection      17409 
+menu            simulation_active_375_history                 17089 
+member          PARAM217                  parameter       3221266393 
+member          UPDATE_RATE_2             collection      17410 
+member          PARAM218                  parameter       3221266394 
+member          UPDATE_RATE_3             collection      17411 
+variable        standardized_status_2_drilled bit-enumerated  17044 
+variable        batteryKneeCompensation   float           16666 
+member          PARAM219                  parameter       3221266395 
+image           Alert5Img                                 16825 
+unit            battery_relation                          16683 
+menu            electronics_warning_non_window_history                 17806 
+variable        device_specific_status_3_latched_value bit-enumerated  4737 (std,imp) 
+menu            no_active_alerts_non_window                 17765 
+member          PARAM220                  parameter       3221266396 
+method          hi_alarm_375_description                  17125 
+member          START_VOLTS               collection      16670 
+member          PARAM221                  parameter       3221266397 
+member          PARAM222                  parameter       3221266398 
+command         write_country_code                        4700 (std,imp) 
+menu            sensor_has_exceeded_limits_non_window_history                 17773 
+member          PARAM223                  parameter       3221266399 
+menu            maintenance_non_window_s                  17756 
+member          PARAM224                  parameter       3221266400 
+member          PARAM225                  parameter       3221266401 
+variable        sensor1_digital_value     float           16494 
+member          PARAM226                  parameter       3221266402 
+member          PARAM227                  parameter       3221266403 
+variable        measured_surface_limit_status enumerated      17210 
+member          PARAM228                  parameter       3221266404 
+source          terminal_limit_source                     16976 
+member          PARAM229                  parameter       3221266405 
+variable        compat_max_update_per_1   time_value      17291 
+source          ambient_gauge_source                      16980 
+variable        batteryUpdate             unsigned        16446 
+menu            broadcast_config_msg3_unknown_non_window_s                 17741 
+variable        compat_max_update_per_2   time_value      17308 
+image           Alert6Img                                 16827 
+menu            advanced_broadcasting_non_window_s                 17696 
+variable        tag                       packed-ascii    163 (std,mand,imp) 
+variable        sensor1_lower_sensor_limit float           16404 
+member          PARAM230                  parameter       3221266406 
+member          PARAM231                  parameter       3221266407 
+method          method_configure_broadcast_power_level                 16726 
+member          PARAM232                  parameter       3221266408 
+collection      event_control             variable        4757 (std,imp) 
+menu            group_button_stuck_history                 16849 
+member          PARAM233                  parameter       3221266409 
+member          TREND_VALUE_9_LIMIT_STATUS collection      4552 (std) 
+member          PARAM234                  parameter       3221266410 
+collection      __DEV                     variable        963 (std) 
+member          PARAM235                  parameter       3221266411 
+menu            group_sensor_has_exceeded_limits_history                 16868 
+member          PARAM236                  parameter       3221266412 
+menu            window_device_overview_menu                 16832 
+member          PARAM237                  parameter       3221266413 
+menu            view_broadcast_config_msg3_9_non_window_s                 17726 
+member          PARAM238                  parameter       3221266414 
+variable        analog_channel_saturated1 bit-enumerated  4157 (std,imp) 
+command         read_cvd_coeff                            17141 
+member          PARAM239                  parameter       3221266415 
+member          SENSOR_SERIAL_NUMBER      collection      199 (std) 
+variable        ambient_digital_units_DB  enumerated      16634 
+menu            advisory_alerts_non_window                 17764 
+menu            process_sensor_manual_setup_non_window                 17698 
+image           Alert7Img                                 16829 
+variable        alert_7_var_assign        enumerated      16567 
+variable        aoStatus                  bit-enumerated  16433 
+variable        loop_current_mode         enumerated      2056 (std,imp) 
+variable        software_revision         unsigned        158 (std,mand,imp) 
+member          PARAM240                  parameter       3221266416 
+member          TREND_VALUE_2_TREND_VALUE collection      17157 
+menu            group_press_process_alert_diagnostic                 16959 
+member          PARAM241                  parameter       3221266417 
+member          PARAM242                  parameter       3221266418 
+member          PARAM243                  parameter       3221266419 
+member          PARAM244                  parameter       3221266420 
+menu            grp_view_configuration_burst2_9                 17651 
+member          PARAM245                  parameter       3221266421 
+member          PARAM246                  parameter       3221266422 
+member          PARAM247                  parameter       3221266423 
+member          ALARM_CODE                collection      196 (std) 
+member          PARAM248                  parameter       3221266424 
+menu            menu_manual_sensor_limit_config                 17746 
+menu            guided_setup_window                       16775 
+member          PARAM249                  parameter       3221266425 
+menu            group_maintenance_history                 17820 
+member          SUPPLY_WARN               source          17010 
+menu            terminal_temp_exceeded_limits_375_history                 17080 
+member          SNSR_UNIT                 collection      17446 
+variable        dummy_input               enumerated      17465 
+variable        battery_digital_units_DB  enumerated      16636 
+variable        measured_stem_limit_status enumerated      17206 
+variable        sensor_accuracy_mode      enumerated      16529 
+member          HIHI_SET_PT               collection      17449 
+variable        secondary_variable_code   index           4049 (std,imp) 
+method          lo_lo_alarm_non_window_description                 17557 
+menu            lo_lo_alarm_non_window                    17680 
+method          read_config_errors                        16856 
+variable        cjc_serial_number         unsigned        16480 
+member          DIGITAL_VALUE             collection      191 (std) 
+menu            reset_restore_non_window                  17788 
+menu            grp_revision_numbers                      17627 
+method          high_power_refresh_disabling                 16400 
+command         get_latest_dynamic_values_cmd                 16531 
+command         read_unique_identifier                    174 (std,mand,imp) 
+variable        __input_percent_range     float           965 (std) 
+member          HIHI_DIRECTION            collection      17448 
+menu            Menu_Main_Maintenance                     1017 (std) 
+variable        join_shed_time            time_value      14014 (std,imp) 
+member          TREND_VALUE_0_LIMIT_STATUS collection      4516 (std) 
+write-as-one    sensor_connect_1                          16694 
+variable        batteryPDQ                enumerated      16447 
+menu            group_info_info_primary                   16962 
+variable        standardized_status_3_DB  bit-enumerated  16616 
+menu            group_percent_output_information                 16958 
+member          DEVICE_SPECIFIC_STATUS_22_MASK collection      4663 (std) 
+menu            manual_setup_power_page                   17605 
+variable        sensor1_digital_rapid_units enumerated      17338 
+menu            group_sensor1                             16931 
+member          ALERT_VAR_ASSIGN          collection      16549 
+menu            event_notification_non_window_s                 17732 
+method          sensor_has_exceeded_limits_375_history_description                 17112 
+menu            group_identification_2                    16949 
+method          std_CheckDeviceIdentificationDownload                 1015 (std) 
+chart           percent_of_range_gauge_chart_original                 16998 
+member          PARAM200                  parameter       3221266376 
+member          PARAM201                  parameter       3221266377 
+member          PARAM202                  parameter       3221266378 
+member          STX_SENT                  collection      4331 (std) 
+member          PARAM203                  parameter       3221266379 
+member          TREND_VALUE_2_LIMIT_STATUS collection      4524 (std) 
+member          PARAM204                  parameter       3221266380 
+variable        device_specific_status_3_mask bit-enumerated  4720 (std,imp) 
+member          PARAM205                  parameter       3221266381 
+menu            communication_alert_window                 17018 
+menu            group_all_variables_temperature                 16968 
+member          PARAM206                  parameter       3221266382 
+member          PARAM207                  parameter       3221266383 
+variable        sensor1DrilledLS          enumerated      16521 
+member          PARAM208                  parameter       3221266384 
+member          PARAM209                  parameter       3221266385 
+command         write_long_tag                            224 (std,imp) 
+variable        burst_trigger_units       enumerated      4711 (std,imp) 
+command         read_calibrator_mode                      17142 
+image           imgStemMeasurementStatus                  17590 
+array           compat_burst_vars         array           17187 
+member          PARAM290                  parameter       3221266466 
+command         write_message                             185 (std,mand,imp) 
+member          PARAM291                  parameter       3221266467 
+command         reset_configuration_change_flag                 4010 (std,imp) 
+method          db_memory_warning_375_description                 17119 
+menu            active_alerts_overview_375                 17053 
+member          PARAM292                  parameter       3221266468 
+array           subdevice_variables       collection      4243 (std) 
+menu            terminal_temp_exceeded_limits_non_window                 17673 
+member          PARAM293                  parameter       3221266469 
+variable        analog_channel_saturated_codes enumerated      2262 (std,imp) 
+member          PARAM294                  parameter       3221266470 
+menu            group_ambient_measurement                 16805 
+member          PARAM295                  parameter       3221266471 
+method          sensor_has_exceeded_limits_375_description                 17111 
+member          PARAM296                  parameter       3221266472 
+write-as-one    scaling_wao                               252 (std,imp) 
+member          PARAM297                  parameter       3221266473 
+menu            sensor1_failure_non_window_history                 17770 
+member          PARAM298                  parameter       3221266474 
+member          PARAM299                  parameter       3221266475 
+menu            group_operating_parameters                 16890 
+variable        aoLS                      enumerated      16432 
+method          configuration_error_375_description                 17121 
+menu            manual_setup_375                          16748 
+variable        lcd_operating_mode        enumerated      16588 
+variable        wireless_operation_mode_codes enumerated      2253 (std,imp) 
+member          TREND_VALUE_8_TREND_VALUE collection      17175 
+variable        ambientDrilledLS          enumerated      16473 
+menu            wireless_information_page                 16932 
+variable        loop_current_mode_codes   enumerated      2041 (std,imp) 
+member          TREND_VALUE_4_LIMIT_STATUS collection      4532 (std) 
+menu            group_db_memory_warning_history                 16859 
+variable        sensor_1_max_lower_trim   float           16507 
+command         dynamic_data_publishing                   16656 
+menu            hi_hi_alarm_375                           17066 
+variable        alarm_selection_code      enumerated      2027 (std,imp) 
+method          method_mac_address_non_window_s                 17543 
+variable        __sensor_units            enumerated      957 (std) 
+menu            group_nps_calculated_measurement_variables                 17614 
+method          std_CheckDeviceIdentificationUpload                 1014 (std) 
+chart           temperature_gauge_chart                   16867 
+variable        devSpec_loopCurrent_write_dev_var_code enumerated      17372 
+method          METHOD_flush_delayed_responses                 16735 
+member          SPECIAL_SENSOR_COEFF_0    collection      16513 
+menu            radio_non_window_s                        17684 
+member          SPECIAL_SENSOR_COEFF_1    collection      16515 
+member          _MNG_STATUS               record          3221290753 
+command         read_long_tag                             222 (std,imp) 
+member          SPECIAL_SENSOR_COEFF_2    collection      16517 
+member          SPECIAL_SENSOR_COEFF_3    collection      16519 
+command         write_device_variable                     4187 (std,imp) 
+menu            communications_non_window                 17755 
+menu            sensor_dev_info_manual_setup_375                 16762 
+variable        uint8_var_blk_char        unsigned        2147548932 
+unit            battery_life_relation                     17219 
+menu            device_information_page                   16947 
+variable        limit_status              enumerated      2053 (std,imp) 
+menu            radio_failure_375_history                 17075 
+command         read_device_nickname_address                 14048 (std,imp) 
+menu            device_options_page                       17626 
+menu            group_hi_alarm_history                    16854 
+member          DRILLED_VALUE             collection      16453 
+member          TREND_VALUE_6_LIMIT_STATUS collection      4540 (std) 
+member          UNIV_CMD_REV              collection      4265 (std) 
+variable        standardized_status_3_latched_value bit-enumerated  2280 (std,imp) 
+variable        write_device_variable_codes enumerated      2045 (std,imp) 
+menu            supply_voltage_low_non_window_history                 17776 
+menu            group_alerts                              16780 
+variable        total_number_burst_messages unsigned        4438 (std,imp) 
+member          DATA_QUALITY              collection      247 (std) 
+variable        sensor_1_type_local       enumerated      17795 
+menu            electronics_temp_exceeded_limits_375                 17061 
+menu            group_terminal_measurement                 16809 
+member          TIME_OF_FIRST_UNACK_EVENT collection      4637 (std) 
+variable        max_num_device_variables  unsigned        206 (std,imp) 
+image           imgSensorStatus3_drilled                  16910 
+command         read_wireless_device_capabilities                 14036 (std,imp) 
+menu            sensor1_failure_375                       17056 
+member          MINIMUM_LOWER_TRIM_POINT  collection      4196 (std) 
+menu            calibration_page                          16919 
+menu            dialog_configure_data_history_1                 17500 
+variable        ambient_digital_rapid_units enumerated      17332 
+member          PARAM250                  parameter       3221266426 
+variable        standardized_status_3_mask bit-enumerated  2272 (std,imp) 
+menu            dialog_configure_data_history_2                 17501 
+member          PARAM251                  parameter       3221266427 
+variable        join_status               bit-enumerated  14012 (std,imp) 
+command         acknowledge_event_notification                 4696 (std,imp) 
+variable        alert_6_mode              enumerated      16561 
+variable        batteryDrilledStatus      bit-enumerated  16456 
+member          PARAM252                  parameter       3221266428 
+chart           temperature_gauge_chart_drilled                 16901 
+member          PARAM253                  parameter       3221266429 
+member          TREND_VALUE_3_LIMIT_STATUS collection      4528 (std) 
+method          electronics_failure_375_description                 17099 
+variable        sensor_1_connection       enumerated      16395 
+member          PARAM254                  parameter       3221266430 
+member          TREND_VALUE_2_FAMILY_STATUS collection      17159 
+member          PARAM255                  parameter       3221266431 
+member          PARAM256                  parameter       3221266432 
+menu            revision_non_window_s                     17683 
+member          PARAM257                  parameter       3221266433 
+variable        compat_burst_vars_4_0     index           17282 
+menu            lo_lo_alarm_alert_setup_375                 16753 
+member          PARAM258                  parameter       3221266434 
+variable        devSpec_pcntRngLSL        float           17383 
+variable        compat_burst_vars_4_1     index           17296 
+axis            fast_axis                                 16534 
+member          PARAM259                  parameter       3221266435 
+variable        si_control                enumerated      4698 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_23_LATCHED_VALUE collection      4689 (std) 
+menu            sensor_1_operating_parameters_non_window                 17812 
+variable        compat_burst_vars_4_2     index           17313 
+image           imgHIHIAlarm                              16853 
+member          KNEE_VOLTS                collection      16671 
+variable        sensor1Classification     enumerated      16498 
+method          db_memory_warning_non_window_history_description                 17529 
+member          LOLO_SET_PT               collection      17461 
+variable        devSpec_loopCurrent_fl_rapid float           17374 
+menu            communications_page_RO                    16915 
+variable        alert_7_units             enumerated      16570 
+member          PARAM260                  parameter       3221266436 
+variable        lock_device_code_local    enumerated      17398 
+member          PARAM261                  parameter       3221266437 
+member          PARAM262                  parameter       3221266438 
+variable        int8_var_blk_char         integer         2147548931 
+menu            supply_voltage_failure                    16879 
+member          PARAM263                  parameter       3221266439 
+member          TREND_VALUE_8_LIMIT_STATUS collection      4548 (std) 
+variable        secondary_variable_code_DB index           16710 
+member          PARAM264                  parameter       3221266440 
+member          CHANNEL                   collection      4261 (std) 
+member          PARAM265                  parameter       3221266441 
+member          PARAM266                  parameter       3221266442 
+member          DAMPING_VALUE             collection      198 (std) 
+variable        operatingMode_drilled     enumerated      17041 
+member          PARAM267                  parameter       3221266443 
+menu            group_ao_diags                            16964 
+member          PARAM268                  parameter       3221266444 
+member          PARAM269                  parameter       3221266445 
+command         read_unique_identifier_with_tag                 179 (std,mand,imp) 
+menu            view_broadcast_config_msg2_33_non_window_s                 17723 
+variable        batteryCutoff             float           16662 
+variable        nps_pipe_schedule         enumerated      17197 
+member          PARAM270                  parameter       3221266446 
+variable        devSpec_pcntRng_damping   float           17385 
+refresh         nps_units_relation                        17225 
+member          PARAM271                  parameter       3221266447 
+member          PARAM272                  parameter       3221266448 
+member          DRILLED_DEVICE_FAMILY_STATUS collection      16429 
+member          PARAM273                  parameter       3221266449 
+member          TREND_VALUE_5_LIMIT_STATUS collection      4536 (std) 
+member          PARAM274                  parameter       3221266450 
+menu            grp_configuration_burst1                  17631 
+variable        operatingMode_h           enumerated      16602 
+member          PARAM275                  parameter       3221266451 
+menu            grp_configuration_burst2                  17635 
+chart           temperature_gauge_chart_original                 16972 
+member          PARAM276                  parameter       3221266452 
+menu            grp_configuration_burst3                  17639 
+member          PARAM277                  parameter       3221266453 
+menu            secondary_variable_non_window                 17809 
+member          PARAM278                  parameter       3221266454 
+variable        time_of_first_unack_event time_value      4802 (std,imp) 
+member          PARAM279                  parameter       3221266455 
+array           compat_trend_array        collection      17149 
+command         write_network_id                          14023 (std,imp) 
+command         read_2_wire_ohms_lead_correction                 17139 
+source          sensor_limit_source                       16971 
+member          TREND_VALUE_6_TREND_VALUE collection      17169 
+command         read_accuracy_mode                        17143 
+member          PARAM280                  parameter       3221266456 
+method          refresh_alerts                            17047 
+variable        device_specific_status_3_drilled bit-enumerated  17037 
+member          PARAM281                  parameter       3221266457 
+member          PARAM282                  parameter       3221266458 
+member          PARAM283                  parameter       3221266459 
+member          PARAM284                  parameter       3221266460 
+member          ALERT_UNITS               collection      9059 (std,imp) 
+member          ANALOG_CHANNEL_SATURATED1_LATCHED_VALUE collection      4676 (std) 
+variable        sensor_1_two_wire_offset  float           16396 
+member          PARAM285                  parameter       3221266461 
+member          PARAM286                  parameter       3221266462 
+method          method_enable_high_power_refresh                 17560 
+member          PARAM287                  parameter       3221266463 
+member          PARAM288                  parameter       3221266464 
+member          PARAM289                  parameter       3221266465 
+menu            group_measurement                         16798 
+menu            routine_maintenance_page                  17598 
+variable        battery_limit_status      enumerated      17347 
+variable        __input_transfer_function enumerated      966 (std) 
+member          PARAM110                  parameter       3221266286 
+member          PARAM111                  parameter       3221266287 
+member          PARAM112                  parameter       3221266288 
+member          PARAM113                  parameter       3221266289 
+member          PARAM114                  parameter       3221266290 
+menu            upload_variables                          1003 (std) 
+member          PARAM115                  parameter       3221266291 
+member          PARAM1                    parameter       3221266176 
+menu            group_shortcuts                           16938 
+member          PARAM116                  parameter       3221266292 
+member          PARAM2                    parameter       3221266177 
+member          TREND_VALUE_10            collection      4554 (std) 
+member          PARAM117                  parameter       3221266293 
+member          PARAM3                    parameter       3221266178 
+member          TREND_VALUE_11            collection      4558 (std) 
+collection      renamer                   variable        17408 
+menu            group_ambient_temperature_setup                 16803 
+command         read_battery_info                         16677 
+member          PARAM118                  parameter       3221266294 
+member          PARAM4                    parameter       3221266179 
+command         read_cps_model_string_2                   16642 
+member          PARAM119                  parameter       3221266295 
+member          PARAM5                    parameter       3221266180 
+method          simulation_active_non_window_description                 17534 
+member          PARAM6                    parameter       3221266181 
+member          PERCENT_VALUE_GAUGE       chart           16997 
+member          PARAM7                    parameter       3221266182 
+member          PARAM8                    parameter       3221266183 
+member          DEVICE_SPECIFIC_STATUS_3_MASK collection      4645 (std) 
+menu            data_history_non_window_s_1                 17758 
+menu            group_identification                      16811 
+menu            percent_of_range_manual_setup_375                 16756 
+member          PARAM9                    parameter       3221266184 
+variable        device_nickname_address   unsigned        14047 (std,imp) 
+menu            data_history_non_window_s_2                 17759 
+member          PARAM120                  parameter       3221266296 
+member          PARAM121                  parameter       3221266297 
+method          electronics_temp_exceeded_limits_non_window_history_description                 17523 
+member          PARAM122                  parameter       3221266298 
+member          PARAM123                  parameter       3221266299 
+variable        sensor1DampingValue       float           16497 
+member          PARAM124                  parameter       3221266300 
+member          PARAM125                  parameter       3221266301 
+member          PARAM126                  parameter       3221266302 
+variable        battery_voltage_write_dev_var_code enumerated      17328 
+member          PARAM127                  parameter       3221266303 
+member          PARAM128                  parameter       3221266304 
+axis            process_calculated_temp_axis                 17798 
+member          PARAM129                  parameter       3221266305 
+menu            group_simulate_device_variables_all                 17601 
+unit            burst_trigger0_units_relation                 17226 
+member          RAPID_DIGITAL_UNITS       collection      17146 
+menu            security_page                             17625 
+variable        real_time_clock_flag_codes enumerated      2251 (std,imp) 
+variable        device_specific_status_2_latched_value bit-enumerated  4736 (std,imp) 
+variable        cjcDampingValue           float           16481 
+unit            fast_relation                             16533 
+member          PARAM130                  parameter       3221266306 
+menu            group_digital_p_output                    16955 
+member          PARAM131                  parameter       3221266307 
+member          PARAM132                  parameter       3221266308 
+member          PARAM133                  parameter       3221266309 
+array           deviceVariables_DB        collection      16704 
+member          PARAM134                  parameter       3221266310 
+variable        units_code                enumerated      2025 (std,imp) 
+menu            upload_from_device_root_menu                 1024 (std) 
+unit            ambient_rapid_relation                    17791 
+member          PARAM135                  parameter       3221266311 
+member          PARAM136                  parameter       3221266312 
+member          PARAM137                  parameter       3221266313 
+member          PARAM138                  parameter       3221266314 
+menu            group_lo_lo_alarm_config                  16830 
+member          PARAM139                  parameter       3221266315 
+variable        cjc_digital_value         float           16476 
+variable        sensor1_digital_units_DB  enumerated      16630 
+command         write_radio_power_output                  14050 (std,imp) 
+variable        nps_line_size             enumerated      17196 
+variable        sensor_1_min_lower_trim   float           16506 
+member          PARAM140                  parameter       3221266316 
+variable        calibrator_mode           enumerated      16397 
+member          PARAM141                  parameter       3221266317 
+member          PARAM142                  parameter       3221266318 
+member          PARAM143                  parameter       3221266319 
+member          PARAM144                  parameter       3221266320 
+menu            grp_view_configuration_burst1_9                 17647 
+member          PARAM145                  parameter       3221266321 
+member          PARAM146                  parameter       3221266322 
+member          PARAM147                  parameter       3221266323 
+member          PARAM148                  parameter       3221266324 
+member          PARAM149                  parameter       3221266325 
+variable        analog_channel_saturated1_DB bit-enumerated  16614 
+variable        batteryMinSpan            float           17353 
+command         read_wireless_module_revision                 14060 (std,imp) 
+menu            lo_alarm_375                              17068 
+menu            menu_non_instrusive_process_setup                 17747 
+menu            model_number_device_info                  17687 
+menu            group_secondary_info                      16965 
+menu            group_display                             16779 
+variable        fl_batteryLife_rapid_value float           17359 
+menu            other_375                                 16743 
+variable        aoClassification          enumerated      16430 
+member          UPDATE_TIME_PERIOD        collection      4701 (std,imp) 
+command         write_polling_address                     178 (std,mand,imp) 
+collection      compat_burst_msg_0        variable        17321 
+collection      compat_burst_msg_1        variable        17322 
+collection      compat_burst_msg_2        variable        17323 
+menu            device_alerts_active_page                 16833 
+collection      devSpec_percentRange      variable        17325 
+variable        logging_database_mode     enumerated      16590 
+variable        event_debounce_interval_event time_value      4805 (std,imp) 
+method          method_advertise_to_new_devices                 16716 
+member          KNEE_COMPENSATION         collection      16676 
+menu            group_identification_man                  17618 
+method          electronics_temp_exceeded_limits_non_window_description                 17522 
+menu            lo_alarm_375_history                      17086 
+variable        trend_value_0_10          float           17269 
+menu            advisory_alerts_375                       17051 
+member          DEVICE_FAMILY_STATUS      collection      249 (std) 
+menu            group_non_intrusive_process_setup                 17611 
+variable        trend_value_0_11          float           17273 
+method          button_stuck_375_description                 17131 
+method          supply_voltage_low_375_description                 17117 
+image           imgFastUpdates                            16911 
+axis            sensor_axis                               17000 
+variable        join_mode                 enumerated      14019 (std,imp) 
+menu            supply_volt_operating_parameters_non_window                 17815 
+method          method_configure_device_display_non_window_s                 17818 
+variable        battery_lower_sensor_limit float           16440 
+command         read_join_mode_configuration                 14021 (std,imp) 
+variable        search_type               enumerated      16619 
+method          AM_read_active_calibrator_mode                 16410 
+variable        sensor_write_dev_var_code enumerated      17337 
+menu            group_press_temp_diagnostics_alerts                 16956 
+menu            sensor_calibration_no_offset_non_window                 17787 
+variable        devSpec_pcntRngUSL        float           17382 
+menu            group_model_numbers                       16951 
+variable        batteryStatus             bit-enumerated  16449 
+unit            __input_units_relation                    976 (std) 
+member          LOWER_TRIM_POINT          collection      4198 (std) 
+image           img_burst_message_1_trigger_mode                 17584 
+edit-display    __key_pad_rerange                         954 (std) 
+method          power_mode_warning                        17817 
+variable        __sensor_serial_number    unsigned        955 (std) 
+image           img_status_bottom                         16918 
+collection      event_report              variable        4761 (std,imp) 
+menu            button_stuck_non_window_history                 17783 
+variable        alert_6_direction         enumerated      16562 
+member          blk_dd_revision           record          3221290757 
+member          PARAM100                  parameter       3221266276 
+member          PARAM101                  parameter       3221266277 
+axis            supply_axis                               17007 
+member          PARAM102                  parameter       3221266278 
+member          MANUFID                   collection      4262 (std) 
+member          PARAM103                  parameter       3221266279 
+unit            burst_trigger1_units_relation                 17227 
+member          PARAM104                  parameter       3221266280 
+member          PARAM105                  parameter       3221266281 
+variable        network_access_mode_codes enumerated      2256 (std,imp) 
+member          PARAM106                  parameter       3221266282 
+image           img_burst_message_2_trigger_mode                 17585 
+variable        devSpec_pcntRngMinSpan    float           17384 
+member          PARAM107                  parameter       3221266283 
+member          PARAM108                  parameter       3221266284 
+member          PARAM109                  parameter       3221266285 
+menu            group_status                              16936 
+menu            manual_setup_window                       16781 
+member          MAX_UPDATE_TIME           collection      4639 (std) 
+variable        battery_digital_rapid_units enumerated      17329 
+member          DEVICE_SPECIFIC_STATUS_17_MASK collection      4658 (std) 
+member          PARAM190                  parameter       3221266366 
+menu            group_wireless_network                    16789 
+member          PARAM191                  parameter       3221266367 
+variable        event_notification_control_n enumerated      2266 (std,imp) 
+method          radio_failure_non_window_description                 17514 
+member          PARAM192                  parameter       3221266368 
+member          PARAM193                  parameter       3221266369 
+member          PARAM194                  parameter       3221266370 
+variable        dummy_variable            unsigned        251 (std,imp) 
+member          BATT_RESERVED             collection      16673 
+member          PARAM195                  parameter       3221266371 
+array           burst_event_array         collection      4575 (std) 
+unit            burst_trigger2_units_relation                 17228 
+method          dd_version_displayng                      17029 
+member          PARAM196                  parameter       3221266372 
+member          PARAM197                  parameter       3221266373 
+member          PARAM198                  parameter       3221266374 
+variable        primary_variable_code     index           4048 (std,imp) 
+menu            lo_alarm_non_window                       17679 
+member          PARAM199                  parameter       3221266375 
+menu            group_operating_parameters_no_sensor_no_term_temp                 16894 
+command         read_device_options                       17200 
+menu            group_lo_lo_alarm_history                 16851 
+variable        status_history_clear_option enumerated      16592 
+variable        device_status_DB          bit-enumerated  16623 
+member          STANDARDIZED_STATUS_0_MASK collection      4649 (std) 
+image           imgSensorFailure_non_window                 17575 
+member          LOLO_DIRECTION            collection      17460 
+menu            group_burst_command_group                 16952 
+member          QUALITY_STATUS            collection      4774 (std,imp) 
+variable        ambientClassification     enumerated      16464 
+variable        dummy_variable_float      float           17391 
+command         write_accuracy_mode                       16653 
+record          hart_blk_char                             2147548929 
+member          HI_DIRECTION              collection      17452 
+menu            group_failed_sensor                       16961 
+variable        percentRange              float           233 (std,imp) 
+refresh         burst_variables0                          17229 
+method          electronics_failure_375_history_description                 17100 
+refresh         burst_variables1                          17230 
+refresh         burst_variables2                          17231 
+member          SOURCE_COMMAND_NUMBER                     4216 (std) 
+method          terminal_block_failure_non_window_description                 17510 
+variable        dd_revision               ascii           17407 
+method          supply_voltage_low_375_history_description                 17118 
+variable        device_variable_trim_code index           4223 (std,imp) 
+method          hi_alarm_non_window_history_description                 17554 
+image           imgSensorStatus2_drilled                  16902 
+member          ALERT_DIRECTION           collection      16552 
+variable        alert_5_name              packed-ascii    16558 
+command         read_radio_output_power                   14051 (std,imp) 
+menu            Menu_Main_Specialist                      1012 (std) 
+menu            manual_setup_wireless_page                 16782 
+variable        ambient_serial_number     unsigned        16462 
+image           imgButtonStuck                            16848 
+image           imgTerminalBlockFailure                   16882 
+member          TREND_VALUE_9_FAMILY_STATUS collection      17180 
+variable        standardized_status_0_latched_value bit-enumerated  2277 (std,imp) 
+menu            radio_failure                             16878 
+variable        power_source              enumerated      14028 (std,imp) 
+menu            hi_alarm_non_window                       17678 
+method          method_device_status_non_window_s                 17506 
+variable        wireless_module_transmitter_revision unsigned        14055 (std,imp) 
+menu            electronics_warning_375                   17059 
+menu            group_fixed_process_variables                 16934 
+member          PARAM150                  parameter       3221266326 
+collection      analog_io                 variable        240 (std,imp) 
+member          PARAM151                  parameter       3221266327 
+menu            group_terminal_temp_exceeded_limits_history                 16872 
+member          PARAM152                  parameter       3221266328 
+menu            configure_update_rate_method_menu                 17136 
+variable        extended_fld_device_status_h bit-enumerated  16601 
+member          PARAM153                  parameter       3221266329 
+method          configuration_error_375_history_description                 17122 
+member          PARAM154                  parameter       3221266330 
+member          ANALOG_CHANNEL_FIXED1_MASK collection      4654 (std) 
+member          TREND_VALUE_1_FAMILY_STATUS collection      17156 
+member          PARAM155                  parameter       3221266331 
+command         report_device_health                      14046 (std,imp) 
+variable        peak_packets_per_second   float           14029 (std,imp) 
+member          PARAM156                  parameter       3221266332 
+image           imgDeviceStatus                           16939 
+member          PARAM157                  parameter       3221266333 
+variable        compat_burst_vars_3_0     index           17281 
+member          PARAM158                  parameter       3221266334 
+variable        compat_burst_vars_3_1     index           17295 
+member          PARAM159                  parameter       3221266335 
+member          DEVICE_SPECIFIC_STATUS_22_LATCHED_VALUE collection      4688 (std) 
+variable        compat_burst_vars_3_2     index           17312 
+variable        radio_power_output        integer         14049 (std,imp) 
+variable        devSpec_loopCurrent_fl    float           17360 
+variable        extended_fld_device_status_latched_value bit-enumerated  2276 (std,imp) 
+member          PARAM160                  parameter       3221266336 
+member          PARAM161                  parameter       3221266337 
+member          PARAM162                  parameter       3221266338 
+menu            device_alerts_active_page_NO_ALERTS                 16834 
+member          PARAM163                  parameter       3221266339 
+member          DEVICE_SPECIFIC_STATUS_1_LATCHED_VALUE collection      4668 (std) 
+variable        devSpec_loopCurrent_damping float           17370 
+member          TREND_VALUE_9_TREND_VALUE collection      17178 
+variable        nim_state_DB              enumerated      16610 
+member          PARAM164                  parameter       3221266340 
+menu            group_hi_alarm_config                     16826 
+member          PARAM165                  parameter       3221266341 
+method          method_abort_find_device                  17546 
+member          PARAM166                  parameter       3221266342 
+member          PARAM167                  parameter       3221266343 
+member          PARAM168                  parameter       3221266344 
+variable        analog_channel_fixed1_mask bit-enumerated  2274 (std,imp) 
+member          PARAM169                  parameter       3221266345 
+variable        simulate_sensor1_digital_value float           17221 
+menu            configure_update_rate_menu                 16766 
+method          upper_sensor_trim_TBD                     16702 
+menu            group_operating_parameters_no_sensor_no_term_temp_drilled                 16895 
+member          TRIG_MODE_1               collection      17415 
+member          TRIG_MODE_2               collection      17416 
+member          SENSOR_TYPE               collection      16504 
+member          TRIG_MODE_3               collection      17417 
+variable        status_3_10               enumerated      16698 
+variable        status_3_11               enumerated      16699 
+command         write_transmitter_info                    16658 
+member          PARAM170                  parameter       3221266346 
+member          PARAM171                  parameter       3221266347 
+member          TREND_VALUE_11_LIMIT_STATUS collection      4560 (std) 
+menu            grp_view_trigger_variable_msg1                 17649 
+member          PARAM172                  parameter       3221266348 
+menu            grp_view_trigger_variable_msg2                 17653 
+member          PARAM173                  parameter       3221266349 
+menu            grp_view_trigger_variable_msg3                 17657 
+member          PARAM174                  parameter       3221266350 
+member          PARAM175                  parameter       3221266351 
+method          transmitter_sensor_matching                 16733 
+member          PARAM176                  parameter       3221266352 
+member          ANALOG_CHANNEL                            212 (std) 
+member          PARAM177                  parameter       3221266353 
+member          PARAM178                  parameter       3221266354 
+method          device_self_test                          4209 (std,imp) 
+member          LOLO_DEAD_BAND            collection      17462 
+member          PARAM179                  parameter       3221266355 
+variable        sensor_1_max_upper_trim   float           16509 
+menu            alert_setup_375                           16749 
+variable        __sensor_damping_value    float           964 (std) 
+menu            active_alerts_overview_non_window                 17766 
+menu            terminal_block_failure_375_history                 17073 
+command         write_pv_units                            4017 (std,imp) 
+member          LOWER_SENSOR_LIMIT        collection      202 (std) 
+menu            lo_lo_alarm_page                          16823 
+member          PARAM180                  parameter       3221266356 
+member          MAX_UPDATE_PERIOD         collection      4384 (std) 
+member          PARAM181                  parameter       3221266357 
+command         read_device_variable_assignments                 4178 (std,imp) 
+member          PARAM182                  parameter       3221266358 
+member          DEVICE_STATUS                             216 (std) 
+variable        nps_line_size_local       enumerated      17342 
+variable        time_status               enumerated      16622 
+member          PARAM183                  parameter       3221266359 
+member          PARAM184                  parameter       3221266360 
+member          PARAM185                  parameter       3221266361 
+member          PARAM186                  parameter       3221266362 
+member          SENSOR_UPPER_TRIM                         6007 (std) 
+command         write_burst_device_variables                 4188 (std,imp) 
+member          PARAM187                  parameter       3221266363 
+member          PARAM188                  parameter       3221266364 
+member          PARAM189                  parameter       3221266365 
+variable        devSpec_loopCurrent_update_period time_value      17371 
+variable        device_specific_status_0_drilled bit-enumerated  17034 
+unit            cjc_temp_relation                         16681 
+member          DEVICE_FAMILY             collection      253 (std) 
+menu            group_information                         16818 
+member          PARAM410                  parameter       3221266586 
+member          LO_SET_PT                 collection      17457 
+member          PARAM411                  parameter       3221266587 
+member          UPPER_RANGE_VALUE         collection      204 (std) 
+member          PARAM412                  parameter       3221266588 
+member          PARAM413                  parameter       3221266589 
+image           img_find_device                           17583 
+command         read_all_sensor_configuration_info                 16652 
+member          PARAM414                  parameter       3221266590 
+menu            radio_page                                17624 
+member          PARAM415                  parameter       3221266591 
+menu            supply_voltage_failure_non_window_history                 17772 
+menu            group_fast_updates                        16900 
+member          PARAM416                  parameter       3221266592 
+image           img_burst_message_3_trigger_mode                 17586 
+method          hi_hi_alarm_375_description                 17123 
+member          PARAM417                  parameter       3221266593 
+menu            radio_failure_375                         17057 
+member          PARAM418                  parameter       3221266594 
+image           imgLOLOAlarm_non_window                   17580 
+member          PARAM419                  parameter       3221266595 
+menu            group_measurement_and_status_log                 16926 
+variable        device_specific_status_5_latched_value bit-enumerated  4739 (std,imp) 
+variable        burst_mode_select         enumerated      4095 (std,imp) 
+method          post_send_configuration_method                 1008 (std) 
+menu            hot_key                                   1001 (std) 
+menu            configure_message3_non_window_s                 17731 
+variable        a_to_d_conversion_info    enumerated      16528 
+collection      battery_voltage           variable        16436 
+menu            broadcast_config_msg2_33_non_window_s                 17739 
+variable        fl_batteryLife            float           17344 
+variable        compat_burst_trig_mode_1  enumerated      17290 
+member          PARAM420                  parameter       3221266596 
+variable        compat_burst_trig_mode_2  enumerated      17307 
+menu            manual_setup_process_sensor_page                 16783 
+source          fast_gauge_source                         16536 
+variable        ambient_upper_sensor_limit float           16459 
+member          PARAM421                  parameter       3221266597 
+member          PARAM422                  parameter       3221266598 
+member          SUB_DEVICE_MAPPING        collection      4801 (std,imp) 
+command         write_event_notification_timing                 4694 (std,imp) 
+menu            db_memory_warning_non_window_history                 17777 
+member          PARAM423                  parameter       3221266599 
+variable        alert_8_units             enumerated      16577 
+member          PARAM424                  parameter       3221266600 
+menu            group_terminal_temp_exceeded_limits                 16863 
+member          PARAM425                  parameter       3221266601 
+menu            configuration_error_non_window                 17676 
+member          PARAM426                  parameter       3221266602 
+member          TEMP_SOURCE               source          17005 
+member          PARAM427                  parameter       3221266603 
+member          PARAM428                  parameter       3221266604 
+variable        battery_data_quality      enumerated      17346 
+member          PARAM429                  parameter       3221266605 
+command         read_battery_life                         14038 (std,imp) 
+variable        burst_trigger_classification enumerated      4710 (std,imp) 
+variable        device_variable_family_codes enumerated      2049 (std,imp) 
+method          sensor1_failure_375_history_description                 17104 
+menu            security_overview_non_window_s                 17685 
+member          CUTOFF_VOLTS              collection      16672 
+variable        rc_cmd_number_48          unsigned        16655 
+member          DRILLED_UNITS             collection      16451 
+variable        config_change_counter_latched_value unsigned        4751 (std,imp) 
+image           imgElectronicsFailure                     16880 
+member          PARAM430                  parameter       3221266606 
+member          BURST_TRIGGER_MODE        collection      4394 (std) 
+method          method_configure_process_alarms                 16713 
+variable        cjcStatus                 bit-enumerated  16486 
+member          PARAM431                  parameter       3221266607 
+member          TRANSFER_FUNCTION         collection      197 (std) 
+variable        extended_fld_device_status bit-enumerated  2055 (std,imp) 
+member          PARAM432                  parameter       3221266608 
+variable        sensor1_digital_rapid_value float           17339 
+member          PARAM433                  parameter       3221266609 
+member          PARAM434                  parameter       3221266610 
+method          lo_alarm_375_description                  17127 
+member          PARAM435                  parameter       3221266611 
+variable        sensor1Update             unsigned        16500 
+member          PARAM436                  parameter       3221266612 
+menu            terminal_temp_device_temps_manual_setup_375                 16765 
+member          PARAM437                  parameter       3221266613 
+variable        max_neighbors             unsigned        14034 (std,imp) 
+menu            failed_alerts_375                         17049 
+member          PARAM438                  parameter       3221266614 
+member          PARAM439                  parameter       3221266615 
+menu            configure_message1_non_window_s                 17729 
+unit            alert7_relation                           16687 
+menu            group_sensor_has_exceeded_limits                 16861 
+variable        __new_digital_units       enumerated      970 (std) 
+variable        batteryKnee               float           16661 
+member          PARAM440                  parameter       3221266616 
+variable        standardized_status_2_mask bit-enumerated  2271 (std,imp) 
+member          PARAM441                  parameter       3221266617 
+member          TREND_VALUE_10_LIMIT_STATUS collection      4556 (std) 
+method          configure_fixed_temperature                 16724 
+member          PARAM442                  parameter       3221266618 
+variable        device_status             bit-enumerated  151 (std,mand,imp) 
+member          PARAM443                  parameter       3221266619 
+member          blk_index_dis             record          3221290762 
+method          configuration_error_non_window_history_description                 17531 
+variable        devSpec_loopCurrentUSL    float           17367 
+member          PARAM444                  parameter       3221266620 
+block           _MNG_HART_BLOCK                           2147548928 
+unit            terminal_rapid_relation                   17790 
+member          PARAM445                  parameter       3221266621 
+member          BURST_CLASSIFICATION      collection      4395 (std) 
+menu            lo_alarm_alert_setup_hh                   17694 
+member          MSG1_6var                 collection      17426 
+member          PARAM446                  parameter       3221266622 
+collection      event_mask                variable        4759 (std,imp) 
+menu            group_secondary_variable                  17802 
+member          PARAM447                  parameter       3221266623 
+array           alerts                    collection      16543 
+member          PARAM448                  parameter       3221266624 
+member          PARAM449                  parameter       3221266625 
+source          sensor_gauge_source_drilled                 16973 
+menu            alert_setup_hh                            17691 
+menu            communications_375                        16738 
+collection      compat_trend_0            variable        17277 
+variable        non_intrusive_units       enumerated      17203 
+menu            communications_join_status_group                 16913 
+variable        advertisements            unsigned        14006 (std,imp) 
+variable        alert_8_var_assign        enumerated      16574 
+method          electronics_temp_exceeded_limits_375_description                 17113 
+member          ANALOG_UNITS                              4070 (std) 
+menu            group_failed_fix_now_history                 17819 
+variable        device_variable_code      index           4167 (std,imp) 
+member          MSG1_5var                 collection      17425 
+method          sensor1_failure_non_window_description                 17512 
+menu            lo_lo_alarm_alert_setup_hh                 17695 
+variable        minimum_span              float           16496 
+variable        real_time_clock_flag      bit-enumerated  4444 (std,imp) 
+member          DEVICE_VARIABLE           collection      211 (std) 
+menu            view_update_rate_msg1                     17720 
+menu            group_sensor_limits                       16797 
+menu            view_update_rate_msg2                     17724 
+variable        device_power_status_codes enumerated      2260 (std,imp) 
+menu            view_update_rate_msg3                     17728 
+variable        sensor1_digital_units     enumerated      16493 
+menu            group_broadcast_information_none                 17032 
+menu            device_display_manual_setup_non_window                 17699 
+menu            electronics_temp_exceeded_limits_non_window                 17672 
+variable        ambientUpdate             unsigned        16469 
+member          STANDARDIZED_STATUS_1_LATCHED_VALUE collection      4675 (std) 
+array           factory_protection_array  variable        1006 (std) 
+menu            group_radio_upgrade                       17620 
+member          MSG1_8var                 collection      17428 
+chart           supply_voltage_gauge_chart_drilled                 16905 
+menu            routine_maintenance                       16739 
+menu            operating_parameters_page                 16889 
+variable        uint32_var_blk_char       unsigned        2147548934 
+unit            alert6_relation                           16686 
+method          supply_voltage_low_non_window_description                 17526 
+method          METHOD_read_measurement_DB_375                 16700 
+command         read_message                              180 (std,mand,imp) 
+menu            view_broadcast_config_msg3_unknown_non_window_s                 17725 
+variable        sensor1PDQ                enumerated      16501 
+command         read_radio_upgrade_lock                   17216 
+menu            grp_trigger_variable_msg1                 17634 
+menu            communications_window                     16772 
+variable        ambientDrilled_units      enumerated      16470 
+command         read_device_variables_and_status                 221 (std,imp) 
+menu            grp_trigger_variable_msg2                 17638 
+member          MSG1_7var                 collection      17427 
+array           IO_card_channel           array           4356 (std) 
+menu            grp_trigger_variable_msg3                 17642 
+variable        devSpec_pcntRng_units     enumerated      17376 
+variable        batteryStartCurrent       float           16664 
+variable        __input_lower_value       float           969 (std) 
+image           img_no_active_alert                       17572 
+method          METHOD_advanced_burst_setup                 17467 
+image           imgSupplyVoltageFailure_375                 17093 
+chart           percent_of_range_gauge_chart                 16898 
+member          ALERT_DB                  collection      16557 
+menu            overview_burst_unknown_non_window_s                 17191 
+menu            group_sensor1_failure_history                 16885 
+refresh         sensor_1_connection_relation                 16693 
+member          PARAM400                  parameter       3221266576 
+variable        __input_units             enumerated      967 (std) 
+variable        quaternary_variable_code_DB index           16712 
+variable        lcd_display_items         bit-enumerated  16589 
+member          PARAM401                  parameter       3221266577 
+member          DEVICE_SPECIFIC_STATUS_23_MASK collection      4664 (std) 
+member          PARAM402                  parameter       3221266578 
+member          PARAM403                  parameter       3221266579 
+member          PARAM404                  parameter       3221266580 
+member          PARAM405                  parameter       3221266581 
+menu            operating_parameters_window                 16771 
+member          PARAM406                  parameter       3221266582 
+member          PARAM407                  parameter       3221266583 
+variable        percent_upper_limit       integer         17463 
+member          PARAM408                  parameter       3221266584 
+variable        wireless_module_software_revision unsigned        14056 (std,imp) 
+member          DUMMY                                     246 (std) 
+variable        ambient_digital_value     float           16458 
+member          PARAM409                  parameter       3221266585 
+variable        response_code             enumerated      150 (std,mand,imp) 
+menu            fms_menu                                  2147548944 
+menu            group_power_filter                        16816 
+variable        flag_assignment           enumerated      2034 (std,imp) 
+variable        rc_cmd_number_9           unsigned        16654 
+member          MSG1_2var                 collection      17422 
+menu            group_hi_hi_alarm                         16841 
+member          PARAM490                  parameter       3221266666 
+member          PARAM491                  parameter       3221266667 
+member          PARAM492                  parameter       3221266668 
+variable        cjcUpdate                 unsigned        16487 
+member          PARAM493                  parameter       3221266669 
+member          PARAM494                  parameter       3221266670 
+variable        __sensor_value            float           956 (std) 
+variable        sensor_1_min_upper_trim   float           16508 
+member          PARAM495                  parameter       3221266671 
+member          PARAM496                  parameter       3221266672 
+variable        device_specific_status_4_mask bit-enumerated  4721 (std,imp) 
+unit            alert8_relation                           16688 
+variable        sensor1Family             enumerated      16499 
+member          PARAM497                  parameter       3221266673 
+member          PARAM498                  parameter       3221266674 
+member          PARAM499                  parameter       3221266675 
+menu            supply_voltage_low_375                    17063 
+variable        alert_7_direction         enumerated      16569 
+variable        trigger_level             float           4712 (std,imp) 
+variable        battery_update_period     time_value      17355 
+member          MSG1_1var                 collection      17421 
+variable        devSpec_pcntRng_serialNum unsigned        17388 
+menu            dev_info_manual_setup_non_window                 17703 
+method          return_to_normal_and_original_output_ambientt                 16720 
+variable        ambientDrilledStatus      bit-enumerated  16474 
+collection      battery_voltage_DB        variable        16708 
+unit            alert5_relation                           16685 
+variable        join_attempts             unsigned        14007 (std,imp) 
+member          SENSOR_UNITS                              200 (std) 
+variable        battery_serial_number     unsigned        16442 
+menu            configure_message2_non_window_s                 17730 
+variable        master_mode_code          enumerated      2261 (std,imp) 
+member          CONFIG_CHANGE_COUNTER_LATCHED_VALUE collection      4691 (std) 
+image           imgSensorStatus0                          16897 
+image           imgSensorStatus1                          16806 
+variable        cjc_upper_sensor_limit    float           16477 
+image           imgSensorStatus2                          16800 
+member          MSG1_4var                 collection      17424 
+image           imgSensorStatus3                          16810 
+image           imgSensorStatus4                          16899 
+image           imgElectronicsFailure_non_window                 17573 
+variable        hart_functions            bit-enumerated  1005 (std) 
+member          LONG_TAG                  collection      4266 (std) 
+menu            group_primary_variable                    17800 
+method          method_configure_sensor                   16696 
+menu            find_device_window_1                      17549 
+menu            device_display_options_1                  17750 
+menu            find_device_window_2                      17661 
+command         write_a_to_d_conversion_info                 16647 
+menu            find_device_window_3                      17548 
+source          supply_good_source                        16992 
+variable        polling_address           unsigned        162 (std,mand,imp) 
+menu            group_master_reset                        16925 
+member          MSG1_3var                 collection      17423 
+command         read_transmitter_info                     5150 (std,imp) 
+collection      tertiary_variable         collection      244 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_15_LATCHED_VALUE collection      4681 (std) 
+member          TREND_VALUE_0_TREND_VALUE collection      17151 
+variable        sensor_1_special_delta    float           16526 
+collection      __pv                      variable        974 (std) 
+variable        data_history_local        enumerated      17397 
+member          TREND_VALUE_8_FAMILY_STATUS collection      17177 
+variable        standardized_status_1_latched_value bit-enumerated  2278 (std,imp) 
+image           img_no_active_alerts                      17144 
+variable        device_specific_status_0_h bit-enumerated  16595 
+menu            ambient_operating_parameters_non_window                 17814 
+command         read_tag_descriptor_date                  181 (std,mand,imp) 
+member          PARAM450                  parameter       3221266626 
+member          PARAM451                  parameter       3221266627 
+member          PARAM452                  parameter       3221266628 
+member          PARAM453                  parameter       3221266629 
+member          CALC_MEAS                 chart           17566 
+member          PARAM454                  parameter       3221266630 
+member          TREND_VALUE_0_FAMILY_STATUS collection      17153 
+member          PARAM455                  parameter       3221266631 
+member          PARAM456                  parameter       3221266632 
+member          RANGING                   collection      214 (std) 
+member          PARAM457                  parameter       3221266633 
+menu            group_quarternary_variable                 17803 
+variable        variable_mac_add          ascii           17406 
+variable        compat_burst_vars_6_0     index           17284 
+member          PARAM458                  parameter       3221266634 
+variable        compat_burst_vars_6_1     index           17298 
+member          PARAM459                  parameter       3221266635 
+variable        battery_digital_rapid_value float           17330 
+variable        compat_burst_vars_6_2     index           17315 
+command         write_device_variable_units                 4182 (std,imp) 
+source          percent_of_range_source                   16996 
+menu            db_memory_warning_375_history                 17082 
+member          PARAM460                  parameter       3221266636 
+member          PARAM461                  parameter       3221266637 
+member          DEV_ID                    collection      4264 (std) 
+menu            view_broadcast_config_msg1_unknown_non_window_s                 17717 
+member          PARAM462                  parameter       3221266638 
+member          PARAM463                  parameter       3221266639 
+variable        fl_batteryLife_rapid_units enumerated      17358 
+variable        alert_7_mode              enumerated      16568 
+member          PARAM464                  parameter       3221266640 
+member          PARAM465                  parameter       3221266641 
+variable        __input_upper_value       float           968 (std) 
+member          PARAM466                  parameter       3221266642 
+variable        devSpec_loopCurrent_classification enumerated      17365 
+source          supply_gauge_source_drilled                 16995 
+member          PARAM467                  parameter       3221266643 
+menu            lo_alarm_alert_setup_375                  16752 
+member          PARAM468                  parameter       3221266644 
+variable        measured_stem_family_status enumerated      17207 
+member          PARAM469                  parameter       3221266645 
+member          ALERT_NAME                collection      16559 
+command         read_additional_device_status                 4163 (std,imp) 
+command         write_model_string                        16645 
+member          DEVICE_SPECIFIC_STATUS_4_LATCHED_VALUE collection      4671 (std) 
+menu            operating_parameters_2_non_window                 17753 
+member          PARAM470                  parameter       3221266646 
+variable        burst_variable_code       index           4707 (std,imp) 
+menu            Table_Main_Maintenance                    1011 (std) 
+member          PARAM471                  parameter       3221266647 
+member          PARAM472                  parameter       3221266648 
+member          PARAM473                  parameter       3221266649 
+member          PARAM474                  parameter       3221266650 
+menu            sensor_has_exceeded_limits_375                 17060 
+member          PARAM475                  parameter       3221266651 
+member          PARAM476                  parameter       3221266652 
+member          SUPPLY_GOOD_SOURCE        chart           16993 
+member          PARAM477                  parameter       3221266653 
+member          PARAM478                  parameter       3221266654 
+member          PARAM479                  parameter       3221266655 
+menu            group_electronics_failure                 16875 
+variable        last_clock_date           date            4442 (std,imp) 
+member          MAXIMUM_UPPER_TRIM_POINT  collection      4201 (std) 
+member          PARAM480                  parameter       3221266656 
+member          PARAM481                  parameter       3221266657 
+member          PARAM482                  parameter       3221266658 
+member          PARAM483                  parameter       3221266659 
+menu            manual_setup_HART_page                    17604 
+method          lo_alarm_non_window_history_description                 17556 
+member          PARAM484                  parameter       3221266660 
+member          PARAM485                  parameter       3221266661 
+refresh         __x1                                      972 (std) 
+member          PARAM486                  parameter       3221266662 
+refresh         __x2                                      973 (std) 
+member          PARAM487                  parameter       3221266663 
+menu            device_display_options                    17749 
+variable        ambient_digital_value_DB  float           16635 
+variable        alert_number              index           16581 
+member          PARAM488                  parameter       3221266664 
+member          PARAM489                  parameter       3221266665 
+variable        device_specific_status_1_drilled bit-enumerated  17035 
+menu            group_power_module                        17031 
+method          sensor_has_exceeded_limits_non_window_history_description                 17521 
+axis            percent_of_range_axis                     17012 
+menu            sensor1_failure_375_history                 17074 
+variable        terminated_packets        unsigned        14040 (std,imp) 
+member          BURST_VAR_0               collection      4386 (std) 
+command         write_radio_upgrade_lock                  17218 
+member          BURST_VAR_1               collection      4387 (std) 
+member          BURST_VAR_2               collection      4388 (std) 
+member          BURST_VAR_3               collection      4389 (std) 
+member          ACK_RECEIVED              collection      4332 (std) 
+member          PARAM310                  parameter       3221266486 
+member          BURST_VAR_4               collection      4390 (std) 
+variable        measured_surface_data_quality enumerated      17209 
+menu            device_overview_page                      16935 
+method          configure_fixed_terminal_temp                 16721 
+member          PARAM311                  parameter       3221266487 
+member          BURST_VAR_5               collection      4391 (std) 
+method          electronics_failure_non_window_description                 17508 
+member          PARAM312                  parameter       3221266488 
+member          BURST_VAR_6               collection      4392 (std) 
+menu            identification_non_window_s                 17682 
+variable        compat_update_per_1       time_value      17289 
+member          PARAM313                  parameter       3221266489 
+member          BURST_VAR_7               collection      4393 (std) 
+method          method_nonwin_calculated_measurement_details                 17561 
+variable        compat_update_per_2       time_value      17306 
+member          PARAM314                  parameter       3221266490 
+member          PARAM315                  parameter       3221266491 
+member          TREND_0_DATE_STAMP        collection      4512 (std) 
+menu            group_find_devices                        17600 
+member          PARAM316                  parameter       3221266492 
+menu            group_failed_fix_now                      16836 
+member          PARAM317                  parameter       3221266493 
+array           burst_message_array       collection      4434 (std) 
+member          PARAM318                  parameter       3221266494 
+member          PARAM319                  parameter       3221266495 
+command         read_network_tag                          14027 (std,imp) 
+variable        standardized_status_2_codes enumerated      2243 (std,imp) 
+variable        batteryClassification     enumerated      16444 
+variable        device_specific_status_4_latched_value bit-enumerated  4738 (std,imp) 
+menu            button_stuck_375_history                  17088 
+variable        read_time                 unsigned        16621 
+menu            join_status_375                           16744 
+member          PARAM320                  parameter       3221266496 
+variable        fast_quality              enumerated      16388 
+member          PARAM321                  parameter       3221266497 
+member          PARAM322                  parameter       3221266498 
+collection      ambient_temperature       variable        16435 
+member          PARAM323                  parameter       3221266499 
+member          TREND_SAMPLE_INTERVAL     collection      4511 (std) 
+member          PARAM324                  parameter       3221266500 
+member          HIHI_ALERT_MODE           collection      17447 
+variable        battery_minimum_span      float           16441 
+member          PARAM325                  parameter       3221266501 
+member          PARAM326                  parameter       3221266502 
+menu            view_configure_msg3_non_window_s                 17715 
+member          PARAM327                  parameter       3221266503 
+unit            battery_life_rapid_relation                 17792 
+member          PARAM328                  parameter       3221266504 
+menu            group_sensor_trim                         16921 
+member          PARAM329                  parameter       3221266505 
+variable        event_nofication_control_codes enumerated      2247 (std,imp) 
+variable        device_power_status       enumerated      14043 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_4_MASK collection      4646 (std) 
+variable        loopCurrent               float           237 (std,imp) 
+method          device_master_reset                       4210 (std,imp) 
+member          PARAM330                  parameter       3221266506 
+member          LOWER_RANGE_VALUE         collection      205 (std) 
+menu            revisions_page                            17821 
+member          PARAM331                  parameter       3221266507 
+member          PARAM332                  parameter       3221266508 
+variable        tertiary_variable_code    index           4050 (std,imp) 
+member          PARAM333                  parameter       3221266509 
+variable        ambient_digital_units     enumerated      16457 
+member          PARAM334                  parameter       3221266510 
+menu            radio_failure_non_window                  17669 
+member          PARAM335                  parameter       3221266511 
+variable        battery_digital_value     float           16438 
+member          PARAM336                  parameter       3221266512 
+member          blk_profile               record          3221290758 
+member          PARAM337                  parameter       3221266513 
+member          PARAM338                  parameter       3221266514 
+variable        max_update_period         time_value      4799 (std,imp) 
+member          PARAM339                  parameter       3221266515 
+menu            view_broadcast_config_msg2_unknown_non_window_s                 17721 
+method          readTrend                                 17536 
+variable        analog_channel_saturated1_h bit-enumerated  16605 
+member          AMBIENT_VALUE_GAUGE       chart           16981 
+command         write_sensor_configuration                 16649 
+member          PARAM340                  parameter       3221266516 
+variable        compat_burst_trig_level_1 float           17302 
+member          PARAM341                  parameter       3221266517 
+variable        compat_burst_trig_level_2 float           17319 
+member          PARAM342                  parameter       3221266518 
+method          simulation_active_non_window_history_description                 17535 
+member          PARAM343                  parameter       3221266519 
+variable        model_number_II           packed-ascii    16583 
+member          PARAM344                  parameter       3221266520 
+menu            group_advisory_act_history                 17825 
+menu            manual_setup_page                         16944 
+member          PARAM345                  parameter       3221266521 
+variable        device_options            bit-enumerated  17201 
+member          PARAM346                  parameter       3221266522 
+variable        number_events_supported   unsigned        4574 (std,imp) 
+command         perform_device_reset                      4138 (std,imp) 
+member          PARAM347                  parameter       3221266523 
+member          PARAM348                  parameter       3221266524 
+image           imgButtonStuck_non_window                 17581 
+menu            group_manual_setup_sensor_1                 16945 
+member          PARAM349                  parameter       3221266525 
+menu            group_setup_1                             16795 
+variable        capture_mode_codes        enumerated      2051 (std,imp) 
+menu            group_setup_2                             16796 
+menu            group_setup_3                             17608 
+menu            group_setup_4                             17609 
+command         read_all_sensor_calibration_info                 16532 
+member          DEVICE_SPECIFIC_STATUS_14_MASK collection      4655 (std) 
+menu            group_setup_5                             17610 
+variable        detected_crc_errors       unsigned        14044 (std,imp) 
+menu            security_non_window_s                     17705 
+method          button_stuck_non_window_history_description                 17533 
+member          MINIMUM_UPPER_TRIM_POINT  collection      4200 (std) 
+menu            device_dev_info_manual_setup_375                 16761 
+variable        pcntRngClassification     enumerated      16417 
+variable        dev_operating_mode_latched_value enumerated      2298 (std,imp) 
+variable        batteryKneePercent        float           16665 
+variable        ambientDrilledPDQ         enumerated      16472 
+variable        ambientFamily             enumerated      16465 
+menu            other_manual_setup_non_window                 17706 
+method          METHOD_configure_transmissions                 16725 
+member          PV_RANGE_HI               source          16541 
+command         force_join_mode                           14020 (std,imp) 
+variable        pcntRngDrilledLS          enumerated      16421 
+menu            menu_non_instrusive_custom_setup                 17748 
+member          SUPPLY_GOOD               source          17011 
+member          TREND_VALUE               collection      4842 (std,imp) 
+command         write_number_of_response_preambles                 4067 (std,imp) 
+menu            group_measurement_range                   16815 
+method          method_join_device_to_network                 16731 
+member          STANDARDIZED_STATUS_0_LATCHED_VALUE collection      4674 (std) 
+member          IO_CARD                   collection      4260 (std) 
+menu            group_operating_parameters_no_term_temp                 16892 
+menu            revision_page                             17623 
+method          hi_hi_alarm_non_window_description                 17551 
+image           imgLOLOAlarm_375                          17097 
+command         read_detailed_config_errors                 16591 
+member          LOLO_ALERT_MODE           collection      17459 
+method          method_configure_data_history_non_window_s                 17502 
+menu            other_page                                16920 
+member          ALERT_SP                  collection      16555 
+variable        devSpec_pcntRng_classification enumerated      17380 
+variable        cjc_digital_rapid_units   enumerated      17335 
+member          SUPPLY_SOURCE             source          17008 
+command         read_pv_sensor_info                       182 (std,mand,imp) 
+menu            lock_unlock_window                        17504 
+menu            grp_configuration_burst2_9                 17636 
+variable        network_access_mode       enumerated      14052 (std,imp) 
+variable        extended_device_status_codes enumerated      2042 (std,imp) 
+menu            overview_burst2_non_window_s                 17190 
+menu            device_status_non_window_s                 17664 
+member          PARAM300                  parameter       3221266476 
+member          PARAM301                  parameter       3221266477 
+chart           terminal_temp_gauge_chart_drilled                 16909 
+member          PARAM302                  parameter       3221266478 
+image           device_icon                               1021 (std) 
+member          PARAM303                  parameter       3221266479 
+member          PARAM304                  parameter       3221266480 
+member          PARAM305                  parameter       3221266481 
+member          PARAM306                  parameter       3221266482 
+member          TREND_VALUE_4_TREND_VALUE collection      17163 
+member          PARAM307                  parameter       3221266483 
+member          PARAM308                  parameter       3221266484 
+member          PARAM309                  parameter       3221266485 
+variable        device_specific_status_0_mask bit-enumerated  4717 (std,imp) 
+menu            HART_non_window_s                         17700 
+member          TRIM_POINT_UNITS          collection      4121 (std) 
+command         read_alert_history                        16594 
+variable        si_control_codes          enumerated      2255 (std,imp) 
+collection      sensor1_measurement_DB    variable        16705 
+member          PARAM390                  parameter       3221266566 
+menu            menu_manual_sensor_setup                  17745 
+member          PARAM391                  parameter       3221266567 
+member          ANALOG_DAMPING                            4078 (std) 
+member          PARAM392                  parameter       3221266568 
+member          PARAM393                  parameter       3221266569 
+member          SUPPLY_WARN_GAUGE         chart           16991 
+member          PARAM394                  parameter       3221266570 
+menu            data_history_trend_page_enabled                 17595 
+method          method_event_notification_non_window_s                 17541 
+member          PARAM395                  parameter       3221266571 
+command         write_cps_model_string                    16641 
+member          PARAM396                  parameter       3221266572 
+member          OSTX_RECEIVED             collection      4333 (std) 
+member          PARAM397                  parameter       3221266573 
+menu            manual_setup_percent_of_range_page                 16784 
+variable        batteryDrilled_units      enumerated      16450 
+member          PARAM398                  parameter       3221266574 
+member          PARAM399                  parameter       3221266575 
+variable        simulate_ambient_digital_value float           17222 
+method          terminal_temp_exceeded_limits_375_history_description                 17116 
+menu            grp_view_configuration_burst1                 17646 
+menu            grp_view_configuration_burst2                 17650 
+menu            overview_burst0_non_window_s                 17188 
+menu            grp_view_configuration_burst3                 17654 
+member          DEVICE_SPECIFIC_STATUS_18_MASK collection      4659 (std) 
+image           fast_var_status_image                     16542 
+variable        standardized_status_0     bit-enumerated  260 (std,imp) 
+method          device_variable_trim                      4224 (std,imp) 
+variable        standardized_status_1     bit-enumerated  261 (std,imp) 
+member          DEVICE_CLASS                              215 (std) 
+menu            group_simulate_device_variables                 16929 
+variable        standardized_status_2     bit-enumerated  262 (std,imp) 
+method          sensor1_failure_375_description                 17103 
+variable        standardized_status_3     bit-enumerated  263 (std,imp) 
+method          METHOD_show_dd_rev                        17544 
+array           subdevice_burst_array     variable        4321 (std) 
+command         read_device_variable_trim_point                 4166 (std,imp) 
+menu            sensor_has_exceeded_limits_375_history                 17078 
+member          DEV_OPERATING_MODE_MASK   collection      4843 (std) 
+command         read_device_variable_information                 4183 (std,imp) 
+variable        power_source_codes        enumerated      2252 (std,imp) 
+variable        sensor1_digital_value_DB  float           16631 
+member          STANDARDIZED_STATUS_1_MASK collection      4650 (std) 
+member          TREND_VALUE_1_LIMIT_STATUS collection      4520 (std) 
+image           imgAlertBlank                             17019 
+variable        sensor_1_lower_trim_point_value float           16403 
+variable        network_search_timer      time_value      14009 (std,imp) 
+menu            hi_hi_alarm_page                          16820 
+variable        extended_fld_device_status_drilled bit-enumerated  17040 
+variable        ambientPDQ                enumerated      16466 
+image           imgSensorStatus4_drilled                  16908 
+variable        sensor1Status             bit-enumerated  16503 
+menu            diagnostic_root_menu                      1018 (std) 
+chart           supply_voltage_gauge_chart                 16896 
+menu            other_manual_setup_375                    16760 
+menu            configuration_error_375                   17065 
+variable        batteryDrilledPDQ         enumerated      16454 
+variable        wireless_module_manufacturer_id enumerated      14059 (std,imp) 
+method          event_notification_write_action                 17403 
+menu            group_sensor1_failure                     16877 
+member          DEVICE_SPECIFIC_STATUS_14_LATCHED_VALUE collection      4680 (std) 
+member          RANGE_UNITS               collection      203 (std) 
+menu            group_electronics_failure_history                 16881 
+method          std_CheckDeviceIdentification                 1013 (std) 
+variable        cjcDrilled_units          enumerated      16488 
+variable        device_specific_status_1_h bit-enumerated  16596 
+array           compat_events             collection      17150 
+member          PARAM350                  parameter       3221266526 
+variable        peak_packet_load          time_value      14030 (std,imp) 
+variable        calculated_process_data_quality enumerated      17213 
+member          PARAM351                  parameter       3221266527 
+array           compat_burst_vars_0       variable        17286 
+variable        alert_6_name              packed-ascii    16566 
+member          PARAM352                  parameter       3221266528 
+array           compat_burst_vars_1       variable        17303 
+member          PARAM353                  parameter       3221266529 
+array           compat_burst_vars_2       variable        17320 
+member          PARAM354                  parameter       3221266530 
+variable        alert_5_direction         enumerated      16551 
+member          PARAM355                  parameter       3221266531 
+member          PARAM356                  parameter       3221266532 
+member          PARAM357                  parameter       3221266533 
+variable        compat_burst_vars_5_0     index           17283 
+menu            lo_lo_alarm_375_history                   17087 
+member          PARAM358                  parameter       3221266534 
+method          __univ_self_test                          953 (std) 
+variable        compat_burst_vars_5_1     index           17297 
+member          PARAM359                  parameter       3221266535 
+member          DEVICE_SPECIFIC_STATUS_24_LATCHED_VALUE collection      4690 (std) 
+variable        compat_burst_vars_5_2     index           17314 
+menu            menu_trends_hh                            17754 
+unit            sensor1_measurement_relation                 16679 
+menu            root_menu                                 1000 (std) 
+member          PERCENT_LIMIT_GAUGE       chart           17563 
+method          method_configure_data_history                 17499 
+member          PARAM360                  parameter       3221266536 
+unit            range_relation                            16684 
+member          PARAM361                  parameter       3221266537 
+member          PARAM362                  parameter       3221266538 
+variable        ambientStatus             bit-enumerated  16468 
+member          PARAM363                  parameter       3221266539 
+member          PARAM364                  parameter       3221266540 
+method          method_mac_address                        17394 
+member          PARAM365                  parameter       3221266541 
+variable        device_specific_status_3_DB bit-enumerated  16627 
+member          PARAM366                  parameter       3221266542 
+image           imgButtonStuck_375                        17098 
+member          AMBIENT_LIMIT_GAUGE       chart           16983 
+member          PARAM367                  parameter       3221266543 
+member          PARAM368                  parameter       3221266544 
+member          PARAM369                  parameter       3221266545 
+member          UPPER_SENSOR_LIMIT        collection      201 (std) 
+variable        write_protect_code        enumerated      2030 (std,imp) 
+variable        analog_channel_saturated1_drilled bit-enumerated  17046 
+member          PARAM370                  parameter       3221266546 
+unit            battery_drill_relation                    16689 
+member          PARAM371                  parameter       3221266547 
+member          TREND_VALUE_7_DATA_QUALITY collection      4543 (std) 
+member          PARAM372                  parameter       3221266548 
+menu            join_key_window                           17466 
+member          PARAM373                  parameter       3221266549 
+menu            supply_voltage_failure_history                 16888 
+member          PARAM374                  parameter       3221266550 
+member          PARAM375                  parameter       3221266551 
+command         write_final_assembly_number                 187 (std,mand,imp) 
+method          method_configure_device_display                 16732 
+member          PARAM376                  parameter       3221266552 
+menu            view_configure_msg2_non_window_s                 17716 
+member          PARAM377                  parameter       3221266553 
+variable        device_specific_status_4_DB bit-enumerated  16628 
+member          PARAM378                  parameter       3221266554 
+member          PARAM379                  parameter       3221266555 
+menu            calibration_page_pop_up                   16924 
+menu            group_wireless                            16777 
+member          EVENT_CONTROL             collection      4758 (std,imp) 
+menu            grp_configuration_burst3_33                 17641 
+variable        standardized_status_3_codes enumerated      2244 (std,imp) 
+menu            group_tertiary_variable                   17801 
+collection      alert_5                   variable        16544 
+member          PARAM380                  parameter       3221266556 
+member          ANALOG_CHANNEL_FIXED1_LATCHED_VALUE collection      4679 (std) 
+collection      alert_6                   variable        16545 
+member          PARAM381                  parameter       3221266557 
+variable        max_packet_buffers        unsigned        14035 (std,imp) 
+member          TREND_VALUE_7_FAMILY_STATUS collection      17174 
+collection      alert_7                   variable        16546 
+variable        cjc_digital_units         enumerated      16475 
+member          PARAM382                  parameter       3221266558 
+collection      alert_8                   variable        16547 
+member          PARAM383                  parameter       3221266559 
+image           imgRadioFailure                           16886 
+member          PARAM384                  parameter       3221266560 
+member          PARAM385                  parameter       3221266561 
+member          PARAM386                  parameter       3221266562 
+menu            view_configure_msg1_non_window_s                 17714 
+method          METHOD_configure_transmissions_non_window                 17468 
+member          PARAM387                  parameter       3221266563 
+image           imgSensorFailure                          16884 
+member          PARAM388                  parameter       3221266564 
+image           img_nps_flow                              17589 
+source          supply_gauge_source                       16986 
+variable        sensor_1_type             enumerated      16394 
+member          PARAM389                  parameter       3221266565 
+menu            trends_window                             17593 
+variable        device_specific_status_5_DB bit-enumerated  16629 
+refresh         alert_7_units_relation                    17027 
+menu            supply_voltage_failure_375                 17058 
+variable        alert_5_var_assign        enumerated      16548 
+variable        current_date              date            4440 (std,imp) 
+method          METHOD_configure_transmissions_375                 17137 
+axis            ambient_temp_axis                         17797 
+method          terminal_temp_exceeded_limits_non_window_description                 17524 
+variable        ambient_digital_rapid_value float           17333 
+refresh         alert_8_units_relation                    17028 
+image           imgElectronicsFailure_375                 17090 
+image           img_status_top                            16917 
+menu            group_broadcast_information_1                 16790 
+method          supply_voltage_failure_375_history_description                 17108 
+menu            group_pv_range_info                       16963 
+menu            group_broadcast_information_2                 16791 
+menu            group_broadcast_information_3                 16792 
+member          DEVICE_SPECIFIC_STATUS_0_MASK collection      4642 (std) 
+method          METHOD_reset_battery_life                 16734 
+menu            manual_setup_display_page                 16787 
+unit            sensor_rapid_relation                     17789 
+menu            simulate_page                             16928 
+method          method_join_device_to_network_non_window_s                 17194 
+method          METHOD_read_measurement_DB                 16697 
+member          EXP_DEV_TYPE              collection      4263 (std) 
+member          PV_SOURCE                 source          16540 
+refresh         alert_5_units_relation                    17025 
+image           imgSupplyVoltageFailure                   16873 
+command         set_pv_upper_range_value                  4008 (std,imp) 
+member          KNEE_PERCENT              collection      16675 
+command         read_cps_model_string                     16640 
+menu            grp_maintenance_event_notification                 17644 
+menu            basic_setup                               7005 (std,imp) 
+member          HIHI_DEAD_BAND            collection      17450 
+menu            hi_hi_alarm_non_window                    17677 
+variable        manufacturer_id           enumerated      153 (std,mand,imp) 
+menu            maintenance_alerts_non_window                 17763 
+unit            __sensor_units_relation                   975 (std) 
+member          SIMULATED                 collection      4847 (std,imp) 
+menu            grp_view_configuration_burst2_33                 17652 
+menu            configure_msg3_window_1                   17478 
+method          method_view_configure_message_1                 17484 
+menu            configure_msg3_window_2                   17479 
+method          method_view_configure_message_2                 17489 
+menu            configure_msg3_window_3                   17480 
+variable        write_protect             enumerated      167 (std,mand,imp) 
+method          method_view_configure_message_3                 17494 
+menu            configure_msg3_window_4                   17481 
+source          supply_fail_source                        16988 
+refresh         alert_6_units_relation                    17026 
+image           imgDatabaseMemoryWarning                  16858 
+member          DEVICE_SPECIFIC_STATUS_20_MASK collection      4661 (std) 
+menu            electronics_failure_non_window_history                 17768 
+variable        power_mode                enumerated      16585 
+variable        descriptor                packed-ascii    165 (std,mand,imp) 
+member          TRIM_POINT_SUPPORT        collection      4120 (std) 
+variable        cjc_write_dev_var_code    enumerated      17334 
+command         write_join_key                            14004 (std,imp) 
+menu            event_notification_window_1                 17482 
+variable        battery_life              unsigned        14037 (std,imp) 
+menu            grp_no_active_alerts                      17594 
+menu            event_notification_window_2                 17483 
+variable        request_preambles         unsigned        155 (std,mand,imp) 
+menu            view_broadcast_config_msg1_33_non_window_s                 17719 
+variable        cjcDrilledLS              enumerated      16491 
+menu            window_nps_calculated_measurement_details                 17613 
+collection      sensor_a                  variable        6001 (std) 
+variable        country_code_codes        enumerated      2259 (std,imp) 
+menu            grp_view_configuration_burst1_33                 17648 
+member          SURF_MEAS                 chart           17568 
+variable        standardized_status_1_mask bit-enumerated  2270 (std,imp) 
+variable        battery_serialNum         unsigned        17357 
+member          TREND_0_TIME_STAMP        collection      4513 (std) 
+member          MSG2_6var                 collection      17434 
+menu            group_sensor_information                  16923 
+menu            lo_lo_alarm_non_window_history                 17782 
+member          CALC_MEASURE              source          17571 
+method          electronics_temp_exceeded_limits_375_history_description                 17114 
+member          SUPPLY_FAIL               source          17009 
+variable        standardized_status_1_codes enumerated      2242 (std,imp) 
+chart           supply_voltage_gauge_chart_original                 16994 
+member          STANDARDIZED_STATUS_3_LATCHED_VALUE collection      4678 (std) 
+method          hi_alarm_non_window_description                 17553 
+menu            hi_alarm_alert_setup_375                  16751 
+variable        upperRange_value          float           234 (std,imp) 
+method          METHOD_read_measurement_DB_non_window                 17537 
+variable        trend_value_0_device_family_status_10 enumerated      17272 
+variable        trend_value_0_device_family_status_11 enumerated      17276 
+menu            hi_alarm_375                              17067 
+variable        sensor_1_special_beta     float           16527 
+member          MSG2_5var                 collection      17433 
+variable        reserved_bits             unsigned        14010 (std,imp) 
+collection      event                     collection      4756 (std,imp) 
+method          get_status_history                        16746 
+menu            Table_Main_Specialist                     1010 (std) 
+unit            batteryCapVRelation                       16667 
+method          return_to_normal_and_original_output_supply_voltage                 16718 
+menu            grp_configuration_burst1_9                 17632 
+menu            view_configure_msg2_window_1                 17490 
+variable        alert_5_deadband          float           16556 
+variable        detailed_invalid_config1  bit-enumerated  16523 
+menu            view_configure_msg2_window_2                 17491 
+member          TERMINAL_LIMIT_GAUGE      chart           16977 
+variable        detailed_invalid_config2  bit-enumerated  16524 
+menu            view_configure_msg2_window_3                 17492 
+member          MSG2_8var                 collection      17436 
+menu            view_configure_msg2_window_4                 17493 
+member          TERMINAL_SOURCE           source          17002 
+source          nps_ambient_measurement_source                 17796 
+member          EVENT_MASK                collection      4760 (std,imp) 
+method          sensor_has_exceeded_limits_non_window_description                 17520 
+menu            electronics_warning_375_history                 17077 
+collection      ambient_temperature_DB    variable        16707 
+image           imgDatabaseMemoryWarning_non_window                 17578 
+variable        calculated_process_temperature float           17212 
+menu            variables_non_window                      17804 
+menu            mapped_variables_page                     17799 
+method          configuration_error_non_window_description                 17530 
+menu            broadcast_config_msg2_9_non_window_s                 17738 
+collection      batteryCapacity           variable        16668 
+member          STAT_BACK_CNT             collection      4269 (std) 
+variable        alert_6_deadband          float           16565 
+member          MINIMUM_SPAN              collection      195 (std) 
+command         read_device_variable_trim_guidelines                 4170 (std,imp) 
+array           loop_warning_variables    variable        1004 (std) 
+method          method_reset_to_default_setting                 17538 
+member          MSG2_7var                 collection      17435 
+variable        maintenance_event_notification bit-enumerated  17400 
+chart           ambient_gauge_chart                       16869 
+variable        ambient_write_dev_var_code enumerated      17331 
+menu            group_sensor_1_setup                      16946 
+member          SENSOR_LOWER_TRIM                         6005 (std) 
+member          DRILLED_LIMIT_STATUS      collection      16428 
+member          DEVICE_SPECIFIC_STATUS_24_MASK collection      4665 (std) 
+menu            group_electronics_temp_exceeded_limits_history                 16870 
+method          terminal_block_failure_non_window_history_description                 17511 
+variable        measured_surface_family_status enumerated      17211 
+member          COMMAND_NUMBER            collection      4381 (std) 
+variable        update_period_local       unsigned        16391 
+menu            group_operating_parameters_drilled                 16891 
+menu            broadcast_config_msg1_9_non_window_s                 17734 
+command         write_cvd_coeff                           16650 
+menu            group_broadcast_info                      17607 
+variable        battery_family_status     enumerated      17348 
+method          method_lock_unlock_non_window_s                 17505 
+variable        alert_7_deadband          float           16572 
+member          MSG2_2var                 collection      17430 
+menu            manual_setup_device_information_page                 16786 
+command         write_pv_sensor_serial_number                 4047 (std,imp) 
+variable        device_specific_status_5_mask bit-enumerated  4722 (std,imp) 
+method          terminal_block_failure_375_history_description                 17102 
+method          deactivate_var_simulation                 17559 
+variable        cjc_digital_rapid_value   float           17336 
+variable        nps_stem_conduction_coeff float           17199 
+grid            data_history_table                        17582 
+menu            view_configure_msg1_window_1                 17485 
+variable        devSpec_pcntRng_data_quality enumerated      17377 
+variable        alert_8_deadband          float           16579 
+menu            operating_parameters_1_non_window                 17752 
+menu            view_configure_msg1_window_2                 17486 
+variable        sensor_1_special_alpha    float           16525 
+menu            view_configure_msg1_window_3                 17487 
+member          MSG2_1var                 collection      17429 
+variable        trend_value_0_limit_status_1 enumerated      17235 
+menu            view_configure_msg1_window_4                 17488 
+variable        trend_value_0_limit_status_2 enumerated      17239 
+menu            quarternary_variable_non_window                 17811 
+variable        trend_value_0_limit_status_3 enumerated      17243 
+variable        extended_fld_device_status_mask bit-enumerated  2268 (std,imp) 
+variable        trend_value_0_limit_status_4 enumerated      17247 
+menu            group_ambient_limits                      16804 
+variable        trend_value_0_limit_status_5 enumerated      17251 
+variable        trend_value_0_limit_status_6 enumerated      17255 
+variable        trend_value_0_limit_status_7 enumerated      17259 
+variable        standardized_status_3_h   bit-enumerated  16607 
+collection      devSpec_loopCurrent       variable        17326 
+variable        trend_value_0_limit_status_8 enumerated      17263 
+image           imgDatabaseMemoryWarning_375                 17095 
+variable        trend_value_0_limit_status_9 enumerated      17267 
+member          PERCENT_RANGE_GAUGE       chart           17822 
+menu            active_alerts_375                         17048 
+method          active_calibrator_disabling                 16398 
+variable        DUST_NETWORKS_model_code  enumerated      2226 (std,imp) 
+member          DEVICE_SPECIFIC_STATUS_17_LATCHED_VALUE collection      4683 (std) 
+menu            supply_voltage_low_375_history                 17081 
+method          method_no_active_alerts_non_window_s                 17507 
+method          sensor1_failure_non_window_history_description                 17513 
+variable        maintenance_event_notification_non_window_s bit-enumerated  17404 
+menu            group_write_protection                    16812 
+collection      scratchData               variable        17327 
+member          TREND_VALUE_6_FAMILY_STATUS collection      17171 
+member          MSG2_4var                 collection      17432 
+menu            db_memory_warning_375                     17064 
+menu            hi_alarm_page                             16821 
+variable        analog_channel_fixed1     bit-enumerated  4160 (std,imp) 
+collection      scaling                   variable        239 (std,imp) 
+member          TREND_VALUE_5_TREND_VALUE collection      17166 
+variable        my_power_source           enumerated      16587 
+menu            lo_lo_alarm_375                           17069 
+menu            group_hpa_diagnostics                     16957 
+variable        device_specific_status_2_h bit-enumerated  16597 
+menu            grp_radio_information                     17628 
+variable        device_specific_status_0_DB bit-enumerated  16624 
+variable        config_change_counter     unsigned        207 (std,imp) 
+variable        last_clock_time           time_value      4443 (std,imp) 
+member          MINIMUM_TRIM_DIFFERENTIAL collection      4156 (std) 
+menu            cjc_operating_parameters_non_window                 17816 
+variable        transfer_function_code    enumerated      2026 (std,imp) 
+menu            group_radio_upgrade_device_info                 17630 
+member          MSG2_3var                 collection      17431 
+variable        device_variable_code_1    index           225 (std,imp) 
+member          EVENT_NOTIFICATION_RETRY_TIME collection      4638 (std) 
+variable        device_variable_code_2    index           226 (std,imp) 
+variable        batteryUnits              enumerated      17345 
+variable        device_variable_code_3    index           227 (std,imp) 
+variable        device_variable_code_4    index           228 (std,imp) 
+menu            hi_alarm_alert_setup_hh                   17693 
+variable        device_variable_code_5    index           256 (std,imp) 
+member          TREND_VALUE_7_TREND_VALUE collection      17172 
+variable        device_variable_code_6    index           257 (std,imp) 
+source          ambient_gauge_source_drilled                 16985 
+variable        device_variable_code_7    index           258 (std,imp) 
+unit            battery_rapid_relation                    17220 
+variable        __analog_alarm_code       enumerated      962 (std) 
+variable        device_variable_code_8    index           259 (std,imp) 
+command         read_pv                                   175 (std,mand,imp) 
+menu            group_lo_lo_alarm                         16844 
+variable        batteryCapStart           float           16660 
+command         write_2_wire_ohms_lead_correction                 16648 
+variable        compat_burst_vars_0_1     index           17292 
+variable        device_specific_status_1_DB bit-enumerated  16625 
+variable        __sensor_minimum_span     float           960 (std) 
+member          TREND_VALUE_11_DATA_QUALITY collection      4559 (std) 
+variable        compat_burst_vars_0_2     index           17309 
+member          DEVICE_SPECIFIC_STATUS_2_LATCHED_VALUE collection      4669 (std) 
+variable        longTag                   ascii           210 (std,imp) 
+menu            configure_sensor_short_cut_dialog                 16943 
+member          TRIGGER_LEVEL             collection      4397 (std) 
+menu            device_information_overview_non_window_s                 17665 
+command         set_pv_lower_range_value                  4009 (std,imp) 
+command         read_pv_output_info                       183 (std,mand,imp) 
+member          MAX_UPDATE_RATE_1         collection      17412 
+menu            group_join_details                        16914 
+menu            grp_configuration_burst2_33                 17637 
+member          MAX_UPDATE_RATE_2         collection      17413 
+member          MAX_UPDATE_RATE_3         collection      17414 
+method          simulation_active_375_description                 17133 
+variable        process_data_status       enumerated      2052 (std,imp) 
+menu            overview_burst1_non_window_s                 17189 
+member          DEVICE_SPECIFIC_STATUS_5_MASK collection      4647 (std) 
+menu            group_configuration_error_history                 16857 
+menu            compare_menu                              17662 
+variable        calculated_process_limit_status enumerated      17214 
+member          TREND_VALUE_10_DATA_QUALITY collection      4555 (std) 
+variable        device_specific_status_2_DB bit-enumerated  16626 
+variable        alert_8_mode              enumerated      16575 
+menu            download_to_device_root_menu                 1023 (std) 
+menu            routine_maintenance_window                 16773 
+menu            supply_voltage_failure_non_window                 17670 
+menu            grp_configuration_burst1_33                 17633 
+command         reset_device_variable_trim                 4177 (std,imp) 
+variable        cjcDrilledStatus          bit-enumerated  16492 
+member          LO_ALERT_MODE             collection      17455 
+image           imgHIHIAlarm_non_window                   17579 
+menu            communications_page                       16912 
+menu            configure_msg2_window_1                   17474 
+menu            group_lo_alarm_history                    16852 
+menu            configure_msg2_window_2                   17475 
+menu            electronics_failure_375                   17054 
+menu            radio_failure_non_window_history                 17771 
+menu            configure_msg2_window_3                   17476 
+menu            configure_375                             16412 
+variable        wireless_mode             enumerated      14011 (std,imp) 
+menu            configure_msg2_window_4                   17477 
+member          TREND_VALUES              collection      4779 (std,imp) 
+menu            device_alerts_window                      16770 
+command         write_calibrator_mode                     16651 
+variable        cjcLS                     enumerated      16485 
+member          DEV_OPERATING_MODE_LATCHED_VALUE collection      4844 (std) 
+member          TREND_VALUE_8_DEVICE_FAMILY_STATUS collection      4549 (std) 
+menu            group_temp_process_alert_diagnostic                 16960 
+variable        alert_7_setpoint          float           16571 
+variable        standardized_status_1_drilled bit-enumerated  17043 
+variable        devSpec_loopCurrent_family_status enumerated      17364 
+member          TREND_CONTROL             collection      4507 (std) 
+method          lower_sensor_trim_TBD                     16701 
+menu            group_terminal_temperature_setup                 16807 
+array           mappableVariables         collection      17148 
+array           subDevice                 collection      4220 (std) 
+member          PARAM510                  parameter       3221266686 
+member          TRIG_LEVEL_1              collection      17418 
+method          method_high_device_power_warning                 17395 
+member          PARAM511                  parameter       3221266687 
+variable        device_profile            enumerated      255 (std,imp) 
+member          TRIG_LEVEL_2              collection      17419 
+member          PARAM512                  parameter       3221266688 
+method          hi_hi_alarm_non_window_history_description                 17552 
+member          TRIG_LEVEL_3              collection      17420 
+member          PARAM513                  parameter       3221266689 
+variable        sensor1LS                 enumerated      16502 
+member          PARAM514                  parameter       3221266690 
+member          TREND_VALUE_3_DEVICE_FAMILY_STATUS collection      4529 (std) 
+member          PARAM515                  parameter       3221266691 
+menu            button_stuck_non_window                   17681 
+variable        alert_6_setpoint          float           16564 
+member          PARAM516                  parameter       3221266692 
+member          PARAM517                  parameter       3221266693 
+variable        generated_packets         unsigned        14039 (std,imp) 
+source          nps_stem_measurement_source                 17569 
+member          PARAM518                  parameter       3221266694 
+menu            group_operating_parameters_no_term_temp_drilled                 16893 
+member          SENSOR_RANGE_GAUGE        chart           16539 
+member          PARAM519                  parameter       3221266695 
+command         read_database_elements                    16618 
+member          PERCENT_RANGE             collection      194 (std) 
