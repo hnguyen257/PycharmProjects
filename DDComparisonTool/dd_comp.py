@@ -70,7 +70,10 @@ def main():
 
     #Populate File-by-File Differences.
     #import dd_folder_obj import fdf_diffs
+
     value_diffs = fbf_diffs(obj_0, obj_1)
+
+
 
     #If out_file == None: pretty print differences
     if out_file == None: return
@@ -194,52 +197,56 @@ def write_xls(obj_0, obj_1, fbf, out_file):
     file_file_max = max(obj_len0, obj_len1)
     pass_three = []
     for i in range(file_file_max):
-        #Check files indices
-        if i0 >= obj_len0 or i1 >= obj_len1:
-            break
+        #try:
+            #Check files indices
+            if i0 >= obj_len0 or i1 >= obj_len1:
+                break
 
-        #If files are not the same files types or unexpected types
-        file_ref0 = obj_0.file_info[i0][0]
-        file_ref1 = obj_1.file_info[i1][0]
-        if file_ref0 != file_ref1 or file_ref0 == -1:
-            if file_ref0 > file_ref1:
-                i1 += 1
-            elif file_ref1 > file_ref0:
-                i0 += 1
-            else:
-                i0 += 1
-                i1 += 1
-            continue
+            #If files are not the same files types or unexpected types
+            file_ref0 = obj_0.file_info[i0][0]
+            file_ref1 = obj_1.file_info[i1][0]
+            if file_ref0 != file_ref1 or file_ref0 == -1:
+                if file_ref0 > file_ref1:
+                    i1 += 1
+                elif file_ref1 > file_ref0:
+                    i0 += 1
+                else:
+                    i0 += 1
+                    i1 += 1
+                continue
 
-        #If the file is not a comparable file
-        file_ref_name = obj_0.expected_files[file_ref0][0]
-        comparable_file = obj_0.expected_files[file_ref0][1]
-        if not comparable_file:
+            #If the file is not a comparable file
+            file_ref_name = obj_0.expected_files[file_ref0][0]
+            comparable_file = obj_0.expected_files[file_ref0][1]
+            if not comparable_file:
+                i0 += 1
+                i1 += 1
+                continue
+
+            #Move to or create excel sheet for file type
+            sheet_name = str(file_ref_name)+" file"
+            print("    *** "+sheet_name+" Modification")
+            if sheet_name not in wb.sheetnames:
+                create_file_sheet(wb, sheet_name)
+            #ws = wb[sheet_name]
+
+            # Compute and write the Diff (line-by-line) results
+            path_0 = obj_0.folder_path+"/"+obj_0.files[i0]
+            path_1 = obj_1.folder_path+"/"+obj_1.files[i1]
+            fileType = obj_0.file_info[i0][0]
+            print("      * path_0: "+path_0)
+            print("      * path_1: "+path_1)
+            pass_three.extend(diff_file(path_0, path_1, sheet_name, wb, file_type=fileType))
+
+            #Save File
+            wb.save(report)
+
+            #increment files indices
             i0 += 1
             i1 += 1
-            continue
-
-        #Move to or create excel sheet for file type
-        sheet_name = str(file_ref_name)+" file"
-        print("    *** "+sheet_name+" Modification")
-        if sheet_name not in wb.sheetnames:
-            create_file_sheet(wb, sheet_name)
-        #ws = wb[sheet_name]
-
-        # Compute and write the Diff (line-by-line) results
-        path_0 = obj_0.folder_path+"/"+obj_0.files[i0]
-        path_1 = obj_1.folder_path+"/"+obj_1.files[i1]
-        fileType = obj_0.file_info[i0][0]
-        print("      * path_0: "+path_0)
-        print("      * path_1: "+path_1)
-        pass_three.extend(diff_file(path_0, path_1, sheet_name, wb, file_type=fileType))
-
-        #Save File
-        wb.save(report)
-
-        #increment files indices
-        i0 += 1
-        i1 += 1
+        #except:
+            #print "An Error occured while writing excel files"
+            #continue
 
     #Passthrough 3: Call Excel macro to color code the lines
     xl=win32com.client.Dispatch("Excel.Application")
@@ -311,7 +318,14 @@ def diff_file(path_0, path_1, sheet_name, wb, row_number=1, file_type=-1):
 
         #Populate the contents portion of file 0
         if line[2] != None:
-            ws.cell(row=row_number, column=contents_0).value = line[2]
+            try:
+                ws.cell(row=row_number, column=contents_0).value = line[2]
+
+            except:
+                print "Line error below"
+                print line[2].encode('unicode_escape').decode('utf-8')
+                ws.cell(row=row_number, column=contents_0).value = line[2].encode('unicode_escape').decode('utf-8')
+
             #Populate to_highlight list for macro calling in the callee
             if line[6] != None:
                 for x in line[6]:

@@ -430,7 +430,8 @@ Discription:
 def get_ddini_file(path):
     with open(path) as f:
         ddini_file = f.read().replace('\x00', '').replace('\xff', '').replace('\xfe', '').splitlines()
-    ddini_file = [ddini_file[i] for i in range(len(ddini_file))]
+
+    ddini_file = [ddini_file[i].decode("utf-8", "ignore") for i in range(len(ddini_file))]
     return ddini_file
 
 
@@ -441,7 +442,8 @@ Discription:
 def get_alert_file(path):
     with open(path) as f:
         alert_file = f.read().splitlines()
-    alert_file = [alert_file[i] for i in range(len(alert_file))]
+
+    alert_file = [alert_file[i].decode("utf-8", "ignore") for i in range(len(alert_file))]
     return alert_file
 
 
@@ -452,7 +454,8 @@ Discription:
 def get_fhx_file(path):
     with open(path) as f:
         fhx_file = f.read().replace('\x00', '').replace('\xff', '').replace('\xfe', '').splitlines()
-    fhx_file = [fhx_file[i] for i in range(len(fhx_file))]
+
+    fhx_file = [fhx_file[i].decode("utf-8", "ignore") for i in range(len(fhx_file))]
     return fhx_file
 
 
@@ -463,7 +466,8 @@ Discription:
 def get_mrg_file(path):
     with open(path) as f:
         mrg_file = f.read().replace('\x00', '').replace('\xff', '').replace('\xfe', '').splitlines()
-    mrg_file = [mrg_file[i] for i in range(0, len(mrg_file), 2)]
+
+    mrg_file = [mrg_file[i].decode("utf-8", "ignore") for i in range(0, len(mrg_file), 2)]
     return mrg_file
 
 
@@ -474,7 +478,8 @@ Discription:
 def get_ini_file(path):
     with open(path) as f:
         ini_file = f.read().splitlines()
-    ini_file = [ini_file[i] for i in range(len(ini_file))]
+
+    ini_file = [ini_file[i].decode("utf-8", "ignore") for i in range(len(ini_file))]
     return ini_file
 
 
@@ -485,7 +490,8 @@ Discription:
 def get_alm_file(path):
     with open(path) as f:
         alm_file = f.read().replace('\x00', '').replace('\xff', '').replace('\xfe', '').splitlines()
-    alm_file = [alm_file[i] for i in range(0, len(alm_file), 2)]
+
+    alm_file = [alm_file[i].decode("utf-8", "ignore") for i in range(0, len(alm_file), 2)]
     return alm_file
 
 
@@ -509,7 +515,10 @@ def fbf_diffs(obj_0, obj_1):
         et0 = obj_0.file_info[index0][1]
         et1 = obj_1.file_info[index1][1]
         #file_diffs.extend([True, ".alert", obj_0.files[index0], obj_1.files[index1]])
-        file_diffs.append([True, ".alert", obj_0.files[index0], obj_1.files[index1], alert_fbfd(et0, et1)])
+        try:
+            file_diffs.append([True, ".alert", obj_0.files[index0], obj_1.files[index1], alert_fbfd(et0, et1)])
+        except:
+            print "An error occured during difference check function"
     elif index0 != -1:
         file_diffs.append((False, ".alert", obj_0.files[index0], None))
     elif index1 != -1:
