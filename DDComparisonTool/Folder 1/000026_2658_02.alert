@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AlertsRoot Version="1.0">
+<AlertsRoot Version="1.02">
   <Protocol>HART</Protocol>
-  <Manufacturer>38</Manufacturer>
+  <Manufacturer>389</Manufacturer>
   <DeviceType>9816</DeviceType>
   <DeviceRevision>2</DeviceRevision>
   <DDRevision>6</DDRevision>

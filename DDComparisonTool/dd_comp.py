@@ -1,7 +1,8 @@
 import os
 import sys
 from os import listdir
-
+from difflib import unified_diff
+from openpyxl import Workbook
 from openpyxl import load_workbook
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Alignment, PatternFill
@@ -36,7 +37,7 @@ def main():
     call_error_checking(paths)
     print("* paths:\n    ->"+str(paths))
 
-    #out_file by default should go to the Desktop folder with the time and date in the file name
+    #out_file by default should go to the Downloads folder with the time and date in the file name
     call_time = datetime.datetime.now().strftime("%m-%d-%Y_%Hh-%Mm")
     out_file = os.path.expanduser("~\\Desktop\\")+"report"+call_time+".xlsm"
 
@@ -89,18 +90,18 @@ def main():
             makes expanding the number of ways to call
             easier.
 
-    Current Implementations:
+    Current Implimentations:
         1. Checks validity of flags.
-            -> For more information on implemented flags
+            -> For more information on implimented flags
                 check header comment for main function.
         2. Compares '# of Args' to 'Expected Number of Args'.
-        3. Checks validity of paths given.
+        3. Checks validity of paths givin.
 """
 def call_error_checking(args):
 
     #Invalid arguments, too few arguments
     if len(args) == 0:
-        print("### - ERROR: Invalid number of arguments\n\t-> Expected 2, received: 0")
+        print("### - ERROR: Invalid number of arguments\n\t->Expected 2, recieved: 0")
         display_help()
         exit(1)
 
@@ -114,7 +115,7 @@ def call_error_checking(args):
         if args[0] == "-o":
             #Invalid usage of '-o' flag
             if len(args) != 4:
-                print("### - ERROR: Invalid number of arguments\n\t->Expected 4, received "+str(len(args)))
+                print("### - ERROR: Invalid number of arguments\n\t->Expected 4, recieved "+str(len(args)))
                 display_help()
                 exit(1)
             args.pop(1) #removes filename from arguments
@@ -127,7 +128,7 @@ def call_error_checking(args):
 
     #Invalid argument number
     if len(args) != 2:
-        print("### - ERROR: Invalid number of arguments\n\t->Expected 2, received: "+str(len(args)))
+        print("### - ERROR: Invalid number of arguments\n\t->Expected 2, recieved: "+str(len(args)))
         display_help()
         exit(1)
 
