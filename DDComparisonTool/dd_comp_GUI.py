@@ -17,6 +17,7 @@ def start():
     print folder_path_0.get()
     print folder_path_1.get()
     os.system("C:\python27\python.exe dd_comp.py \""+folder_path_0.get()+"\" \""+ folder_path_1.get()+"\"")
+    os.system("C:\python27\python.exe diff_checker.py \"" + folder_path_0.get() + "\" \"" + folder_path_1.get() + "\"")
     root.destroy()
 
 def cancel():

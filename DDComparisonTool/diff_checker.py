@@ -31,9 +31,12 @@ def main():
         f.write("File type: " + file_name_list[current_file_index] + "\n")
         f.write("Files being compare: " + file_pair_list[current_file_index][0] + "  and  " + file_pair_list[current_file_index][1] + "\n")
         f.write("Differences: " + "\n")
+        current_line_keeper = 0
         for current_line in range(len(files_as_string_1[current_file_index])):
+            if(no_difference) == true:
+                current_line_keeper = current_line
 
-            print files_as_string_1[current_file_index][current_line]
+            print files_as_string_1[current_file_index][current_line_keeper]
             print files_as_string_2[current_file_index][current_line]
 
             if(files_as_string_1[current_file_index][current_line] == files_as_string_2[current_file_index][current_line]):
