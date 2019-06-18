@@ -35,7 +35,7 @@ def main():
 
     #Basic error checking
     call_error_checking(paths)
-    print("* paths:\n    ->"+str(paths))
+    print("* paths:\n    ->" + str(paths))
 
     #out_file by default should go to the Downloads folder with the time and date in the file name
     call_time = datetime.datetime.now().strftime("%m-%d-%Y_%Hh-%Mm")
@@ -65,13 +65,14 @@ def main():
     print("\n\nINSIDE:  ---------- OBJ_1 ----------")
     print(str(obj_1))
 
-    #Scrape the DD_Folders.  Append the Differeneces returned
+    #Scrape the DD_Folders.  Append the Differences returned
     #Returns a list of differences in the form (Key, expected_value, file_index, actual_value)
 
     #Populate File-by-File Differences.
     #import dd_folder_obj import fdf_diffs
 
     value_diffs = fbf_diffs(obj_0, obj_1)
+    print value_diffs
 
 
 
@@ -327,9 +328,13 @@ def diff_file(path_0, path_1, sheet_name, wb, row_number=1, file_type=-1):
                 ws.cell(row=row_number, column=contents_0).value = line[2].encode('unicode_escape').decode('utf-8')
 
             #Populate to_highlight list for macro calling in the callee
+
             if line[6] != None:
                 for x in line[6]:
                     to_highlight.append((row_number, contents_0, x[0], x[1], sheet_name))
+
+                    print to_highlight
+
 
 
         #Populate the contents portion of file 1
@@ -560,6 +565,9 @@ def delo(lines):
       ln_b += 1
       continue
     diffs.append(diff_to_add)
+
+
+  print diffs
   return diffs
 
 

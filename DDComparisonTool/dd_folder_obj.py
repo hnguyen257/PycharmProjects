@@ -530,6 +530,7 @@ def fbf_diffs(obj_0, obj_1):
     print_obj(file_diffs, "")
     ret_diffs.extend(file_diffs)
 
+    print ret_diffs
     return ret_diffs
 
 def print_obj(obj, spacing):
