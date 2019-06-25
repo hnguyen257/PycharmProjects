@@ -24,11 +24,8 @@ def main():
 
 
     h = open("reportH.html", "w+")
-    h.write('<div class="tab">' + "\n")
-    for current_file_index in range(number_of_files):
-        fileName = str(file_name_list[current_file_index])
-        h.write('          <button class="tablinks" onmouseover="openFile(event, \'' + fileName + '\')">' + fileName + '</button>' + "\n")
-    h.write('    </div>')
+
+
 
 
     #Go through each file type available
@@ -50,6 +47,7 @@ def main():
         h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
         h.write('<table style="width:100%">' + '\n')
         h.write('<tr>' + '\n')
+        h.write('   <th>' + 'Line #' + '</th>' + '\n')
         h.write('   <th>' + fileA + '</th>' + '\n')
         h.write('   <th>' + fileB + '</th>' + '\n')
         h.write('</tr>' + '\n\n')
@@ -66,7 +64,7 @@ def main():
 
             h.write('<tr>' + '\n')
 
-
+            h.write('  <td>' + str(current_line) + '</td>' + '\n')
             if(files_as_string_1[current_file_index][current_line] == files_as_string_2[current_file_index][current_line]):
                 h.write('  <td>' + str(files_as_string_1[current_file_index][current_line]).rstrip() + '</td>' + '\n')
                 h.write('  <td>' + str(files_as_string_2[current_file_index][current_line]).rstrip() + '</td>' + '\n')
@@ -76,17 +74,19 @@ def main():
                     no_difference = False
 
 
+
+
                 length_a = len(str(files_as_string_1[current_file_index][current_line]).rstrip())
                 length_b = len(str(files_as_string_2[current_file_index][current_line]).rstrip())
 
                 print length_a
                 print length_b
 
-
+                diff_id = str(diff_total)
                 length_use = length_a
                 if length_a > length_b:
                     length_use = length_b
-                h.write('   <td style="background-color: #FFFF00">')
+                h.write('   <td ' + 'id="' + diff_id + '"' + ' style="background-color: #FFFF00">')
                 for a in range(length_use):
                     print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
                     print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
@@ -130,6 +130,7 @@ def main():
                     h.write('</font>')
                 h.write('</td>' + '\n')
 
+
                 print "difference"
                 diff_total = diff_total + 1
                 f.write("Line " + str(current_line) + "\n")
@@ -143,11 +144,7 @@ def main():
         h.write('</table>' + "\n")
         h.write('</div>' + '\n\n')
 
-    h = open("reportH2.html", "w+")
 
-    writeHeader(h)
-    h.write(open("reportH.html", 'r').read())
-    writeFooter(h)
 
     f = open("report.txt", "w+")
     f.write("Time: " + str(datetime.datetime.now()) + "\n")
@@ -155,9 +152,28 @@ def main():
     for i in range(len(file_name_list)):
         f.write("      " + file_name_list[i] + ":  " + file_pair_list[i][0] + " and " + file_pair_list[i][1] + "   -   " + str(diff_total_list[i]) + " differences" + "\n")
     f.write(open("report_prep.txt", 'r').read())
+    f.close()
     os.remove('report_prep.txt')
 
+    h = open("reportH2.html", "w+")
+    writeHeader(h)
 
+    h.write('<div class="tab">' + "\n")
+    h.write('          <button class="tablinks" onmouseover="openFile(event, \'' + 'Overall result' + '\')"'  + '>' + 'Overall result' + '</button>' + "\n")
+    for current_file_index in range(number_of_files):
+        fileName = str(file_name_list[current_file_index])
+        color = '#ccffee"'
+        if diff_total_list[current_file_index] > 0:
+            color = '#ff9999"'
+        h.write(
+            '          <button class="tablinks" onmouseover="openFile(event, \'' + fileName + '\')"' + 'style="background-color:' + color + '>'  + fileName + '</button>' + "\n")
+    h.write('    </div>')
+
+    h.write(open("reportH.html", 'r').read())
+    h.write('<div id="Overall result" class="tabcontent">' + '\n')
+    h.write('<pre>' + open("report.txt", 'r').read() + '</pre')
+    h.write('</div>')
+    writeFooter(h)
 
 
 def index_file():
@@ -259,6 +275,30 @@ function openFile(evt, fileName) {
   document.getElementById(fileName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+    document.getElementById("myBtn2").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+    document.getElementById("myBtn2").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// When the user clicks on the button, go to next line of differences
+function goNext() {
+  location.href = "#2";
+}
+
 </script>
 
 </body>
@@ -286,13 +326,54 @@ def writeHeader(h):
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;}
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+#myBtn2 {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn2:hover {
+  background-color: #555;
+}
+
 /* Style the tab */
 .tab {
   float: left;
+  position:fixed;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-  width: 30%;
-  height: 300px;
+  width: 20%;
+  height: 500px;
 }
 
 /* Style the buttons inside the tab */
@@ -311,19 +392,18 @@ body {font-family: "Lato", sans-serif;}
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #80bfff!important ;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #80bfff!important;
 }
 
 /* Style the tab content */
 .tabcontent {
-  float: left;
+  float: right;
   padding: 0px 12px;
-  border: 1px solid #ccc;
   width: 70%;
   border-left: none;
   height: 300px;
@@ -340,6 +420,8 @@ body {font-family: "Lato", sans-serif;}
 </head>
 <body>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="goNext()" id="myBtn2" title="Go to next line of difference" value='0'>Next</button>
 
     ''')
 
