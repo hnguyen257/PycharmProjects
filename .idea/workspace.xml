@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df49fdb7-b645-471a-91a6-f1c971d03792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/E1260297.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DDComparisonTool/scratch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PycharmProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PycharmProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 2/00002626580206.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 2/00002626580206.mrg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DDComparisonTool/dd_comp.py" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/dd_comp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DDComparisonTool/dd_folder_obj.py" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/dd_folder_obj.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DDComparisonTool/last_report.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/last_report.xlsm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlayGround.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayGround.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,22 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DDComparisonTool/dd_comp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2234">
-              <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="628">
+              <caret line="123" column="100" selection-start-line="123" selection-start-column="100" selection-end-line="123" selection-end-column="100" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -47,52 +30,121 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/encodings/utf_16.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="111" selection-start-line="111" selection-end-line="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PlayGround.py">
+        <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="493">
+              <caret line="122" column="147" selection-start-line="122" selection-start-column="147" selection-end-line="122" selection-end-column="147" />
+              <folding>
+                <element signature="e#1814#1832#0" expanded="true" />
+                <element signature="e#2276#2309#0" expanded="true" />
+                <element signature="e#2338#2371#0" expanded="true" />
+                <element signature="e#2393#2426#0" expanded="true" />
+                <element signature="e#2455#2488#0" expanded="true" />
+                <element signature="e#2842#2875#0" expanded="true" />
+                <element signature="e#2924#2957#0" expanded="true" />
+                <element signature="e#2982#3015#0" expanded="true" />
+                <element signature="e#3064#3097#0" expanded="true" />
+                <element signature="e#3098#3104#1" expanded="true" />
+                <element signature="e#3104#3110#0" expanded="true" />
+                <element signature="e#3110#3116#0" expanded="true" />
+                <element signature="e#3116#3122#0" expanded="true" />
+                <element signature="e#3272#3305#0" expanded="true" />
+                <element signature="e#3328#3361#0" expanded="true" />
+                <element signature="e#3376#3409#0" expanded="true" />
+                <element signature="e#3424#3457#0" expanded="true" />
+                <element signature="e#3472#3505#0" expanded="true" />
+                <element signature="e#3520#3553#0" expanded="true" />
+                <element signature="e#3568#3601#0" expanded="true" />
+                <element signature="e#3616#3649#0" expanded="true" />
+                <element signature="e#3664#3697#0" expanded="true" />
+                <element signature="e#3712#3745#0" expanded="true" />
+                <element signature="e#3760#3793#0" expanded="true" />
+                <element signature="e#3808#3841#0" expanded="true" />
+                <element signature="e#3863#3896#0" expanded="true" />
+                <element signature="e#3919#3952#0" expanded="true" />
+                <element signature="e#3967#4000#0" expanded="true" />
+                <element signature="e#4015#4048#0" expanded="true" />
+                <element signature="e#4063#4096#0" expanded="true" />
+                <element signature="e#4111#4144#0" expanded="true" />
+                <element signature="e#4159#4192#0" expanded="true" />
+                <element signature="e#4207#4240#0" expanded="true" />
+                <element signature="e#4255#4288#0" expanded="true" />
+                <element signature="e#4303#4336#0" expanded="true" />
+                <element signature="e#4351#4384#0" expanded="true" />
+                <element signature="e#4399#4432#0" expanded="true" />
+                <element signature="e#4616#4649#0" expanded="true" />
+                <element signature="e#4690#4723#0" expanded="true" />
+                <element signature="e#5030#5063#0" expanded="true" />
+                <element signature="e#5104#5137#0" expanded="true" />
+                <element signature="e#316321#316339#0" expanded="true" />
+                <element signature="e#336992#336996#0" expanded="true" />
+                <element signature="e#337008#337012#0" expanded="true" />
+                <element signature="e#337096#337100#0" expanded="true" />
+                <element signature="e#337112#337116#0" expanded="true" />
+                <element signature="e#338866#338870#0" expanded="true" />
+                <element signature="e#338882#338886#0" expanded="true" />
+                <element signature="e#338970#338974#0" expanded="true" />
+                <element signature="e#338986#338990#0" expanded="true" />
+                <element signature="e#340712#340716#0" expanded="true" />
+                <element signature="e#340728#340732#0" expanded="true" />
+                <element signature="e#340816#340820#0" expanded="true" />
+                <element signature="e#340832#340836#0" expanded="true" />
+                <element signature="e#344282#344286#0" expanded="true" />
+                <element signature="e#344298#344302#0" expanded="true" />
+                <element signature="e#344386#344390#0" expanded="true" />
+                <element signature="e#344402#344406#0" expanded="true" />
+                <element signature="e#346020#346024#0" expanded="true" />
+                <element signature="e#346036#346040#0" expanded="true" />
+                <element signature="e#346124#346128#0" expanded="true" />
+                <element signature="e#346140#346144#0" expanded="true" />
+                <element signature="e#394794#394798#0" expanded="true" />
+                <element signature="e#394810#394814#0" expanded="true" />
+                <element signature="e#394898#394902#0" expanded="true" />
+                <element signature="e#394914#394918#0" expanded="true" />
+                <element signature="e#396492#396496#0" expanded="true" />
+                <element signature="e#396508#396512#0" expanded="true" />
+                <element signature="e#396596#396600#0" expanded="true" />
+                <element signature="e#396612#396616#0" expanded="true" />
+                <element signature="e#402570#402574#0" expanded="true" />
+                <element signature="e#402586#402590#0" expanded="true" />
+                <element signature="e#402674#402678#0" expanded="true" />
+                <element signature="e#402690#402694#0" expanded="true" />
+                <element signature="e#410049#410067#0" expanded="true" />
+                <element signature="e#417213#417231#0" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#425843#425861#0" expanded="true" />
+                <element signature="e#435559#435577#0" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing.txt">
+        <entry file="file://$PROJECT_DIR$/DDComparisonTool/scratch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1241">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reportH.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/codecs.py">
+        <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlayGround.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="701" selection-start-line="701" selection-end-line="701" />
+            <state relative-caret-position="51">
+              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -112,7 +164,13 @@
       <find>belo</find>
       <find>fhx</find>
       <find>fm8</find>
+      <find>openCity</find>
+      <find>cityName</find>
     </findStrings>
+    <replaceStrings>
+      <replace>openFile</replace>
+      <replace>fileName</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,22 +183,26 @@
         <option value="$PROJECT_DIR$/DDComparisonTool/dd_folder_obj.py" />
         <option value="$PROJECT_DIR$/DDComparisonTool/dd_comp.py" />
         <option value="$PROJECT_DIR$/report.txt" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/scratch" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg" />
         <option value="$PROJECT_DIR$/PlayGround.py" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/reportH2.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="395" />
-    <option name="y" value="200" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="2552" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,11 +215,16 @@
               <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
               <item name="DDComparisonTool" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PycharmProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="DDComparisonTool" type="462c0819:PsiDirectoryNode" />
+              <item name="Folder 1" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -177,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PlayGround">
+  <component name="RunManager" selected="Python.diff_checker">
     <configuration name="PlayGround" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -227,13 +294,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Hiep Nguyen\PycharmProjects\DDComparisionTool\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DDComparisonTool" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
-      <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
+      <option name="PARAMETERS" value="&quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -248,8 +315,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.PlayGround" />
         <item itemvalue="Python.diff_checker" />
+        <item itemvalue="Python.PlayGround" />
         <item itemvalue="Python.dd_comp" />
       </list>
     </recent_temporary>
@@ -276,19 +343,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="2552" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11854584" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24973656" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43228602" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26868907" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3954496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.22968581" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
@@ -343,27 +411,17 @@
           <line>74</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py</url>
+          <line>120</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../DDComparisonTool/dd_comp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/guru99.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../DDComparisonTool/dd_comp.py" />
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/guru99.txt" />
     <entry file="file://C:/Python27/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -439,13 +497,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-762174762/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67220">
-          <caret line="3361" column="8" selection-start-line="3361" selection-start-column="8" selection-end-line="3361" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-762174762/__builtin__.py" />
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/dd_folder_obj.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2115">
@@ -474,33 +526,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="701" selection-start-line="701" selection-end-line="701" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/Python27/Lib/encodings/utf_16.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/report.txt" />
+    <entry file="file://$PROJECT_DIR$/Testing.txt" />
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/dd_comp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2234">
+        <state relative-caret-position="3145">
           <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -508,30 +538,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29869">
+          <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/encodings/utf_16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11917">
+          <caret line="701" selection-start-line="701" selection-end-line="701" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report_prep.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportH.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/scratch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlayGround.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="628">
+          <caret line="123" column="100" selection-start-line="123" selection-start-column="100" selection-end-line="123" selection-end-column="100" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt">
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlayGround.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="493">
+          <caret line="122" column="147" selection-start-line="122" selection-start-column="147" selection-end-line="122" selection-end-column="147" />
+          <folding>
+            <element signature="e#1814#1832#0" expanded="true" />
+            <element signature="e#2276#2309#0" expanded="true" />
+            <element signature="e#2338#2371#0" expanded="true" />
+            <element signature="e#2393#2426#0" expanded="true" />
+            <element signature="e#2455#2488#0" expanded="true" />
+            <element signature="e#2842#2875#0" expanded="true" />
+            <element signature="e#2924#2957#0" expanded="true" />
+            <element signature="e#2982#3015#0" expanded="true" />
+            <element signature="e#3064#3097#0" expanded="true" />
+            <element signature="e#3098#3104#1" expanded="true" />
+            <element signature="e#3104#3110#0" expanded="true" />
+            <element signature="e#3110#3116#0" expanded="true" />
+            <element signature="e#3116#3122#0" expanded="true" />
+            <element signature="e#3272#3305#0" expanded="true" />
+            <element signature="e#3328#3361#0" expanded="true" />
+            <element signature="e#3376#3409#0" expanded="true" />
+            <element signature="e#3424#3457#0" expanded="true" />
+            <element signature="e#3472#3505#0" expanded="true" />
+            <element signature="e#3520#3553#0" expanded="true" />
+            <element signature="e#3568#3601#0" expanded="true" />
+            <element signature="e#3616#3649#0" expanded="true" />
+            <element signature="e#3664#3697#0" expanded="true" />
+            <element signature="e#3712#3745#0" expanded="true" />
+            <element signature="e#3760#3793#0" expanded="true" />
+            <element signature="e#3808#3841#0" expanded="true" />
+            <element signature="e#3863#3896#0" expanded="true" />
+            <element signature="e#3919#3952#0" expanded="true" />
+            <element signature="e#3967#4000#0" expanded="true" />
+            <element signature="e#4015#4048#0" expanded="true" />
+            <element signature="e#4063#4096#0" expanded="true" />
+            <element signature="e#4111#4144#0" expanded="true" />
+            <element signature="e#4159#4192#0" expanded="true" />
+            <element signature="e#4207#4240#0" expanded="true" />
+            <element signature="e#4255#4288#0" expanded="true" />
+            <element signature="e#4303#4336#0" expanded="true" />
+            <element signature="e#4351#4384#0" expanded="true" />
+            <element signature="e#4399#4432#0" expanded="true" />
+            <element signature="e#4616#4649#0" expanded="true" />
+            <element signature="e#4690#4723#0" expanded="true" />
+            <element signature="e#5030#5063#0" expanded="true" />
+            <element signature="e#5104#5137#0" expanded="true" />
+            <element signature="e#316321#316339#0" expanded="true" />
+            <element signature="e#336992#336996#0" expanded="true" />
+            <element signature="e#337008#337012#0" expanded="true" />
+            <element signature="e#337096#337100#0" expanded="true" />
+            <element signature="e#337112#337116#0" expanded="true" />
+            <element signature="e#338866#338870#0" expanded="true" />
+            <element signature="e#338882#338886#0" expanded="true" />
+            <element signature="e#338970#338974#0" expanded="true" />
+            <element signature="e#338986#338990#0" expanded="true" />
+            <element signature="e#340712#340716#0" expanded="true" />
+            <element signature="e#340728#340732#0" expanded="true" />
+            <element signature="e#340816#340820#0" expanded="true" />
+            <element signature="e#340832#340836#0" expanded="true" />
+            <element signature="e#344282#344286#0" expanded="true" />
+            <element signature="e#344298#344302#0" expanded="true" />
+            <element signature="e#344386#344390#0" expanded="true" />
+            <element signature="e#344402#344406#0" expanded="true" />
+            <element signature="e#346020#346024#0" expanded="true" />
+            <element signature="e#346036#346040#0" expanded="true" />
+            <element signature="e#346124#346128#0" expanded="true" />
+            <element signature="e#346140#346144#0" expanded="true" />
+            <element signature="e#394794#394798#0" expanded="true" />
+            <element signature="e#394810#394814#0" expanded="true" />
+            <element signature="e#394898#394902#0" expanded="true" />
+            <element signature="e#394914#394918#0" expanded="true" />
+            <element signature="e#396492#396496#0" expanded="true" />
+            <element signature="e#396508#396512#0" expanded="true" />
+            <element signature="e#396596#396600#0" expanded="true" />
+            <element signature="e#396612#396616#0" expanded="true" />
+            <element signature="e#402570#402574#0" expanded="true" />
+            <element signature="e#402586#402590#0" expanded="true" />
+            <element signature="e#402674#402678#0" expanded="true" />
+            <element signature="e#402690#402694#0" expanded="true" />
+            <element signature="e#410049#410067#0" expanded="true" />
+            <element signature="e#417213#417231#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#425843#425861#0" expanded="true" />
+            <element signature="e#435559#435577#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

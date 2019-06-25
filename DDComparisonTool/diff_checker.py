@@ -23,35 +23,131 @@ def main():
     f = open("report_prep.txt", "w+")
 
 
+    h = open("reportH.html", "w+")
+    h.write('<div class="tab">' + "\n")
+    for current_file_index in range(number_of_files):
+        fileName = str(file_name_list[current_file_index])
+        h.write('          <button class="tablinks" onmouseover="openFile(event, \'' + fileName + '\')">' + fileName + '</button>' + "\n")
+    h.write('    </div>')
+
+
+    #Go through each file type available
     for current_file_index in range(number_of_files):
         no_difference = True
         diff_total = 0
+        current_line_keeper = 0
+        fileName =  str(file_name_list[current_file_index])
+        fileA = str(file_pair_list[current_file_index][0])
+        fileB = str(file_pair_list[current_file_index][1])
+
+        # Write current file type to report_prep.txt
         f = open("report_prep.txt", "a+")
         f.write("\n\n")
-        f.write("File type: " + file_name_list[current_file_index] + "\n")
-        f.write("Files being compare: " + file_pair_list[current_file_index][0] + "  and  " + file_pair_list[current_file_index][1] + "\n")
+        f.write("File type: " + fileName + "\n")
+        f.write("Files being compare: " + fileA + "  and  " + fileB + "\n")
         f.write("Differences: " + "\n")
-        current_line_keeper = 0
+
+        h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
+        h.write('<table style="width:100%">' + '\n')
+        h.write('<tr>' + '\n')
+        h.write('   <th>' + fileA + '</th>' + '\n')
+        h.write('   <th>' + fileB + '</th>' + '\n')
+        h.write('</tr>' + '\n\n')
+
+        #go down the every line of the current file being processed
         for current_line in range(len(files_as_string_1[current_file_index])):
-            if(no_difference) == true:
+
+            # For missing line implementation, not done yet.
+            if(no_difference) == True:
                 current_line_keeper = current_line
 
             print files_as_string_1[current_file_index][current_line_keeper]
             print files_as_string_2[current_file_index][current_line]
 
+            h.write('<tr>' + '\n')
+
+
             if(files_as_string_1[current_file_index][current_line] == files_as_string_2[current_file_index][current_line]):
+                h.write('  <td>' + str(files_as_string_1[current_file_index][current_line]).rstrip() + '</td>' + '\n')
+                h.write('  <td>' + str(files_as_string_2[current_file_index][current_line]).rstrip() + '</td>' + '\n')
                 print "Same"
             else:
                 if(no_difference):
                     no_difference = False
+
+
+                length_a = len(str(files_as_string_1[current_file_index][current_line]).rstrip())
+                length_b = len(str(files_as_string_2[current_file_index][current_line]).rstrip())
+
+                print length_a
+                print length_b
+
+
+                length_use = length_a
+                if length_a > length_b:
+                    length_use = length_b
+                h.write('   <td style="background-color: #FFFF00">')
+                for a in range(length_use):
+                    print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
+                    print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
+                    if str(files_as_string_1[current_file_index][current_line]).rstrip()[a] != str(files_as_string_2[current_file_index][current_line]).rstrip()[a]:
+                        h.write('<font style="background-color: #89ED75">' +  str(files_as_string_1[current_file_index][current_line]).rstrip()[a] + '</font>')
+                    else:
+                        h.write(str(files_as_string_1[current_file_index][current_line]).rstrip()[a])
+                if length_a > length_b:
+                    h.write('<font style="background-color: #89ED75">')
+                    for a in range(length_use,length_a):
+                        h.write(str(files_as_string_1[current_file_index][current_line]).rstrip()[a])
+                    h.write('</font>')
+                else:
+                    h.write('<font style="background-color: #89ED75">')
+                    for a in range(length_use, length_b):
+                        h.write('&nbsp;&nbsp;')
+                    h.write('</font>')
+
+                h.write('</td>' + '\n')
+
+                length_use = length_b
+                if length_b > length_a:
+                    length_use = length_a
+                h.write('   <td style="background-color: #FFFF00">')
+                for a in range(length_use):
+                    print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
+                    print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
+                    if str(files_as_string_2[current_file_index][current_line]).rstrip()[a] != str(files_as_string_1[current_file_index][current_line]).rstrip()[a]:
+                        h.write('<font style="background-color: #89ED75">' + str(files_as_string_2[current_file_index][current_line]).rstrip()[a] + '</font>')
+                    else:
+                        h.write(str(files_as_string_2[current_file_index][current_line]).rstrip()[a])
+                if length_b > length_a:
+                    h.write('<font style="background-color: #89ED75">')
+                    for a in range(length_use, length_b):
+                        h.write(str(files_as_string_2[current_file_index][current_line]).rstrip()[a])
+                    h.write('</font>')
+                else:
+                    h.write('<font style="background-color: #89ED75">')
+                    for a in range(length_use,length_a):
+                        h.write('&nbsp;&nbsp;')
+                    h.write('</font>')
+                h.write('</td>' + '\n')
+
                 print "difference"
                 diff_total = diff_total + 1
                 f.write("Line " + str(current_line) + "\n")
                 f.write("     " + files_as_string_1[current_file_index][current_line] + "\n")
                 f.write("     " + files_as_string_2[current_file_index][current_line] + "\n")
+            h.write('</tr>' + '\n\n')
+
         if(no_difference):
             f.write("     None" + "\n")
         diff_total_list.append(diff_total)
+        h.write('</table>' + "\n")
+        h.write('</div>' + '\n\n')
+
+    h = open("reportH2.html", "w+")
+
+    writeHeader(h)
+    h.write(open("reportH.html", 'r').read())
+    writeFooter(h)
 
     f = open("report.txt", "w+")
     f.write("Time: " + str(datetime.datetime.now()) + "\n")
@@ -144,7 +240,30 @@ def index_file():
             pass
 
 
+def writeFooter(h):
+    #h = open("reportH.html", "a+")
+    h.write('''
+<div class="clearfix"></div>
 
+<script>
+function openFile(evt, fileName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(fileName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
+''')
 
 
 
@@ -156,9 +275,75 @@ def index_file():
     print len(files_as_string_2)
 
 
+def writeHeader(h):
+    #h = open("reportH.html", "a+")
+    h.write('''
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
 
 
+    ''')
 
+    return h
 
 
 
