@@ -86,7 +86,7 @@ def main():
                 length_use = length_a
                 if length_a > length_b:
                     length_use = length_b
-                h.write('   <td ' + 'id="' + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write('   <td ' + 'id="' + str(file_name_list[current_file_index]) + diff_id + '"' + ' style="background-color: #FFFF00">')
                 for a in range(length_use):
                     print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
                     print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
@@ -171,8 +171,18 @@ def main():
 
     h.write(open("reportH.html", 'r').read())
     h.write('<div id="Overall result" class="tabcontent">' + '\n')
-    h.write('<pre>' + open("report.txt", 'r').read() + '</pre')
+    h.write('<pre>' + open("report.txt", 'r').read() + '</pre>' + '\n')
     h.write('</div>')
+    h.write('''
+    <div class="clearfix"></div>
+
+    <script>
+    ''')
+    h.write('var currentFile = ' + "''" + '\n')
+    h.write('var currentDiff = 0 \n')
+    h.write('var dict = {}; \n')
+    for i in range(len(file_name_list)):
+        h.write('dict["' + file_name_list[i] + '"] = ' + str(diff_total_list[i]) + '\n' )
     writeFooter(h)
 
 
@@ -259,9 +269,6 @@ def index_file():
 def writeFooter(h):
     #h = open("reportH.html", "a+")
     h.write('''
-<div class="clearfix"></div>
-
-<script>
 function openFile(evt, fileName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -274,6 +281,7 @@ function openFile(evt, fileName) {
   }
   document.getElementById(fileName).style.display = "block";
   evt.currentTarget.className += " active";
+  currentFile = fileName;
 }
 
 window.onscroll = function() {scrollFunction()};
@@ -296,7 +304,14 @@ function topFunction() {
 
 // When the user clicks on the button, go to next line of differences
 function goNext() {
-  location.href = "#2";
+   var a = '#' + currentFile +currentDiff;
+  if(currentDiff < dict[currentFile]){
+  	currentDiff = currentDiff + 1;
+  }else{
+  	currentDiff = 0;
+  }
+  location.href = a
+  window.scrollBy(0, 200);
 }
 
 </script>
@@ -325,6 +340,10 @@ def writeHeader(h):
 <style>
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;}
+
+html {
+  scroll-behavior: smooth;
+}
 
 #myBtn {
   display: none;
@@ -421,9 +440,9 @@ body {font-family: "Lato", sans-serif;}
 <body>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-<button onclick="goNext()" id="myBtn2" title="Go to next line of difference" value='0'>Next</button>
+<button onclick="goNext()" id="myBtn2" title="Go to next line of difference">Next</button>
 
-    ''')
+''')
 
     return h
 
