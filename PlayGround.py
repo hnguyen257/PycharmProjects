@@ -1,5 +1,7 @@
 
+from difflib import SequenceMatcher
 
 
-print 'safsdf' + ' ' + ' ' + ' ' + ' ' + ' ' + ' '  + 'sfasdfsdf'
-
+a= '<Severity>ALERT_MAINT_ID</Severity>'
+b= '<Severity> </Severity>'
+print SequenceMatcher(None, a, b).ratio()
