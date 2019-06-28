@@ -21,8 +21,6 @@ def main():
     print file_pair_list
 
     f = open("report_prep.txt", "w+")
-
-
     h = open("reportH.html", "w+")
 
 
@@ -311,7 +309,6 @@ function goNext() {
   	currentDiff = 0;
   }
   location.href = a
-  window.scrollBy(0, 200);
 }
 
 </script>

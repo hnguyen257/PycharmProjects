@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df49fdb7-b645-471a-91a6-f1c971d03792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f1f460301.mrg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f_1f46_03.fhx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f_1f46_04.alert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f_1f46_04.alm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/0301.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/0301.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/0606.sym" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/ddinstal.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f1f460301.mrg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f_1f46_03.alert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f_1f46_03.alm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f_1f46_03.fhx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.fm8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.sym" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/ddinstal.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sameAndDiff/dd_comp_GUI_SD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PycharmProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PycharmProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 1/0206.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 1/0206.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayGround.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayGround.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" beforeDir="false" afterPath="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +23,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="117" column="158" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="158" />
+            <state relative-caret-position="-2929">
+              <caret line="128" column="39" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="39" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#8063#10832#0" />
               </folding>
             </state>
           </provider>
@@ -44,61 +35,43 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sameAndDiff/sameAndDiff.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="693">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#8063#10832#0" />
-                <element signature="e#10859#12429#0" />
-                <element signature="e#12456#14377#0" />
-                <element signature="e#14422#14652#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm64.exe.vmoptions">
+        <entry file="file://$PROJECT_DIR$/sameAndDiff/dd_comp_GUI_SD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+            <state relative-caret-position="119">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DiffCheckerContent/DiffCheckerContent.py">
+        <entry file="file://$PROJECT_DIR$/sameAndDiff/reportH2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#8063#10832#0" />
-                <element signature="e#10859#12429#0" />
-              </folding>
-            </state>
+            <state relative-caret-position="-553568" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DiffCheckerContent/playground.py">
+        <entry file="file://$PROJECT_DIR$/sameAndDiff/report.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#8063#10832#0" />
-                <element signature="e#10504#10734#1" />
-              </folding>
-            </state>
+            <state relative-caret-position="-204" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DiffCheckerContent/playground_2.py">
+        <entry file="file://$PROJECT_DIR$/PlayGround.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+            <state relative-caret-position="102">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -120,19 +93,10 @@
       <find>fm8</find>
       <find>openCity</find>
       <find>cityName</find>
-      <find>reportH2</find>
-      <find>report.txt</find>
-      <find>similar_found</find>
-      <find>current_line_B</find>
     </findStrings>
     <replaceStrings>
       <replace>openFile</replace>
       <replace>fileName</replace>
-      <replace>reportH2_content.</replace>
-      <replace>report_content.txt</replace>
-      <replace>same_line_found</replace>
-      <replace>current_file_a</replace>
-      <replace>current_line_b</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -147,34 +111,28 @@
         <option value="$PROJECT_DIR$/DDComparisonTool/dd_comp.py" />
         <option value="$PROJECT_DIR$/report.txt" />
         <option value="$PROJECT_DIR$/DDComparisonTool/scratch" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg" />
         <option value="$PROJECT_DIR$/DDComparisonTool/reportH.html" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/reportH2.html" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
         <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert" />
         <option value="$PROJECT_DIR$/DDComparisonTool/Scatch2" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/reportH2.html" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
         <option value="$PROJECT_DIR$/PlayGround.py" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/diff_checker_content_only.py" />
-        <option value="$PROJECT_DIR$/DiffCheckerContent/DiffCheckerContent.py" />
-        <option value="$PROJECT_DIR$/DiffCheckerContent/playground_2.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/pycharm64.exe.vmoptions" />
-        <option value="$PROJECT_DIR$/DiffCheckerContent/playground.py" />
         <option value="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="438" />
-    <option name="y" value="190" />
-    <option name="width" value="1437" />
-    <option name="height" value="1047" />
+    <option name="x" value="390" />
+    <option name="y" value="122" />
+    <option name="width" value="1438" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,30 +143,23 @@
             <path>
               <item name="PycharmProjects" type="b2602c69:ProjectViewProjectNode" />
               <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
-              <item name="DDComparisonTool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PycharmProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
-              <item name="DiffCheckerContent" type="462c0819:PsiDirectoryNode" />
+              <item name="sameAndDiff" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DDComparisonTool" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sameAndDiff" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool" />
+      <recent name="C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\sameAndDiff" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.playground">
+  <component name="RunManager" selected="Python.sameAndDiff">
     <configuration name="PlayGround" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -245,6 +196,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="dd_comp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DDComparisonTool" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDComparisonTool/dd_comp.py" />
+      <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="diff_checker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -252,55 +224,13 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Python27\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Hiep Nguyen\PycharmProjects\DDComparisionTool\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DDComparisonTool" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
-      <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="playground" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DiffCheckerContent" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DiffCheckerContent/playground.py" />
-      <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="playground_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DiffCheckerContent" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DiffCheckerContent/playground_2.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="&quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -321,7 +251,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" />
-      <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
+      <option name="PARAMETERS" value="&quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -331,18 +261,16 @@
     </configuration>
     <list>
       <item itemvalue="Python.PlayGround" />
+      <item itemvalue="Python.dd_comp" />
       <item itemvalue="Python.diff_checker" />
-      <item itemvalue="Python.playground" />
-      <item itemvalue="Python.playground_2" />
       <item itemvalue="Python.sameAndDiff" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.playground" />
         <item itemvalue="Python.sameAndDiff" />
-        <item itemvalue="Python.playground_2" />
         <item itemvalue="Python.PlayGround" />
         <item itemvalue="Python.diff_checker" />
+        <item itemvalue="Python.dd_comp" />
       </list>
     </recent_temporary>
   </component>
@@ -364,14 +292,7 @@
       <option name="project" value="LOCAL" />
       <updated>1560178443006</updated>
     </task>
-    <task id="LOCAL-00002" summary="add diff same">
-      <created>1561694355769</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1561694355769</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -384,22 +305,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1293" height="773" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19283456" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1477363" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24973656" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35211268" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35536295" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38509318" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3954496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.22968581" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4988086" weight="0.22826087" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50119144" side_tool="true" weight="0.32919255" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4988086" weight="0.14285715" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -426,8 +347,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reset to original" />
-    <MESSAGE value="add diff same" />
-    <option name="LAST_COMMIT_MESSAGE" value="add diff same" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reset to original" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -453,19 +373,9 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DDComparisonTool/diff_checker_content_only.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DiffCheckerContent/playground.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/sameAndDiff/sameAndDiff.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -586,6 +496,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29869">
+          <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://C:/Python27/Lib/encodings/utf_16.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
@@ -601,7 +518,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/report_prep.txt" />
-    <entry file="file://$PROJECT_DIR$/reportH.html" />
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/dd_comp_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420" />
@@ -712,521 +635,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/scratch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1660">
-          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Scatch2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859820">
-          <caret line="42991" column="22" selection-start-line="42991" selection-start-column="22" selection-end-line="42991" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63960">
-          <caret line="3198" column="76" selection-start-line="3198" selection-start-column="76" selection-end-line="3198" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1360">
+        <state relative-caret-position="380">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alm">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.fhx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 2/000026_2658_02.alert">
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Scatch2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/difflib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6699">
-          <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlayGround.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="607">
+          <caret line="42999" selection-start-line="42999" selection-end-line="42999" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470220">
-          <caret line="23673" column="62" selection-start-line="23673" selection-start-column="62" selection-end-line="23673" selection-end-column="62" />
+        <state relative-caret-position="2074">
+          <caret line="122" column="4" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2972#2990#0" expanded="true" />
-            <element signature="e#3528#3561#0" expanded="true" />
-            <element signature="e#3590#3623#0" expanded="true" />
-            <element signature="e#3624#3630#0" expanded="true" />
-            <element signature="e#3630#3636#0" expanded="true" />
-            <element signature="e#3656#3689#0" expanded="true" />
-            <element signature="e#3718#3751#0" expanded="true" />
-            <element signature="e#4167#4200#0" expanded="true" />
-            <element signature="e#4249#4282#0" expanded="true" />
-            <element signature="e#4307#4340#0" expanded="true" />
-            <element signature="e#4389#4422#0" expanded="true" />
-            <element signature="e#4423#4429#0" expanded="true" />
-            <element signature="e#4429#4435#0" expanded="true" />
-            <element signature="e#4435#4441#0" expanded="true" />
-            <element signature="e#4441#4447#0" expanded="true" />
-            <element signature="e#4447#4453#0" expanded="true" />
-            <element signature="e#4453#4459#0" expanded="true" />
-            <element signature="e#4459#4465#0" expanded="true" />
-            <element signature="e#4465#4471#0" expanded="true" />
-            <element signature="e#4692#4725#0" expanded="true" />
-            <element signature="e#4748#4781#0" expanded="true" />
-            <element signature="e#4796#4829#0" expanded="true" />
-            <element signature="e#4844#4877#0" expanded="true" />
-            <element signature="e#4892#4925#0" expanded="true" />
-            <element signature="e#4940#4973#0" expanded="true" />
-            <element signature="e#4988#5021#0" expanded="true" />
-            <element signature="e#5036#5069#0" expanded="true" />
-            <element signature="e#5084#5117#0" expanded="true" />
-            <element signature="e#5132#5165#0" expanded="true" />
-            <element signature="e#5180#5213#0" expanded="true" />
-            <element signature="e#5228#5261#0" expanded="true" />
-            <element signature="e#5283#5316#0" expanded="true" />
-            <element signature="e#5339#5372#0" expanded="true" />
-            <element signature="e#5387#5420#0" expanded="true" />
-            <element signature="e#5435#5468#0" expanded="true" />
-            <element signature="e#5483#5516#0" expanded="true" />
-            <element signature="e#5531#5564#0" expanded="true" />
-            <element signature="e#5579#5612#0" expanded="true" />
-            <element signature="e#5627#5660#0" expanded="true" />
-            <element signature="e#5675#5708#0" expanded="true" />
-            <element signature="e#5723#5756#0" expanded="true" />
-            <element signature="e#5771#5804#0" expanded="true" />
-            <element signature="e#5819#5852#0" expanded="true" />
-            <element signature="e#5853#5859#0" expanded="true" />
-            <element signature="e#5859#5865#0" expanded="true" />
-            <element signature="e#6099#6132#0" expanded="true" />
-            <element signature="e#6173#6206#0" expanded="true" />
-            <element signature="e#6231#6264#0" expanded="true" />
-            <element signature="e#6305#6338#0" expanded="true" />
-            <element signature="e#6339#6345#0" expanded="true" />
-            <element signature="e#6345#6351#0" expanded="true" />
-            <element signature="e#6351#6357#0" expanded="true" />
-            <element signature="e#6357#6363#0" expanded="true" />
-            <element signature="e#6363#6369#0" expanded="true" />
-            <element signature="e#6369#6375#0" expanded="true" />
-            <element signature="e#6375#6381#0" expanded="true" />
-            <element signature="e#6381#6387#0" expanded="true" />
-            <element signature="e#200629#200662#0" expanded="true" />
-            <element signature="e#200733#200766#0" expanded="true" />
-            <element signature="e#200796#200829#0" expanded="true" />
-            <element signature="e#200900#200933#0" expanded="true" />
-            <element signature="e#200934#200940#0" expanded="true" />
-            <element signature="e#200940#200946#0" expanded="true" />
-            <element signature="e#200946#200952#0" expanded="true" />
-            <element signature="e#200952#200958#0" expanded="true" />
-            <element signature="e#200958#200964#0" expanded="true" />
-            <element signature="e#200964#200970#0" expanded="true" />
-            <element signature="e#200970#200976#0" expanded="true" />
-            <element signature="e#200976#200982#0" expanded="true" />
-            <element signature="e#200982#200988#0" expanded="true" />
-            <element signature="e#200988#200994#0" expanded="true" />
-            <element signature="e#200994#201000#0" expanded="true" />
-            <element signature="e#201000#201006#0" expanded="true" />
-            <element signature="e#201006#201012#0" expanded="true" />
-            <element signature="e#201012#201018#0" expanded="true" />
-            <element signature="e#201018#201024#0" expanded="true" />
-            <element signature="e#201024#201030#0" expanded="true" />
-            <element signature="e#201030#201036#0" expanded="true" />
-            <element signature="e#201036#201042#0" expanded="true" />
-            <element signature="e#204248#204281#0" expanded="true" />
-            <element signature="e#204316#204349#0" expanded="true" />
-            <element signature="e#204377#204410#0" expanded="true" />
-            <element signature="e#204445#204478#0" expanded="true" />
-            <element signature="e#204479#204485#0" expanded="true" />
-            <element signature="e#204485#204491#0" expanded="true" />
-            <element signature="e#204491#204497#0" expanded="true" />
-            <element signature="e#204497#204503#0" expanded="true" />
-            <element signature="e#204503#204509#0" expanded="true" />
-            <element signature="e#204509#204515#0" expanded="true" />
-            <element signature="e#204515#204521#0" expanded="true" />
-            <element signature="e#204521#204527#0" expanded="true" />
-            <element signature="e#204527#204533#0" expanded="true" />
-            <element signature="e#204533#204539#0" expanded="true" />
-            <element signature="e#204539#204545#0" expanded="true" />
-            <element signature="e#204545#204551#0" expanded="true" />
-            <element signature="e#204551#204557#0" expanded="true" />
-            <element signature="e#204557#204563#0" expanded="true" />
-            <element signature="e#206359#206392#0" expanded="true" />
-            <element signature="e#206413#206446#0" expanded="true" />
-            <element signature="e#206478#206511#0" expanded="true" />
-            <element signature="e#206532#206565#0" expanded="true" />
-            <element signature="e#206566#206572#0" expanded="true" />
-            <element signature="e#206572#206578#0" expanded="true" />
-            <element signature="e#206578#206584#0" expanded="true" />
-            <element signature="e#206584#206590#0" expanded="true" />
-            <element signature="e#206590#206596#0" expanded="true" />
-            <element signature="e#206596#206602#0" expanded="true" />
-            <element signature="e#206602#206608#0" expanded="true" />
-            <element signature="e#206608#206614#0" expanded="true" />
-            <element signature="e#206614#206620#0" expanded="true" />
-            <element signature="e#206620#206626#0" expanded="true" />
-            <element signature="e#206626#206632#0" expanded="true" />
-            <element signature="e#206632#206638#0" expanded="true" />
-            <element signature="e#206638#206644#0" expanded="true" />
-            <element signature="e#206644#206650#0" expanded="true" />
-            <element signature="e#206650#206656#0" expanded="true" />
-            <element signature="e#206656#206662#0" expanded="true" />
-            <element signature="e#206662#206668#0" expanded="true" />
-            <element signature="e#206668#206674#0" expanded="true" />
-            <element signature="e#206674#206680#0" expanded="true" />
-            <element signature="e#206680#206686#0" expanded="true" />
-            <element signature="e#206686#206692#0" expanded="true" />
-            <element signature="e#206692#206698#0" expanded="true" />
-            <element signature="e#341720#341753#0" expanded="true" />
-            <element signature="e#341825#341858#0" expanded="true" />
-            <element signature="e#341890#341923#0" expanded="true" />
-            <element signature="e#341995#342028#0" expanded="true" />
-            <element signature="e#342029#342035#0" expanded="true" />
-            <element signature="e#342035#342041#0" expanded="true" />
-            <element signature="e#342041#342047#0" expanded="true" />
-            <element signature="e#342047#342053#0" expanded="true" />
-            <element signature="e#342053#342059#0" expanded="true" />
-            <element signature="e#342059#342065#0" expanded="true" />
-            <element signature="e#342065#342071#0" expanded="true" />
-            <element signature="e#342071#342077#0" expanded="true" />
-            <element signature="e#342077#342083#0" expanded="true" />
-            <element signature="e#342083#342089#0" expanded="true" />
-            <element signature="e#342089#342095#0" expanded="true" />
-            <element signature="e#342095#342101#0" expanded="true" />
-            <element signature="e#342101#342107#0" expanded="true" />
-            <element signature="e#342107#342113#0" expanded="true" />
-            <element signature="e#342113#342119#0" expanded="true" />
-            <element signature="e#342119#342125#0" expanded="true" />
-            <element signature="e#342125#342131#0" expanded="true" />
-            <element signature="e#342131#342137#0" expanded="true" />
-            <element signature="e#342137#342143#0" expanded="true" />
-            <element signature="e#342143#342149#0" expanded="true" />
-            <element signature="e#342149#342155#0" expanded="true" />
-            <element signature="e#342155#342161#0" expanded="true" />
-            <element signature="e#347301#347334#0" expanded="true" />
-            <element signature="e#347409#347442#0" expanded="true" />
-            <element signature="e#347471#347504#0" expanded="true" />
-            <element signature="e#347579#347612#0" expanded="true" />
-            <element signature="e#347613#347619#0" expanded="true" />
-            <element signature="e#347619#347625#0" expanded="true" />
-            <element signature="e#347625#347631#0" expanded="true" />
-            <element signature="e#347631#347637#0" expanded="true" />
-            <element signature="e#347637#347643#0" expanded="true" />
-            <element signature="e#347643#347649#0" expanded="true" />
-            <element signature="e#347649#347655#0" expanded="true" />
-            <element signature="e#347655#347661#0" expanded="true" />
-            <element signature="e#347661#347667#0" expanded="true" />
-            <element signature="e#347667#347673#0" expanded="true" />
-            <element signature="e#347673#347679#0" expanded="true" />
-            <element signature="e#347679#347685#0" expanded="true" />
-            <element signature="e#347685#347691#0" expanded="true" />
-            <element signature="e#347691#347697#0" expanded="true" />
-            <element signature="e#347697#347703#0" expanded="true" />
-            <element signature="e#347703#347709#0" expanded="true" />
-            <element signature="e#374651#374669#0" expanded="true" />
-            <element signature="e#375954#375987#0" expanded="true" />
-            <element signature="e#376011#376044#0" expanded="true" />
-            <element signature="e#376059#376092#0" expanded="true" />
-            <element signature="e#376107#376140#0" expanded="true" />
-            <element signature="e#376155#376188#0" expanded="true" />
-            <element signature="e#376203#376236#0" expanded="true" />
-            <element signature="e#376251#376284#0" expanded="true" />
-            <element signature="e#376299#376332#0" expanded="true" />
-            <element signature="e#376347#376380#0" expanded="true" />
-            <element signature="e#376395#376428#0" expanded="true" />
-            <element signature="e#376443#376476#0" expanded="true" />
-            <element signature="e#376491#376524#0" expanded="true" />
-            <element signature="e#376539#376572#0" expanded="true" />
-            <element signature="e#376587#376620#0" expanded="true" />
-            <element signature="e#376635#376668#0" expanded="true" />
-            <element signature="e#376683#376716#0" expanded="true" />
-            <element signature="e#376731#376764#0" expanded="true" />
-            <element signature="e#376779#376812#0" expanded="true" />
-            <element signature="e#376827#376860#0" expanded="true" />
-            <element signature="e#376875#376908#0" expanded="true" />
-            <element signature="e#376923#376956#0" expanded="true" />
-            <element signature="e#376971#377004#0" expanded="true" />
-            <element signature="e#377029#377062#0" expanded="true" />
-            <element signature="e#377086#377119#0" expanded="true" />
-            <element signature="e#377134#377167#0" expanded="true" />
-            <element signature="e#377182#377215#0" expanded="true" />
-            <element signature="e#377230#377263#0" expanded="true" />
-            <element signature="e#377278#377311#0" expanded="true" />
-            <element signature="e#377326#377359#0" expanded="true" />
-            <element signature="e#377374#377407#0" expanded="true" />
-            <element signature="e#377422#377455#0" expanded="true" />
-            <element signature="e#377470#377503#0" expanded="true" />
-            <element signature="e#377518#377551#0" expanded="true" />
-            <element signature="e#377566#377599#0" expanded="true" />
-            <element signature="e#377614#377647#0" expanded="true" />
-            <element signature="e#377662#377695#0" expanded="true" />
-            <element signature="e#377710#377743#0" expanded="true" />
-            <element signature="e#377758#377791#0" expanded="true" />
-            <element signature="e#377806#377839#0" expanded="true" />
-            <element signature="e#377854#377887#0" expanded="true" />
-            <element signature="e#377902#377935#0" expanded="true" />
-            <element signature="e#377950#377983#0" expanded="true" />
-            <element signature="e#377998#378031#0" expanded="true" />
-            <element signature="e#378046#378079#0" expanded="true" />
-            <element signature="e#378080#378086#0" expanded="true" />
-            <element signature="e#378086#378092#0" expanded="true" />
-            <element signature="e#378092#378098#0" expanded="true" />
-            <element signature="e#378098#378104#0" expanded="true" />
-            <element signature="e#378104#378110#0" expanded="true" />
-            <element signature="e#378110#378116#0" expanded="true" />
-            <element signature="e#378116#378122#0" expanded="true" />
-            <element signature="e#378122#378128#0" expanded="true" />
-            <element signature="e#378344#378377#0" expanded="true" />
-            <element signature="e#378404#378437#0" expanded="true" />
-            <element signature="e#378452#378485#0" expanded="true" />
-            <element signature="e#378500#378533#0" expanded="true" />
-            <element signature="e#378548#378581#0" expanded="true" />
-            <element signature="e#378596#378629#0" expanded="true" />
-            <element signature="e#378644#378677#0" expanded="true" />
-            <element signature="e#378692#378725#0" expanded="true" />
-            <element signature="e#378740#378773#0" expanded="true" />
-            <element signature="e#378788#378821#0" expanded="true" />
-            <element signature="e#378836#378869#0" expanded="true" />
-            <element signature="e#378884#378917#0" expanded="true" />
-            <element signature="e#378932#378965#0" expanded="true" />
-            <element signature="e#378980#379013#0" expanded="true" />
-            <element signature="e#379028#379061#0" expanded="true" />
-            <element signature="e#379086#379119#0" expanded="true" />
-            <element signature="e#379146#379179#0" expanded="true" />
-            <element signature="e#379194#379227#0" expanded="true" />
-            <element signature="e#379242#379275#0" expanded="true" />
-            <element signature="e#379290#379323#0" expanded="true" />
-            <element signature="e#379338#379371#0" expanded="true" />
-            <element signature="e#379386#379419#0" expanded="true" />
-            <element signature="e#379434#379467#0" expanded="true" />
-            <element signature="e#379482#379515#0" expanded="true" />
-            <element signature="e#379530#379563#0" expanded="true" />
-            <element signature="e#379578#379611#0" expanded="true" />
-            <element signature="e#379626#379659#0" expanded="true" />
-            <element signature="e#379674#379707#0" expanded="true" />
-            <element signature="e#379722#379755#0" expanded="true" />
-            <element signature="e#379770#379803#0" expanded="true" />
-            <element signature="e#379804#379810#0" expanded="true" />
-            <element signature="e#379810#379816#0" expanded="true" />
-            <element signature="e#379816#379822#0" expanded="true" />
-            <element signature="e#379822#379828#0" expanded="true" />
-            <element signature="e#379828#379834#0" expanded="true" />
-            <element signature="e#379834#379840#0" expanded="true" />
-            <element signature="e#379840#379846#0" expanded="true" />
-            <element signature="e#379846#379852#0" expanded="true" />
-            <element signature="e#380346#380379#0" expanded="true" />
-            <element signature="e#380407#380440#0" expanded="true" />
-            <element signature="e#380455#380488#0" expanded="true" />
-            <element signature="e#380503#380536#0" expanded="true" />
-            <element signature="e#380551#380584#0" expanded="true" />
-            <element signature="e#380599#380632#0" expanded="true" />
-            <element signature="e#380647#380680#0" expanded="true" />
-            <element signature="e#380695#380728#0" expanded="true" />
-            <element signature="e#380743#380776#0" expanded="true" />
-            <element signature="e#380791#380824#0" expanded="true" />
-            <element signature="e#380839#380872#0" expanded="true" />
-            <element signature="e#380887#380920#0" expanded="true" />
-            <element signature="e#380935#380968#0" expanded="true" />
-            <element signature="e#380984#381017#0" expanded="true" />
-            <element signature="e#381032#381065#0" expanded="true" />
-            <element signature="e#381080#381113#0" expanded="true" />
-            <element signature="e#381128#381161#0" expanded="true" />
-            <element signature="e#381176#381209#0" expanded="true" />
-            <element signature="e#381224#381257#0" expanded="true" />
-            <element signature="e#381272#381305#0" expanded="true" />
-            <element signature="e#381320#381353#0" expanded="true" />
-            <element signature="e#381368#381401#0" expanded="true" />
-            <element signature="e#381416#381449#0" expanded="true" />
-            <element signature="e#381464#381497#0" expanded="true" />
-            <element signature="e#381512#381545#0" expanded="true" />
-            <element signature="e#381560#381593#0" expanded="true" />
-            <element signature="e#381618#381651#0" expanded="true" />
-            <element signature="e#381679#381712#0" expanded="true" />
-            <element signature="e#381727#381760#0" expanded="true" />
-            <element signature="e#381775#381808#0" expanded="true" />
-            <element signature="e#381823#381856#0" expanded="true" />
-            <element signature="e#381871#381904#0" expanded="true" />
-            <element signature="e#381919#381952#0" expanded="true" />
-            <element signature="e#381967#382000#0" expanded="true" />
-            <element signature="e#382015#382048#0" expanded="true" />
-            <element signature="e#382063#382096#0" expanded="true" />
-            <element signature="e#382111#382144#0" expanded="true" />
-            <element signature="e#382159#382192#0" expanded="true" />
-            <element signature="e#382207#382240#0" expanded="true" />
-            <element signature="e#382256#382289#0" expanded="true" />
-            <element signature="e#382304#382337#0" expanded="true" />
-            <element signature="e#382352#382385#0" expanded="true" />
-            <element signature="e#382400#382433#0" expanded="true" />
-            <element signature="e#382448#382481#0" expanded="true" />
-            <element signature="e#382496#382529#0" expanded="true" />
-            <element signature="e#382544#382577#0" expanded="true" />
-            <element signature="e#382592#382625#0" expanded="true" />
-            <element signature="e#382640#382673#0" expanded="true" />
-            <element signature="e#382688#382721#0" expanded="true" />
-            <element signature="e#382736#382769#0" expanded="true" />
-            <element signature="e#382784#382817#0" expanded="true" />
-            <element signature="e#382832#382865#0" expanded="true" />
-            <element signature="e#382866#382872#0" expanded="true" />
-            <element signature="e#382872#382878#0" expanded="true" />
-            <element signature="e#382878#382884#0" expanded="true" />
-            <element signature="e#382884#382890#0" expanded="true" />
-            <element signature="e#382890#382896#0" expanded="true" />
-            <element signature="e#382896#382902#0" expanded="true" />
-            <element signature="e#382902#382908#0" expanded="true" />
-            <element signature="e#382908#382914#0" expanded="true" />
-            <element signature="e#403583#403587#0" expanded="true" />
-            <element signature="e#403599#403603#0" expanded="true" />
-            <element signature="e#403687#403691#0" expanded="true" />
-            <element signature="e#403703#403707#0" expanded="true" />
-            <element signature="e#405637#405641#0" expanded="true" />
-            <element signature="e#405653#405657#0" expanded="true" />
-            <element signature="e#405741#405745#0" expanded="true" />
-            <element signature="e#405757#405761#0" expanded="true" />
-            <element signature="e#407663#407667#0" expanded="true" />
-            <element signature="e#407679#407683#0" expanded="true" />
-            <element signature="e#407767#407771#0" expanded="true" />
-            <element signature="e#407783#407787#0" expanded="true" />
-            <element signature="e#411593#411597#0" expanded="true" />
-            <element signature="e#411609#411613#0" expanded="true" />
-            <element signature="e#411697#411701#0" expanded="true" />
-            <element signature="e#411713#411717#0" expanded="true" />
-            <element signature="e#413511#413515#0" expanded="true" />
-            <element signature="e#413527#413531#0" expanded="true" />
-            <element signature="e#413615#413619#0" expanded="true" />
-            <element signature="e#413631#413635#0" expanded="true" />
-            <element signature="e#467400#467404#0" expanded="true" />
-            <element signature="e#467416#467420#0" expanded="true" />
-            <element signature="e#467504#467508#0" expanded="true" />
-            <element signature="e#467520#467524#0" expanded="true" />
-            <element signature="e#469278#469282#0" expanded="true" />
-            <element signature="e#469294#469298#0" expanded="true" />
-            <element signature="e#469382#469386#0" expanded="true" />
-            <element signature="e#469398#469402#0" expanded="true" />
-            <element signature="e#475971#475975#0" expanded="true" />
-            <element signature="e#475987#475991#0" expanded="true" />
-            <element signature="e#476075#476079#0" expanded="true" />
-            <element signature="e#476091#476095#0" expanded="true" />
-            <element signature="e#484170#484188#0" expanded="true" />
-            <element signature="e#492183#492201#0" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#502189#502207#0" expanded="true" />
-            <element signature="e#513629#513647#0" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/scratch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1016">
-          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
+        <state relative-caret-position="2159">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report_content.txt">
+    <entry file="file://$PROJECT_DIR$/reportH.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker_content_only.py">
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sameAndDiff/reportH2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="79" column="138" selection-start-line="79" selection-start-column="138" selection-end-line="79" selection-end-column="138" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#11130#13899#0" />
-            <element signature="e#13929#15499#0" />
-            <element signature="e#15526#17447#0" />
-          </folding>
+        <state relative-caret-position="-553568" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sameAndDiff/report.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlayGround.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiffCheckerContent/playground_2.py">
+    <entry file="file://$PROJECT_DIR$/sameAndDiff/dd_comp_GUI_SD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DiffCheckerContent/DiffCheckerContent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#8063#10832#0" />
-            <element signature="e#10859#12429#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm64.exe.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DiffCheckerContent/playground.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#8063#10832#0" />
-            <element signature="e#10504#10734#1" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="117" column="158" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="158" />
+        <state relative-caret-position="-2929">
+          <caret line="128" column="39" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="39" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#8063#10832#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sameAndDiff/sameAndDiff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="693">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#8063#10832#0" />
-            <element signature="e#10859#12429#0" />
-            <element signature="e#12456#14377#0" />
-            <element signature="e#14422#14652#1" />
           </folding>
         </state>
       </provider>
