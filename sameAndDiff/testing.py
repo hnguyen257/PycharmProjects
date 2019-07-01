@@ -259,9 +259,9 @@ def index_file():
                         file_pair_list.append(current_file_pair)
                         break
             except:
-                    continue
+                continue
     except:
-            pass
+        pass
 
 
 def writeFooter(h):

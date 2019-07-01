@@ -2,15 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df49fdb7-b645-471a-91a6-f1c971d03792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sameAndDiff/dd_comp_GUI_SD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiffCheckerContent/diff_checker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diff_checker_2.0/diff_checker_2.0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diff_checker_2.0/playGround.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diff_checker_2.0/report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sameAndDiff/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PycharmProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PycharmProjects.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 1/0206.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 1/0206.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 2/00002626580206.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 2/00002626580206.mrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 2/000026_2658_02.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 2/000026_2658_02.alert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 2/000026_2658_02.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 2/000026_2658_02.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Folder 2/0206.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 2/0206.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/00002626580206.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/00002626580206.mrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/000026_2658_02.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/000026_2658_02.alert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/000026_2658_02.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/000026_2658_02.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/000026_2658_02.fhx" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/000026_2658_02.fhx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/0206.fm8" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/0206.fm8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/0206.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/0206.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/0206.map" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/0206.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/0206.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/0206.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/New folder/ddinstal.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 5/ddinstal.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/000026_266e_02.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/000026_266e_02.alert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/000026_266e_02.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/000026_266e_02.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/000026_266e_02.fhx" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/000026_266e_02.fhx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/0206.fm8" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/0206.fm8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/0206.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/0206.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/0206.map" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/0206.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/0206.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/0206.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/266E0206.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/266E0206.mrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/266E_0206.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/266E_0206.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 04-16-2019_DD_Phase 1/AMS Install Kit/ddinstal.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 3/ddinstal.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/000026_266e_02.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/000026_266e_02.alert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/000026_266e_02.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/000026_266e_02.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/000026_266e_02.fhx" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/000026_266e_02.fhx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/0206.fm8" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/0206.fm8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/0206.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/0206.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/0206.map" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/0206.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/0206.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/0206.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/266E0206.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/266E0206.mrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/266E_0206.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/266E_0206.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-13-2019_DD_Phase 2-Pass2/ddinstal.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 4/ddinstal.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/000026_266e_02.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/000026_266e_02.alert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/000026_266e_02.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/000026_266e_02.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/000026_266e_02.fhx" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/000026_266e_02.fhx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/0201.fm8" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/0201.fm8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/0201.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/0201.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/0201.map" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/0201.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/0201.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/0201.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/266E0201.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/266E0201.mrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/266E_0101.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/266E_0101.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/RX 05-24-2017_Phase 2/DD 3308 02 01_Release 1_12/3308 0201 AMS Install Kit/ddinstal.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/Folder 6/ddinstal.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f1f460301.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/00001f1f460301.mrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f_1f46_03.fhx" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/00001f_1f46_03.fhx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f_1f46_04.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/00001f_1f46_04.alert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/00001f_1f46_04.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/00001f_1f46_04.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/0301.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/0301.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/0301.map" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/0301.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/0606.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/0606.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD1/ddinstal.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 7t/ddinstal.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f1f460301.mrg" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/00001f1f460301.mrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f_1f46_03.alert" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/00001f_1f46_03.alert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f_1f46_03.alm" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/00001f_1f46_03.alm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/00001f_1f46_03.fhx" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/00001f_1f46_03.fhx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.fm8" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/0301.fm8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/0301.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.map" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/0301.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/0301.sym" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/0301.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDComparisonTool/Trial DD2/ddinstal.ini" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/folder 8t/ddinstal.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayGround.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayGround.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" beforeDir="false" afterPath="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,58 +83,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2929">
-              <caret line="128" column="39" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sameAndDiff/sameAndDiff.py">
+        <entry file="file://$PROJECT_DIR$/diff_checker_2.0/diff_checker_2.0.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="1121">
+              <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#3649#9018#1" />
+                <element signature="e#7925#10389#0" />
+                <element signature="e#10416#11961#0" />
+                <element signature="e#12132#14053#0" />
+                <element signature="e#12176#14038#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sameAndDiff/dd_comp_GUI_SD.py">
+        <entry file="file://$PROJECT_DIR$/diff_checker_2.0/playGround.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sameAndDiff/reportH2.html">
+        <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker_content_only.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-553568" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sameAndDiff/report.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlayGround.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="170">
+              <caret line="97" column="194" lean-forward="true" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="194" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,10 +138,12 @@
       <find>fm8</find>
       <find>openCity</find>
       <find>cityName</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>openFile</replace>
       <replace>fileName</replace>
+      <replace>#print</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -114,17 +161,24 @@
         <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg" />
         <option value="$PROJECT_DIR$/DDComparisonTool/reportH.html" />
         <option value="$PROJECT_DIR$/DDComparisonTool/reportH2.html" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert" />
         <option value="$PROJECT_DIR$/DDComparisonTool/Scatch2" />
         <option value="$PROJECT_DIR$/PlayGround.py" />
         <option value="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
+        <option value="$PROJECT_DIR$/sameAndDiff/testing.py" />
+        <option value="$PROJECT_DIR$/diff_checker_2.0/report.txt" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert" />
+        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alm" />
+        <option value="$PROJECT_DIR$/testing/test.py" />
+        <option value="$PROJECT_DIR$/diff_checker_2.0/reportH2.html" />
+        <option value="$PROJECT_DIR$/diff_checker_2.0/diff_checker_2.0.py" />
+        <option value="$PROJECT_DIR$/diff_checker_2.0/playGround.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="390" />
-    <option name="y" value="122" />
+    <option name="x" value="445" />
+    <option name="y" value="87" />
     <option name="width" value="1438" />
     <option name="height" value="1048" />
   </component>
@@ -133,6 +187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,22 +198,28 @@
             <path>
               <item name="PycharmProjects" type="b2602c69:ProjectViewProjectNode" />
               <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
-              <item name="sameAndDiff" type="462c0819:PsiDirectoryNode" />
+              <item name="diff_checker_2.0" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sameAndDiff" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DiffCheckerContent" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\RX 05-24-2017_Phase 2" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\RX 04-16-2019_DD_Phase 1" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DiffCheckerContent" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
       <recent name="C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\sameAndDiff" />
     </key>
   </component>
@@ -174,7 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sameAndDiff">
+  <component name="RunManager" selected="Python.playGround">
     <configuration name="PlayGround" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -196,19 +257,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dd_comp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="diff_checker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\E1260297\PycharmProjects\PycharmProjects\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DDComparisonTool" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDComparisonTool/dd_comp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
       <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,20 +278,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="diff_checker" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="diff_checker_2.0" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Hiep Nguyen\PycharmProjects\DDComparisionTool\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DDComparisonTool" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/diff_checker_2.0" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDComparisonTool/diff_checker.py" />
-      <option name="PARAMETERS" value="&quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/diff_checker_2.0/diff_checker_2.0.py" />
+      <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 7t&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 8t&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -238,7 +299,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sameAndDiff" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="playGround" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/diff_checker_2.0" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/diff_checker_2.0/playGround.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -250,8 +332,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sameAndDiff/sameAndDiff.py" />
-      <option name="PARAMETERS" value="&quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\Hiep Nguyen\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sameAndDiff/testing.py" />
+      <option name="PARAMETERS" value="&quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 1&quot; &quot;C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\Folder 2&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -261,16 +343,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.PlayGround" />
-      <item itemvalue="Python.dd_comp" />
       <item itemvalue="Python.diff_checker" />
-      <item itemvalue="Python.sameAndDiff" />
+      <item itemvalue="Python.testing" />
+      <item itemvalue="Python.diff_checker_2.0" />
+      <item itemvalue="Python.playGround" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sameAndDiff" />
+        <item itemvalue="Python.playGround" />
+        <item itemvalue="Python.diff_checker_2.0" />
+        <item itemvalue="Python.testing" />
         <item itemvalue="Python.PlayGround" />
         <item itemvalue="Python.diff_checker" />
-        <item itemvalue="Python.dd_comp" />
       </list>
     </recent_temporary>
   </component>
@@ -305,14 +389,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1293" height="773" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1477363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14752372" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24973656" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38509318" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34561214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3954496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -377,70 +461,15 @@
           <line>28</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/diff_checker_2.0/diff_checker_2.0.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../DDComparisonTool/dd_comp.py" />
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/guru99.txt" />
-    <entry file="file://C:/Python27/Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="288" selection-start-line="288" selection-end-line="288" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/genericpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/zipfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="761" selection-start-line="761" selection-end-line="761" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/xml/etree/ElementTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="265" selection-start-line="265" selection-end-line="265" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/venv/Lib/site-packages/openpyxl/packaging/extended.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/shutil.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1380">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/win32com/client/dynamic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="526" selection-start-line="526" selection-end-line="526" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/openpyxl/workbook/workbook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5480">
-          <caret line="274" selection-start-line="274" selection-end-line="274" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/openpyxl/reader/excel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5580">
@@ -503,160 +532,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/encodings/utf_16.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11917">
-          <caret line="701" selection-start-line="701" selection-end-line="701" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/report_prep.txt" />
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/dd_comp_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-          <folding>
-            <element signature="e#905#923#0" expanded="true" />
-            <element signature="e#1367#1400#0" expanded="true" />
-            <element signature="e#1429#1462#0" expanded="true" />
-            <element signature="e#1463#1469#0" expanded="true" />
-            <element signature="e#1469#1475#0" expanded="true" />
-            <element signature="e#1495#1528#0" expanded="true" />
-            <element signature="e#1557#1590#0" expanded="true" />
-            <element signature="e#1944#1977#0" expanded="true" />
-            <element signature="e#2026#2059#0" expanded="true" />
-            <element signature="e#2084#2117#0" expanded="true" />
-            <element signature="e#2166#2199#0" expanded="true" />
-            <element signature="e#2200#2206#0" expanded="true" />
-            <element signature="e#2206#2212#0" expanded="true" />
-            <element signature="e#2212#2218#0" expanded="true" />
-            <element signature="e#2218#2224#0" expanded="true" />
-            <element signature="e#2224#2230#0" expanded="true" />
-            <element signature="e#2230#2236#0" expanded="true" />
-            <element signature="e#2236#2242#0" expanded="true" />
-            <element signature="e#2242#2248#0" expanded="true" />
-            <element signature="e#2418#2451#0" expanded="true" />
-            <element signature="e#2474#2507#0" expanded="true" />
-            <element signature="e#2522#2555#0" expanded="true" />
-            <element signature="e#2570#2603#0" expanded="true" />
-            <element signature="e#2618#2651#0" expanded="true" />
-            <element signature="e#2666#2699#0" expanded="true" />
-            <element signature="e#2714#2747#0" expanded="true" />
-            <element signature="e#2762#2795#0" expanded="true" />
-            <element signature="e#2810#2843#0" expanded="true" />
-            <element signature="e#2858#2891#0" expanded="true" />
-            <element signature="e#2906#2939#0" expanded="true" />
-            <element signature="e#2954#2987#0" expanded="true" />
-            <element signature="e#3009#3042#0" expanded="true" />
-            <element signature="e#3065#3098#0" expanded="true" />
-            <element signature="e#3113#3146#0" expanded="true" />
-            <element signature="e#3161#3194#0" expanded="true" />
-            <element signature="e#3209#3242#0" expanded="true" />
-            <element signature="e#3257#3290#0" expanded="true" />
-            <element signature="e#3305#3338#0" expanded="true" />
-            <element signature="e#3353#3386#0" expanded="true" />
-            <element signature="e#3401#3434#0" expanded="true" />
-            <element signature="e#3449#3482#0" expanded="true" />
-            <element signature="e#3497#3530#0" expanded="true" />
-            <element signature="e#3545#3578#0" expanded="true" />
-            <element signature="e#3579#3585#0" expanded="true" />
-            <element signature="e#3585#3591#0" expanded="true" />
-            <element signature="e#3773#3806#0" expanded="true" />
-            <element signature="e#3847#3880#0" expanded="true" />
-            <element signature="e#3905#3938#0" expanded="true" />
-            <element signature="e#3979#4012#0" expanded="true" />
-            <element signature="e#4013#4019#0" expanded="true" />
-            <element signature="e#4019#4025#0" expanded="true" />
-            <element signature="e#4025#4031#0" expanded="true" />
-            <element signature="e#4031#4037#0" expanded="true" />
-            <element signature="e#4037#4043#0" expanded="true" />
-            <element signature="e#4043#4049#0" expanded="true" />
-            <element signature="e#4049#4055#0" expanded="true" />
-            <element signature="e#4055#4061#0" expanded="true" />
-            <element signature="e#316919#316937#0" expanded="true" />
-            <element signature="e#337590#337594#0" expanded="true" />
-            <element signature="e#337606#337610#0" expanded="true" />
-            <element signature="e#337694#337698#0" expanded="true" />
-            <element signature="e#337710#337714#0" expanded="true" />
-            <element signature="e#339464#339468#0" expanded="true" />
-            <element signature="e#339480#339484#0" expanded="true" />
-            <element signature="e#339568#339572#0" expanded="true" />
-            <element signature="e#339584#339588#0" expanded="true" />
-            <element signature="e#341310#341314#0" expanded="true" />
-            <element signature="e#341326#341330#0" expanded="true" />
-            <element signature="e#341414#341418#0" expanded="true" />
-            <element signature="e#341430#341434#0" expanded="true" />
-            <element signature="e#344880#344884#0" expanded="true" />
-            <element signature="e#344896#344900#0" expanded="true" />
-            <element signature="e#344984#344988#0" expanded="true" />
-            <element signature="e#345000#345004#0" expanded="true" />
-            <element signature="e#346618#346622#0" expanded="true" />
-            <element signature="e#346634#346638#0" expanded="true" />
-            <element signature="e#346722#346726#0" expanded="true" />
-            <element signature="e#346738#346742#0" expanded="true" />
-            <element signature="e#395392#395396#0" expanded="true" />
-            <element signature="e#395408#395412#0" expanded="true" />
-            <element signature="e#395496#395500#0" expanded="true" />
-            <element signature="e#395512#395516#0" expanded="true" />
-            <element signature="e#397090#397094#0" expanded="true" />
-            <element signature="e#397106#397110#0" expanded="true" />
-            <element signature="e#397194#397198#0" expanded="true" />
-            <element signature="e#397210#397214#0" expanded="true" />
-            <element signature="e#403168#403172#0" expanded="true" />
-            <element signature="e#403184#403188#0" expanded="true" />
-            <element signature="e#403272#403276#0" expanded="true" />
-            <element signature="e#403288#403292#0" expanded="true" />
-            <element signature="e#410647#410665#0" expanded="true" />
-            <element signature="e#417811#417829#0" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#426441#426459#0" expanded="true" />
-            <element signature="e#436157#436175#0" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#7;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/Scatch2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
           <caret line="42999" selection-start-line="42999" selection-end-line="42999" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="122" column="4" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -667,22 +552,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reportH.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sameAndDiff/reportH2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-553568" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sameAndDiff/report.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/reportH.html" />
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/report.txt" />
+    <entry file="file://$PROJECT_DIR$/sameAndDiff/report.txt" />
     <entry file="file://$PROJECT_DIR$/PlayGround.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -690,29 +562,438 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Python27/Lib/runpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sameAndDiff/dd_comp_GUI_SD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="272">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py">
+    <entry file="file://C:/Python27/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2929">
-          <caret line="128" column="39" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="39" />
+        <state relative-caret-position="197">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/weakref.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sameAndDiff/sameAndDiff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.fhx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/0206.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/0206.map">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/0206.sym">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/ddinstal.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diff_checker_2.0/report.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 2/000026_2658_02.alert">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Python27/Lib/encodings/utf_16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="700" selection-start-line="700" selection-end-line="700" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/00002626580206.mrg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58040">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alert">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/Folder 1/000026_2658_02.alm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="463" selection-start-line="463" selection-end-line="463" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sameAndDiff/sameAndDiff.py">
+    <entry file="file://$PROJECT_DIR$/sameAndDiff/testing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="542">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sameAndDiff/reportH2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-735421">
+          <folding>
+            <element signature="n#style#0;n#button#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2972#2990#0" expanded="true" />
+            <element signature="e#371527#371545#0" expanded="true" />
+            <element signature="e#372830#372863#0" expanded="true" />
+            <element signature="e#372885#372918#0" expanded="true" />
+            <element signature="e#372933#372966#0" expanded="true" />
+            <element signature="e#372981#373014#0" expanded="true" />
+            <element signature="e#373029#373062#0" expanded="true" />
+            <element signature="e#373077#373110#0" expanded="true" />
+            <element signature="e#373125#373158#0" expanded="true" />
+            <element signature="e#373173#373206#0" expanded="true" />
+            <element signature="e#373221#373254#0" expanded="true" />
+            <element signature="e#373269#373302#0" expanded="true" />
+            <element signature="e#373317#373350#0" expanded="true" />
+            <element signature="e#373365#373398#0" expanded="true" />
+            <element signature="e#373413#373446#0" expanded="true" />
+            <element signature="e#373461#373494#0" expanded="true" />
+            <element signature="e#373509#373542#0" expanded="true" />
+            <element signature="e#373557#373590#0" expanded="true" />
+            <element signature="e#373605#373638#0" expanded="true" />
+            <element signature="e#373653#373686#0" expanded="true" />
+            <element signature="e#373701#373734#0" expanded="true" />
+            <element signature="e#373749#373782#0" expanded="true" />
+            <element signature="e#373797#373830#0" expanded="true" />
+            <element signature="e#373845#373878#0" expanded="true" />
+            <element signature="e#373893#373926#0" expanded="true" />
+            <element signature="e#373941#373974#0" expanded="true" />
+            <element signature="e#373989#374022#0" expanded="true" />
+            <element signature="e#374037#374070#0" expanded="true" />
+            <element signature="e#374085#374118#0" expanded="true" />
+            <element signature="e#374133#374166#0" expanded="true" />
+            <element signature="e#374191#374224#0" expanded="true" />
+            <element signature="e#374246#374279#0" expanded="true" />
+            <element signature="e#374294#374327#0" expanded="true" />
+            <element signature="e#374342#374375#0" expanded="true" />
+            <element signature="e#374390#374423#0" expanded="true" />
+            <element signature="e#374438#374471#0" expanded="true" />
+            <element signature="e#374486#374519#0" expanded="true" />
+            <element signature="e#374534#374567#0" expanded="true" />
+            <element signature="e#374582#374615#0" expanded="true" />
+            <element signature="e#374630#374663#0" expanded="true" />
+            <element signature="e#374678#374711#0" expanded="true" />
+            <element signature="e#374726#374759#0" expanded="true" />
+            <element signature="e#374774#374807#0" expanded="true" />
+            <element signature="e#374822#374855#0" expanded="true" />
+            <element signature="e#374870#374903#0" expanded="true" />
+            <element signature="e#374918#374951#0" expanded="true" />
+            <element signature="e#374966#374999#0" expanded="true" />
+            <element signature="e#375014#375047#0" expanded="true" />
+            <element signature="e#375062#375095#0" expanded="true" />
+            <element signature="e#375110#375143#0" expanded="true" />
+            <element signature="e#375158#375191#0" expanded="true" />
+            <element signature="e#375206#375239#0" expanded="true" />
+            <element signature="e#375254#375287#0" expanded="true" />
+            <element signature="e#375302#375335#0" expanded="true" />
+            <element signature="e#375350#375383#0" expanded="true" />
+            <element signature="e#375398#375431#0" expanded="true" />
+            <element signature="e#375446#375479#0" expanded="true" />
+            <element signature="e#375494#375527#0" expanded="true" />
+            <element signature="e#375528#375534#0" expanded="true" />
+            <element signature="e#375534#375540#0" expanded="true" />
+            <element signature="e#375540#375546#0" expanded="true" />
+            <element signature="e#375546#375552#0" expanded="true" />
+            <element signature="e#375552#375558#0" expanded="true" />
+            <element signature="e#375558#375564#0" expanded="true" />
+            <element signature="e#375564#375570#0" expanded="true" />
+            <element signature="e#375570#375576#0" expanded="true" />
+            <element signature="e#397113#397117#0" expanded="true" />
+            <element signature="e#397129#397133#0" expanded="true" />
+            <element signature="e#397217#397221#0" expanded="true" />
+            <element signature="e#397233#397237#0" expanded="true" />
+            <element signature="e#399167#399171#0" expanded="true" />
+            <element signature="e#399183#399187#0" expanded="true" />
+            <element signature="e#399271#399275#0" expanded="true" />
+            <element signature="e#399287#399291#0" expanded="true" />
+            <element signature="e#401193#401197#0" expanded="true" />
+            <element signature="e#401209#401213#0" expanded="true" />
+            <element signature="e#401297#401301#0" expanded="true" />
+            <element signature="e#401313#401317#0" expanded="true" />
+            <element signature="e#405123#405127#0" expanded="true" />
+            <element signature="e#405139#405143#0" expanded="true" />
+            <element signature="e#405227#405231#0" expanded="true" />
+            <element signature="e#405243#405247#0" expanded="true" />
+            <element signature="e#407041#407045#0" expanded="true" />
+            <element signature="e#407057#407061#0" expanded="true" />
+            <element signature="e#407145#407149#0" expanded="true" />
+            <element signature="e#407161#407165#0" expanded="true" />
+            <element signature="e#460930#460934#0" expanded="true" />
+            <element signature="e#460946#460950#0" expanded="true" />
+            <element signature="e#461034#461038#0" expanded="true" />
+            <element signature="e#461050#461054#0" expanded="true" />
+            <element signature="e#462808#462812#0" expanded="true" />
+            <element signature="e#462824#462828#0" expanded="true" />
+            <element signature="e#462912#462916#0" expanded="true" />
+            <element signature="e#462928#462932#0" expanded="true" />
+            <element signature="e#469501#469505#0" expanded="true" />
+            <element signature="e#469517#469521#0" expanded="true" />
+            <element signature="e#469605#469609#0" expanded="true" />
+            <element signature="e#469621#469625#0" expanded="true" />
+            <element signature="e#477700#477718#0" expanded="true" />
+            <element signature="e#479815#479848#0" expanded="true" />
+            <element signature="e#479872#479905#0" expanded="true" />
+            <element signature="e#479920#479953#0" expanded="true" />
+            <element signature="e#479968#480001#0" expanded="true" />
+            <element signature="e#480016#480049#0" expanded="true" />
+            <element signature="e#480064#480097#0" expanded="true" />
+            <element signature="e#480112#480145#0" expanded="true" />
+            <element signature="e#480160#480193#0" expanded="true" />
+            <element signature="e#480208#480241#0" expanded="true" />
+            <element signature="e#480256#480289#0" expanded="true" />
+            <element signature="e#480304#480337#0" expanded="true" />
+            <element signature="e#480352#480385#0" expanded="true" />
+            <element signature="e#480400#480433#0" expanded="true" />
+            <element signature="e#480448#480481#0" expanded="true" />
+            <element signature="e#480496#480529#0" expanded="true" />
+            <element signature="e#480544#480577#0" expanded="true" />
+            <element signature="e#480592#480625#0" expanded="true" />
+            <element signature="e#480640#480673#0" expanded="true" />
+            <element signature="e#480688#480721#0" expanded="true" />
+            <element signature="e#480736#480769#0" expanded="true" />
+            <element signature="e#480784#480817#0" expanded="true" />
+            <element signature="e#480842#480875#0" expanded="true" />
+            <element signature="e#480899#480932#0" expanded="true" />
+            <element signature="e#480947#480980#0" expanded="true" />
+            <element signature="e#480995#481028#0" expanded="true" />
+            <element signature="e#481043#481076#0" expanded="true" />
+            <element signature="e#481091#481124#0" expanded="true" />
+            <element signature="e#481139#481172#0" expanded="true" />
+            <element signature="e#481187#481220#0" expanded="true" />
+            <element signature="e#481235#481268#0" expanded="true" />
+            <element signature="e#481283#481316#0" expanded="true" />
+            <element signature="e#481331#481364#0" expanded="true" />
+            <element signature="e#481379#481412#0" expanded="true" />
+            <element signature="e#481427#481460#0" expanded="true" />
+            <element signature="e#481475#481508#0" expanded="true" />
+            <element signature="e#481523#481556#0" expanded="true" />
+            <element signature="e#481571#481604#0" expanded="true" />
+            <element signature="e#481619#481652#0" expanded="true" />
+            <element signature="e#481667#481700#0" expanded="true" />
+            <element signature="e#481715#481748#0" expanded="true" />
+            <element signature="e#481763#481796#0" expanded="true" />
+            <element signature="e#481811#481844#0" expanded="true" />
+            <element signature="e#481845#481851#0" expanded="true" />
+            <element signature="e#481851#481857#0" expanded="true" />
+            <element signature="e#481857#481863#0" expanded="true" />
+            <element signature="e#481863#481869#0" expanded="true" />
+            <element signature="e#481869#481875#0" expanded="true" />
+            <element signature="e#481875#481881#0" expanded="true" />
+            <element signature="e#481881#481887#0" expanded="true" />
+            <element signature="e#481887#481893#0" expanded="true" />
+            <element signature="e#488925#488943#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#498931#498949#0" expanded="true" />
+            <element signature="e#510371#510389#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-986">
+          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="111" column="20" lean-forward="true" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/reportH.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diff_checker_2.0/reportH.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiffCheckerContent/playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="9" column="14" selection-start-line="9" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiffCheckerContent/DiffCheckerContent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3621">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiffCheckerContent/diff_checker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3774">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diff_checker_2.0/reportH2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1621">
+          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3125#3131#0" expanded="true" />
+            <element signature="e#3137#3143#0" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#2;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3231#3237#0" expanded="true" />
+            <element signature="e#3239#3245#0" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#3;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3423#3429#0" expanded="true" />
+            <element signature="e#3432#3438#0" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#4;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3887#3893#0" expanded="true" />
+            <element signature="e#3918#3924#0" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4003#4009#0" expanded="true" />
+            <element signature="e#4035#4041#0" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#2;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4194#4200#0" expanded="true" />
+            <element signature="e#4200#4206#0" expanded="true" />
+            <element signature="e#4206#4212#0" expanded="true" />
+            <element signature="e#4212#4218#0" expanded="true" />
+            <element signature="e#4218#4224#0" expanded="true" />
+            <element signature="e#4224#4230#0" expanded="true" />
+            <element signature="e#4230#4236#0" expanded="true" />
+            <element signature="e#4236#4242#0" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#3;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4393#4399#0" expanded="true" />
+            <element signature="e#4399#4405#0" expanded="true" />
+            <element signature="e#4405#4411#0" expanded="true" />
+            <element signature="e#4411#4417#0" expanded="true" />
+            <element signature="e#4417#4423#0" expanded="true" />
+            <element signature="e#4423#4429#0" expanded="true" />
+            <element signature="e#4429#4435#0" expanded="true" />
+            <element signature="e#4435#4441#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#2;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#3;n#table#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDComparisonTool/diff_checker_content_only.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="97" column="194" lean-forward="true" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="194" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diff_checker_2.0/playGround.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diff_checker_2.0/diff_checker_2.0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#3649#9018#1" />
+            <element signature="e#7925#10389#0" />
+            <element signature="e#10416#11961#0" />
+            <element signature="e#12132#14053#0" />
+            <element signature="e#12176#14038#0" />
           </folding>
         </state>
       </provider>

@@ -2,6 +2,7 @@ import sys
 import os
 from os import listdir
 import codecs
+import traceback
 import datetime
 import chardet
 import locale
@@ -10,20 +11,20 @@ import xml.etree.ElementTree as ET
 
 files_as_string_1 =[]
 files_as_string_2 =[]
+files_as_string_2_set =[]
 file_name_list = []
 file_pair_list = []
 diff_total_list = []
+
 def main():
     index_file()
+
     number_of_files = len(files_as_string_1)
 
-    print file_name_list
-    print file_pair_list
+    #print file_name_list
+    #print file_pair_list
 
-    f = open("report_prep.txt", "w+")
     h = open("reportH.html", "w+")
-
-
 
 
     #Go through each file type available
@@ -35,13 +36,6 @@ def main():
         fileA = str(file_pair_list[current_file_index][0])
         fileB = str(file_pair_list[current_file_index][1])
 
-        # Write current file type to report_prep.txt
-        f = open("report_prep.txt", "a+")
-        f.write("\n\n")
-        f.write("File type: " + fileName + "\n")
-        f.write("Files being compare: " + fileA + "  and  " + fileB + "\n")
-        f.write("Differences: " + "\n")
-
         h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
         h.write('<table style="width:100%">' + '\n')
         h.write('<tr>' + '\n')
@@ -51,34 +45,93 @@ def main():
         h.write('</tr>' + '\n\n')
 
         #go down the every line of the current file being processed
-        for current_line in range(len(files_as_string_1[current_file_index])):
-
-            # For missing line implementation, not done yet.
-            if(no_difference) == True:
-                current_line_keeper = current_line
-
-            print files_as_string_1[current_file_index][current_line_keeper]
-            print files_as_string_2[current_file_index][current_line]
-
-            h.write('<tr>' + '\n')
-
-            h.write('  <td>' + str(current_line) + '</td>' + '\n')
-            if(files_as_string_1[current_file_index][current_line] == files_as_string_2[current_file_index][current_line]):
-                h.write('  <td>' + str(files_as_string_1[current_file_index][current_line]).rstrip() + '</td>' + '\n')
-                h.write('  <td>' + str(files_as_string_2[current_file_index][current_line]).rstrip() + '</td>' + '\n')
-                print "Same"
+        current_file_A = files_as_string_1[current_file_index]
+        current_file_B = files_as_string_2[current_file_index]
+        file_A_diff = []
+        count = 0
+        for current_line in current_file_A:
+            if current_line in current_file_B:
+                current_file_B.remove(current_line)
             else:
-                if(no_difference):
-                    no_difference = False
+                file_A_diff.append(current_line)
+        diff_id = str(diff_total)
+        for current_line in file_A_diff:
+            h.write('<tr>' + '\n')
+            h.write('  <td>' + str(current_file_A.index(current_line)) + '</td>' + '\n')
+
+            h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+            h.write(escapeHtml(current_line))
+            h.write('   </td>' + '\n')
+
+            if len(current_file_B) > file_A_diff.index(current_line):
+                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write(escapeHtml(current_file_B[0]))
+                current_file_B.pop(0)
+                h.write('  </td>' + '\n')
+            else:
+                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+                h.write(' </td>' + '\n')
+            diff_total = diff_total + 1
+
+            h.write('</tr>' + '\n\n')
+
+        diff_total_list.append(diff_total)
+        h.write('</table>' + "\n")
+        h.write('</div>' + '\n\n')
+    h.close()
+    writeEnding()
+
+def escapeHtml(unsafe):
+    safe = unsafe.replace('&', "&amp;").replace('<', "&lt;").replace('>', "&gt;").replace('"', "&quot;").replace("'", "&#039;");
+    return safe
+
+
+def writeEnding():
+    number_of_files = len(files_as_string_1)
+
+    h = open("reportH2.html", "w+")
+    writeHeader(h)
+
+    h.write('<div class="tab">' + "\n")
+    h.write('          <button class="tablinks" onmouseover="openFile(event, \'' + 'Overall result' + '\')"'  + '>' + 'Overall result' + '</button>' + "\n")
+    for current_file_index in range(number_of_files):
+        fileName = str(file_name_list[current_file_index])
+        color = '#ccffee"'
+        if diff_total_list[current_file_index] > 0:
+            color = '#ff9999"'
+        h.write(
+            '          <button class="tablinks" onmouseover="openFile(event, \'' + fileName + '\')"' + 'style="background-color:' + color + '>'  + fileName + '</button>' + "\n")
+    h.write('    </div>')
+
+    #print open("reportH.html", 'r').read()
+
+    h.write(open("reportH.html", 'r').read())
+    h.write('<div id="Overall result" class="tabcontent">' + '\n')
+    h.write('<pre>' + open("report.txt", 'r').read() + '</pre>' + '\n')
+    h.write('</div>')
 
 
 
+    h.write('''
+    <div class="clearfix"></div>
 
-                length_a = len(str(files_as_string_1[current_file_index][current_line]).rstrip())
-                length_b = len(str(files_as_string_2[current_file_index][current_line]).rstrip())
+    <script>
+    ''')
+    h.write('var currentFile = ' + "''" + '\n')
+    h.write('var currentDiff = 0 \n')
+    h.write('var dict = {}; \n')
+    print len(file_name_list)
+    print len(diff_total_list)
+    for i in range(len(file_name_list)):
+        h.write('dict["' + file_name_list[i] + '"] = ' + str(diff_total_list[i]) + '\n' )
+    writeFooter(h)
 
-                print length_a
-                print length_b
+
+'''
+
+          
+
 
                 diff_id = str(diff_total)
                 length_use = length_a
@@ -86,8 +139,8 @@ def main():
                     length_use = length_b
                 h.write('   <td ' + 'id="' + str(file_name_list[current_file_index]) + diff_id + '"' + ' style="background-color: #FFFF00">')
                 for a in range(length_use):
-                    print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
-                    print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
+                    #print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
+                    #print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
                     if str(files_as_string_1[current_file_index][current_line]).rstrip()[a] != str(files_as_string_2[current_file_index][current_line]).rstrip()[a]:
                         h.write('<font style="background-color: #89ED75">' +  str(files_as_string_1[current_file_index][current_line]).rstrip()[a] + '</font>')
                     else:
@@ -110,8 +163,8 @@ def main():
                     length_use = length_a
                 h.write('   <td style="background-color: #FFFF00">')
                 for a in range(length_use):
-                    print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
-                    print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
+                    #print str(files_as_string_1[current_file_index][current_line]).rstrip()[a]
+                    #print str(files_as_string_2[current_file_index][current_line]).rstrip()[a]
                     if str(files_as_string_2[current_file_index][current_line]).rstrip()[a] != str(files_as_string_1[current_file_index][current_line]).rstrip()[a]:
                         h.write('<font style="background-color: #89ED75">' + str(files_as_string_2[current_file_index][current_line]).rstrip()[a] + '</font>')
                     else:
@@ -129,7 +182,7 @@ def main():
                 h.write('</td>' + '\n')
 
 
-                print "difference"
+                #print "difference"
                 diff_total = diff_total + 1
                 f.write("Line " + str(current_line) + "\n")
                 f.write("     " + files_as_string_1[current_file_index][current_line] + "\n")
@@ -171,18 +224,21 @@ def main():
     h.write('<div id="Overall result" class="tabcontent">' + '\n')
     h.write('<pre>' + open("report.txt", 'r').read() + '</pre>' + '\n')
     h.write('</div>')
-    h.write('''
+    
+    remember to remove the 2 escape character
+    
+    h.write(\'''
     <div class="clearfix"></div>
 
     <script>
-    ''')
+    \''')
     h.write('var currentFile = ' + "''" + '\n')
     h.write('var currentDiff = 0 \n')
     h.write('var dict = {}; \n')
     for i in range(len(file_name_list)):
         h.write('dict["' + file_name_list[i] + '"] = ' + str(diff_total_list[i]) + '\n' )
     writeFooter(h)
-
+'''
 
 def index_file():
     paths = sys.argv[1:]
@@ -191,77 +247,77 @@ def index_file():
     folder1_path = paths[0]
     folder2_path = paths[1]
 
-    print "Path 1: " + folder1_path
-    print "Path 2: " + folder2_path
+    ##print "Path 1: " + folder1_path
+    ##print "Path 2: " + folder2_path
 
     files_in_folder1 = listdir(folder1_path)
     files_in_folder2 = listdir(folder2_path)
-    print "Files in folder 1:"
-    print files_in_folder1
+    ##print "Files in folder 1:"
+    ##print files_in_folder1
 
-    print "Files in folder 2:"
-    print files_in_folder2
+    #print "Files in folder 2:"
+    #print files_in_folder2
     a = os.getcwd()
-    print a
+    #print a
 
     try:
         for file1 in files_in_folder1:
             current_extension = file1.split(".")[1]
+
             if(current_extension == 'fm8'):
                 continue
-            print current_extension
+
             current_file_folder1 = str(folder1_path) + "\\" + file1
-            print current_file_folder1
 
             raw = open(current_file_folder1,'rb').read()
             result = chardet.detect(raw)
-            print result
+            #print result
             char = result['encoding']
-            print char
+            #print char
             if char not in ['ascii', 'UTF-8','UTF-16']:
                 continue
 
             try:
                 for file2 in files_in_folder2:
-                    print file2.split(".")[1]
-                    print current_extension
+                    #print file2.split(".")[1]
+                    #print current_extension
                     if file2.split(".")[1] == current_extension:
-                        print file1
-                        print file2
+                        #print file1
+                        #print file2
                         if(file1 == 'ddinstal.ini' and file2 != 'ddinstal.ini'):
                             continue
                         current_file_folder2 = str(folder2_path) + "\\" + file2
-                        text_file_1 = codecs.open(current_file_folder1, "r", char)
 
-                        raw = open(current_file_folder1, 'rb').read()
-                        result = chardet.detect(raw)
-                        print result
-                        char = result['encoding']
-                        print char
+                        text_file_1 = codecs.open(current_file_folder1, "r", char)
                         text_file_2 = codecs.open(current_file_folder2, "r", char)
 
                         current_file_as_string_list_1 = []
                         current_file_as_string_list_2 = []
+                        current_file_as_string_list_2_set = set()
+
                         for line in text_file_1:
-                            print line
+                            #print line
                             current_file_as_string_list_1.append(line)
 
                         files_as_string_1.append(current_file_as_string_list_1)
 
                         for line in text_file_2:
-                            print line
+                            #print line
+                            current_file_as_string_list_2_set.add(line)
                             current_file_as_string_list_2.append(line)
 
                         files_as_string_2.append(current_file_as_string_list_2)
-
+                        files_as_string_2_set.append(current_file_as_string_list_2_set)
                         current_file_pair = [file1,file2]
                         file_name_list.append(current_extension)
                         file_pair_list.append(current_file_pair)
+
                         break
-            except:
-                    continue
+            except Exception:
+                traceback.print_exc()
+                continue
     except:
-            pass
+        pass
 
 
 def writeFooter(h):
@@ -323,8 +379,8 @@ function goNext() {
 
 
 
-    print len(files_as_string_1)
-    print len(files_as_string_2)
+    #print len(files_as_string_1)
+    #print len(files_as_string_2)
 
 
 def writeHeader(h):
@@ -449,15 +505,6 @@ html {
 if __name__ == "__main__":
     main()
 
-
-'''
-text_file = codecs.open(current_file, "r", 'latin-1')
-
-    print "_______________________________________________________________________________"
-    #print (text_file.read())
-    for line in text_file:
-        print line
-'''
 
 
 
