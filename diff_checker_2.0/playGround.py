@@ -1,16 +1,27 @@
 from difflib import SequenceMatcher
 
-a = [[0 for i in range(20)] for j in range(10)]
+a = [5,6,7,8,9]
+
+b = [i for i in a]
+
 print a
+print b
 
-b = 0
-for i in range(10):
-    for j in range(20):
-        b = i + j
-        a[i][j] = b
+a.remove(5)
 
-for i in range(10):
-    print a[i]
+print a
+print b
+
+
+
+
+
+
+
+
+
+
+
 '''
 a = 'member PARAM1482 parameter 3221267659'
 b = 'variable percentRange2 float 20122'

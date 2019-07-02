@@ -22,10 +22,8 @@ def main():
 
     number_of_files = len(files_as_string_1)
 
-    #print file_name_list
-    #print file_pair_list
-
     h = open("reportH.html", "w+")
+
 
 
     #Go through each file type available
@@ -40,22 +38,32 @@ def main():
         h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
         h.write('<table style="width:100%">' + '\n')
         h.write('<tr>' + '\n')
-        h.write('   <th>' + 'Line #' + '</th>' + '\n')
+        h.write('   <th>' + 'Line A #' + '</th>' + '\n')
         h.write('   <th>' + fileA + '</th>' + '\n')
+        h.write('   <th>' + 'Line B #' + '</th>' + '\n')
         h.write('   <th>' + fileB + '</th>' + '\n')
         h.write('</tr>' + '\n\n')
 
         #go down the every line of the current file being processed
         current_file_A = files_as_string_1[current_file_index]
         current_file_B = files_as_string_2[current_file_index]
+        current_file_B_original = [i for i in current_file_B]
+        for current_line in current_file_B:
+            if current_line.replace(' ', '').replace('\n','').replace('\r','') == 0:
+                current_file_B.remove(current_line)
+
         file_A_diff = []
+
         count = 0
         for current_line in current_file_A:
+            if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
+                continue
             if current_line in current_file_B:
                 current_file_B.remove(current_line)
             else:
                 file_A_diff.append(current_line)
 
+        line_in_B_left = [i for i in current_file_B]
         #print len(current_file_B)
         #print len(file_A_diff)
         similarity_percentage = [[0 for i in range(len(current_file_B))] for j in range(len(file_A_diff))]
@@ -94,27 +102,33 @@ def main():
             most_similar_B[j] = highest_percentage_index
 
 
-        print most_similar_A
-        print most_similar_B
-
         diff_id = str(diff_total)
+
+
         for current_line in file_A_diff:
             h.write('<tr>' + '\n')
-            h.write('  <td>' + str(current_file_A.index(current_line)) + '</td>' + '\n')
+            h.write('  <td>' + str(current_file_A.index(current_line)+ 1) + '</td>' + '\n')
+            current_file_A[current_file_A.index(current_line)] = None
 
             h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
             h.write(escapeHtml(current_line))
             h.write('   </td>' + '\n')
-            try:
-                if file_A_diff.index(current_line) == most_similar_B[most_similar_A[file_A_diff.index(current_line)]]:
-                    h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
-                    h.write(escapeHtml(current_file_B[most_similar_A[file_A_diff.index(current_line)]]))
-                    current_file_B.remove(current_file_B[most_similar_A[file_A_diff.index(current_line)]])
-                    h.write('  </td>' + '\n')
-            except:
-                print most_similar_A[file_A_diff.index(current_line)]
-                print len(current_file_B)
+
+            a = file_A_diff.index(current_line)
+            file_A_diff[a] = None
+            b = most_similar_A[a]
+
+
+            if most_similar_B[b] == a:
+                h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write(escapeHtml(current_file_B[b]))
+                line_in_B_left.remove(current_file_B[b])
+                h.write('  </td>' + '\n')
+
             else:
+                h.write('  <td>' + ' - ' + '</td>' + '\n')
                 h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
                 h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
                 h.write(' </td>' + '\n')
@@ -122,13 +136,19 @@ def main():
             diff_total = diff_total + 1
             h.write('</tr>' + '\n\n')
 
-        for current_line in current_file_B:
+
+        for current_line in line_in_B_left:
+            if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
+                continue
             h.write('<tr>' + '\n')
-            h.write('  <td>' + str(current_file_B.index(current_line)) + '</td>' + '\n')
+            h.write('  <td>' + ' - ' + '</td>' + '\n')
 
             h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
             h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
             h.write(' </td>' + '\n')
+
+            h.write('  <td>' + str(current_file_B_original.index(current_line) + 1) + '</td>' + '\n')
+            current_file_B_original[current_file_B_original.index(current_line)] = None
 
             h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
             h.write(escapeHtml(current_line))
@@ -396,7 +416,6 @@ function openFile(evt, fileName) {
   }
   document.getElementById(fileName).style.display = "block";
   evt.currentTarget.className += " active";
-  currentFile = fileName;
 }
 
 window.onscroll = function() {scrollFunction()};
@@ -404,10 +423,8 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
-    document.getElementById("myBtn2").style.display = "block";
   } else {
     document.getElementById("myBtn").style.display = "none";
-    document.getElementById("myBtn2").style.display = "none";
   }
 }
 
@@ -415,17 +432,6 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
-
-// When the user clicks on the button, go to next line of differences
-function goNext() {
-   var a = '#' + currentFile +currentDiff;
-  if(currentDiff < dict[currentFile]){
-  	currentDiff = currentDiff + 1;
-  }else{
-  	currentDiff = 0;
-  }
-  location.href = a
 }
 
 </script>
@@ -479,25 +485,6 @@ html {
   background-color: #555;
 }
 
-#myBtn2 {
-  display: none;
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn2:hover {
-  background-color: #555;
-}
 
 /* Style the tab */
 .tab {
@@ -554,7 +541,6 @@ html {
 <body>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-<button onclick="goNext()" id="myBtn2" title="Go to next line of difference">Next</button>
 
 ''')
 
