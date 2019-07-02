@@ -70,9 +70,9 @@ def main():
 
         #print file_A_diff
         #print current_file_B
-
+        print len(file_A_diff)
         for i in range(len(file_A_diff)):
-            #print i
+            print i
             for j in range(len(current_file_B)):
                 similarity_percentage[i][j] = SequenceMatcher(None, file_A_diff[i], current_file_B[j]).ratio()
                 #print similarity_percentage[i][j]
@@ -341,8 +341,8 @@ def index_file():
     a = os.getcwd()
     #print a
 
-    try:
-        for file1 in files_in_folder1:
+    for file1 in files_in_folder1:
+        try:
             current_extension = file1.split(".")[1]
 
             if(current_extension == 'fm8'):
@@ -354,51 +354,55 @@ def index_file():
             result = chardet.detect(raw)
             #print result
             char = result['encoding']
-            #print char
+            print char
             if char not in ['ascii', 'UTF-8','UTF-16']:
                 continue
 
-            try:
-                for file2 in files_in_folder2:
-                    #print file2.split(".")[1]
-                    #print current_extension
-                    if file2.split(".")[1] == current_extension:
-                        #print file1
-                        #print file2
-                        if(file1 == 'ddinstal.ini' and file2 != 'ddinstal.ini'):
-                            continue
-                        current_file_folder2 = str(folder2_path) + "\\" + file2
+            #try:
+            for file2 in files_in_folder2:
+                #print file2.split(".")[1]
+                #print current_extension
+                if file2.split(".")[1] == current_extension:
+                    #print file1
+                    #print file2
+                    if(file1 == 'ddinstal.ini' and file2 != 'ddinstal.ini'):
+                        continue
+                    current_file_folder2 = str(folder2_path) + "\\" + file2
 
-                        text_file_1 = codecs.open(current_file_folder1, "r", char)
-                        text_file_2 = codecs.open(current_file_folder2, "r", char)
+                    text_file_1 = codecs.open(current_file_folder1, "r", char)
+                    text_file_2 = codecs.open(current_file_folder2, "r", char)
 
-                        current_file_as_string_list_1 = []
-                        current_file_as_string_list_2 = []
-                        current_file_as_string_list_2_set = set()
+                    current_file_as_string_list_1 = []
+                    current_file_as_string_list_2 = []
+                    current_file_as_string_list_2_set = set()
 
-                        for line in text_file_1:
-                            #print line
-                            current_file_as_string_list_1.append(line)
+                    for line in text_file_1:
+                        #print line
+                        current_file_as_string_list_1.append(line)
 
-                        files_as_string_1.append(current_file_as_string_list_1)
+                    files_as_string_1.append(current_file_as_string_list_1)
 
-                        for line in text_file_2:
-                            #print line
-                            current_file_as_string_list_2_set.add(line)
-                            current_file_as_string_list_2.append(line)
+                    for line in text_file_2:
+                        print line
+                        current_file_as_string_list_2_set.add(line)
+                        current_file_as_string_list_2.append(line)
 
-                        files_as_string_2.append(current_file_as_string_list_2)
-                        files_as_string_2_set.append(current_file_as_string_list_2_set)
-                        current_file_pair = [file1,file2]
-                        file_name_list.append(current_extension)
-                        file_pair_list.append(current_file_pair)
 
-                        break
-            except Exception:
-                traceback.print_exc()
-                continue
-    except:
-        pass
+                    files_as_string_2.append(current_file_as_string_list_2)
+                    files_as_string_2_set.append(current_file_as_string_list_2_set)
+                    current_file_pair = [file1,file2]
+                    file_name_list.append(current_extension)
+                    file_pair_list.append(current_file_pair)
+
+                    #break
+            #except Exception:
+                #traceback.print_exc()
+                #continue
+        except:
+            continue
+
+
+
 
 
 def writeFooter(h):
