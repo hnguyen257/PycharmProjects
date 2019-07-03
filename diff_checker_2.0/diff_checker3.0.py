@@ -12,7 +12,6 @@ import xml.etree.ElementTree as ET
 
 files_as_string_1 =[]
 files_as_string_2 =[]
-files_as_string_2_set =[]
 file_name_list = []
 file_pair_list = []
 diff_total_list = []
@@ -28,6 +27,7 @@ def main():
 
     #Go through each file type available
     for current_file_index in range(number_of_files):
+        #try:
         no_difference = True
         diff_total = 0
         current_line_keeper = 0
@@ -47,15 +47,51 @@ def main():
         #go down the every line of the current file being processed
         current_file_A = files_as_string_1[current_file_index]
         current_file_B = files_as_string_2[current_file_index]
-        current_file_B_original = [i for i in current_file_B]
-        for current_line in current_file_B:
-            if current_line.replace(' ', '').replace('\n','').replace('\r','') == 0:
-                current_file_B.remove(current_line)
+
+        if fileName == 'ini':
+            pass
+        for i in range(len(current_file_A)):
+            current_file_A[i] = current_file_A[i].replace('\n','').replace('\r','')
+        current_file_A_temp = [i for i in current_file_A]
+        for line in current_file_A_temp:
+            if len(line.replace(' ', '')) == 0:
+                current_file_A.remove(line)
+
+
+        for i in range(len(current_file_B)):
+            current_file_B[i] = current_file_B[i].replace('\n','').replace('\r','')
+        current_file_B_temp = [i for i in current_file_B]
+        for line in current_file_B_temp:
+            if len(line.replace(' ', '')) == 0:
+                current_file_B.remove(line)
+
 
         file_A_diff = []
 
         count = 0
+        '''
+        if fileName == 'ini':
+            for i in range(len(current_file_A)):
+                print current_file_A[i]
+                print current_file_B[i]
+                a = str(current_file_A[i])
+                b = str(current_file_B[i])
+                for i in range(len(a)):
+                    print a[i]
+                    print b[i]
+                    if a[i] == b[i]:
+                        print 'same'
+                    else:
+                        print 'no'
+                if a == b:
+                    print 'same'
+                else:
+                    print 'no'
+        '''
+        current_file_B_original = [i for i in current_file_B]
+
         for current_line in current_file_A:
+            print current_line
             if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
                 continue
             if current_line in current_file_B:
@@ -83,9 +119,12 @@ def main():
         most_similar_B = [0 for i in range(len(current_file_B))]
 
         for i in range(len(file_A_diff)):
+            print file_A_diff[i]
             highest_percentage = 0
             highest_percentage_index = 0
             for j in range(len(current_file_B)):
+                print current_file_B[j]
+                print similarity_percentage[i][j]
                 if similarity_percentage[i][j] > highest_percentage:
                     highest_percentage_index = j
                     highest_percentage = similarity_percentage[i][j]
@@ -93,9 +132,12 @@ def main():
 
 
         for j in range(len(current_file_B)):
+            print current_file_B[j]
             highest_percentage = 0
             highest_percentage_index = 0
             for i in range(len(file_A_diff)):
+                print file_A_diff[i]
+                print similarity_percentage[i][j]
                 if similarity_percentage[i][j] > highest_percentage:
                     highest_percentage_index = i
                     highest_percentage = similarity_percentage[i][j]
@@ -114,10 +156,11 @@ def main():
             h.write(escapeHtml(current_line))
             h.write('   </td>' + '\n')
 
+            print current_line
             a = file_A_diff.index(current_line)
             file_A_diff[a] = None
             b = most_similar_A[a]
-
+            print current_file_B[b]
 
             if most_similar_B[b] == a:
                 h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
@@ -160,6 +203,9 @@ def main():
         diff_total_list.append(diff_total)
         h.write('</table>' + "\n")
         h.write('</div>' + '\n\n')
+        #except:
+            #number_of_files = number_of_files - 1
+            #continue
     h.close()
     writeEnding()
 
@@ -342,66 +388,108 @@ def index_file():
     #print a
 
     for file1 in files_in_folder1:
-        try:
-            current_extension = file1.split(".")[1]
+        #try:
+        current_extension = file1.split(".")[1]
 
-            if(current_extension == 'fm8'):
-                continue
+        if(current_extension == 'fm8'):
+            continue
 
-            current_file_folder1 = str(folder1_path) + "\\" + file1
+        current_file_folder1 = str(folder1_path) + "\\" + file1
 
-            raw = open(current_file_folder1,'rb').read()
-            result = chardet.detect(raw)
-            #print result
-            char = result['encoding']
-            print char
-            if char not in ['ascii', 'UTF-8','UTF-16']:
-                continue
+        raw = open(current_file_folder1,'rb').read()
+        result = chardet.detect(raw)
+        #print result
+        char = result['encoding']
+        print char
+        if char not in ['ascii', 'UTF-8','UTF-16']:
+            continue
 
             #try:
-            for file2 in files_in_folder2:
-                #print file2.split(".")[1]
-                #print current_extension
-                if file2.split(".")[1] == current_extension:
-                    #print file1
-                    #print file2
-                    if(file1 == 'ddinstal.ini' and file2 != 'ddinstal.ini'):
+        for file2 in files_in_folder2:
+            #print file2.split(".")[1]
+            #print current_extension
+            if file2.split(".")[1] == current_extension:
+                #print file1
+                #print file2
+                if(file1 == 'ddinstal.ini' and file2 != 'ddinstal.ini'):
+                    continue
+                current_file_folder2 = str(folder2_path) + "\\" + file2
+
+                text_file_1 = open(current_file_folder1, 'r').read()
+                text_file_2 = open(current_file_folder2, 'r').read()
+
+                current_file_as_string_list_1 = []
+                current_file_as_string_list_2 = []
+
+                f = open('testing.txt', 'w+')
+                for line in text_file_1:
+                    result = chardet.detect(line)
+                    char = result['encoding']
+                    if char not in ['utf-8', 'utf-16', 'ascii']:
+                        line = line.decode(char).encode('utf-8','ignore')
+                    if line == '\x00':
                         continue
-                    current_file_folder2 = str(folder2_path) + "\\" + file2
+                    f.write(line)
+                f.close()
+                f = open('testing.txt', 'r').readlines()
+                for line in f:
+                    current_file_as_string_list_1.append(line)
 
-                    text_file_1 = codecs.open(current_file_folder1, "r", char)
-                    text_file_2 = codecs.open(current_file_folder2, "r", char)
 
-                    current_file_as_string_list_1 = []
-                    current_file_as_string_list_2 = []
-                    current_file_as_string_list_2_set = set()
+                f = open('testing2.txt', 'w+')
+                for line in text_file_2:
+                    result = chardet.detect(line)
+                    char = result['encoding']
+                    if char not in ['utf-8', 'utf-16', 'ascii']:
+                        line = line.decode(char).encode('utf-8','ignore')
+                    if line == '\x00':
+                        continue
+                    f.write(line)
+                f.close()
+                f = open('testing2.txt', 'r').readlines()
+                for line in f:
+                    current_file_as_string_list_2.append(line)
 
-                    for line in text_file_1:
-                        #print line
-                        current_file_as_string_list_1.append(line)
+                for line in current_file_as_string_list_1:
+                    print line
+                print '________________________________________________________________________________________________'
+                for line in current_file_as_string_list_2:
+                    print line
+                print '________________________________________________________________________________________________'
 
-                    files_as_string_1.append(current_file_as_string_list_1)
+                files_as_string_1.append(current_file_as_string_list_1)
+                files_as_string_2.append(current_file_as_string_list_2)
+                current_file_pair = [file1,file2]
+                file_name_list.append(current_extension)
+                file_pair_list.append(current_file_pair)
+            #except:
+                #continue
+        #except:
+            #continue
+'''
+result = chardet.detect(line)
+char = result['encoding']
+print result
+print line.decode(char)
+print line
+line = line.encode('utf-8', 'ignore')
+'''
 
+'''
+try:
                     for line in text_file_2:
                         print line
                         current_file_as_string_list_2_set.add(line)
                         current_file_as_string_list_2.append(line)
+                except:
+                    text_file_2 = codecs.open(current_file_folder2, "r", char)
+                    print text_file_2
+                    text_file_2 = open(current_file_folder2, 'r').readlines()
+                    print text_file_2
+                    for line in text_file_2:
+                        print line
 
-
-                    files_as_string_2.append(current_file_as_string_list_2)
-                    files_as_string_2_set.append(current_file_as_string_list_2_set)
-                    current_file_pair = [file1,file2]
-                    file_name_list.append(current_extension)
-                    file_pair_list.append(current_file_pair)
-
-                    #break
-            #except Exception:
-                #traceback.print_exc()
-                #continue
-        except:
-            continue
-
-
+'''
 
 
 
