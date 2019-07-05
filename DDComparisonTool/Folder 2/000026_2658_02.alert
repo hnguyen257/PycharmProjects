@@ -9,15 +9,15 @@
     <Variable>
       <Size>1</Size>
       <Type>bit-enumerated</Type>
-      <BytePosidfdftifdfdon>03</BytePosition>
+      <BytePosition>03</BytePosition>
       <Label>
         </Label>
-      <Name>TODO_Finfdfdd_Name</Name>
+      <Name>TODO_Find_Name</Name>
       <AlertList>
         <Alert>
           <Value>256</Value>
           <AlarmString>Device Not Responding</AlarmString>
-          <Severity>AdfdfLERT_ADVISE_ID</Severity>
+          <Severity>ALERT_ADVISE_ID</Severity>
           <ExtendedHelpText>
           </ExtendedHelpText>
           <DDHelpText>

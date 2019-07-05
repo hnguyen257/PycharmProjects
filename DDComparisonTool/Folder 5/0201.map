@@ -1,0 +1,125 @@
+;Rosemount 3308 Rev 2 MAP FILE
+
+[IDENTIFICATION]
+Manufacturer=26
+Model=266E
+Device Revision=2
+DD Revision=1
+Map File Format Version=1
+Use for CalMgmt=No
+Use for Export=Yes
+
+[PARAMETER MAP]
+Amplitude=
+Cold Junction Compensation=
+Damping Value=Param!sensor_damping_value
+Date=Param!date
+Descriptor=Param!descriptor
+Hart Universal Revision=Param!universal_revision
+input block Lower Range Value=Param!lowerRange_value
+input block Units Code=
+input block Units String=
+input block Upper Range Value=Param!upperRange_value
+Lower Sensor Limit=ItemArray!dynamic_variables!Element!1!Member!LOWER_SENSOR_LIMIT
+Manual Cold Junction Compensation=
+Manufacturer Name=Param!manufacturer_id
+Message=Param!message
+Model Name=Param!device_type
+Number of Wires=
+output block Lower Range Value=
+output block Units Code=
+output block Units String=
+output block Upper Range Value=
+Polling Address=Param!polling_address
+Pressure Measurement Type=
+Probe Connect=
+Probe Type=
+Serial Number=
+Tag=Param!tag
+Transfer Function Code=Param!transfer_function
+Unique ID=Param!device_id
+Upper Sensor Limit=ItemArray!dynamic_variables!Element!1!Member!UPPER_SENSOR_LIMIT
+Wave Form=
+
+[PARAMETER SPECIAL INFO]
+Manual Cold Junction Compensation=No Associated Parameter
+output block Lower Range Value=No Associated Parameter
+output block Units Code=Read only
+output block Units String=Read only
+output block Upper Range Value=No Associated Parameter
+
+[DEFAULT PARAMETER VALUES]
+Manual Cold Junction Compensation=1
+output block Lower Range Value=4.0
+output block Upper Range Value=20.0
+output block Units Code=44
+
+[INPUT BLOCK TYPE]
+;Generic=1,TempRtd=2,TempTC=3,Frequency=4,Pressure=5,Multivariable=99
+Input block=1
+Parameter for current PV=
+
+[input block Units Code DD to Common Map]
+44=ft
+45=m
+47=in
+48=cm
+49=mm
+40=US gal
+41=L
+42=Imp gal
+43=m3
+46=bbl
+111=CuIn
+32=deg C
+33=deg F
+57=%
+53=day
+58=v
+240=None
+250=Not Used
+251=None
+
+
+[input block Units String DD to Common Map]
+ft=ft
+m=m
+in=in
+cm=cm
+mm=mm
+US gal=US gal
+L=L
+Imp gal=Imp gal
+m3=m3
+bbl=bbl
+CuIn=CuIn
+deg C=deg C
+deg F=deg F
+%=%
+day=day
+v=v
+None=None
+Not Used=Not Used
+None=None
+
+[output block Units Code DD to Common Map]
+39=mA
+250=Not used
+251=None
+252=Unknown
+
+[output block Units String DD to Common Map]
+mA=mA
+Not used=Not used
+None=None
+Unknown=Unknown
+
+[Transfer Function Code DD to Common Map]
+;0=Linear
+;1=Sq root
+0=Linear
+1=Sq root
+250=Not used
+251=None
+252=Unknown
+253=Special

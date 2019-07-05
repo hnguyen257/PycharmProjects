@@ -24,6 +24,8 @@ def main():
     h = open("reportH.html", "w+")
 
 
+    file_name_quantity = {i:1 for i in file_name_list}
+
 
     #Go through each file type available
     for current_file_index in range(number_of_files):
@@ -32,8 +34,19 @@ def main():
         diff_total = 0
         current_line_keeper = 0
         fileName =  str(file_name_list[current_file_index])
+
+        x = file_name_quantity[fileName.split()[0]]
+        if x > 1:
+            fileName = fileName + '(' + str(x) + ')'
+
+        file_name_quantity[fileName.split()[0]] = x + 1
+
+        file_name_list[current_file_index] = fileName
+
+
         fileA = str(file_pair_list[current_file_index][0])
         fileB = str(file_pair_list[current_file_index][1])
+
 
         h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
         h.write('<table style="width:100%">' + '\n')
@@ -50,8 +63,9 @@ def main():
 
         if fileName == 'ini':
             pass
+
         for i in range(len(current_file_A)):
-            current_file_A[i] = current_file_A[i].replace('\n','').replace('\r','')
+            current_file_A[i] = current_file_A[i].replace('\n','').replace('\r','').rstrip()
         current_file_A_temp = [i for i in current_file_A]
         for line in current_file_A_temp:
             if len(line.replace(' ', '')) == 0:
@@ -59,7 +73,7 @@ def main():
 
 
         for i in range(len(current_file_B)):
-            current_file_B[i] = current_file_B[i].replace('\n','').replace('\r','')
+            current_file_B[i] = current_file_B[i].replace('\n','').replace('\r','').rstrip()
         current_file_B_temp = [i for i in current_file_B]
         for line in current_file_B_temp:
             if len(line.replace(' ', '')) == 0:
@@ -97,6 +111,7 @@ def main():
             if current_line in current_file_B:
                 current_file_B.remove(current_line)
             else:
+                diff_total = diff_total + 1
                 file_A_diff.append(current_line)
 
         line_in_B_left = [i for i in current_file_B]
@@ -118,30 +133,40 @@ def main():
         most_similar_A = [0 for i in range(len(file_A_diff))]
         most_similar_B = [0 for i in range(len(current_file_B))]
 
+        second_most_similar_A = [0 for i in range(len(file_A_diff))]
+        second_most_similar_B = [0 for i in range(len(current_file_B))]
+
         for i in range(len(file_A_diff)):
-            print file_A_diff[i]
-            highest_percentage = 0
-            highest_percentage_index = 0
+            #print file_A_diff[i]
+            highest_percentage = None
+            highest_percentage_index = None
+            second_highest_percentage_index = None
             for j in range(len(current_file_B)):
-                print current_file_B[j]
-                print similarity_percentage[i][j]
+                #print current_file_B[j]
+                #print similarity_percentage[i][j]
                 if similarity_percentage[i][j] > highest_percentage:
+                    second_highest_percentage_index = highest_percentage_index
                     highest_percentage_index = j
                     highest_percentage = similarity_percentage[i][j]
             most_similar_A[i] = highest_percentage_index
+            second_most_similar_A[i] = second_highest_percentage_index
 
 
         for j in range(len(current_file_B)):
-            print current_file_B[j]
-            highest_percentage = 0
-            highest_percentage_index = 0
+            #print current_file_B[j]
+            highest_percentage = None
+            highest_percentage_index = None
+            second_highest_percentage_index = None
             for i in range(len(file_A_diff)):
-                print file_A_diff[i]
-                print similarity_percentage[i][j]
+                #print file_A_diff[i]
+                #print similarity_percentage[i][j]
                 if similarity_percentage[i][j] > highest_percentage:
+                    second_highest_percentage_index = highest_percentage_index
                     highest_percentage_index = i
                     highest_percentage = similarity_percentage[i][j]
             most_similar_B[j] = highest_percentage_index
+            second_most_similar_B[j] = second_highest_percentage_index
+
 
 
         diff_id = str(diff_total)
@@ -156,27 +181,49 @@ def main():
             h.write(escapeHtml(current_line))
             h.write('   </td>' + '\n')
 
-            print current_line
+            testing = current_line
             a = file_A_diff.index(current_line)
             file_A_diff[a] = None
             b = most_similar_A[a]
-            print current_file_B[b]
 
-            if most_similar_B[b] == a:
-                h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
-                current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
-                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
-                h.write(escapeHtml(current_file_B[b]))
-                line_in_B_left.remove(current_file_B[b])
-                h.write('  </td>' + '\n')
+            if b != None and len(current_file_B) > 0:
+                if most_similar_B[b] == a:
+                    h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                    current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                    h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                    h.write(escapeHtml(current_file_B[b]))
+                    line_in_B_left.remove(current_file_B[b])
+                    h.write('  </td>' + '\n')
+                    continue
 
-            else:
-                h.write('  <td>' + ' - ' + '</td>' + '\n')
-                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
-                h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
-                h.write(' </td>' + '\n')
+                if second_most_similar_B[b] == a:
+                    a2 = most_similar_B[b]
+                    if most_similar_A[a2] != b:
+                        h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                        current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                        h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                        h.write(escapeHtml(current_file_B[b]))
+                        line_in_B_left.remove(current_file_B[b])
+                        h.write('  </td>' + '\n')
+                        continue
 
-            diff_total = diff_total + 1
+
+                if most_similar_B[b] == a:
+                    h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                    current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                    h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                    h.write(escapeHtml(current_file_B[b]))
+                    line_in_B_left.remove(current_file_B[b])
+                    h.write('  </td>' + '\n')
+                    continue
+
+
+            h.write('  <td>' + ' - ' + '</td>' + '\n')
+            h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+            h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+            h.write(' </td>' + '\n')
+
+
             h.write('</tr>' + '\n\n')
 
 
@@ -245,13 +292,6 @@ def writeEnding():
 
     <script>
     ''')
-    h.write('var currentFile = ' + "''" + '\n')
-    h.write('var currentDiff = 0 \n')
-    h.write('var dict = {}; \n')
-    print len(file_name_list)
-    print len(diff_total_list)
-    for i in range(len(file_name_list)):
-        h.write('dict["' + file_name_list[i] + '"] = ' + str(diff_total_list[i]) + '\n' )
     writeFooter(h)
 
 
@@ -390,9 +430,10 @@ def index_file():
     for file1 in files_in_folder1:
         #try:
         current_extension = file1.split(".")[1]
-
+        print current_extension
         if(current_extension == 'fm8'):
             continue
+
 
         current_file_folder1 = str(folder1_path) + "\\" + file1
 
@@ -401,18 +442,20 @@ def index_file():
         #print result
         char = result['encoding']
         print char
-        if char not in ['ascii', 'UTF-8','UTF-16']:
+        if char not in ['ascii', 'UTF-8','UTF-16','UTF-8-SIG']:
             continue
 
             #try:
-        for file2 in files_in_folder2:
+        for file2_prep in files_in_folder2:
+            file2 = file2_prep
             #print file2.split(".")[1]
             #print current_extension
             if file2.split(".")[1] == current_extension:
-                #print file1
-                #print file2
-                if(file1 == 'ddinstal.ini' and file2 != 'ddinstal.ini'):
+                print file1
+                print file2
+                if (current_extension == 'ini') and (file1 != file2):
                     continue
+                files_in_folder2.remove(file2_prep)
                 current_file_folder2 = str(folder2_path) + "\\" + file2
 
                 text_file_1 = open(current_file_folder1, 'r').read()

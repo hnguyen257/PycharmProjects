@@ -1,18 +1,9 @@
-from difflib import SequenceMatcher
 
-a = [5,6,7,8,9]
 
-b = [i for i in range(a)]
-
-for i in range(len(a)):
-    print a[i]
-    a[i] = 9
-
+a = 'ini (1)'
 print a
-print b
 
-
-
+print a.split()[0]
 
 
 

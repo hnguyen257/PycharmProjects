@@ -9,7 +9,7 @@
     <Variable>
       <Size>1</Size>
       <Type>bit-enumerated</Type>
-      <BytePositifdfdon>03</BytePosition>
+      <BytePosidfdftifdfdon>03</BytePosition>
       <Label>
         </Label>
       <Name>TODO_Finfdfdd_Name</Name>
@@ -617,10 +617,10 @@ If the situation persists, replace the sensor or the device</ExtendedHelpText>
     <Variable>
       <Size>1</Size>
       <Type>bit-enumerated</Type>
-      <BytePosition>13</BytePosition>
+bnbbnbnbnb
       <Label>Standardized Status 3</Label>
       <Name>standardized_status_3</Name>
-      <AlertList>
+      <AlertList>vbvbvbvb
         <Alert>
           <Value>1</Value>
           <AlarmString>Capacity Denied</AlarmString>

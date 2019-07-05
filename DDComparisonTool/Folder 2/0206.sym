@@ -1283,44 +1283,6 @@ menu            group_ao_diags                            16964
 member          PARAM268                  parameter       3221266444 
 member          PARAM269                  parameter       3221266445 
 command         read_unique_identifier_with_tag                 179 (std,mand,imp) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 menu            view_broadcast_config_msg2_33_non_window_s                 17723 
 variable        batteryCutoff             float           16662 
 variable        nps_pipe_schedule         enumerated      17197 
