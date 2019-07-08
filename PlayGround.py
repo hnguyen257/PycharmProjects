@@ -1,12 +1,6 @@
 
 
 
-a = []
-a.append(5)
-a.append(8)
-if 9 not in a:
-    print 'No'
-
 
 
 

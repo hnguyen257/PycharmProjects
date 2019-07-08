@@ -68,24 +68,26 @@ def main():
             #go down the every line of the current file being processed
             current_file_A = files_as_string_1[current_file_index]
             current_file_B = files_as_string_2[current_file_index]
-            current_file_B_original = [i for i in current_file_B]
+
 
 
             if fileName == 'ini':
                 pass
 
+            for i in range(len(current_file_A)):
+                current_file_A[i] = current_file_A[i].replace('\n','').replace('\r','').rstrip()
             current_file_A_temp = [i for i in current_file_A]
             for line in current_file_A_temp:
                 if len(line.replace(' ', '')) == 0:
                     current_file_A.remove(line)
 
 
+            for i in range(len(current_file_B)):
+                current_file_B[i] = current_file_B[i].replace('\n','').replace('\r','').rstrip()
             current_file_B_temp = [i for i in current_file_B]
             for line in current_file_B_temp:
                 if len(line.replace(' ', '')) == 0:
-                    current_file_B_original[current_file_B_original.index(line)] = None
                     current_file_B.remove(line)
-
 
             file_A_diff = []
 
@@ -116,7 +118,6 @@ def main():
                 if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
                     continue
                 if current_line in current_file_B:
-                    current_file_B_original[current_file_B_original.index(current_line)] = None
                     current_file_B.remove(current_line)
                 else:
                     diff_total = diff_total + 1
@@ -214,9 +215,6 @@ def main():
                 file_A_diff[a] = None
                 b = most_similar_A[a]
 
-                #for i in range(len(current_file_B_original)):
-                    #a = str(i) + ' ' + current_file_B_original[i]
-                    #print a
                 if b != None and len(current_file_B) > 0:
                     if most_similar_B[b] == a:
                         h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
@@ -447,7 +445,7 @@ def index_file():
                     file_name_list.append(current_extension)
                     file_pair_list.append(current_file_pair)
                 #except:
-                    #continue
+                #continue
         except:
             e = open('error.txt', 'a+')
             e.write('   Errors occurred in file: ' + file1 + '.\n')

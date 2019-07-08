@@ -1,4 +1,4 @@
-import tkFileDialog as filedialog
+from Tkinter import tkFileDialog
 from Tkinter import *
 import os
 
@@ -14,10 +14,7 @@ def browse_button_1():
 
 def start():
     global root
-    print folder_path_0.get()
-    print folder_path_1.get()
-    os.system("C:\python27\python.exe dd_comp.py \""+folder_path_0.get()+"\" \""+ folder_path_1.get()+"\"")
-    os.system("C:\python27\python.exe diff_checker.py \"" + folder_path_0.get() + "\" \"" + folder_path_1.get() + "\"")
+    os.system("python dd_comp.py \""+folder_path_0.get()+"\" \""+folder_path_1.get()+"\"")
     root.destroy()
 
 def cancel():
@@ -38,10 +35,6 @@ def check_paths(*args):
 
 
 root = Tk()
-root.title('DD files Comparison Tool')
-root.geometry("500x500")
-
-
 # tkinter Variable Setup
 # ------------------------------------------------------------
 # Path 1 Initialization and Trace

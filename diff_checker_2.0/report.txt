@@ -1,3 +1,1330 @@
+Time: 2019-07-08 14:33:53.225000
+Overall result: 
+      mrg:  00001f1f460301.mrg and 00001f1f460301.mrg   -   553 differences
+      fhx:  00001f_1f46_03.fhx and 00001f_1f46_03.fhx   -   2 differences
+      alert:  00001f_1f46_04.alert and 00001f_1f46_03.alert   -   9 differences
+      alm:  00001f_1f46_04.alm and 00001f_1f46_03.alm   -   5 differences
+      ini:  0301.ini and 0301.ini   -   0 differences
+      map:  0301.map and 0301.map   -   0 differences
+      sym:  0606.sym and 0301.sym   -   10 differences
+      ini(2):  ddinstal.ini and ddinstal.ini   -   3 differences
+Errors encountered:
+   None
 
 
-to be implemented later
+File type: mrg
+Files being compare: 00001f1f460301.mrg  and  00001f1f460301.mrg
+Differences: 
+Line in 00001f1f460301.mrg that are not in 00001f1f460301.mrg:
+   line 20:             }    
+
+   line 25:         DeviceType       "800006",
+
+Line in 00001f1f460301.mrg that are not in 00001f1f460301.mrg:
+   line 2: 
+
+   line 2: 
+
+   line 21:         Protocol  {
+
+   line 22:             Name          "FF",
+
+   line 23:             ManIdentifier "784"
+
+   line 21:         Protocol  {
+
+   line 26:             Name          "PROFIBUS-DP",
+
+   line 27:             ManIdentifier "31"
+
+   line 21:         Protocol  {
+
+   line 30:             Name          "PROFIBUS-PA",
+
+   line 27:             ManIdentifier "31"
+
+   line 2: 
+
+   line 37:         DeviceType       "8006",
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 69:     parameters {
+
+   line 70:         TemplateAlias      T00001,
+
+   line 71:         Block              0,
+
+   line 72:         Event {
+
+   line 73:             Time             2018/10/26 13:16:47.495,
+
+   line 74:             EventID          43399:1188261733,
+
+   line 75:             Description      "Create Device Template",
+
+   line 76:             User             "EMRSN\\Sumit.Gangurde",
+
+   line 77:             Computer         10.129.181.66,
+
+   line 78:             Source           "Server",
+
+   line 79:             Type             6,
+
+   line 80:             Category         1
+
+   line 83:             Name    "abort_code.000040B0.0000.0000",
+
+   line 90:             Name    "ACK_count.000011DB.0000.0000",
+
+   line 97:             Name    "active_curve_Code.00005148.0000.0000",
+
+   line 104:             Name    "active_curve_UnitString.00005149.0000.0000",
+
+   line 111:             Name    "actual_deltaT.00004E7C.0000.0000",
+
+   line 118:             Name    "actual_frequency.00004E7B.0000.0000",
+
+   line 122:             Data    154.788971
+
+   line 125:             Name    "actual_MAI_value.00004097.0000.0000",
+
+   line 132:             Name    "Actual_Target_Amplitude.00004160.0000.0000",
+
+   line 136:             Data    3.400000
+
+   line 139:             Name    "Alarm_screen_password_enable.00004193.0000.0000",
+
+   line 146:             Name    "alarm_selection_code.000007EB.0000.0000",
+
+   line 153:             Name    "algorithm_progress.00004209.0000.0000",
+
+   line 160:             Name    "algorithm_state_at_abort.000040B1.0000.0000",
+
+   line 167:             Name    "allow_flow_when_printing.00004E8B.0000.0000",
+
+   line 174:             Name    "amp_cal_dr_im.00004E79.0000.0000",
+
+   line 178:             Data    0.353648
+
+   line 181:             Name    "amp_cal_dr_re.00004E78.0000.0000",
+
+   line 185:             Data    -0.231638
+
+   line 188:             Name    "amp_cal_t1_im.00004E71.0000.0000",
+
+   line 192:             Data    0.363303
+
+   line 195:             Name    "amp_cal_t1_re.00004E70.0000.0000",
+
+   line 199:             Data    -0.217245
+
+   line 202:             Name    "amp_cal_t2_im.00004E73.0000.0000",
+
+   line 206:             Data    0.372817
+
+   line 209:             Name    "amp_cal_t2_re.00004E72.0000.0000",
+
+   line 213:             Data    -0.198511
+
+   line 216:             Name    "amp_cal_t3_im.00004E75.0000.0000",
+
+   line 220:             Data    0.370057
+
+   line 223:             Name    "amp_cal_t3_re.00004E74.0000.0000",
+
+   line 227:             Data    -0.203592
+
+   line 230:             Name    "amp_cal_t4_im.00004E77.0000.0000",
+
+   line 234:             Data    0.356671
+
+   line 237:             Name    "amp_cal_t4_re.00004E76.0000.0000",
+
+   line 241:             Data    -0.226753
+
+   line 244:             Name    "analog_channel_fixed_codes.000008D7.0000.0000",
+
+   line 251:             Name    "analog_channel_fixed1.00001040.0000.0000",
+
+   line 258:             Name    "analog_channel_fixed1_mask.000008E2.0000.0000",
+
+   line 265:             Name    "analog_channel_flags.00000802.0000.0000",
+
+   line 272:             Name    "analog_channel_number_code.0000105D.0000.0000",
+
+   line 279:             Name    "analog_channel_number_code_1.0000105E.0000.0000",
+
+   line 286:             Name    "analog_channel_number_code_2.0000105F.0000.0000",
+
+   line 293:             Name    "analog_channel_number_code_3.00001060.0000.0000",
+
+   line 300:             Name    "analog_channel_number_code_4.00001061.0000.0000",
+
+   line 307:             Name    "analog_channel_number_code_test.00004E81.0000.0000",
+
+   line 314:             Name    "analog_channel_number_code_test_1.00004E82.0000.0000",
+
+   line 321:             Name    "analog_channel_number_code_test_2.00004E83.0000.0000",
+
+   line 328:             Name    "analog_channel_number_code_test_3.00004E84.0000.0000",
+
+   line 335:             Name    "analog_channel_number_code_test_4.00004E85.0000.0000",
+
+   line 342:             Name    "analog_channel_saturated_codes.000008D6.0000.0000",
+
+   line 349:             Name    "analog_channel_saturated1.0000103D.0000.0000",
+
+   line 356:             Name    "analog_channel_saturated1_mask.000008E1.0000.0000",
+
+   line 363:             Name    "analog_damping.00004005.0000.0000",
+
+   line 370:             Name    "analog_damping2.000049AD.0000.0000",
+
+   line 377:             Name    "analog_damping3.000049B0.0000.0000",
+
+   line 384:             Name    "analog_output_numbers_code.000007F4.0000.0000",
+
+   line 391:             Name    "analog_units.00004002.0000.0000",
+
+   line 398:             Name    "analog_units2.000049D8.0000.0000",
+
+   line 402:             Data    39
+
+   line 405:             Name    "analog_units3.000049E2.0000.0000",
+
+   line 402:             Data    39
+
+   line 412:             Name    "AOC_cal_en.000041C0.0000.0000",
+
+   line 419:             Name    "AOC_win_width.000041BF.0000.0000",
+
+   line 426:             Name    "api_avg_dens_digital_units.00004FCF.0000.0000",
+
+   line 433:             Name    "api_avg_dens_digital_value.00004364.0000.0000",
+
+   line 440:             Name    "api_avg_dens_lower_sensor_limit.00004EBC.0000.0000",
+
+   line 447:             Name    "api_avg_dens_minimum_span.00004FD0.0000.0000",
+
+   line 454:             Name    "api_avg_dens_upper_sensor_limit.00004EBB.0000.0000",
+
+   line 461:             Name    "api_avg_temp_digital_units.00005001.0000.0000",
+
+   line 468:             Name    "api_avg_temp_digital_value.0000436C.0000.0000",
+
+   line 475:             Name    "api_avg_temp_lower_sensor_limit.00004EBF.0000.0000",
+
+   line 482:             Name    "api_avg_temp_minimum_span.00005002.0000.0000",
+
+   line 489:             Name    "api_avg_temp_upper_sensor_limit.00004EBE.0000.0000",
+
+   line 496:             Name    "api_ctl.00004171.0000.0000",
+
+   line 503:             Name    "api_ctl_lower_sensor_limit.00004748.0000.0000",
+
+   line 510:             Name    "api_ctl_table_type.0000416E.0000.0000",
+
+   line 517:             Name    "api_ctl_upper_sensor_limit.00004747.0000.0000",
+
+   line 524:             Name    "api_dens_digital_units.00004FC9.0000.0000",
+
+   line 531:             Name    "api_dens_digital_value.0000434B.0000.0000",
+
+   line 538:             Name    "api_dens_lower_sensor_limit.00004EB6.0000.0000",
+
+   line 545:             Name    "api_dens_minimum_span.00004FCA.0000.0000",
+
+   line 552:             Name    "api_dens_upper_sensor_limit.00004EB5.0000.0000",
+
+   line 559:             Name    "api_ref_pressure.00004173.0000.0000",
+
+   line 566:             Name    "api_ref_temp.00004170.0000.0000",
+
+   line 573:             Name    "api_ref_temperature.00004EAB.0000.0000",
+
+   line 577:             Data    15.000000
+
+   line 580:             Name    "api_thermal_exp_coeff.0000416F.0000.0000",
+
+   line 584:             Data    0.000556
+
+   line 587:             Name    "api_vinv_digital_units.000046D7.0000.0000",
+
+   line 594:             Name    "api_vinv_digital_value.000046D8.0000.0000",
+
+   line 601:             Name    "api_vol_flow_digital_units.00004FCC.0000.0000",
+
+   line 675:             Data    19.217215
+
+   line 2985:             Data    105
+
+   line 2992:             Data    "None    "
+
+   line 5246:             Data    81
+
+   line 5344:             Data    0.417270
+
+   line 5372:             Data    83.454041
+
+   line 5344:             Data    0.417270
+
+   line 5372:             Data    83.454041
+
+   line 577:             Data    15.000000
+
+   line 402:             Data    39
+
+   line 15004:             Data    10
+
+   line 16558:             Data    1316
+
+   line 16621:             Data    -454.000000
+
+   line 16628:             Data    33.799999
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 18007:             Data    842.000000
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 18028:             Data    1
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 17936:             Type    Float,
+
+   line 18028:             Data    1
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18176:             },
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 17936:             Type    Float,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 17936:             Type    Float,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18392:             Data    46
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18413:             Data    250
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18413:             Data    250
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18413:             Data    250
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18413:             Data    250
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18028:             Data    1
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18699:             Type    TString,
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18049:             Data    0.000000
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 18391:             Type    Long,
+
+   line 18371:             Data    0
+
+   line 18176:             },
+
+   line 18198:         Value {
+
+   line 18207:             Kind    DDL,
+
+   line 18208:             Mode    Offline,
+
+   line 17936:             Type    Float,
+
+   line 18729:             }
+
+   line 2: 
+
+   line 2: 
+
+
+
+File type: fhx
+Files being compare: 00001f_1f46_03.fhx  and  00001f_1f46_03.fhx
+Differences: 
+Line in 00001f_1f46_03.fhx that are not in 00001f_1f46_03.fhx:
+   line 7:      DESCRIPTION="Micro Motion Inc. 5700 H7"
+
+Line in 00001f_1f46_03.fhx that are not in 00001f_1f46_03.fhx:
+   line 7:      DESCRIPTION="Micro Motion Inc.. 5700 H7"
+
+   line 13:      RESOURCE_PATH="00001f\1f46\"
+
+
+
+File type: alert
+Files being compare: 00001f_1f46_04.alert  and  00001f_1f46_03.alert
+Differences: 
+Line in 00001f_1f46_04.alert that are not in 00001f_1f46_03.alert:
+   line 19:           <AlarmString>Device Not connected</AlarmString>
+
+   line 69:           <Severity>ALERT_JUNK_ID</Severity>
+
+   line 185:      </Alert>
+
+   line 186:      <Alert>
+
+   line 189:      <Severity>ALERT_FAILED_ID</Severity>
+
+Line in 00001f_1f46_03.alert that are not in 00001f_1f46_04.alert:
+   line 19:           <AlarmString>Device Not Responding</AlarmString>
+
+   line 188:           <AlarmString>Configuration Error</AlarmString>
+
+   line 221: 
+
+   line 658:           <Severity>ALERT_ADVISE_ID</Severity>
+
+   line 686:           <Value>4</Value>
+
+   line 688:           <Severity>ALERT_FAILED_ID</Severity>
+
+   line 695:         <Alert>
+
+   line 704:         </Alert>
+
+   line 707:   </VariableList>
+
+   line 708: </AlertsRoot>
+
+
+File type: alm
+Files being compare: 00001f_1f46_04.alm  and  00001f_1f46_03.alm
+Differences: 
+Line in 00001f_1f46_04.alm that are not in 00001f_1f46_03.alm:
+   None
+Line in 00001f_1f46_03.alm that are not in 00001f_1f46_04.alm:
+   line 9: 1	0	2	Sensor Failed	Sensor Conditions
+
+   line 10: 1	0	1	Electronics Failed	Electronic Conditions
+
+   line 11: 2	0	8	Event Active	Process Conditions
+
+   line 17: 2	0	2	Transmitter Initializing	Process Conditions
+
+   line 18: 3	0	5	Display Communication Error	Electronic Conditions
+
+
+
+File type: ini
+Files being compare: 0301.ini  and  0301.ini
+Differences: 
+Line in 0301.ini that are not in 0301.ini:
+   None
+Line in 0301.ini that are not in 0301.ini:
+   line 7: 
+
+   line 7: 
+
+   line 7: 
+
+   line 7: 
+
+   line 7: 
+
+
+
+File type: map
+Files being compare: 0301.map  and  0301.map
+Differences: 
+Line in 0301.map that are not in 0301.map:
+   None
+Line in 0301.map that are not in 0301.map:
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+
+
+File type: sym
+Files being compare: 0606.sym  and  0301.sym
+Differences: 
+Line in 0606.sym that are not in 0301.sym:
+   line 23: member          PARAM1482                 parameter       3221267659 
+
+   line 24: member          PARAM522                  parameter       3221266698 
+
+   line 25: member          PARAM2455                 parameter       21932 
+
+Line in 0301.sym that are not in 0606.sym:
+   line 33: 
+
+   line 41: menu            alert_function_check_failed_hh_fail                 21227 
+
+   line 42: variable        percentRange2             float           20122 
+
+   line 43: member          PARAM1485                 parameter       3221267662 
+
+   line 44: member          PARAM525                  parameter       3221266701 
+
+   line 45: member          PARAM2458                 parameter       21935 
+
+   line 46: menu            grp_backlight                             20631 
+
+   line 47: variable        percentRange3             float           20129 
+
+   line 48: variable        NOC_gross_vol_at_line_minimum_span float           18900 
+
+   line 49: command         read_MODBUS_DATA_VALUE                    16556 
+
+   line 50: member          PARAM1486                 parameter       3221267663 
+
+
+
+File type: ini(2)
+Files being compare: ddinstal.ini  and  ddinstal.ini
+Differences: 
+Line in ddinstal.ini that are not in ddinstal.ini:
+   line 12: Name=Micro Motion ...
+
+   line 26: ALERTT  =00001f_1f46_03.alert
+
+   line 27: FHX=00001f_1f46_04.fh#x
+
+Line in ddinstal.ini that are not in ddinstal.ini:
+   line 4: 
+
+   line 4: 
+
+   line 12: Name=Micro Motion
+
+   line 4: 
+
+   line 26: ALERT=00001f_1f46_03.alert
+
+   line 27: FHX=00001f_1f46_03.fhx
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+ 
+ 
+ 
+ - End of Report -

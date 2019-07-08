@@ -1,10 +1,12 @@
 
 
-a = 'ini (1)'
-print a
 
-print a.split()[0]
+check = open('checking.txt', 'w+')
+check.write('hello')
+check.close()
+test = open('checking.txt', 'r').read()
 
+print len(test)
 
 
 
