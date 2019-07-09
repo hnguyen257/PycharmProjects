@@ -53,7 +53,7 @@ def main():
             f = open("report_prep.txt", "a+")
             f.write("\n\n")
             f.write("File type: " + fileName + "\n")
-            f.write("Files being compare: " + fileA + "  and  " + fileB + "\n")
+            f.write("Files being compare: " + fileA + '(A)' + "  and  " + fileB + '(B)' + "\n")
             f.write("Differences: " + "\n")
 
             h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
@@ -69,10 +69,6 @@ def main():
             current_file_A = files_as_string_1[current_file_index]
             current_file_B = files_as_string_2[current_file_index]
             current_file_B_original = [i for i in current_file_B]
-
-
-            if fileName == 'ini':
-                pass
 
             current_file_A_temp = [i for i in current_file_A]
             for line in current_file_A_temp:
@@ -90,25 +86,7 @@ def main():
             file_A_diff = []
 
             count = 0
-            '''
-            if fileName == 'ini':
-                for i in range(len(current_file_A)):
-                    print current_file_A[i]
-                    print current_file_B[i]
-                    a = str(current_file_A[i])
-                    b = str(current_file_B[i])
-                    for i in range(len(a)):
-                        print a[i]
-                        print b[i]
-                        if a[i] == b[i]:
-                            print 'same'
-                        else:
-                            print 'no'
-                    if a == b:
-                        print 'same'
-                    else:
-                        print 'no'
-            '''
+
             current_file_B_original = [i for i in current_file_B]
 
             for current_line in current_file_A:
@@ -182,8 +160,7 @@ def main():
             diff_id = str(diff_total)
 
 
-
-            f.write('Line in ' + fileA + ' that are not in ' + fileB + ':' + "\n")
+            f.write('Line in ' + fileA + '(A)' + ' that are not in ' + fileB + '(B)' + ':' + "\n")
             if len(file_A_diff) == 0:
                 f.write('   None' + '\n')
 
@@ -192,12 +169,20 @@ def main():
 
 
 
-            f.write('Line in ' + fileB + ' that are not in ' + fileA + ':' + "\n")
+            f.write('Line in ' + fileB + '(B)' + ' that are not in ' + fileA + '(A)' + ':' + "\n")
+
             if len(current_file_B) == 0:
                 f.write('   None' + '\n')
+            else:
+                flag = 0
+                for current_line in current_file_B:
+                    if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
+                        continue
+                    f.write('   line ' +  str(current_file_B_original.index(current_line)+ 1) + ': ' + current_line + "\n")
+                    flag = 1
+                if flag == 0:
+                    f.write('   None' + '\n')
 
-            for current_line in current_file_B:
-                f.write('   line ' +  str(current_file_B_original.index(current_line)+ 1) + ': ' + current_line + "\n")
 
             for current_line in file_A_diff:
 
@@ -370,7 +355,7 @@ def index_file():
             print current_extension
             if(current_extension == 'fm8'):
                 e = open('errors.txt', 'a+')
-                e.write('   File ' + file1 + '\'s encoding is not belong to either ascii, utf-9 or utf-16. Manual inspection required.' + '\n' )
+                e.write('   File ' + file1 + '\'s encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.' + '\n' )
                 continue
 
 
@@ -383,7 +368,7 @@ def index_file():
             print char
             if char not in ['ascii', 'UTF-8','UTF-16','UTF-8-SIG']:
                 e = open('errors.txt', 'a+')
-                e.write('   File ' + file1 + '\'s encoding is not belong to either ascii, utf-9 or utf-16. Manual inspection required.' + '\n')
+                e.write('   File ' + file1 + '\'s encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.' + '\n')
                 continue
 
             #try:
