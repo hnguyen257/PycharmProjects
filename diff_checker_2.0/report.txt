@@ -1,4 +1,4 @@
-Time: 2019-07-09 17:27:41.961000
+Time: 2019-07-10 17:44:50.837000
 Overall result: 
       mrg:  00002626580206.mrg and 00002626580206.mrg   -   9 differences
       alert:  000026_2658_02.alert and 000026_2658_02.alert   -   3 differences

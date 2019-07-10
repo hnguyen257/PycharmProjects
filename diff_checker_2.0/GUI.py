@@ -3,6 +3,7 @@ import Tkinter, Tkconstants, tkFileDialog
 import os
 import sys
 import os
+import ttk
 from os import listdir
 import codecs
 import traceback
@@ -12,6 +13,21 @@ from difflib import SequenceMatcher
 import locale
 import io
 import xml.etree.ElementTree as ET
+
+
+
+root = Tk()
+root.title("HART DD comparison tool")
+root.geometry("700x500")
+root.wm_minsize(700,500)
+
+downloaded = IntVar()
+
+
+downloaded_index = IntVar()
+
+
+
 
 class Application(Frame):
     file1 = ''
@@ -24,11 +40,25 @@ class Application(Frame):
     file_pair_list = []
     diff_total_list = []
 
+
+    progress = ttk.Progressbar(root, orient = 'horizontal', variable= downloaded, mode = 'determinate')
+    progress.pack(fill=BOTH, side = BOTTOM)
+    label_progress = Label(wraplength = 490, text = 'Comparing...')
+    label_progress.pack(side = BOTTOM)
+
+    progress_index = ttk.Progressbar(root, orient = 'horizontal', variable= downloaded_index, mode = 'determinate')
+    progress_index.pack(fill=BOTH, side = BOTTOM)
+    label_progress = Label(wraplength = 490, text = 'Indexing...')
+    label_progress.pack(side = BOTTOM)
+
+
     def browse_A(self):
         self.file1 = tkFileDialog.askdirectory()
+        self.Text_A.configure(text = self.file1)
 
     def browse_B(self):
         self.file2 = tkFileDialog.askdirectory()
+        self.Text_B.configure(text = self.file2)
 
     def Compare(self):
         #os.system("python diff_checker3.0.py \""+self.file1+"\" \""+self.file2+"\"")
@@ -39,26 +69,44 @@ class Application(Frame):
         self.BROWSE_A = Button(self)
         self.BROWSE_A["text"] = "Browse folder 1"
         self.BROWSE_A["command"] = self.browse_A
-        self.BROWSE_A.pack({"side": "left"})
+        self.BROWSE_A.bind("<Enter>", lambda event: self.BROWSE_A.configure(bg="orange"))
+        self.BROWSE_A.bind("<Leave>", lambda event: self.BROWSE_A.configure(bg="white"))
+        #self.BROWSE_A.pack()
+        self.BROWSE_A.grid(row = 3, column = 0, ipadx = 40, ipady = 10, pady = 10)
 
         self.BROWSE_B = Button(self)
         self.BROWSE_B["text"] = "Browse folder 2"
         self.BROWSE_B["command"] = self.browse_B
-        self.BROWSE_B.pack({"side": "right"})
+        self.BROWSE_B.bind("<Enter>", lambda event: self.BROWSE_B.configure(bg="orange"))
+        self.BROWSE_B.bind("<Leave>", lambda event: self.BROWSE_B.configure(bg="white"))
+        #self.BROWSE_B.pack()
+        self.BROWSE_B.grid(row = 6, column = 0, ipadx = 40, ipady = 10, pady = 10)
 
-        self.BROWSE_B = Button(self)
-        self.BROWSE_B["text"] = "Compare"
-        self.BROWSE_B["command"] = self.Compare
-        self.BROWSE_B.pack({"side": "right"})
+        self.BROWSE_C = Button(self)
+        self.BROWSE_C["text"] = "Compare"
+        self.BROWSE_C["command"] = self.Compare
+        self.BROWSE_C.bind("<Enter>", lambda event: self.BROWSE_C.configure(bg="green"))
+        self.BROWSE_C.bind("<Leave>", lambda event: self.BROWSE_C.configure(bg="white"))
+        #self.BROWSE_C.pack(fill=BOTH)
+        self.BROWSE_C.grid(row = 9, column = 0, ipadx = 10, ipady = 10, pady = 10)
+
+
+        self.Text_A = Label(self, wraplength = 490)
+        self.Text_A.grid(row = 3, column = 2, ipadx = 10, ipady = 10, pady = 10)
+
+        self.Text_B = Label(self, wraplength = 490)
+        self.Text_B.grid(row = 6, column = 2, ipadx = 10, ipady = 10, pady = 10)
+
+
+
 
     def __init__(self, master=None):
         Frame.__init__(self, master)
-        self.
-        self.title("HART DD comparison tool")
-        self.minsize(640,400)
         self.pack()
         self.createWidgets()
 
+    number_of_files = len(files_as_string_1)
+    progress["maximum"] = number_of_files
 
 
     def compare(self):
@@ -74,8 +122,12 @@ class Application(Frame):
             file_name_quantity = {i:1 for i in self.file_name_list}
 
 
+            value = 0
             #Go through each file type available
             for current_file_index in range(number_of_files):
+                value = value + 1
+                downloaded.set(value)
+                root.update()
                 try:
                     no_difference = True
                     diff_total = 0
@@ -375,6 +427,8 @@ class Application(Frame):
         ''')
         self.writeFooter(h)
 
+
+
     def index_file(self):
         folder1_path = self.file1
         folder2_path = self.file2
@@ -392,7 +446,15 @@ class Application(Frame):
         a = os.getcwd()
         #print a
 
+        number_of_files_index = len(files_in_folder1)
+        Application.progress_index["maximum"] = number_of_files_index
+
+
+        value = 0
         for file1 in files_in_folder1:
+            value = value + 1
+            downloaded_index.set(value)
+            root.update()
             try:
                 current_extension = file1.split(".")[1]
                 print current_extension
@@ -652,8 +714,7 @@ class Application(Frame):
 
         return h
 
-root = Tk()
+
 app = Application(master=root)
 app.mainloop()
-
 
