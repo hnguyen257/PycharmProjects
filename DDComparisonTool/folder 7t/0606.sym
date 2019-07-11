@@ -14,7 +14,8 @@ member          PARAM1480                 parameter       3221267657
 member          PARAM520                  parameter       3221266696 
 member          PARAM2453                 parameter       21930 
 menu            win_display_precision                     20630 
-command         read_tseries_sensor_pars                  16565 
+menu            win_display_precision                     20630
+command         read_tseries_sensor_pars                  16565
 member          PARAM1481                 parameter       3221267658 
 member          PARAM521                  parameter       3221266697 
 member          PARAM2454                 parameter       21931 

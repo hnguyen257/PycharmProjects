@@ -1,0 +1,1 @@
+   File 0206.fm8's encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.

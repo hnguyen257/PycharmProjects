@@ -1,0 +1,506 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: "Lato", sans-serif;}
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+      background-color: #555;
+    }
+    
+    
+    /* Style the tab */
+    .tab {
+      float: left;
+      position:fixed;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      width: 20%;
+      height: 500px;
+    }
+    
+    /* Style the buttons inside the tab */
+    .tab button {
+      display: block;
+      background-color: inherit;
+      color: black;
+      padding: 22px 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      font-size: 17px;
+    }
+    
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #80bfff!important ;
+    }
+    
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+      background-color: #80bfff!important;
+    }
+    
+    /* Style the tab content */
+    .tabcontent {
+      float: right;
+      padding: 0px 12px;
+      width: 70%;
+      border-left: none;
+      height: 300px;
+      display: none;
+    }
+    
+    /* Clear floats after the tab */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    <div class="tab">
+          <button class="tablinks" onmouseover="openFile(event, 'Overall result')">Overall result</button>
+          <button class="tablinks" onmouseover="openFile(event, 'mrg')"style="background-color:#ff9999">mrg</button>
+          <button class="tablinks" onmouseover="openFile(event, 'alert')"style="background-color:#ff9999">alert</button>
+          <button class="tablinks" onmouseover="openFile(event, 'alm')"style="background-color:#ccffee">alm</button>
+          <button class="tablinks" onmouseover="openFile(event, 'fhx')"style="background-color:#ccffee">fhx</button>
+          <button class="tablinks" onmouseover="openFile(event, 'ini')"style="background-color:#ccffee">ini</button>
+          <button class="tablinks" onmouseover="openFile(event, 'map')"style="background-color:#ccffee">map</button>
+          <button class="tablinks" onmouseover="openFile(event, 'sym')"style="background-color:#ccffee">sym</button>
+          <button class="tablinks" onmouseover="openFile(event, 'ini(2)')"style="background-color:#ccffee">ini(2)</button>
+    </div><div id="mrg" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>00002626580206.mrg</th>
+   <th>Line B #</th>
+   <th>00002626580206.mrg</th>
+</tr>
+
+<tr>
+  <td>5</td>
+   <td id="mrg9" style="background-color: #FFFF00">    // Header section:
+   </td>
+  <td>5</td>
+   <td id="mrg9" style="background-color: #FFFF00">    // Header section:6
+  </td>
+<tr>
+  <td>9</td>
+   <td id="mrg9" style="background-color: #FFFF00">    Default Source &quot;FMS export operation&quot;,vvvv
+   </td>
+  <td>9</td>
+   <td id="mrg9" style="background-color: #FFFF00">    Default Source &quot;FMS export operation&quot;,
+  </td>
+<tr>
+  <td>12</td>
+   <td id="mrg9" style="background-color: #FFFF00">    // Definitio7n section:
+   </td>
+  <td>12</td>
+   <td id="mrg9" style="background-color: #FFFF00">    // Definition section:
+  </td>
+<tr>
+  <td>15</td>
+   <td id="mrg9" style="background-color: #FFFF00">        Name          &quot;Rosemount&quot;,aaaa
+   </td>
+  <td>15</td>
+   <td id="mrg9" style="background-color: #FFFF00">        Name          &quot;Rosemount&quot;,
+  </td>
+<tr>
+  <td>1841</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Name    &quot;devSpec_loopCurrentLSL.000043D8.0000.0000&quot;,gbcvbrgtd
+   </td>
+  <td>1841</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Name    &quot;devSpec_loopCurrentLSL.000043D8.0000.0000&quot;,
+  </td>
+<tr>
+  <td>1871</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Mode    Offline,dgghdhd
+   </td>
+  <td>3446</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Mode    Offline,
+  </td>
+<tr>
+  <td>1888</td>
+   <td id="mrg9" style="background-color: #FFFF00">            },dghdhdghdgh
+   </td>
+  <td>3442</td>
+   <td id="mrg9" style="background-color: #FFFF00">            },
+  </td>
+<tr>
+  <td>3150</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Name    &quot;standardized_status_2_h.000040DE.0000.0000&quot;,ghfdhdghdfh
+   </td>
+  <td>3150</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Name    &quot;standardized_status_2_h.000040DE.0000.0000&quot;,
+  </td>
+<tr>
+  <td>3199</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Name    &quot;standardized_status_3_mask.000008E0.0000.0000&quot;,dghdhdhd
+   </td>
+  <td>3199</td>
+   <td id="mrg9" style="background-color: #FFFF00">            Name    &quot;standardized_status_3_mask.000008E0.0000.0000&quot;,
+  </td>
+</table>
+</div>
+
+<div id="alert" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>000026_2658_02.alert</th>
+   <th>Line B #</th>
+   <th>000026_2658_02.alert</th>
+</tr>
+
+<tr>
+  <td>12</td>
+   <td id="alert3" style="background-color: #FFFF00">      &lt;BytePositifdfdon&gt;03&lt;/BytePosition&gt;
+   </td>
+  <td>12</td>
+   <td id="alert3" style="background-color: #FFFF00">      &lt;BytePosition&gt;03&lt;/BytePosition&gt;
+  </td>
+<tr>
+  <td>15</td>
+   <td id="alert3" style="background-color: #FFFF00">      &lt;Name&gt;TODO_Finfdfdd_Name&lt;/Name&gt;
+   </td>
+  <td>15</td>
+   <td id="alert3" style="background-color: #FFFF00">      &lt;Name&gt;TODO_Find_Name&lt;/Name&gt;
+  </td>
+<tr>
+  <td>20</td>
+   <td id="alert3" style="background-color: #FFFF00">          &lt;Severity&gt;AdfdfLERT_ADVISE_ID&lt;/Severity&gt;
+   </td>
+  <td>647</td>
+   <td id="alert3" style="background-color: #FFFF00">          &lt;Severity&gt;ALERT_ADVISE_ID&lt;/Severity&gt;
+  </td>
+</table>
+</div>
+
+<div id="alm" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>000026_2658_02.alm</th>
+   <th>Line B #</th>
+   <th>000026_2658_02.alm</th>
+</tr>
+
+</table>
+</div>
+
+<div id="fhx" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>000026_2658_02.fhx</th>
+   <th>Line B #</th>
+   <th>000026_2658_02.fhx</th>
+</tr>
+
+</table>
+</div>
+
+<div id="ini" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>0206.ini</th>
+   <th>Line B #</th>
+   <th>0206.ini</th>
+</tr>
+
+</table>
+</div>
+
+<div id="map" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>0206.map</th>
+   <th>Line B #</th>
+   <th>0206.map</th>
+</tr>
+
+</table>
+</div>
+
+<div id="sym" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>0206.sym</th>
+   <th>Line B #</th>
+   <th>0206.sym</th>
+</tr>
+
+</table>
+</div>
+
+<div id="ini(2)" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>ddinstal.ini</th>
+   <th>Line B #</th>
+   <th>ddinstal.ini</th>
+</tr>
+
+</table>
+</div>
+
+<div id="Overall result" class="tabcontent">
+<pre>Time: 2019-07-09 16:35:19.816000
+Overall result: 
+      mrg:  00002626580206.mrg and 00002626580206.mrg   -   9 differences
+      alert:  000026_2658_02.alert and 000026_2658_02.alert   -   3 differences
+      alm:  000026_2658_02.alm and 000026_2658_02.alm   -   0 differences
+      fhx:  000026_2658_02.fhx and 000026_2658_02.fhx   -   0 differences
+      ini:  0206.ini and 0206.ini   -   0 differences
+      map:  0206.map and 0206.map   -   0 differences
+      sym:  0206.sym and 0206.sym   -   0 differences
+      ini(2):  ddinstal.ini and ddinstal.ini   -   0 differences
+Errors encountered:
+   File 0206.fm8's encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.
+
+
+File type: mrg
+Files being compare: 00002626580206.mrg  and  00002626580206.mrg
+Differences: 
+Line in 00002626580206.mrg that are not in 00002626580206.mrg:
+   line 5:     // Header section:
+
+   line 9:     Default Source "FMS export operation",vvvv
+
+   line 12:     // Definitio7n section:
+
+   line 15:         Name          "Rosemount",aaaa
+
+   line 1841:             Name    "devSpec_loopCurrentLSL.000043D8.0000.0000",gbcvbrgtd
+
+   line 1871:             Mode    Offline,dgghdhd
+
+   line 1888:             },dghdhdghdgh
+
+   line 3150:             Name    "standardized_status_2_h.000040DE.0000.0000",ghfdhdghdfh
+
+   line 3199:             Name    "standardized_status_3_mask.000008E0.0000.0000",dghdhdhd
+
+Line in 00002626580206.mrg that are not in 00002626580206.mrg:
+   line 2: 
+
+   line 5:     // Header section:6
+
+   line 9:     Default Source "FMS export operation",
+
+   line 2: 
+
+   line 12:     // Definition section:
+
+   line 15:         Name          "Rosemount",
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 1841:             Name    "devSpec_loopCurrentLSL.000043D8.0000.0000",
+
+   line 3150:             Name    "standardized_status_2_h.000040DE.0000.0000",
+
+   line 3199:             Name    "standardized_status_3_mask.000008E0.0000.0000",
+
+   line 3442:             },
+
+   line 3446:             Mode    Offline,
+
+   line 2: 
+
+   line 2: 
+
+
+
+File type: alert
+Files being compare: 000026_2658_02.alert  and  000026_2658_02.alert
+Differences: 
+Line in 000026_2658_02.alert that are not in 000026_2658_02.alert:
+   line 12:       <BytePositifdfdon>03</BytePosition>
+
+   line 15:       <Name>TODO_Finfdfdd_Name</Name>
+
+   line 20:           <Severity>AdfdfLERT_ADVISE_ID</Severity>
+
+Line in 000026_2658_02.alert that are not in 000026_2658_02.alert:
+   line 12:       <BytePosition>03</BytePosition>
+
+   line 15:       <Name>TODO_Find_Name</Name>
+
+   line 647:           <Severity>ALERT_ADVISE_ID</Severity>
+
+
+
+File type: alm
+Files being compare: 000026_2658_02.alm  and  000026_2658_02.alm
+Differences: 
+Line in 000026_2658_02.alm that are not in 000026_2658_02.alm:
+   None
+Line in 000026_2658_02.alm that are not in 000026_2658_02.alm:
+   None
+
+
+File type: fhx
+Files being compare: 000026_2658_02.fhx  and  000026_2658_02.fhx
+Differences: 
+Line in 000026_2658_02.fhx that are not in 000026_2658_02.fhx:
+   None
+Line in 000026_2658_02.fhx that are not in 000026_2658_02.fhx:
+   None
+
+
+File type: ini
+Files being compare: 0206.ini  and  0206.ini
+Differences: 
+Line in 0206.ini that are not in 0206.ini:
+   None
+Line in 0206.ini that are not in 0206.ini:
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+
+
+File type: map
+Files being compare: 0206.map  and  0206.map
+Differences: 
+Line in 0206.map that are not in 0206.map:
+   None
+Line in 0206.map that are not in 0206.map:
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+
+
+File type: sym
+Files being compare: 0206.sym  and  0206.sym
+Differences: 
+Line in 0206.sym that are not in 0206.sym:
+   None
+Line in 0206.sym that are not in 0206.sym:
+   None
+
+
+File type: ini(2)
+Files being compare: ddinstal.ini  and  ddinstal.ini
+Differences: 
+Line in ddinstal.ini that are not in ddinstal.ini:
+   None
+Line in ddinstal.ini that are not in ddinstal.ini:
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+ 
+ 
+ 
+ - End of Report -</pre>
+</div>
+        <div class="clearfix"></div>
+    
+        <script>
+        
+    function openFile(evt, fileName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(fileName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+    </script>
+    
+    </body>
+    </html>
+    

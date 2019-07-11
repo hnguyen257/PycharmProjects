@@ -5,11 +5,13 @@ import sys
 import os
 import ttk
 from os import listdir
+import tkMessageBox
 import codecs
 import traceback
 import datetime
 import chardet
 from difflib import SequenceMatcher
+import shutil
 import locale
 import io
 import xml.etree.ElementTree as ET
@@ -18,8 +20,8 @@ import xml.etree.ElementTree as ET
 
 root = Tk()
 root.title("HART DD comparison tool")
-root.geometry("700x500")
-root.wm_minsize(700,500)
+root.geometry("840x500")
+root.wm_minsize(840,500)
 
 downloaded = IntVar()
 
@@ -32,6 +34,8 @@ downloaded_index = IntVar()
 class Application(Frame):
     file1 = ''
     file2 = ''
+    file3 = ''
+    file4 = ''
 
 
     files_as_string_1 =[]
@@ -54,20 +58,90 @@ class Application(Frame):
 
     def browse_A(self):
         self.file1 = tkFileDialog.askdirectory()
-        self.Text_A.configure(text = self.file1)
+        self.Text_A.delete(0, last=len(self.Text_A.get()))
+        self.Text_A.insert(0, self.file1)
 
     def browse_B(self):
         self.file2 = tkFileDialog.askdirectory()
-        self.Text_B.configure(text = self.file2)
+        self.Text_B.delete(0, last=len(self.Text_B.get()))
+        self.Text_B.insert(0, self.file2)
+
+    def browse_output(self):
+        self.file3 = tkFileDialog.askdirectory()
+        self.Text_C.delete(0, last=len(self.Text_C.get()))
+        self.Text_C.insert(0, self.file3)
+
+
+
+    #print(os.path.isdir("C:/Users/E1260297/Documents/"))
+    #print(os.path.exists("C:/Users/E1260297/Documents/"))
+    #print(os.path.isfile("C:/Users/E1260297/Documents/"))
 
     def Compare(self):
         #os.system("python diff_checker3.0.py \""+self.file1+"\" \""+self.file2+"\"")
         #print "python dd_comp.py \"" + self.file1 + "\" \""+ self.file2 +"\""
-        self.compare()
+        self.file1 = self.Text_A.get()
+        self.file2 = self.Text_B.get()
+        if os.path.exists(self.file1) is False or os.path.exists(self.file2) is False:
+            if os.path.exists(self.file1) is False and os.path.exists(self.file2) is False:
+                tkMessageBox.showinfo("Error", "Both path A and path B are not valid. Please check and try again.")
+            elif os.path.exists(self.file1) is True and os.path.exists(self.file2) is False:
+                tkMessageBox.showinfo("Error", "Path B not valid. Please check and try again.")
+            elif os.path.exists(self.file1) is False and os.path.exists(self.file2) is True:
+                tkMessageBox.showinfo("Error", "Path A not valid. Please check and try again.")
+            return
+
+        self.file3 = self.Text_C.get()
+        self.file4 = self.Text_E.get()
+        if os.path.isdir(self.file3) is False and self.file3 != 'Default: same folder of the running program':
+            tkMessageBox.showinfo("Error", "File output location not valid or not a folder. Please check and try again.")
+            return
+
+        if os.path.isfile(self.file1) is True and os.path.isfile(self.file2) is True:
+            self.compare_file()
+            current_path = os.getcwd().replace('\\','/') + '/' + 'reportH2.html'
+            if self.file3 == 'Default: same folder of the running program' and self.file4 == 'Default: reportH2.html':
+                return
+            dest_folder = ''
+            dest_name = ''
+            if self.file3 == 'Default: same folder of the running program':
+                dest_folder = os.getcwd().replace('\\','/') + '/'
+            else:
+                dest_folder = self.file3 + '/'
+            if self.file4 == 'Default: reportH2.html':
+                dest_name = 'reportH2.html'
+            else:
+                dest_name = self.file4 + '.html'
+            dest = dest_folder + dest_name
+            shutil.move(current_path, dest)
+            return
+
+        if os.path.isdir(self.file1) is True and os.path.isdir(self.file2) is True:
+            self.compare()
+            current_path = os.getcwd().replace('\\','/') + '/' + 'reportH2.html'
+            if self.file3 == 'Default: same folder of the running program' and self.file4 == 'Default: reportH2.html':
+                return
+            dest_folder = ''
+            dest_name = ''
+            if self.file3 == 'Default: same folder of the running program':
+                dest_folder = os.getcwd().replace('\\','/') + '/'
+            else:
+                dest_folder = self.file3 + '/'
+            if self.file4 == 'Default: reportH2.html':
+                dest_name = 'reportH2.html'
+            else:
+                dest_name = self.file4 + '.html'
+            dest = dest_folder + dest_name
+            shutil.move(current_path, dest)
+            return
+
+        tkMessageBox.showinfo("Error", "Please make sure path A and B are either both folders or both files location. Please check and try again")
+        return
+
 
     def createWidgets(self):
         self.BROWSE_A = Button(self)
-        self.BROWSE_A["text"] = "Browse folder 1"
+        self.BROWSE_A["text"] = "Browse path A"
         self.BROWSE_A["command"] = self.browse_A
         self.BROWSE_A.bind("<Enter>", lambda event: self.BROWSE_A.configure(bg="orange"))
         self.BROWSE_A.bind("<Leave>", lambda event: self.BROWSE_A.configure(bg="white"))
@@ -75,27 +149,59 @@ class Application(Frame):
         self.BROWSE_A.grid(row = 3, column = 0, ipadx = 40, ipady = 10, pady = 10)
 
         self.BROWSE_B = Button(self)
-        self.BROWSE_B["text"] = "Browse folder 2"
+        self.BROWSE_B["text"] = "Browse path B"
         self.BROWSE_B["command"] = self.browse_B
         self.BROWSE_B.bind("<Enter>", lambda event: self.BROWSE_B.configure(bg="orange"))
         self.BROWSE_B.bind("<Leave>", lambda event: self.BROWSE_B.configure(bg="white"))
         #self.BROWSE_B.pack()
         self.BROWSE_B.grid(row = 6, column = 0, ipadx = 40, ipady = 10, pady = 10)
 
+        self.BROWSE_D = Button(self)
+        self.BROWSE_D["text"] = "Browse output location"
+        self.BROWSE_D["command"] = self.browse_output
+        self.BROWSE_D.bind("<Enter>", lambda event: self.BROWSE_D.configure(bg="orange"))
+        self.BROWSE_D.bind("<Leave>", lambda event: self.BROWSE_D.configure(bg="white"))
+        #self.BROWSE_B.pack()
+        self.BROWSE_D.grid(row = 9, column = 0, ipadx = 20, ipady = 10, pady = 10)
+
         self.BROWSE_C = Button(self)
         self.BROWSE_C["text"] = "Compare"
         self.BROWSE_C["command"] = self.Compare
         self.BROWSE_C.bind("<Enter>", lambda event: self.BROWSE_C.configure(bg="green"))
         self.BROWSE_C.bind("<Leave>", lambda event: self.BROWSE_C.configure(bg="white"))
-        #self.BROWSE_C.pack(fill=BOTH)
-        self.BROWSE_C.grid(row = 9, column = 0, ipadx = 10, ipady = 10, pady = 10)
+        #self.BROWSE_C.pack(fill=BOTH, side=TOP)
+        self.BROWSE_C.grid(row = 20, column = 0, columnspan = 3, ipadx = 10, ipady = 10, pady = 10)
 
 
-        self.Text_A = Label(self, wraplength = 490)
-        self.Text_A.grid(row = 3, column = 2, ipadx = 10, ipady = 10, pady = 10)
+        #self.Text_A = Label(self, wraplength = 490)
+        #self.Text_A.grid(row = 3, column = 2, ipadx = 10, ipady = 10, pady = 10)
 
-        self.Text_B = Label(self, wraplength = 490)
-        self.Text_B.grid(row = 6, column = 2, ipadx = 10, ipady = 10, pady = 10)
+        self.Text_A = Entry(self, width=100)
+        self.Text_A.grid(row = 3, column = 2, columnspan = 2, ipadx = 10, ipady = 10, pady = 10, padx = 5)
+
+        self.Text_B = Entry(self, width=100)
+        self.Text_B.grid(row = 6, column = 2, columnspan = 2, ipadx = 10, ipady = 10, pady = 10, padx = 5)
+
+        self.Text_C = Entry(self, width=100)
+        self.Text_C.insert(0, 'Default: same folder of the running program')
+        self.Text_C.grid(row = 9, column = 2, columnspan = 2, ipadx = 10, ipady = 10, pady = 10, padx = 5)
+
+
+        self.Text_F = Label(self, text = 'Name of report: ')
+        self.Text_F.grid(row = 12, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 20)
+
+
+        self.Text_E = Entry(self, width=100)
+        self.Text_E.insert(0, 'Default: reportH2.html')
+        self.Text_E.grid(row = 12, column = 2, columnspan = 2, ipadx = 10, ipady = 10, pady = 10, padx = 5)
+
+        #self.Text_B = Label(self, wraplength = 490)
+        #self.Text_B.grid(row = 6, column = 2, ipadx = 10, ipady = 10, pady = 10, padx = 5)
+
+
+        #self.Text_C = Label(self, wraplength = 490)
+        #self.Text_C.grid(row = 9, column = 2, ipadx = 10, ipady = 10, pady = 10)
+
 
 
 
@@ -105,13 +211,12 @@ class Application(Frame):
         self.pack()
         self.createWidgets()
 
-    number_of_files = len(files_as_string_1)
-    progress["maximum"] = number_of_files
+
 
 
     def compare(self):
             e = open('errors.txt', 'w+')
-            self.index_file()
+            self.index_folder()
 
             number_of_files = len(self.files_as_string_1)
 
@@ -121,6 +226,8 @@ class Application(Frame):
 
             file_name_quantity = {i:1 for i in self.file_name_list}
 
+
+            Application.progress["maximum"] = number_of_files
 
             value = 0
             #Go through each file type available
@@ -150,7 +257,10 @@ class Application(Frame):
                     f = open("report_prep.txt", "a+")
                     f.write("\n\n")
                     f.write("File type: " + fileName + "\n")
-                    f.write("Files being compare: " + fileA + '(A)' + "  and  " + fileB + '(B)' + "\n")
+                    file_name_difference = ''
+                    if fileA != fileB:
+                        file_name_difference = '  (Note: file name is difference)'
+                    f.write("Files being compare: " + fileA + '(A)' + "  and  " + fileB + '(B)' + file_name_difference + "\n")
                     f.write("Differences: " + "\n")
 
                     h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
@@ -372,7 +482,284 @@ class Application(Frame):
             f.write(' \n \n \n - End of Report -')
             f.close()
             h.close()
+            e.close()
             self.writeEnding()
+            current_path = os.getcwd().replace('\\','/') + '/'
+            os.remove(current_path + 'report.txt')
+            os.remove(current_path + 'errors.txt')
+            os.remove(current_path + 'reportH.html')
+            os.remove(current_path + 'testing.txt')
+            os.remove(current_path + 'testing2.txt')
+
+    def compare_file(self):
+        e = open('errors.txt', 'w+')
+        self.index_file()
+
+        number_of_files = 1
+
+        f = open("report_prep.txt", "w+")
+        h = open("reportH.html", "w+")
+
+
+        file_name_quantity = {i:1 for i in self.file_name_list}
+
+
+        Application.progress["maximum"] = 1
+        try:
+            no_difference = True
+            diff_total = 0
+            current_line_keeper = 0
+            fileName =  str(self.file_name_list[0])
+
+            x = file_name_quantity[fileName.split()[0]]
+            if x > 1:
+                fileName = fileName + '(' + str(x) + ')'
+
+            file_name_quantity[fileName.split()[0]] = x + 1
+
+            self.file_name_list[0] = fileName
+
+
+            fileA = str(self.file_pair_list[0][0])
+            fileB = str(self.file_pair_list[0][1])
+
+            # Write current file type to report_prep.txt
+            f = open("report_prep.txt", "a+")
+            f.write("\n\n")
+            f.write("File type: " + fileName + "\n")
+            f.write("Files being compare: " + fileA + '(A)' + "  and  " + fileB + '(B)' + "\n")
+            f.write("Differences: " + "\n")
+
+            h.write('<div id="' + fileName + '" class="tabcontent">' + '\n')
+            h.write('<table style="width:100%">' + '\n')
+            h.write('<tr>' + '\n')
+            h.write('   <th>' + 'Line A #' + '</th>' + '\n')
+            h.write('   <th>' + fileA + '</th>' + '\n')
+            h.write('   <th>' + 'Line B #' + '</th>' + '\n')
+            h.write('   <th>' + fileB + '</th>' + '\n')
+            h.write('</tr>' + '\n\n')
+
+            #go down the every line of the current file being processed
+            current_file_A = self.files_as_string_1[0]
+            current_file_B = self.files_as_string_2[0]
+            current_file_B_original = [i for i in current_file_B]
+
+
+            current_file_A_temp = [i for i in current_file_A]
+            for line in current_file_A_temp:
+                if len(line.replace(' ', '')) == 0:
+                    current_file_A.remove(line)
+
+
+            current_file_B_temp = [i for i in current_file_B]
+            for line in current_file_B_temp:
+                if len(line.replace(' ', '')) == 0:
+                    current_file_B_original[current_file_B_original.index(line)] = None
+                    current_file_B.remove(line)
+
+
+            file_A_diff = []
+
+            count = 0
+
+            current_file_B_original = [i for i in current_file_B]
+
+            for current_line in current_file_A:
+                print current_line
+                if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
+                    continue
+                if current_line in current_file_B:
+                    current_file_B_original[current_file_B_original.index(current_line)] = None
+                    current_file_B.remove(current_line)
+                else:
+                    diff_total = diff_total + 1
+                    file_A_diff.append(current_line)
+
+            if len(current_file_B) != 0 and len(current_file_A)!=0:
+                no_difference = False
+            line_in_B_left = [i for i in current_file_B]
+            #print len(current_file_B)
+            #print len(file_A_diff)
+            similarity_percentage = [[0 for i in range(len(current_file_B))] for j in range(len(file_A_diff))]
+
+            #print file_A_diff
+            #print current_file_B
+            print len(file_A_diff)
+            for i in range(len(file_A_diff)):
+                print i
+                for j in range(len(current_file_B)):
+                    similarity_percentage[i][j] = SequenceMatcher(None, file_A_diff[i], current_file_B[j]).ratio()
+                    #print similarity_percentage[i][j]
+                #print similarity_percentage[i]
+
+
+            most_similar_A = [0 for i in range(len(file_A_diff))]
+            most_similar_B = [0 for i in range(len(current_file_B))]
+
+            second_most_similar_A = [0 for i in range(len(file_A_diff))]
+            second_most_similar_B = [0 for i in range(len(current_file_B))]
+
+            for i in range(len(file_A_diff)):
+                #print file_A_diff[i]
+                highest_percentage = None
+                highest_percentage_index = None
+                second_highest_percentage_index = None
+                for j in range(len(current_file_B)):
+                    #print current_file_B[j]
+                    #print similarity_percentage[i][j]
+                    if similarity_percentage[i][j] > highest_percentage:
+                        second_highest_percentage_index = highest_percentage_index
+                        highest_percentage_index = j
+                        highest_percentage = similarity_percentage[i][j]
+                most_similar_A[i] = highest_percentage_index
+                second_most_similar_A[i] = second_highest_percentage_index
+
+
+            for j in range(len(current_file_B)):
+                #print current_file_B[j]
+                highest_percentage = None
+                highest_percentage_index = None
+                second_highest_percentage_index = None
+                for i in range(len(file_A_diff)):
+                    #print file_A_diff[i]
+                    #print similarity_percentage[i][j]
+                    if similarity_percentage[i][j] > highest_percentage:
+                        second_highest_percentage_index = highest_percentage_index
+                        highest_percentage_index = i
+                        highest_percentage = similarity_percentage[i][j]
+                most_similar_B[j] = highest_percentage_index
+                second_most_similar_B[j] = second_highest_percentage_index
+
+
+
+            diff_id = str(diff_total)
+
+
+
+            f.write('Line in ' + fileA + '(A)' + ' that are not in ' + fileB + '(B)' + ':' + "\n")
+            if len(file_A_diff) == 0:
+                f.write('   None' + '\n')
+
+            for current_line in file_A_diff:
+                f.write('   line ' +  str(current_file_A.index(current_line)+ 1) + ': ' + current_line + "\n")
+
+
+
+            f.write('Line in ' + fileB + '(B)' + ' that are not in ' + fileA + '(A)' + ':' + "\n")
+
+            if len(current_file_B) == 0:
+                f.write('   None' + '\n')
+            else:
+                flag = 0
+                for current_line in current_file_B:
+                    if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
+                        continue
+                    f.write('   line ' +  str(current_file_B_original.index(current_line)+ 1) + ': ' + current_line + "\n")
+                    flag = 1
+                if flag == 0:
+                    f.write('   None' + '\n')
+
+            for current_line in file_A_diff:
+
+                h.write('<tr>' + '\n')
+                h.write('  <td>' + str(current_file_A.index(current_line)+ 1) + '</td>' + '\n')
+                current_file_A[current_file_A.index(current_line)] = None
+
+                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write(self.escapeHtml(current_line))
+                h.write('   </td>' + '\n')
+
+                testing = current_line
+                a = file_A_diff.index(current_line)
+                file_A_diff[a] = None
+                b = most_similar_A[a]
+
+                #for i in range(len(current_file_B_original)):
+                #a = str(i) + ' ' + current_file_B_original[i]
+                #print a
+                if b != None and len(current_file_B) > 0:
+                    if most_similar_B[b] == a:
+                        h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                        current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                        h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                        h.write(self.escapeHtml(current_file_B[b]))
+                        line_in_B_left.remove(current_file_B[b])
+                        h.write('  </td>' + '\n')
+                        continue
+
+                    if second_most_similar_B[b] == a:
+                        a2 = most_similar_B[b]
+                        if most_similar_A[a2] != b:
+                            h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                            current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                            h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                            h.write(self.escapeHtml(current_file_B[b]))
+                            line_in_B_left.remove(current_file_B[b])
+                            h.write('  </td>' + '\n')
+                            continue
+
+
+                    if most_similar_B[b] == a:
+                        h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                        current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                        h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                        h.write(self.escapeHtml(current_file_B[b]))
+                        line_in_B_left.remove(current_file_B[b])
+                        h.write('  </td>' + '\n')
+                        continue
+
+
+                h.write('  <td>' + ' - ' + '</td>' + '\n')
+                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+                h.write(' </td>' + '\n')
+
+
+                h.write('</tr>' + '\n\n')
+
+
+            for current_line in line_in_B_left:
+                if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
+                    continue
+                h.write('<tr>' + '\n')
+                h.write('  <td>' + ' - ' + '</td>' + '\n')
+
+                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+                h.write(' </td>' + '\n')
+
+                h.write('  <td>' + str(current_file_B_original.index(current_line) + 1) + '</td>' + '\n')
+                current_file_B_original[current_file_B_original.index(current_line)] = None
+
+                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: #FFFF00">')
+                h.write(self.escapeHtml(current_line))
+                h.write('   </td>' + '\n')
+
+                diff_total = diff_total + 1
+                h.write('</tr>' + '\n\n')
+
+
+            self.diff_total_list.append(diff_total)
+            h.write('</table>' + "\n")
+            h.write('</div>' + '\n\n')
+        except:
+            e.write('   Errors occured in file: ' + fileName + '. Manual inspection required' + '\n')
+
+        downloaded.set(1)
+        root.update()
+
+        f.write(' \n \n \n - End of Report -')
+        f.close()
+        h.close()
+        e.close()
+        self.writeEnding()
+        current_path = os.getcwd().replace('\\','/') + '/'
+        os.remove(current_path + 'report.txt')
+        os.remove(current_path + 'errors.txt')
+        os.remove(current_path + 'reportH.html')
+        os.remove(current_path + 'testing.txt')
+        os.remove(current_path + 'testing2.txt')
+
 
     def escapeHtml(self, unsafe):
         safe = unsafe.replace('&', "&amp;").replace('<', "&lt;").replace('>', "&gt;").replace('"', "&quot;").replace("'", "&#039;");
@@ -385,7 +772,12 @@ class Application(Frame):
         f.write("Time: " + str(datetime.datetime.now()) + "\n")
         f.write("Overall result: " + "\n")
         for i in range(len(self.file_name_list)):
-            f.write("      " + self.file_name_list[i] + ":  " + self.file_pair_list[i][0] + " and " + self.file_pair_list[i][1] + "   -   " + str(self.diff_total_list[i]) + " differences" + "\n")
+            file_name_difference = ''
+            if self.file_pair_list[i][0] != self.file_pair_list[i][1]:
+                file_name_difference = '  (Note: file name is difference)'
+            f.write("      " + self.file_name_list[i] + ":  " + self.file_pair_list[i][0] + " and " + self.file_pair_list[i][1] + "   -   " + str(self.diff_total_list[i]) + " differences"  + file_name_difference + "\n")
+        
+
         f.write('Errors encountered:' + '\n')
         if len(open('errors.txt', 'r').read()) == 0:
             f.write('   None' + '\n')
@@ -429,7 +821,7 @@ class Application(Frame):
 
 
 
-    def index_file(self):
+    def index_folder(self):
         folder1_path = self.file1
         folder2_path = self.file2
 
@@ -542,31 +934,78 @@ class Application(Frame):
                 e = open('error.txt', 'a+')
                 e.write('   Errors occurred in file: ' + file1 + '.\n')
                 continue
-    '''
-    result = chardet.detect(line)
-    char = result['encoding']
-    print result
-    print line.decode(char)
-    print line
-    line = line.encode('utf-8', 'ignore')
-    '''
 
-    '''
-    try:
-                        for line in text_file_2:
-                            print line
-                            current_file_as_string_list_2_set.add(line)
-                            current_file_as_string_list_2.append(line)
-                    except:
-                        text_file_2 = codecs.open(current_file_folder2, "r", char)
-                        print text_file_2
-                        text_file_2 = open(current_file_folder2, 'r').readlines()
-                        print text_file_2
-                        for line in text_file_2:
-                            print line
-    
-    '''
+    def index_file(self):
+        file_path_A = self.file1
+        file1 = os.path.split(file_path_A)[-1]
+        file_path_B = self.file2
+        file2 = os.path.split(file_path_B)[-1]
 
+
+        Application.progress_index["maximum"] = 1
+
+        try:
+            current_extension = file1.split(".")[1]
+            if(current_extension == 'fm8'):
+                e = open('errors.txt', 'a+')
+                e.write('   File ' + file1 + '\'s encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.' + '\n' )
+
+            raw = open(file_path_A,'rb').read()
+            result = chardet.detect(raw)
+            char = result['encoding']
+            if char not in ['ascii', 'UTF-8','UTF-16','UTF-8-SIG']:
+                e = open('errors.txt', 'a+')
+                e.write('   File ' + file1 + '\'s encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.' + '\n')
+
+
+
+
+            text_file_1 = open(file_path_A, 'r').read()
+            text_file_2 = open(file_path_B, 'r').read()
+
+            current_file_as_string_list_1 = []
+            current_file_as_string_list_2 = []
+
+            f = open('testing.txt', 'w+')
+            for line in text_file_1:
+                result = chardet.detect(line)
+                char = result['encoding']
+                if char not in ['utf-8', 'utf-16', 'ascii']:
+                    line = line.decode(char).encode('utf-8','ignore')
+                if line == '\x00':
+                    continue
+                f.write(line)
+            f.close()
+            f = open('testing.txt', 'r').readlines()
+            for line in f:
+                current_file_as_string_list_1.append(line)
+
+
+            f = open('testing2.txt', 'w+')
+            for line in text_file_2:
+                result = chardet.detect(line)
+                char = result['encoding']
+                if char not in ['utf-8', 'utf-16', 'ascii']:
+                    line = line.decode(char).encode('utf-8','ignore')
+                if line == '\x00':
+                    continue
+                f.write(line)
+            f.close()
+            f = open('testing2.txt', 'r').readlines()
+            for line in f:
+                current_file_as_string_list_2.append(line)
+
+
+            self.files_as_string_1.append(current_file_as_string_list_1)
+            self.files_as_string_2.append(current_file_as_string_list_2)
+            current_file_pair = [file1,file2]
+            self.file_name_list.append(current_extension)
+            self.file_pair_list.append(current_file_pair)
+            downloaded_index.set(1)
+            root.update()
+        except:
+            e = open('error.txt', 'a+')
+            e.write('   Errors occurred in file: ' + file1 + '.\n')
 
 
     def writeFooter(self, h):

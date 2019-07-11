@@ -1,0 +1,185 @@
+Time: 2019-07-09 16:35:19.816000
+Overall result: 
+      mrg:  00002626580206.mrg and 00002626580206.mrg   -   9 differences
+      alert:  000026_2658_02.alert and 000026_2658_02.alert   -   3 differences
+      alm:  000026_2658_02.alm and 000026_2658_02.alm   -   0 differences
+      fhx:  000026_2658_02.fhx and 000026_2658_02.fhx   -   0 differences
+      ini:  0206.ini and 0206.ini   -   0 differences
+      map:  0206.map and 0206.map   -   0 differences
+      sym:  0206.sym and 0206.sym   -   0 differences
+      ini(2):  ddinstal.ini and ddinstal.ini   -   0 differences
+Errors encountered:
+   File 0206.fm8's encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.
+
+
+File type: mrg
+Files being compare: 00002626580206.mrg  and  00002626580206.mrg
+Differences: 
+Line in 00002626580206.mrg that are not in 00002626580206.mrg:
+   line 5:     // Header section:
+
+   line 9:     Default Source "FMS export operation",vvvv
+
+   line 12:     // Definitio7n section:
+
+   line 15:         Name          "Rosemount",aaaa
+
+   line 1841:             Name    "devSpec_loopCurrentLSL.000043D8.0000.0000",gbcvbrgtd
+
+   line 1871:             Mode    Offline,dgghdhd
+
+   line 1888:             },dghdhdghdgh
+
+   line 3150:             Name    "standardized_status_2_h.000040DE.0000.0000",ghfdhdghdfh
+
+   line 3199:             Name    "standardized_status_3_mask.000008E0.0000.0000",dghdhdhd
+
+Line in 00002626580206.mrg that are not in 00002626580206.mrg:
+   line 2: 
+
+   line 5:     // Header section:6
+
+   line 9:     Default Source "FMS export operation",
+
+   line 2: 
+
+   line 12:     // Definition section:
+
+   line 15:         Name          "Rosemount",
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 2: 
+
+   line 1841:             Name    "devSpec_loopCurrentLSL.000043D8.0000.0000",
+
+   line 3150:             Name    "standardized_status_2_h.000040DE.0000.0000",
+
+   line 3199:             Name    "standardized_status_3_mask.000008E0.0000.0000",
+
+   line 3442:             },
+
+   line 3446:             Mode    Offline,
+
+   line 2: 
+
+   line 2: 
+
+
+
+File type: alert
+Files being compare: 000026_2658_02.alert  and  000026_2658_02.alert
+Differences: 
+Line in 000026_2658_02.alert that are not in 000026_2658_02.alert:
+   line 12:       <BytePositifdfdon>03</BytePosition>
+
+   line 15:       <Name>TODO_Finfdfdd_Name</Name>
+
+   line 20:           <Severity>AdfdfLERT_ADVISE_ID</Severity>
+
+Line in 000026_2658_02.alert that are not in 000026_2658_02.alert:
+   line 12:       <BytePosition>03</BytePosition>
+
+   line 15:       <Name>TODO_Find_Name</Name>
+
+   line 647:           <Severity>ALERT_ADVISE_ID</Severity>
+
+
+
+File type: alm
+Files being compare: 000026_2658_02.alm  and  000026_2658_02.alm
+Differences: 
+Line in 000026_2658_02.alm that are not in 000026_2658_02.alm:
+   None
+Line in 000026_2658_02.alm that are not in 000026_2658_02.alm:
+   None
+
+
+File type: fhx
+Files being compare: 000026_2658_02.fhx  and  000026_2658_02.fhx
+Differences: 
+Line in 000026_2658_02.fhx that are not in 000026_2658_02.fhx:
+   None
+Line in 000026_2658_02.fhx that are not in 000026_2658_02.fhx:
+   None
+
+
+File type: ini
+Files being compare: 0206.ini  and  0206.ini
+Differences: 
+Line in 0206.ini that are not in 0206.ini:
+   None
+Line in 0206.ini that are not in 0206.ini:
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+
+
+File type: map
+Files being compare: 0206.map  and  0206.map
+Differences: 
+Line in 0206.map that are not in 0206.map:
+   None
+Line in 0206.map that are not in 0206.map:
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+   line 10: 
+
+
+
+File type: sym
+Files being compare: 0206.sym  and  0206.sym
+Differences: 
+Line in 0206.sym that are not in 0206.sym:
+   None
+Line in 0206.sym that are not in 0206.sym:
+   None
+
+
+File type: ini(2)
+Files being compare: ddinstal.ini  and  ddinstal.ini
+Differences: 
+Line in ddinstal.ini that are not in ddinstal.ini:
+   None
+Line in ddinstal.ini that are not in ddinstal.ini:
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+   line 4: 
+
+ 
+ 
+ 
+ - End of Report -

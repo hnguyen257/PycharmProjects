@@ -1,0 +1,36 @@
+ÿþ[Version]
+DD Version=6
+FileVersion=2
+
+[General]
+NumOfMfg=1
+UseDeviceFileSubDirs=No
+
+[Mfg1]
+Protocol=HART 
+MfgDictionary= 
+Name=Rosemount
+ID=000026
+NumOfDev=1
+
+[000026.1]
+DevType=2658
+DevTypeDesc=648 Wireless
+DevTypeRevDesc=Rev 2
+DevTypeRev=02
+DDRevDesc=DD Rev 6
+FMS=0206.fm8
+SYM=0206.sym
+MAP=0206.map 
+ALM=000026_2658_02.fhx 
+ALERT=000026_2658_02.alert 
+FHX=000026_2658_02.alm 
+OtherDll=0206.ini
+DeviceHelp= 
+DeviceDLL=
+Template=00002626580206.mrg
+HART Protocol Rev=7
+AmsVersionSupport=10.5, 11.1, 11.5, 12.0, 12.5, 13.0, 13.1
+
+
+
