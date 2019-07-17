@@ -1,3 +1,9 @@
+#Company: Emerson Process Solution
+#Name: Files comparison tool
+#Author: Hiep Nguyen
+#Released date: 07/17/2019
+#version: v1.0
+
 from Tkinter import *
 import tkFileDialog
 import os
@@ -7,19 +13,23 @@ import datetime
 import chardet
 from difflib import SequenceMatcher
 import shutil
+import webbrowser
 
 
 #initialize the GUI
 root = Tk()
-root.title("HART DD comparison tool")
+root.title("Emerson files comparison tool v1.0")
 root.geometry("840x500")
-root.wm_minsize(840,500)
+root.wm_minsize(840,600)
 
 #global variable
 downloaded = IntVar()
 downloaded_index = IntVar()
-
-
+CheckVar1 = IntVar()
+CheckVar1.set(1)
+CheckVar2 = IntVar()
+CheckVar2.set(1)
+CheckVar3 = IntVar()
 
 #Main application
 class Application(Frame):
@@ -65,6 +75,8 @@ class Application(Frame):
     label_progress = Label(wraplength = 490, text = 'Indexing...')
     label_progress.pack(side = BOTTOM)
 
+
+
     #Action to take when user click on browse folder A
     def browse_A(self):
         self.file1 = tkFileDialog.askdirectory()
@@ -83,7 +95,7 @@ class Application(Frame):
         self.Text_C.delete(0, last=len(self.Text_C.get()))
         self.Text_C.insert(0, self.file3)
 
-    #Action to take when user click on browse output location
+    #Action to take when user click on compare button
     def Compare(self):
         self.reset()
         #Get 2 paths to the 2 folder being used for comparison from entry boxes and check their validity
@@ -130,8 +142,14 @@ class Application(Frame):
         #Action to take if the user is comparing 2 folders
         if os.path.isdir(self.file1) is True and os.path.isdir(self.file2) is True:
             self.compare()
+
             current_path = os.getcwd().replace('\\','/') + '/' + 'reportH2.html'
+            current_path_overall = os.getcwd().replace('\\','/') + '/' + 'report.txt'
+
             if self.file3 == 'Default: same folder of the running program' and self.file4 == 'Default: reportH2.html':
+                if CheckVar2.get() == 1:
+                    webbrowser.open_new_tab('file:///' + current_path)
+                self.Text_G.configure(text = '  Comparison process is completed !')
                 return
             dest_folder = ''
             dest_name = ''
@@ -144,7 +162,16 @@ class Application(Frame):
             else:
                 dest_name = self.file4 + '.html'
             dest = dest_folder + dest_name
+
+
             shutil.move(current_path, dest)
+            if CheckVar2.get() == 1:
+                webbrowser.open_new_tab('file:///' + dest)
+
+            if CheckVar3.get() == 1:
+                dest_overall = dest_folder + 'report.txt'
+                shutil.move(current_path_overall, dest_overall)
+            self.Text_G.configure(text = '  Comparison process is completed !')
             return
 
         #Action to take if the user try to compare a folder with a file and vice versa
@@ -183,7 +210,7 @@ class Application(Frame):
         self.BROWSE_C["command"] = self.Compare
         self.BROWSE_C.bind("<Enter>", lambda event: self.BROWSE_C.configure(bg="green"))
         self.BROWSE_C.bind("<Leave>", lambda event: self.BROWSE_C.configure(bg="white"))
-        self.BROWSE_C.grid(row = 20, column = 0, columnspan = 3, ipadx = 10, ipady = 10, pady = 10)
+        self.BROWSE_C.grid(row = 15, column = 0, columnspan = 1, rowspan = 3, ipadx = 10, ipady = 10, pady = 10)
 
         #Create text entry for folder A
         self.Text_A = Entry(self, width=100)
@@ -206,6 +233,36 @@ class Application(Frame):
         self.Text_E = Entry(self, width=100)
         self.Text_E.insert(0, 'Default: reportH2.html')
         self.Text_E.grid(row = 12, column = 2, columnspan = 2, ipadx = 10, ipady = 10, pady = 10, padx = 5)
+
+        #Create 2 checkbox for diff assist and open when done
+        self.Check_A = Checkbutton(self, text = "Diff assist (character highlight)           ", variable = CheckVar1,onvalue = 1, offvalue = 0, width = 40)
+        self.Check_A.grid(row = 15, column = 1, columnspan = 2)
+        self.Check_B = Checkbutton(self, text = "Open report when done                       ", variable = CheckVar2,onvalue = 1, offvalue = 0, width = 40)
+        self.Check_B.grid(row = 16, column = 1, columnspan = 2)
+        self.Check_B = Checkbutton(self, text = "Generate the Overall report separately", variable = CheckVar3,onvalue = 1, offvalue = 0, width = 40)
+        self.Check_B.grid(row = 17, column = 1, columnspan = 2)
+
+
+
+
+        widget = Label(root, compound='top')
+        widget.lenna_image_png = PhotoImage(file="logo2.gif")
+        widget['image'] = widget.lenna_image_png
+        widget.configure(width = 500, height = 100)
+        widget.pack()
+
+
+
+
+
+
+        #Create label to create space
+        self.Text_K = Label(self, text = '')
+        self.Text_K.grid(row = 18, column = 0, pady = 10)
+
+        #Create label to display what the program is doing
+        self.Text_G = Label(self, text = '          Click Compare to begin the process...\n')
+        self.Text_G.grid(row = 20, column = 0)
 
     #Packing all the components and create the GUI
     def __init__(self, master=None):
@@ -238,6 +295,7 @@ class Application(Frame):
             value = 0
             #Go through each file type available
             for current_file_index in range(number_of_files):
+
                 #Update the progress bar
                 value = value + 1
                 downloaded.set(value)
@@ -257,6 +315,8 @@ class Application(Frame):
                         fileName = fileName + '(' + str(x) + ')'
                     file_name_quantity[fileName.split()[0]] = x + 1
                     self.file_name_list[current_file_index] = fileName
+
+                    self.Text_G.configure(text = 'Comparing ' + fileName + ' files...')
 
 
 
@@ -486,7 +546,8 @@ class Application(Frame):
 
             #Delete the auxiliary documents
             current_path = os.getcwd().replace('\\','/') + '/'
-            os.remove(current_path + 'report.txt')
+            if CheckVar3.get() == 0:
+                os.remove(current_path + 'report.txt')
             os.remove(current_path + 'errors.txt')
             os.remove(current_path + 'reportH.html')
             os.remove(current_path + 'testing.txt')
@@ -766,10 +827,13 @@ class Application(Frame):
         os.remove(current_path + 'testing.txt')
         os.remove(current_path + 'testing2.txt')
 
+
     #line by line character highlights
     def character_highlight(self, line_a, line_b):
-        line_a = str(line_a).rstrip().lstrip()
-        line_b = str(line_b).rstrip().lstrip()
+        if CheckVar1.get() == 0:
+            return self.escapeHtml(line_a)
+        #line_a = str(line_a).rstrip().lstrip()
+        #line_b = str(line_b).rstrip().lstrip()
         ret = ''
         len_a = len(line_a)
         len_b = len(line_b)
@@ -797,12 +861,13 @@ class Application(Frame):
                 break
             end_b = end_b - 1
 
-
+        flag = 0
         if bottom_up < top_down:
+            flag = 1
             holder = top_down
             top_down = bottom_up
             bottom_up = holder
-        if diff == 0 or (bottom_up-top_down) == (len_a-1):
+        if diff == 0 or ((bottom_up-top_down) == (len_a-1) and flag == 1):
             for i in range(len_a):
                 ret = ret + line_a[i]
         else:
@@ -923,6 +988,7 @@ class Application(Frame):
         #Going through each file in folder 1 and find the correspond file in folder 2
         value = 0
         for file1 in files_in_folder1:
+            self.Text_G.configure(text = '      Preparing the files before comparison...\n' + 'indexing ' + file1 + '...')
             #Update the progress bar
             value = value + 1
             downloaded_index.set(value)
@@ -1257,5 +1323,7 @@ class Application(Frame):
 
 
 app = Application(master=root)
+root.iconbitmap(r'C:/Users/E1260297/PycharmProjects/PycharmProjects/Emerson-Logo.ico')
 app.mainloop()
+
 

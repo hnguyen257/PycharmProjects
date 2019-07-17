@@ -1,11 +1,15 @@
+import Tkinter as tk
 
-test = '\n\r'
 
-for i in test:
-    if i in ['\n', '\r']:
-        print 'yes'
-print test
 
+if __name__ == '__main__':
+    root = tk.Tk()
+    widget = tk.Label(root, compound='top')
+    widget.lenna_image_png = tk.PhotoImage(file="logo2.gif")
+    widget['text'] = "Lenna.png"
+    widget['image'] = widget.lenna_image_png
+    widget.pack()
+    root.mainloop()
 '''
 past example:
 + Name "amp_cal_t1_re.00004E70.0000.0000",

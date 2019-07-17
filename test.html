@@ -1,0 +1,331 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: "Lato", sans-serif;}
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+      background-color: #555;
+    }
+    
+    
+    /* Style the tab */
+    .tab {
+      float: left;
+      position:fixed;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      width: 20%;
+      height: 500px;
+    }
+    
+    /* Style the buttons inside the tab */
+    .tab button {
+      display: block;
+      background-color: inherit;
+      color: black;
+      padding: 22px 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      font-size: 17px;
+    }
+    
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #80bfff!important ;
+    }
+    
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+      background-color: #80bfff!important;
+    }
+    
+    /* Style the tab content */
+    .tabcontent {
+      float: right;
+      padding: 0px 12px;
+      width: 70%;
+      border-left: none;
+      height: 300px;
+      display: none;
+    }
+    
+    /* Clear floats after the tab */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    <div class="tab">
+          <button class="tablinks" onmouseover="openFile(event, 'Overall result')">Overall result</button>
+          <button class="tablinks" onmouseover="openFile(event, 'alert')"style="background-color:#ff9999">alert</button>
+          <button class="tablinks" onmouseover="openFile(event, 'alm')"style="background-color:#ccffee">alm</button>
+          <button class="tablinks" onmouseover="openFile(event, 'fhx')"style="background-color:#ccffee">fhx</button>
+          <button class="tablinks" onmouseover="openFile(event, 'ini')"style="background-color:#ccffee">ini</button>
+          <button class="tablinks" onmouseover="openFile(event, 'sym')"style="background-color:#ccffee">sym</button>
+          <button class="tablinks" onmouseover="openFile(event, 'map')"style="background-color:#ccffee">map</button>
+          <button class="tablinks" onmouseover="openFile(event, 'ini(2)')"style="background-color:#ccffee">ini(2)</button>
+    </div><div id="alert" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>000026_2658_02.alert</th>
+   <th>Line B #</th>
+   <th>000026_2658_02.alert</th>
+</tr>
+
+<tr>
+  <td>3</td>
+   <td id="alert2" style="background-color: #FFFF00">  &lt;Protocol&gt;HART&lt;/Protocol&gt;
+   </td>
+  <td>3</td>
+   <td id="alert2" style="background-color: #FFFF00">  &lt;Protocol&gt;HARffT&lt;/Protocol&gt;
+  </td>
+</tr>
+
+<tr>
+  <td>12</td>
+   <td id="alert2" style="background-color: #FFFF00">      &lt;BytePosition&gt;03&lt;/BytePosition&gt;
+   </td>
+  <td>12</td>
+   <td id="alert2" style="background-color: #FFFF00">      &lt;BytePosi.tion&gt;03&lt;/BytePosition&gt;
+  </td>
+</tr>
+
+</table>
+</div>
+
+<div id="alm" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>000026_2658_02.alm</th>
+   <th>Line B #</th>
+   <th>000026_2658_02s.alm</th>
+</tr>
+
+</table>
+</div>
+
+<div id="fhx" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>000026_2658_02.fhx</th>
+   <th>Line B #</th>
+   <th>000026_2658_02.fhx</th>
+</tr>
+
+</table>
+</div>
+
+<div id="ini" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>0206.ini</th>
+   <th>Line B #</th>
+   <th>0206.ini</th>
+</tr>
+
+</table>
+</div>
+
+<div id="sym" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>0206.sym</th>
+   <th>Line B #</th>
+   <th>0206.sym</th>
+</tr>
+
+</table>
+</div>
+
+<div id="map" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>3456.map</th>
+   <th>Line B #</th>
+   <th>0206.map</th>
+</tr>
+
+</table>
+</div>
+
+<div id="ini(2)" class="tabcontent">
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>ddinstal.ini</th>
+   <th>Line B #</th>
+   <th>ddinstal.ini</th>
+</tr>
+
+</table>
+</div>
+
+<div id="Overall result" class="tabcontent">
+<pre>Time: 2019-07-17 09:23:57.149000
+Overall result: 
+      alert:  000026_2658_02.alert (ascii)  and 000026_2658_02.alert (ascii)    -   2 differences
+      alm:  000026_2658_02.alm (ascii)  and 000026_2658_02s.alm (UTF-16)    -   0 differences
+      fhx:  000026_2658_02.fhx (ascii)  and 000026_2658_02.fhx (UTF-16)    -   0 differences
+      ini:  0206.ini (ascii)  and 0206.ini (ascii)    -   0 differences
+      sym:  0206.sym (ascii)  and 0206.sym (ascii)    -   0 differences
+      map:  3456.map (ascii)  and 0206.map (ascii)    -   0 differences
+      ini(2):  ddinstal.ini (ascii)  and ddinstal.ini (UTF-16)    -   0 differences
+Notes: 
+   File type mrg is in folder A but not in folder B
+   alm  : file names and encoding format are different
+   fhx  : file's encodings format are different
+   map  : file names are different
+   ini(2)  : file's encodings format are different
+Errors encountered:
+   File 0206.fm8's encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.
+
+
+File type: alert
+Files being compare: 000026_2658_02.alert(A)  and  000026_2658_02.alert(B)
+Differences: 
+Line in 000026_2658_02.alert(A) that are not in 000026_2658_02.alert(B):
+   line 3:   &lt;Protocol&gt;HARffT&lt;/Protocol&gt;
+
+   line 12:       &lt;BytePosi.tion&gt;03&lt;/BytePosition&gt;
+
+Line in 000026_2658_02.alert(B) that are not in 000026_2658_02.alert(A):
+   line 3:   &lt;Protocol&gt;HART&lt;/Protocol&gt;
+
+   line 12:       &lt;BytePosition&gt;03&lt;/BytePosition&gt;
+
+
+
+File type: alm
+Files being compare: 000026_2658_02.alm(A)  and  000026_2658_02s.alm(B)  (Note: file name is difference)
+Differences: 
+Line in 000026_2658_02.alm(A) that are not in 000026_2658_02s.alm(B):
+   None
+Line in 000026_2658_02s.alm(B) that are not in 000026_2658_02.alm(A):
+   None
+
+
+File type: fhx
+Files being compare: 000026_2658_02.fhx(A)  and  000026_2658_02.fhx(B)
+Differences: 
+Line in 000026_2658_02.fhx(A) that are not in 000026_2658_02.fhx(B):
+   None
+Line in 000026_2658_02.fhx(B) that are not in 000026_2658_02.fhx(A):
+   None
+
+
+File type: ini
+Files being compare: 0206.ini(A)  and  0206.ini(B)
+Differences: 
+Line in 0206.ini(A) that are not in 0206.ini(B):
+   None
+Line in 0206.ini(B) that are not in 0206.ini(A):
+   None
+
+
+File type: sym
+Files being compare: 0206.sym(A)  and  0206.sym(B)
+Differences: 
+Line in 0206.sym(A) that are not in 0206.sym(B):
+   None
+Line in 0206.sym(B) that are not in 0206.sym(A):
+   None
+
+
+File type: map
+Files being compare: 3456.map(A)  and  0206.map(B)  (Note: file name is difference)
+Differences: 
+Line in 3456.map(A) that are not in 0206.map(B):
+   None
+Line in 0206.map(B) that are not in 3456.map(A):
+   None
+
+
+File type: ini(2)
+Files being compare: ddinstal.ini(A)  and  ddinstal.ini(B)
+Differences: 
+Line in ddinstal.ini(A) that are not in ddinstal.ini(B):
+   None
+Line in ddinstal.ini(B) that are not in ddinstal.ini(A):
+   None
+ 
+ 
+ 
+ - End of Report -</pre>
+</div>
+        <div class="clearfix"></div>
+        <script>
+        
+    function openFile(evt, fileName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(fileName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+    </script>
+    
+    </body>
+    </html>
+    

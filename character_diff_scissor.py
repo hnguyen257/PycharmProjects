@@ -1,7 +1,7 @@
 
 
-line_a = '	<Severity>ALERT_FAILED_ID</Severity>'
-line_b = '	<Severity>ALERT_FAILED_ID</Severity>'
+line_a = 'n'
+line_b = 'n ...'
 
 #line by line character highlights
 def character_highlight(line_a, line_b):
@@ -15,8 +15,8 @@ def character_highlight(line_a, line_b):
         len_used = len_b
     diff = 0
     for i in range(len_used):
-        #print line_a[i]
-        #print line_b[i]
+        print line_a[i]
+        print line_b[i]
         if line_a[i] != line_b[i]:
             diff = 1
             top_down = i
@@ -24,8 +24,8 @@ def character_highlight(line_a, line_b):
 
     end_b = len_b - 1
     for i in range(len_a-1, -1, -1):
-        #print line_a[i]
-        #print line_b[end_b]
+        print line_a[i]
+        print line_b[end_b]
         if line_a[i] != line_b[end_b]:
             diff = 1
             bottom_up = i
@@ -34,17 +34,18 @@ def character_highlight(line_a, line_b):
 
     print top_down
     print bottom_up
-
+    flag = 0
     if bottom_up < top_down:
+        flag = 1
         holder = top_down
         top_down = bottom_up
         bottom_up = holder
-    if diff == 0 or (bottom_up-top_down) == (len_a-1):
+    if diff == 0 or ((bottom_up-top_down) == (len_a-1) and flag == 1):
         for i in range(len_a):
             ret = ret + line_a[i]
     else:
-        #print top_down
-        #print bottom_up
+        print top_down
+        print bottom_up
         for i in range(top_down):
             ret = ret + line_a[i]
             print ret
