@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AlertsRoot Version="1.02">
-  <Protocol>HART</Protocol>
+  <Protocol>HARffT</Protocol>
   <Manufacturer>389</Manufacturer>
   <DeviceType>9816</DeviceType>
   <DeviceRevision>2</DeviceRevision>
@@ -9,15 +9,15 @@
     <Variable>
       <Size>1</Size>
       <Type>bit-enumerated</Type>
-      <BytePositifdfdon>03</BytePosition>
+      <BytePosi.tion>03</BytePosition>
       <Label>
         </Label>
-      <Name>TODO_Finfdfdd_Name</Name>
+      <Name>TODO_Find_Name</Name>
       <AlertList>
         <Alert>
           <Value>256</Value>
           <AlarmString>Device Not Responding</AlarmString>
-          <Severity>AdfdfLERT_ADVISE_ID</Severity>
+          <Severity>ALERT_ADVISE_ID</Severity>
           <ExtendedHelpText>
           </ExtendedHelpText>
           <DDHelpText>
