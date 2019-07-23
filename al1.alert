@@ -1,0 +1,4 @@
+﻿
+          <AlarmString>Device Malfunction</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>

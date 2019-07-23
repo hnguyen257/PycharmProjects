@@ -1,7 +1,7 @@
 
 
-line_a = 'n'
-line_b = 'n ...'
+line_a = 'sdfgfgfgdgdgdg'
+line_b = '          sdfgfgfgdgdgdg'
 
 #line by line character highlights
 def character_highlight(line_a, line_b):
@@ -14,6 +14,7 @@ def character_highlight(line_a, line_b):
     if len_a > len_b:
         len_used = len_b
     diff = 0
+    diff_bottom = 0
     for i in range(len_used):
         print line_a[i]
         print line_b[i]
@@ -28,6 +29,7 @@ def character_highlight(line_a, line_b):
         print line_b[end_b]
         if line_a[i] != line_b[end_b]:
             diff = 1
+            diff_bottom = 1
             bottom_up = i
             break
         end_b = end_b - 1
@@ -50,8 +52,10 @@ def character_highlight(line_a, line_b):
             ret = ret + line_a[i]
             print ret
         ret = ret + '+=^font style=#$@background-color: #89ED75#$@^=+'
+        if diff_bottom == 0:
+            bottom_up = top_down
         for i in range(top_down, bottom_up+1):
-            ret = ret + line_a [i]
+            ret = ret + line_a[i].replace(' ', '^$^nbsp;')
             print ret
         ret = ret + '+=^/font^=+'
         for i in range(bottom_up+1, len_a):
@@ -60,12 +64,15 @@ def character_highlight(line_a, line_b):
 
 
     ret = escapeHtml(ret)
-    ret = ret.replace('+=^', '<').replace('^=+', '>').replace('#$@','"')
+    ret = ret.replace('+=^', '<').replace('^=+', '>').replace('#$@','"').replace('^$^', '&')
     return ret
 
 def escapeHtml(unsafe):
     safe = unsafe.replace('&', "&amp;").replace('<', "&lt;").replace('>', "&gt;").replace('"', "&quot;").replace("'", "&#039;");
     return safe
+
+
+
 
 print character_highlight(line_a, line_b)
 print character_highlight(line_b, line_a)
