@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AlertsRoot Version="1.0">
+  <Protocol>HART</Protocol>
+  <Manufacturer>31</Manufacturer>
+  <DeviceType>65</DeviceType>
+  <DeviceRevision>8</DeviceRevision>
+  <DDRevision>4</DDRevision>
+  <VariableList>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>0</BytePosition>
+      <Label>
+        </Label>
+      <Name>TODO_Find_Name</Name>
+      <AlertList>
+        <Alert>
+          <Value>256</Value>
+          <AlarmString>Device Not Responding</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>
+          </ExtendedHelpText>
+          <DDHelpText>
+          </DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0001000000000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>0</BytePosition>
+      <Label>Device Status</Label>
+      <Name>device_status</Name>
+      <AlertList>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Configuration Changed</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>A write or set command has been executed. No Action required.</ExtendedHelpText>
+          <DDHelpText>Configuration parameter changed</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>4000000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>Device Malfunction</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>Cycle power to the flowmeter.
+If alert persists contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Field device malfunction</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>8000000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Cold Start</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Power has been removed and reapplied resulting in the reinstallations of the setup information. The first command to recognize this condition will automatically reset this flag.   This flag may also be set following a Master Reset or a Self Test.</ExtendedHelpText>
+          <DDHelpText>Device power removed and applied again</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Primary Variable Out of Limits</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Verify process and check for slug flow.
+2. Check the test points.
+3. Check the sensor circuitry
+4. Check the sensor tubes for erosion.
+5. If the problem persists, contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Primary variable out of limits</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>More Status Available</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Take action on any other notifications from the device.</ExtendedHelpText>
+          <DDHelpText>The transmitter has one or more active alerts that may require attention.</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Loop Current Fixed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Verify that mA output range values are set to appropriate values.</ExtendedHelpText>
+          <DDHelpText>Primary variable analog output fixed</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0800000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Loop Current Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Verify that mA output range values are set to appropriate values.</ExtendedHelpText>
+          <DDHelpText>Primary variable analog output saturated</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000000000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Non-Primary Variable Out of Limits</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Verify process and check for slug flow.
+2. Check the test points.
+3. Check the sensor circuitry
+4. Check the sensor tubes for erosion.
+5. Check temperature sensor
+6. If the problem persists, contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Non-primary variable out of limits</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000000000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>1</BytePosition>
+      <Label>Device Specific Status 0</Label>
+      <Name>device_specific_status_0</Name>
+      <AlertList>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>A004: Temperature Overrange</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The sensor RTD is signaling a resistance that is out of range for
+the sensor.
+1. Check the sensor RTD resistance values and for RTD shorts to case.
+2. Check the wiring between the sensor and the transmitter.
+a. Using the installation manual for your transmitter, verify that the transmitter is connected to
+the sensor according to the instructions. Obey all safety messages when open- ing wiring
+compartments.
+b. Verify that the wires are making good contact with the terminals.
+c. Perform RTD resistance checks and check for shorts to case
+d. Check the continuity of all wires from the transmitter to the sensor.
+3. Verify temperature characterization parameters (Temp Cal Factor).
+4. Check your process conditions against the values reported
+by the flowmeter.</ExtendedHelpText>
+          <DDHelpText>Temperature Overrange</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>1000000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>A005: Mass Flow Rate Overrange</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The sensor is signaling a flow rate that is out of range for the sen-
+sor.
+1.  If other alarms are present, resolve those alarm conditions first. If the current alarm
+persists, continue with the recom- mended actions.
+2.  Check your process conditions against the values reported by the flowmeter.
+3. Check for slug flow (two-phase flow).
+a. Check for slug flow alarms. If slug flow is the problem, alarms will be posted.
+b.  Check the process for cavitation, flashing, or leaks.
+c. Monitor the density of your process fluid output under
+normal process conditions.</ExtendedHelpText>
+          <DDHelpText>Mass Flow Rate Overrange</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>2000000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>A006: Characterization Required</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The calibration factors for the sensor have not been entered, or
+the sensor type is incorrect, or the calibration factors are incorrect for the sensor type.
+1. Verify that all of the characterization parameters match the data on the sensor tag.
+2. Check the resistance of the LLC.
+3. Check the Sensor Type parameter and make sure it matches your sensor type.
+4.  If Sensor Type is Curved Tube, make sure that none of the pa- rameters specific to Straight
+Tube sensors have been set.
+5. If all of the parameters are correct and the alarm persists, re-place the core processor.</ExtendedHelpText>
+          <DDHelpText>Characterization Required</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>4000000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A003: No Sensor Response</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>The transmitter is not receiving one or more basic electrical sig-
+nals from the sensor. This could mean that the wiring between the sensor and the transmitter has
+been damaged, or that the sensor requires factory service.
+1. Check the drive gain and pickoff voltage.
+2. Check the wiring between the sensor and the transmitter.
+a. Using the installation manual for your transmitter, verify that the transmitter is connected to
+the sensor according to the instructions. Obey all safety messages when open- ing wiring
+compartments.
+b. Verify that the wires are making good contact with the terminals.
+c. Perform RTD resistance checks and check for shorts to case.
+d. Check the continuity of all wires from the transmitter to the sensor.
+3. Check for electrical shorts.
+4. Check the integrity of the sensor tubes.</ExtendedHelpText>
+          <DDHelpText>No Sensor Response</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0800000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A001: EEPROM Error (Core Processor)</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>An uncorrectable checksum mismatch has been detected.</ExtendedHelpText>
+          <DDHelpText>EEPROM Error (Core Processor)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000001000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A002: RAM Error (Core Processor)</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>ROM checksum error or a RAM location cannot be written to.</ExtendedHelpText>
+          <DDHelpText>Random Access Memory (RAM) Error (Core Processor) </DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000001000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>2</BytePosition>
+      <Label>Device Specific Status 0</Label>
+      <Name>device_specific_status_1</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A008: Density Overrange</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The sensor is signaling a density reading below 0 g/cm3 or above 10 g/cm3. Common causes for this
+alarm include partially filled flow tubes, excessive gas entrainment or flashing, tube fouling
+(foreign material stuck in a tube, uneven coating on the inside of a tube, or a plugged tube), or
+tube deformation (a permanent change in tube geometry due to overpressure or hammer effect).
+1.   If other alarms are present, resolve those alarm conditions first. If the current alarm
+persists, continue with the recom- mended actions.
+2.   Check your process conditions against the values reported by the flowmeter.
+3.   Check for air in the flow tubes, tubes not filled, foreign mate- rial in the tubes, or coating
+in the tubes.
+4.   Check for slug flow (two-phase flow).
+a.   Check for slug flow alarms. If slug flow is the problem, alarms will be posted.
+b.   Check the process for cavitation, flashing, or leaks.
+c.   Monitor the density of your process fluid output under normal process conditions.
+d.   Check the values of Slug Low Limit, Slug High Limit, and Slug Duration.
+5.   If accompanied by an A003 alarm, check for electrical shorts between sensor terminals or
+between the sensor terminals and the sensor case.
+6.   Verify that all of the characterization parameters match the data on the sensor tag.
+7.   Check the sensor coils.
+8.   Check the drive gain and pickoff voltage.
+9.   Perform a density calibration.
+10. Contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText> Density Overrange</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000002000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>2</BytePosition>
+      <Label>Device Specific Status 1</Label>
+      <Name>device_specific_status_1</Name>
+      <AlertList>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>A014: Transmitter Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>1. Check that all wiring compartment covers are installed properly.
+2. Check that the wiring connected to the transmitter meets
+specifications and that all cable shields are properly terminated.
+3. Check that the sensor and transmitter are both grounded
+properly.
+4. Evaluate the environment for sources of high electromagnetic
+interference (EMI) and relocate the transmitter or wiring
+as necessary.</ExtendedHelpText>
+          <DDHelpText>Transmitter Failure</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>4000000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>A012: Zero Calibration Failed: High</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>This alarm is caused by positive flow in the sensor during the
+zero, or by a zero offset result that is above the valid range. This
+alarm will be accompanied by A010. Power to the transmitter
+must be cycled to clear this alarm.
+1. Cycle power to the meter.
+2. Make sure there is no flow through the sensor.
+3. Retry the zero calibration.
+4. Power-cycle the transmitter.</ExtendedHelpText>
+          <DDHelpText>Zero Calibration Failed: High</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>A013: Zero Calibration Failed: Unstable</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>There was too much instability during the calibration procedure.
+Power to the transmitter must be cycled to clear this alarm.
+1. Remove or reduce sources of electromechanical noise (e.g.,
+pumps, vibration, pipe stress).
+• Check the drive gain and pickoff voltages to confirm that
+the sensor is in a stable state.
+• Retry the procedure.
+2. Cycle power to the meter, then retry the procedure.</ExtendedHelpText>
+          <DDHelpText>Zero Calibration Failed: Unstable</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A009: Transmitter Initializing/Warming Up</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The transmitter is in power-up mode. Allow the transmitter to
+warm up. The alarm should clear automatically.
+If the alarm does not clear:
+1. Check that there is sufficient voltage at the core processor. A
+minimum of 11.5 VDC should be available at the core terminals
+at all times. If there is insufficient power on the core terminals,
+check that the transmitter is receiving sufficient
+power on the power terminals.
+2. Make sure the sensor tubes are full of process fluid.
+3. Check the wiring between the sensor and the transmitter.</ExtendedHelpText>
+          <DDHelpText>Transmitter Initializing/Warming Up</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A011: Zero Calibration Failed: Low</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>This alarm is caused by reverse flow in the sensor during the
+zero, or by a zero offset result that is below the valid range. This
+alarm will be accompanied by A010. Power to the transmitter
+must be cycled to clear this alarm.
+1. Cycle power to the meter.
+2. Make sure there is no flow through the sensor.
+3. Retry the zero calibration.
+4. Power-cycle the transmitter.</ExtendedHelpText>
+          <DDHelpText>Zero Calibration Failed: Low</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000002000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A010: Calibration Failure</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>This alarm is typically caused by flow through the sensor during
+the zero, or by a zero offset result that is out of range. Power to
+the transmitter must be cycled to clear this alarm.
+1. Cycle power to the meter.
+2. Make sure there is no flow through the sensor.
+3. Retry the zero calibration.
+4. Power-cycle the transmitter.</ExtendedHelpText>
+          <DDHelpText>Calibration Failure</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000002000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>3</BytePosition>
+      <Label>Device Specific Status 2</Label>
+      <Name>device_specific_status_2</Name>
+      <AlertList>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>A022: Configuration Database Corrupt (Core Processor)</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>Uncorrectable checksum mismatch.</ExtendedHelpText>
+          <DDHelpText>Configuration Database Corrupt
+(Core Processor)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>4000000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>A023: Sensor Electronics Failure - Internal Totals Corrupt </AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Uncorrectable checksum mismatch.</ExtendedHelpText>
+          <DDHelpText>Internal Totals Corrupt (Core
+Processor)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>8000000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>A021: Configuration Error - Unrecognized Sensor Type</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The sensor is recognized as a straight tube but the K1 value indicates
+a curved tube, or vice versa. Verify that all of the characterization
+parameters match the data on the sensor tag. If the problem
+persists:
+1. Check that the sensor type (curved or straight) is properly selected.
+2. Confirm that no "T-Series" calibration parameters have been
+set if this is a curved tube sensor.
+3. If this alarm occurs in conjunction with A006, check the LLC
+resistance and for shorts to case.</ExtendedHelpText>
+          <DDHelpText>Incorrect Sensor Type (K1)</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A019: Electronics Failure - Volatile Memory Error </AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>ROM checksum error or a RAM location cannot be written to.</ExtendedHelpText>
+          <DDHelpText>RAM Error (Transmitter)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0800000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>A020: Configuration Error - Calibration Factors Unentered</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The flow calibration factor and/or K1 has not been entered since
+the last master reset. Verify that all of the characterization parameters
+match the data on the sensor tag. If the problem persists:
+1. Check that the sensor type (curved or straight) is properly selected.
+2. Confirm that no "T-series" calibration parameters have been
+set if this is a curved tube sensor.</ExtendedHelpText>
+          <DDHelpText>No Flow Cal Value</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A017: T-Series RTD Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>The sensor RTD is signaling a resistance that is out of range for
+the sensor.
+1. Check the wiring between the sensor and the transmitter.
+a. Using the installation manual for your transmitter, verify
+that the transmitter is connected to the sensor according
+to the instructions. Obey all safety messages when opening
+wiring compartments.
+b. Verify that the wires are making good contact with the
+terminals.
+c. Perform RTD resistance checks and check for shorts to
+case.
+d. Check the continuity of all wires from the transmitter to
+the sensor.
+2. Check your process conditions against the values reported
+by the flowmeter. Temperature should be between –200 °F
+and +400 °F.
+3. Verify that all of the characterization parameters match the
+data on the sensor tag.
+4. Contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>T-Series RTD Failure</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A018: Electronics Failure - Non-Volatile Memory Error </AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>An uncorrectable checksum mismatch has been detected.</ExtendedHelpText>
+          <DDHelpText>EEPROM Error (Transmitter)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000003000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A016: Sensor Temperature (RTD) Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>The sensor RTD is signaling a resistance that is out of range for
+the sensor.
+1. Check the wiring between the sensor and the transmitter.
+a. Using the installation manual for your transmitter, verify
+that the transmitter is connected to the sensor according
+to the instructions. Obey all safety messages when opening
+wiring compartments.
+b. Verify that the wires are making good contact with the
+terminals.
+c. Perform RTD resistance checks and check for shorts to
+case.
+d. Check the continuity of all wires from the transmitter to
+the sensor.
+2. Check your process conditions against the values reported
+by the flowmeter.
+3. Contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Sensor RTD Failure</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000003000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>4</BytePosition>
+      <Label>Device Specific Status 3</Label>
+      <Name>device_specific_status_3</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A024: Sensor Electronics Failure - Program Corrupt </AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>Uncorrectable checksum mismatch.</ExtendedHelpText>
+          <DDHelpText>Program Corrupt (Core Processor)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>A029: Internal Communication Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>This can be an indication that there has been a loss of communication
+between the transmitter and the display module. Try cycling
+power to the meter to see if the alarm clears. If possible, replace
+the display module.</ExtendedHelpText>
+          <DDHelpText>PIC/Daughterboard Communications
+Failure</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>2000000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>A028: Sensor Electronics Failure - Write Error </AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>There has been a failure in the transmitter electronics. Try cycling
+power to the meter to see if the alarm clears. If the alarm
+persists, replace the core processor.</ExtendedHelpText>
+          <DDHelpText>Core Processor Write Failure</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>1000000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A027: Configuration Error - Security Breach</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The transmitter has a weights and measures security feature
+that is currently set to “unsecure.” Set the transmitter to “secure”
+to clear the alarm. An authorized procedure may be required
+to resecure the transmitter.</ExtendedHelpText>
+          <DDHelpText>Security Breach</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0800000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A026: Sensor/Transmitter Communications Failure</AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>The transmitter has lost communication with the core processor
+on the sensor. This alarm can be an indication of a problem with
+the core or the transmitter requiring the replacement of one or
+both parts.
+1. Check the wiring between the sensor and the transmitter.
+a. Using the installation manual for your transmitter, verify
+that the transmitter is connected to the sensor according
+to the instructions. Obey all safety messages when opening
+wiring compartments.
+b. Verify that the wires are making good contact with the
+terminals.
+c. Perform RTD resistance checks and check for shorts to
+case.
+d. Check the continuity of all wires from the transmitter to
+the sensor.
+2. Check the core processor LED.
+3. If no definite correctable cause was found, replace the core
+processor.
+a. If the problem persists, put back the original core processor
+and replace the transmitter.
+b. If the problem still persists, replace both the transmitter
+and core processor.</ExtendedHelpText>
+          <DDHelpText>Sensor/Transmitter Communications
+Failure</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000004000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A025: Sensor Electronics Failure - Protected Boot Sector Fault </AlarmString>
+          <Severity>ALERT_FAILED_ID</Severity>
+          <ExtendedHelpText>Uncorrectable checksum mismatch.</ExtendedHelpText>
+          <DDHelpText>Boot Sector Fault (Core Processor)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000004000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>5</BytePosition>
+      <Label>Device Specific Status 4</Label>
+      <Name>device_specific_status_4</Name>
+      <AlertList>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A035: Meter Verification Aborted</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The Meter Verification test did not complete, possibly because it
+was manually aborted.
+1. Verify that process conditions are stable, then retry the test.
+2. Contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Meter Verification Aborted</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000005000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A032: Meter Verification in Progress: Outputs to Fault</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Meter verification in progress, with outputs set to Fault or Last
+Measured Value.</ExtendedHelpText>
+          <DDHelpText>Meter Verification in Progress:
+Outputs to Fault</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000005000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A034: Meter Verification Failed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The Meter Verification test did not complete.
+1. Verify that process conditions are stable, then retry the test.
+2. Contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Meter Verification Failed</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000005000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A033: Tube Not Full</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>There is insufficient signal coming from the sensor pickoff coils,
+which suggests that the sensor tubes are being prevented from
+vibrating at their natural frequency. This alarm often appears in
+conjunction with alarm A102.
+1. Check for possible fluid separation by monitoring the density
+value and comparing the results against expected density
+values.
+2. Check for plugging, coating, or slug flow.
+3. Settling from a two-phase or three-phase fluid can cause this
+alarm even if the flow tubes are full. This could mean that the
+sensor needs to be reoriented. Refer to the sensor installation
+manual for recommended sensor orientations.</ExtendedHelpText>
+          <DDHelpText>Insufficient Right/Left Pickoff
+Signal</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000005000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>6</BytePosition>
+      <Label>Device Specific Status 5</Label>
+      <Name>device_specific_status_5</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A100: Primary mA Output Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The calculated mA output value is outside of the meter's configured
+range.
+1. Check the Upper Range Value and Lower Range Value parameters.
+Are they set correctly?
+2. Check your process conditions against the values reported
+by the flowmeter.
+3. Verify that the measurement units are configured correctly
+for your application.
+4. Purge the flow tubes.
+5. Verify process conditions, checking especially for air in the
+flow tubes, tubes not filled, foreign material in the tubes, or
+coating in the tubes.</ExtendedHelpText>
+          <DDHelpText>mA Output 1 Saturated</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>A107: Power Reset Occurred</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>The transmitter has been restarted. No Action Required.</ExtendedHelpText>
+          <DDHelpText>Power Reset Occurred</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>8000000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>A106: Burst Mode Enabled</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>HART burst mode is enabled. No action required.
+ If desired, reconfigure the alarm severity to Ignore.</ExtendedHelpText>
+          <DDHelpText>Burst Mode Enabled</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>4000000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>A105: Slug Flow</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>The density of the process has exceeded the user-defined density
+limits.
+1. If other alerts are present (typically, A003, A006, A008, A102, or A105), resolve those alerts first. If the A005 alert persists, continue with the suggestions below.
+2. Verify process and check for slug flow.
+3. Check the test points.
+4. Check the sensor circuitry.
+5. Check the sensor tubes for erosion.
+6. If the problem persists, contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Slug Flow</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>A104: Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>1. Allow the flowmeter to complete calibration.
+2. For zero calibration procedures, you may abort the calibration, set the zero time parameter to a lower value, and restart the calibration.</ExtendedHelpText>
+          <DDHelpText>Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A103: Data Loss Possible (Totals and Inventories)</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>The totalizers are not being saved properly. The core processor
+was unable to store the totalizers on the last power-down and
+must rely on the saved totals. The saved totals can be as much as
+two hours out of date.
+1. Make sure the transmitter and core processor are receiving
+sufficient power.
+2. Check the power supply and power supply wiring.</ExtendedHelpText>
+          <DDHelpText>Data Loss Possible (Totals and
+Inventories)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0800000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A102: Drive Out of Limits / Partially Filled Tube</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The drive power (current/voltage) is at its maximum.
+1. Check the drive gain and pickoff voltage.
+2. Check for electrical shorts between sensor terminals or between
+the sensor terminals and the sensor case.
+3. Check for partially filled tubes, tube fouling, damaged tubes,
+and excessive air entrainment or flashing.
+4. Settling from a two- or three-phase fluid could create this
+alarm even if the flow tubes are full, which could mean the
+sensor needs to be reoriented. Refer to the sensor installation
+manual for recommended sensor orientations.</ExtendedHelpText>
+          <DDHelpText>Drive Overrange</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000006000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A101: Primary mA Output Fixed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Non-zero HART address configured, or the mA output is configured
+to send a constant value.
+1. Check whether the output is in loop test mode. If it is, unfix
+the output.
+2. Exit mA output trim, if applicable.
+3. Check the HART polling address.
+4. Check whether the output has been set to a constant value
+via digital communication.</ExtendedHelpText>
+          <DDHelpText>mA Output 1 Fixed</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000006000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>15</BytePosition>
+      <Label>Device Specific status 14</Label>
+      <Name>device_specific_status_14</Name>
+      <AlertList>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A109: Single-Setpoint Event 2 ON</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Event 2 has been triggered.</ExtendedHelpText>
+          <DDHelpText>Single-SP Event 2 ON</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>020000000F000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A110: Frequency Output Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The calculated frequency output is outside the configured
+range.
+1. Check the Frequency Output Scaling Method parameter.
+2. Check your process conditions against the values reported
+by the flowmeter.
+3. Verify process conditions, checking especially for air in the
+flow tubes, tubes not filled, foreign material in the tubes, or
+coating in the tubes.
+4. Verify that the measurement units are configured correctly
+for your application.
+5. Purge the flow tubes.</ExtendedHelpText>
+          <DDHelpText>Frequency Output Saturated</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>040000000F000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A111: Frequency Output Fixed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The frequency output has been configured to send a constant
+value.
+1. Stopping the totalizer will set the frequency output to zero.
+Cycling power to the transmitter or restarting the totalizer
+will restore the frequency output to normal operation.
+2. Check whether the output is in loop test mode. If it is, unfix
+the output.
+3. Check whether the output has been set to a constant value
+via digital communication.</ExtendedHelpText>
+          <DDHelpText>Frequency Output Fixed</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>080000000F000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>A113: mA Output 2 Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Check your process conditions against the values reported
+by the flowmeter.
+2. Verify process conditions, checking especially for air in the
+flow tubes, tubes not filled, foreign material in the tubes, or
+coating in the tubes.
+3. Verify that the measurement units are configured correctly
+for your application.
+4. Purge the flow tubes.
+5. Check the Upper Range Value and Lower Range Value parameters.
+Are they set correctly?</ExtendedHelpText>
+          <DDHelpText>mA Output 2 Saturated</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>200000000F000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>A114: mA Output 2 Fixed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>1. Check whether the output is in loop test mode. If it is, unfix
+the output.
+2. Exit mA output trim, if applicable.
+3. Check whether the output has been set to a constant value
+via digital communication.</ExtendedHelpText>
+          <DDHelpText>mA Output 2 Fixed</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>400000000F000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A108: Single-Setpoint Event 1 ON</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Event 1 has been triggered.</ExtendedHelpText>
+          <DDHelpText>Single-SP Event 1 ON</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>010000000F000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>A115: No External Input or Polled Data</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The HART polling connection to an external device has failed. No
+response received from polled device.
+1. Verify the external device operation.
+2. Verify the wiring between the transmitter and the external
+device.
+3. Verify the HART polling configuration.</ExtendedHelpText>
+          <DDHelpText>No External Input or Polled Data</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>800000000F000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>15</BytePosition>
+      <Label>Device Specific status 14</Label>
+      <Name>xmtr_specific_status_6</Name>
+      <AlertList>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>16</BytePosition>
+      <Label>Device Specific status 15</Label>
+      <Name>device_specific_status_15</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A116: Temperature Overrange (Petroleum Measurement)</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The process temperature is outside Petroleum Measurement defined extrapolation limits.
+1. Check your process conditions against the values reported
+by the flowmeter.
+2. Verify the configuration of the petroleum measurement table
+type and temperature.</ExtendedHelpText>
+          <DDHelpText>Temperature Overrange (Petroleum)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000010000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>A121: Extrapolation Alert (Concentration Measurement)</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>The process temperature or density is outside the user-defined extrapolation limits.
+If the product in the sensor has temperature or density properties
+that are outside the parameters established by the concentration
+measurement curve, this is a symptom and no action is
+required. This alarm should clear when the process fluid returns
+to normal.
+If the problem persists, check the configuration of the concentration
+measurement application.</ExtendedHelpText>
+          <DDHelpText>Extrapolation Alarm (Concentration)</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000010000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>A120: Curve Fit Failure (Concentration Measurement)</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>The configured density/temperature/concentration values do not result in a proper Concentration Measurement (CM) curve.
+Verify the configuration of the concentration measurement (CM) application.</ExtendedHelpText>
+          <DDHelpText>Curve Fit Failure (Concentration)</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000010000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A119: Discrete Output 2 Fixed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The discrete output has been configured to send a constant value.</ExtendedHelpText>
+          <DDHelpText>Discrete Output 2 Fixed</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000010000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A118: Discrete Output 1 Fixed</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The discrete output has been configured to send a constant value.</ExtendedHelpText>
+          <DDHelpText>Discrete Output 1 Fixed</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000010000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A117: Density Overrange (Petroleum Measurement)</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>The process density is outside Petroleum Measurement defined extrapolation limits.
+1. Check your process conditions against the values reported
+by the flowmeter.
+2. Verify the configuration of the petroleum measurement table
+type and density.</ExtendedHelpText>
+          <DDHelpText>Density Overrange (Petroleum)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000010000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>17</BytePosition>
+      <Label>Device Specific status 16</Label>
+      <Name>device_specific_status_16</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A124: Frequency Input Saturated</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Recommended Actions:
+1. Verify that frequency input parameters are set to appropriate values.</ExtendedHelpText>
+          <DDHelpText>Configuration Conditions</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000011000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>A131: Meter Verification in Progress: Outputs to Last Measured Value</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Meter verification in progress, with outputs set to Last Measured
+Value. Allow the flowmeter to complete calibration.
+For zero calibration procedures, you may abort the calibration, set the zero time parameter to a lower value, and restart the calibration.</ExtendedHelpText>
+          <DDHelpText>Meter Verification in Progress:
+Outputs to Last Measured Value</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>8000000011000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>A128: Batch/Fill No Start</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Recommended Actions:
+1. Set enable batch control option to YES.
+2. Configure batch flow source.
+3. Assign control functions such as primary valve, secondary valve, or pump to discrete outputs.
+4. Clear all alerts.
+5.5. Shut off discrete input.
+6. Change target value.</ExtendedHelpText>
+          <DDHelpText>Configuration Conditions</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000011000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A127: Batch No Reset</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Recommended Actions:
+1. Press RESET, then press START.
+2. Set reset on start option to YES.</ExtendedHelpText>
+          <DDHelpText>Configuration Conditions</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000011000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A126: Batch Overrun</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Recommended Actions:
+1. Check wiring for discrete output indicating overrun.
+2. Check device connected to discrete output indicating overrun.
+3. Enable batch Automatic Overshoot Compensation (AOC).
+4. After cause has been diagnosed, press RESET or START to start new batch.</ExtendedHelpText>
+          <DDHelpText>Process Conditions</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000011000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A125: Batch Timeout</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Recommended Actions:
+1. Check valves, piping, and pumps for proper operation.
+2. Increase number of seconds for Time Out.
+3. If ignore source alarms is set to YES, increase number of minutes for Alarm Timeout.
+4. After cause has been diagnosed, press END to end batch or RESUME to resume batch.</ExtendedHelpText>
+          <DDHelpText>Process Conditions</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000011000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>18</BytePosition>
+      <Label>Device Specific status 17</Label>
+      <Name>device_specific_status_17</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>A132: Sensor Simulation Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Simulation mode is enabled.</ExtendedHelpText>
+          <DDHelpText>Sensor Simulation Active</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0100000012000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>A135: Transmitter/Display Communications Error</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Recommended Actions:
+1. Cycle power to the flow meter.
+2. The flow meter might need service. Contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Electronic Conditions</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0800000012000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>A134: Memory Error (Display)</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Recommended Actions:
+1. Cycle power to the flow meter.
+2. The flow meter might need service. Contact Micro Motion.</ExtendedHelpText>
+          <DDHelpText>Electronic Conditions</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0400000012000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>A133: EEPROM Error (Display)</AlarmString>
+          <Severity>ALERT_MAINT_ID</Severity>
+          <ExtendedHelpText>Change the display module. If the problem persists, contact
+Micro Motion.</ExtendedHelpText>
+          <DDHelpText>EEPROM Error (Display)</DDHelpText>
+          <AlertMonitorDefault>ENABLED</AlertMonitorDefault>
+          <PlantWebID>0200000012000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>20</BytePosition>
+      <Label>Device Specific status 19</Label>
+      <Name>device_specific_status_19</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Discrete Event 1 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Event 1 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000014000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>Discrete Output 3 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Output  3 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>8000000014000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Discrete Output 2 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Output  2 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>4000000014000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Discrete Output 1 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Output  1 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000014000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>Discrete Event 5 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Event 5 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000014000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Discrete Event 4 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Event 4 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000014000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Discrete Event 3 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Event 3 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000014000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Discrete Event 2 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Event 2 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000014000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>21</BytePosition>
+      <Label>Device Specific status 20</Label>
+      <Name>device_specific_status_20</Name>
+      <AlertList>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Flow Rate Switch Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Flow Rate Switch Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000015000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Discrete Input 1 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>
+No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Input 1 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000015000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Discrete Input 2 Active</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>No action required.</ExtendedHelpText>
+          <DDHelpText>Discrete Input 2 Active</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000015000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+    <Variable>
+      <Size>1</Size>
+      <Type>bit-enumerated</Type>
+      <BytePosition>19</BytePosition>
+      <Label>Device Specific status 18</Label>
+      <Name>device_specific_status_18</Name>
+      <AlertList>
+        <Alert>
+          <Value>1</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0100000013000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>128</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>8000000013000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>64</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>4000000013000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>32</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>2000000013000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>16</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>1000000013000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>8</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0800000013000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>4</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0400000013000000</PlantWebID>
+        </Alert>
+        <Alert>
+          <Value>2</Value>
+          <AlarmString>Sensor Calibration In Progress</AlarmString>
+          <Severity>ALERT_ADVISE_ID</Severity>
+          <ExtendedHelpText>Calibration in Progress.  Allow the procedure to complete.</ExtendedHelpText>
+          <DDHelpText>Sensor Calibration in Progress</DDHelpText>
+          <AlertMonitorDefault>DISABLED</AlertMonitorDefault>
+          <PlantWebID>0200000013000000</PlantWebID>
+        </Alert>
+      </AlertList>
+    </Variable>
+  </VariableList>
+</AlertsRoot>
