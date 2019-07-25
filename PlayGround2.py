@@ -1,20 +1,10 @@
 
-import sys
-import traceback
-e = open("test_error.txt", 'w+')
-try:
-    a = 1/0
-except:
-    #print traceback.print_exc()
-    #a = str(traceback.print_exc())
-    pass
-a = traceback.format_exc()
-#print a
-'''
-e.close()
-e = open("test_error.txt", 'r').read()
 
-print "____________"
-print e
-print "____________"
-'''
+
+a = [1,2,3]
+b= [i for i in a]
+for i in a:
+    a[a.index(i)] = 0
+
+print a
+print b

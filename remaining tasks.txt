@@ -1,0 +1,46 @@
+Done
+- clarify the options
+- pop up color for missing file from either folder and change color of character difference, let them choose it
+- python log files in detail when exception occurs
+- if after select, not select anything, keep the before option, for example output location if not selecting anything then keep the default one
+- check jorge file why blank line show up
+- give the option to just show the general report, which mean the same and difference only
+
+
+
+own personal remaining tasks and others:
+- Make it quicker, reduce or eliminate freezing for tinker
+- test with all DDs you can find, thoroughly
+- look at the logic carefully, think of how it can go wrong, is it bug-proof?
+- put line number notice in readme, line number is just suggestive, if anything, please refer to the raw report
+- tell in readme that line number is very subjective and explain why
+- add to readme trouble shoot to remove and reinstall python
+- screenshot installation
+- warning in readme if files have more than 100 difference its gonna take a very long time
+
+impact rn:
+- comparison tool: make it robust and test it thoroughly
+- lock/unlock: finish it up
+- testing: find bunches of issues
+- find one more project to do that got to do with hardware as well		
+
+Lesson:
+- Be careful with global variables
+- when edit code, think carefully how it would affect the logic, the flow and the rest of the code
+- Be careful with logic, when use if, think about else
+- for loop and break
+- copy and paste phai doi ten
+- can than loi chinh ta, especially dealing with not variable, file input output since the compiler would not be able to notify you
+- if you want to truly write a bug-minimal or bug-free code, plan before writing, look at your logic, find a fault in it
+
+improve your skill, reduce bugs as much as possible
+
+to learn:
+- what happen when computer debug?
+
+
+currently working on:
+- tkinter freezing
+- test with all possible DDs folder found
+- look at your own logic and find faults in it
+- adding multithreading
