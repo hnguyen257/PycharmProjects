@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df49fdb7-b645-471a-91a6-f1c971d03792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GUI_0729.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hiep/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayGround2.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayGround2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,10 +12,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.7036759">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Hiep/trace_back_log.txt">
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
@@ -24,6 +23,32 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/GUI_backup_0725.py">
               <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/GUI_0729.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1547">
+                  <caret line="241" column="18" lean-forward="true" selection-start-line="241" selection-start-column="18" selection-end-line="241" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#2794#3089#0" />
+                    <element signature="e#3178#3404#0" />
+                    <element signature="e#3505#3766#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Hiep/GUI.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-347">
+                  <caret line="174" column="79" lean-forward="true" selection-start-line="174" selection-start-column="79" selection-end-line="174" selection-end-column="79" />
+                  <folding>
+                    <element signature="e#128#149#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -71,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>index_file</find>
       <find>alert</find>
       <find>aler</find>
       <find>alert_function_check_failed_hh_fail</find>
@@ -101,6 +125,7 @@
       <find>print</find>
       <find>Default: report.txt</find>
       <find>trace_back_log.txt</find>
+      <find>report.txt</find>
     </findStrings>
     <replaceStrings>
       <replace>openFile</replace>
@@ -114,6 +139,7 @@
       <replace>traceback.print_exc()+ '\n'</replace>
       <replace>trace_back_log</replace>
       <replace>Default: reportH2.txt</replace>
+      <replace>reportH2.txt</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -171,8 +197,8 @@
         <option value="$PROJECT_DIR$/Hiep/alert1.txt" />
         <option value="$PROJECT_DIR$/Hiep/alert2.txt" />
         <option value="$PROJECT_DIR$/PlayGround2.py" />
-        <option value="$PROJECT_DIR$/Hiep/GUI.py" />
         <option value="$PROJECT_DIR$/Hiep/redoGUI.py" />
+        <option value="$PROJECT_DIR$/Hiep/GUI.py" />
       </list>
     </option>
   </component>
@@ -212,17 +238,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Hiep" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\Hiep" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\cmd_testing" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\folder 8t" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\folder 7t" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\build" />
@@ -448,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564182031271</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="today works, except make sure it 1. refractor the compare function, 2. make sure it work for compare file 3. test again.">
+      <created>1564440670207</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564440670207</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -462,8 +495,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14805058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27291885" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24973656" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -512,7 +546,8 @@
     <MESSAGE value="mostly done except checking compare files" />
     <MESSAGE value="done, except skipping sorting lines" />
     <MESSAGE value="added DD files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added DD files" />
+    <MESSAGE value="today works, except make sure it 1. refractor the compare function, 2. make sure it work for compare file 3. test again." />
+    <option name="LAST_COMMIT_MESSAGE" value="today works, except make sure it 1. refractor the compare function, 2. make sure it work for compare file 3. test again." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -827,9 +862,6 @@
     <entry file="file://$PROJECT_DIR$/TempNote.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI_backup_0725.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PlayGround2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -837,36 +869,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI_0729.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1581" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hiep/report.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hiep/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="141" column="25" selection-start-line="141" selection-start-column="11" selection-end-line="141" selection-end-column="25" />
-          <folding>
-            <element signature="e#128#149#0" expanded="true" />
-            <element signature="e#1295#1438#0" />
-            <element signature="e#1474#1605#0" />
-            <element signature="e#1636#2082#0" />
-            <element signature="e#2794#3089#0" />
-            <element signature="e#3178#3404#0" />
-            <element signature="e#3505#3766#0" />
-            <element signature="e#7840#13430#0" />
-            <element signature="e#13529#13606#0" />
-            <element signature="e#13647#14058#0" />
-            <element signature="e#48089#49976#0" />
-            <element signature="e#50113#50257#0" />
-            <element signature="e#50369#54426#0" />
-            <element signature="e#54519#64514#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hiep/redoGUI.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -877,6 +881,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hiep/trace_back_log.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI_backup_0725.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI_0729.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="241" column="18" lean-forward="true" selection-start-line="241" selection-start-column="18" selection-end-line="241" selection-end-column="18" />
+          <folding>
+            <element signature="e#2794#3089#0" />
+            <element signature="e#3178#3404#0" />
+            <element signature="e#3505#3766#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hiep/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-347">
+          <caret line="174" column="79" lean-forward="true" selection-start-line="174" selection-start-column="79" selection-end-line="174" selection-end-column="79" />
+          <folding>
+            <element signature="e#128#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
