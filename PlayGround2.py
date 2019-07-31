@@ -1,4 +1,9 @@
 
-import webbrowser
+import os
 
-webbrowser.open_new_tab('TempNote.txt')
+current = os.getcwd().replace('\\','/')
+
+print current
+
+if os.path.exists(current):
+    print 'yes'

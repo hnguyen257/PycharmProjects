@@ -4,6 +4,7 @@
     <list default="true" id="df49fdb7-b645-471a-91a6-f1c971d03792" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hiep/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hiep/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayGround2.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayGround2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,49 +13,57 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47471023">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Hiep/GUI.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="16">
-                  <caret line="1275" column="12" selection-start-line="1275" selection-start-column="12" selection-end-line="1275" selection-end-column="96" />
-                  <folding>
-                    <element signature="e#128#149#0" expanded="true" />
-                    <element signature="e#46345#48112#0" />
-                    <element signature="e#48249#48393#0" />
-                    <element signature="e#62854#66526#0" />
-                    <element signature="e#66675#67921#0" />
-                    <element signature="e#68095#69966#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Hiep/GUI.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="192">
-                  <caret line="1387" column="92" selection-start-line="1387" selection-start-column="92" selection-end-line="1387" selection-end-column="92" />
-                  <folding>
-                    <element signature="e#128#149#0" expanded="true" />
-                    <element signature="e#46345#48112#0" />
-                    <element signature="e#48249#48393#0" />
-                    <element signature="e#48505#52699#0" />
-                    <element signature="e#52792#62787#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Hiep/GUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="198" column="50" lean-forward="true" selection-start-line="198" selection-start-column="50" selection-end-line="198" selection-end-column="50" />
+              <folding>
+                <element signature="e#128#149#0" expanded="true" />
+                <element signature="e#46345#48112#0" />
+                <element signature="e#48249#48393#0" />
+                <element signature="e#62854#66526#0" />
+                <element signature="e#66675#67921#0" />
+                <element signature="e#68095#69966#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlayGround2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/shutil.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI_backup0731.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Hiep/redoGUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,10 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alert_function_check_failed_hh_fail</find>
-      <find>&amp;#60;</find>
-      <find>count</find>
-      <find>testing</find>
       <find>h.write(</find>
       <find>shutil</find>
       <find>alert_faile</find>
@@ -95,6 +100,10 @@
       <find>report.txt</find>
       <find>CheckVa</find>
       <find>CheckVar5</find>
+      <find>Checkvar4</find>
+      <find>trace</find>
+      <find>Check_D</find>
+      <find>2/0</find>
     </findStrings>
     <replaceStrings>
       <replace>openFile</replace>
@@ -165,8 +174,8 @@
         <option value="$PROJECT_DIR$/diff_checker_2.0/GUI.py" />
         <option value="$PROJECT_DIR$/Hiep/alert1.txt" />
         <option value="$PROJECT_DIR$/Hiep/alert2.txt" />
-        <option value="$PROJECT_DIR$/PlayGround2.py" />
         <option value="$PROJECT_DIR$/Hiep/redoGUI.py" />
+        <option value="$PROJECT_DIR$/PlayGround2.py" />
         <option value="$PROJECT_DIR$/Hiep/GUI.py" />
       </list>
     </option>
@@ -187,6 +196,11 @@
             <path>
               <item name="PycharmProjects" type="b2602c69:ProjectViewProjectNode" />
               <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PycharmProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PycharmProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="cmd_testing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PycharmProjects" type="b2602c69:ProjectViewProjectNode" />
@@ -212,19 +226,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\Hiep" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\cmd_testing" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\folder 8t" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\build" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\cmd_testing" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\RX 05-24-2017_Phase 2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\Hiep" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\cmd_testing" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\folder 8t" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,9 +369,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.GUI" />
+        <item itemvalue="Python.PlayGround2" />
         <item itemvalue="Python.redoGUI (2)" />
         <item itemvalue="Python.redoGUI" />
-        <item itemvalue="Python.PlayGround2" />
         <item itemvalue="Python.GUI (1)" />
       </list>
     </recent_temporary>
@@ -457,7 +471,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564441241676</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="version 2.0 done, not tested yet">
+      <created>1564588619961</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1564588619961</updated>
+    </task>
+    <task id="LOCAL-00014" summary="version 2.0 done, updated redo, not tested yet">
+      <created>1564588791411</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1564588791411</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -473,12 +501,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27291885" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25553215" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.24973656" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35969663" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35536295" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49894625" weight="0.4637053" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -524,7 +552,9 @@
     <MESSAGE value="added DD files" />
     <MESSAGE value="today works, except make sure it 1. refractor the compare function, 2. make sure it work for compare file 3. test again." />
     <MESSAGE value="refractor compare function" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor compare function" />
+    <MESSAGE value="version 2.0 done, not tested yet" />
+    <MESSAGE value="version 2.0 done, updated redo, not tested yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2.0 done, updated redo, not tested yet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -578,51 +608,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/GUI_backup_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="1201" selection-start-line="1201" selection-end-line="1201" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#1423#1635#0" />
-            <element signature="e#1724#1865#0" />
-            <element signature="e#1966#2107#0" />
-            <element signature="e#2202#5674#0" />
-            <element signature="e#5751#8654#0" />
-            <element signature="e#8752#8829#0" />
-            <element signature="e#24416#36032#0" />
-            <element signature="e#36078#36222#0" />
-            <element signature="e#36261#39527#0" />
-            <element signature="e#39567#45541#0" />
-            <element signature="e#45577#48283#0" />
-            <element signature="e#48324#49610#0" />
-            <element signature="e#49651#51562#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDComparisonTool/GUI_backup_4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="1195" selection-start-line="1195" selection-end-line="1195" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#1900#2112#0" />
-            <element signature="e#2201#2342#0" />
-            <element signature="e#2443#2584#0" />
-            <element signature="e#6249#9152#0" />
-            <element signature="e#9250#9327#0" />
-            <element signature="e#25056#36898#0" />
-            <element signature="e#37035#37179#0" />
-            <element signature="e#37291#40657#0" />
-            <element signature="e#40750#48654#0" />
-            <element signature="e#48721#51427#0" />
-            <element signature="e#51576#52822#0" />
-            <element signature="e#52996#54867#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DDComparisonTool/dd_comp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2397">
@@ -830,7 +815,6 @@
     <entry file="file://$PROJECT_DIR$/Hiep/report.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hiep/redoGUI.py" />
     <entry file="file://$PROJECT_DIR$/GUI_backup_0725.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -846,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlayGround2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TempNote.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -863,13 +840,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GUI_backup0731.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hiep/redoGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/shutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlayGround2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hiep/trace_back_log.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Hiep/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1275" column="12" selection-start-line="1275" selection-start-column="12" selection-end-line="1275" selection-end-column="96" />
+        <state relative-caret-position="206">
+          <caret line="198" column="50" lean-forward="true" selection-start-line="198" selection-start-column="50" selection-end-line="198" selection-end-column="50" />
           <folding>
             <element signature="e#128#149#0" expanded="true" />
             <element signature="e#46345#48112#0" />
