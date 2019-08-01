@@ -34,8 +34,8 @@ CheckVar1.set(1)
 CheckVar2 = IntVar()
 CheckVar2.set(1)
 CheckVar5 = IntVar()
-
-
+CheckVar6 = IntVar()
+CheckVar6.set(1)
 
 
 
@@ -130,9 +130,11 @@ class Application(Frame):
         self.Check_A.configure(state = DISABLED)
         self.Check_B.configure(state = DISABLED)
         self.Check_Q.configure(state = DISABLED)
+        self.Check_S.configure(state = DISABLED)
     def Exit(self):
         if CheckVar5.get() == 0:
             self.Check_A.configure(state = NORMAL)
+            self.Check_S.configure(state = NORMAL)
         self.Check_B.configure(state = NORMAL)
         self.Check_Q.configure(state = NORMAL)
 
@@ -197,19 +199,9 @@ class Application(Frame):
         log_path = os.getcwd().replace('\\','/') + '/' + 'trace_back_log.txt'
 
         a = open('trace_back_log.txt', 'r').read()
-        print a
         if len(a) > 0:
-
-            if os.path.exists(dest_folder + 'trace_back_log.txt'):
-                os.remove(dest_folder + 'trace_back_log.txt')
-            new_location = dest_folder + 'trace_back_log.txt'
-            if log_path != new_location:
-                #shutil.move(log_path, new_location)
-                webbrowser.open_new_tab(new_location)
-            else:
-                webbrowser.open_new_tab(log_path)
+            webbrowser.open_new_tab(log_path)
             tkMessageBox.showinfo('Runtime Error occurs !', "Please close the program and read the trace_back_log file for more information.")
-
         else:
             os.remove(log_path)
 
@@ -312,12 +304,15 @@ class Application(Frame):
         self.Text_E.grid(row = 12, column = 1, columnspan = 2, ipadx = 0, ipady = 10, pady = 10, padx = 0)
 
         #Create 2 checkbox for diff assist and open when done
-        self.Check_A = Checkbutton(self, text = "Highlight differences in each pair of lines   ", variable = CheckVar1,onvalue = 1, offvalue = 0, width = 40)
+        self.Check_S = Checkbutton(self, text = "Sort the lines of difference side by side         ", variable = CheckVar6,onvalue = 1, offvalue = 0, width = 40)
+        self.Check_S.grid(row = 14, column = 1, columnspan = 1)
+        self.Check_A = Checkbutton(self, text = "Highlight differences in each pair of lines    ", variable = CheckVar1,onvalue = 1, offvalue = 0, width = 40)
         self.Check_A.grid(row = 15, column = 1, columnspan = 1, padx = 0)
-        self.Check_B = Checkbutton(self, text = "Open report when done                                 ", variable = CheckVar2,onvalue = 1, offvalue = 0, width = 40)
+        self.Check_B = Checkbutton(self, text = "Open report when done                                  ", variable = CheckVar2,onvalue = 1, offvalue = 0, width = 40)
         self.Check_B.grid(row = 16, column = 1, columnspan = 1)
         self.Check_Q = Checkbutton(self, text = "Quick Diff (generate the overall report only)", variable = CheckVar5,onvalue = 1, offvalue = 0, width = 40, command = self.disable_button)
         self.Check_Q.grid(row = 17, column = 1, columnspan = 1)
+
 
         #Create Emerson logo and place it in the GUI
         try:
@@ -336,7 +331,8 @@ class Application(Frame):
 
         #Create label to display what the program is doing
         self.Text_G = Label(self, text = '          Click Compare to begin the process...\n')
-        self.Text_G.grid(row = 20, column = 0)
+        self.Text_G.grid(row = 20, column = 0, columnspan = 3, sticky  = W)
+
 
         self.background_color_button = Button(self, text='Background Color ', command=self.setBgColor,bg='#FFFF00')
         self.background_color_button.grid(row=15, column = 2, rowspan = 2, padx=20)
@@ -360,11 +356,15 @@ class Application(Frame):
         if CheckVar5.get() == 1:
             self.Check_A.configure(state = DISABLED)
             self.Check_A.deselect()
+            self.Check_S.configure(state = DISABLED)
+            self.Check_S.deselect()
             self.Text_E.delete(0,len(self.Text_E.get()))
             self.Text_E.insert(0, 'Default: reportH2.txt')
         else:
             self.Check_A.configure(state = NORMAL)
             self.Check_A.select()
+            self.Check_S.configure(state = NORMAL)
+            self.Check_S.select()
             self.Text_E.delete(0,len(self.Text_E.get()))
             self.Text_E.insert(0, 'Default: reportH2.html')
 
@@ -389,7 +389,7 @@ class Application(Frame):
             file_name_quantity = {i:1 for i in self.file_name_list}
 
             #Set the number of portion in the progress bar
-            Application.progress["maximum"] = number_of_files
+            Application.progress["maximum"] = number_of_files + 1
 
             #Progress bar current value
             value = 0
@@ -402,7 +402,6 @@ class Application(Frame):
 
                 #Begin comparing
                 try:
-                    a = 2/0
                     #Variables for keeping track and acts as flags for later use
                     no_difference = True
                     diff_total = 0
@@ -417,6 +416,7 @@ class Application(Frame):
                     self.file_name_list[current_file_index] = fileName
 
                     self.Text_G.configure(text = 'Comparing ' + fileName + ' files...')
+                    root.update()
 
 
 
@@ -509,46 +509,57 @@ class Application(Frame):
                                 current_file_B_original_temp[current_file_B_original_temp.index(current_line)] = None
                         continue
 
+                    if CheckVar6.get() == 1:
+                        time = (len(current_file_B)*len(file_A_diff))/100000 + 1
+                        self.Text_G.configure(text = '    Comparing ' + fileName + ' files...' + ' estimated time left: ' + str(time) + ' minutes. \n' )
+                        root.update()
+                        #Create an 2D list of similarity index between each file of A to each file of B and vice versa
+                        similarity_percentage = [[0 for i in range(len(current_file_B))] for j in range(len(file_A_diff))]
 
-                    #Create an 2D list of similarity index between each file of A to each file of B and vice versa
-                    similarity_percentage = [[0 for i in range(len(current_file_B))] for j in range(len(file_A_diff))]
-
-                    #Getting the similarity index of every pair of file between A and B and store it to the list created earlier
-                    for i in range(len(file_A_diff)):
-                        for j in range(len(current_file_B)):
-                            similarity_percentage[i][j] = SequenceMatcher(None, file_A_diff[i], current_file_B[j]).ratio()
-
-                    #Create most and second most similar line for every line in file A and file B
-                    most_similar_A = [0 for i in range(len(file_A_diff))]
-                    most_similar_B = [0 for i in range(len(current_file_B))]
-                    second_most_similar_A = [0 for i in range(len(file_A_diff))]
-                    second_most_similar_B = [0 for i in range(len(current_file_B))]
-
-                    #Fill in the most and second most similar line list for every line in A
-                    for i in range(len(file_A_diff)):
-                        highest_percentage = None
-                        highest_percentage_index = None
-                        second_highest_percentage_index = None
-                        for j in range(len(current_file_B)):
-                            if similarity_percentage[i][j] > highest_percentage:
-                                second_highest_percentage_index = highest_percentage_index
-                                highest_percentage_index = j
-                                highest_percentage = similarity_percentage[i][j]
-                        most_similar_A[i] = highest_percentage_index
-                        second_most_similar_A[i] = second_highest_percentage_index
-
-                    #Fill in the most and second most similar line list for every line in B
-                    for j in range(len(current_file_B)):
-                        highest_percentage = None
-                        highest_percentage_index = None
-                        second_highest_percentage_index = None
+                        #Getting the similarity index of every pair of file between A and B and store it to the list created earlier
+                        temp_track = 0
                         for i in range(len(file_A_diff)):
-                            if similarity_percentage[i][j] > highest_percentage:
-                                second_highest_percentage_index = highest_percentage_index
-                                highest_percentage_index = i
-                                highest_percentage = similarity_percentage[i][j]
-                        most_similar_B[j] = highest_percentage_index
-                        second_most_similar_B[j] = second_highest_percentage_index
+                            for j in range(len(current_file_B)):
+                                temp_track = temp_track + 1
+                                if temp_track > 100000:
+                                    temp_track = 0
+                                    time = time - 1
+                                    self.Text_G.configure(text = '    Comparing ' + fileName + ' files...' + ' estimated time left: ' + str(time) + ' minutes.' )
+                                    root.update()
+                                similarity_percentage[i][j] = SequenceMatcher(None, file_A_diff[i], current_file_B[j]).ratio()
+
+
+                        #Create most and second most similar line for every line in file A and file B
+                        most_similar_A = [0 for i in range(len(file_A_diff))]
+                        most_similar_B = [0 for i in range(len(current_file_B))]
+                        second_most_similar_A = [0 for i in range(len(file_A_diff))]
+                        second_most_similar_B = [0 for i in range(len(current_file_B))]
+
+                        #Fill in the most and second most similar line list for every line in A
+                        for i in range(len(file_A_diff)):
+                            highest_percentage = None
+                            highest_percentage_index = None
+                            second_highest_percentage_index = None
+                            for j in range(len(current_file_B)):
+                                if similarity_percentage[i][j] > highest_percentage:
+                                    second_highest_percentage_index = highest_percentage_index
+                                    highest_percentage_index = j
+                                    highest_percentage = similarity_percentage[i][j]
+                            most_similar_A[i] = highest_percentage_index
+                            second_most_similar_A[i] = second_highest_percentage_index
+
+                        #Fill in the most and second most similar line list for every line in B
+                        for j in range(len(current_file_B)):
+                            highest_percentage = None
+                            highest_percentage_index = None
+                            second_highest_percentage_index = None
+                            for i in range(len(file_A_diff)):
+                                if similarity_percentage[i][j] > highest_percentage:
+                                    second_highest_percentage_index = highest_percentage_index
+                                    highest_percentage_index = i
+                                    highest_percentage = similarity_percentage[i][j]
+                            most_similar_B[j] = highest_percentage_index
+                            second_most_similar_B[j] = second_highest_percentage_index
 
 
                     #Get the current difference as ordinal number
@@ -582,52 +593,55 @@ class Application(Frame):
                         #Write current line in file A
                         h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
 
-
-                        #Get index of current line in A, get the most similar line in B of current line in A
-                        a = file_A_diff.index(current_line)
-                        file_A_diff[a] = None
-                        b = most_similar_A[a]
-
-
-                        #If b is not empty then go ahead and check for mutual similarity
-                        if b != None and len(current_file_B) > 0:
-                            #if the most similar line in B of current line in A also has current line in A as its most similar line
-                            # #..., then we match them together
-                            if most_similar_B[b] == a:
-                                h.write(self.character_highlight(current_line, current_file_B[b]))
-                                h.write('   </td>' + '\n')
-
-                                h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
-                                current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
-                                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
+                        if CheckVar6.get() == 1:
+                            #Get index of current line in A, get the most similar line in B of current line in A
+                            a = file_A_diff.index(current_line)
+                            file_A_diff[a] = None
+                            b = most_similar_A[a]
 
 
-                                h.write(self.character_highlight(current_file_B[b], current_line))
-                                line_in_B_left.remove(current_file_B[b])
-                                h.write('  </td>' + '\n')
-                                h.write('</tr>' + '\n\n')
-                                continue
-
-                            #Else check if the most similar line in B of current line in A has current line in A as its second most similar line
-                            elif second_most_similar_B[b] == a:
-                                a2 = most_similar_B[b]
-                                #If its most similar line does not have itself as most similar line, then we match the line in B with current line in A
-                                if most_similar_A[a2] != b:
-                                    h.write(self.character_highlight(current_line,current_file_B[b]))
+                            #If b is not empty then go ahead and check for mutual similarity
+                            if b != None and len(current_file_B) > 0:
+                                #if the most similar line in B of current line in A also has current line in A as its most similar line
+                                # #..., then we match them together
+                                if most_similar_B[b] == a:
+                                    h.write(self.character_highlight(current_line, current_file_B[b]))
                                     h.write('   </td>' + '\n')
 
                                     h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
                                     current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
                                     h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
-                                    h.write(self.character_highlight(current_file_B[b],current_line))
+
+
+                                    h.write(self.character_highlight(current_file_B[b], current_line))
                                     line_in_B_left.remove(current_file_B[b])
                                     h.write('  </td>' + '\n')
                                     h.write('</tr>' + '\n\n')
                                     continue
+
+                                #Else check if the most similar line in B of current line in A has current line in A as its second most similar line
+                                elif second_most_similar_B[b] == a:
+                                    a2 = most_similar_B[b]
+                                    #If its most similar line does not have itself as most similar line, then we match the line in B with current line in A
+                                    if most_similar_A[a2] != b:
+                                        h.write(self.character_highlight(current_line,current_file_B[b]))
+                                        h.write('   </td>' + '\n')
+
+                                        h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
+                                        current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
+                                        h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
+                                        h.write(self.character_highlight(current_file_B[b],current_line))
+                                        line_in_B_left.remove(current_file_B[b])
+                                        h.write('  </td>' + '\n')
+                                        h.write('</tr>' + '\n\n')
+                                        continue
+                                else:
+                                    h.write(self.escapeHtml(current_line))
+                                    h.write('   </td>' + '\n')
+
                             else:
                                 h.write(self.escapeHtml(current_line))
                                 h.write('   </td>' + '\n')
-
                         else:
                             h.write(self.escapeHtml(current_line))
                             h.write('   </td>' + '\n')
@@ -673,10 +687,15 @@ class Application(Frame):
                         e = open('errors.txt', 'a+')
                         e.write('   Errors occured in file: ' + fileName + '. Manual inspection required' + '\n')
                     except:
+                        e2 = open('trace_back_log.txt', 'a+')
+                        e2.write(traceback.format_exc() + '\n')
                         pass
                     continue
 
             #finish the current report and close auxiliary supporting document
+            value = value + 1
+            downloaded.set(value)
+            root.update()
             f.write(' \n \n \n - End of Report -')
             f.close()
             h.close()
@@ -1074,6 +1093,8 @@ class Application(Frame):
             for i in range(len(self.file_name_list)):
                 f.write("      " + self.file_name_list[i] + ":  " + self.file_pair_list[i][0] + ' (' + self.file_format_list[i][0] + ') ' + " and " + self.file_pair_list[i][1] + ' (' + self.file_format_list[i][1] + ') ' + "   -   " + str(self.diff_total_list[i]) + " differences" + "\n")
         except:
+            e2 = open('trace_back_log.txt', 'a+')
+            e2.write(traceback.format_exc() + '\n')
             pass
         if len(self.file_in_A_not_in_B) != 0 or len(self.file_in_B_not_in_A) != 0:
             f.write('Notes: ' + '\n')
@@ -1143,6 +1164,8 @@ class Application(Frame):
                 #write the footer for the html report
                 self.writeFooter(h)
         except:
+            e2 = open('trace_back_log.txt', 'a+')
+            e2.write(traceback.format_exc() + '\n')
             pass
 
     #Indexing the folder and prepare it for the report
