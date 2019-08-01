@@ -30,4 +30,10 @@ shutil.rmtree(current_directory + '\\build')
 shutil.rmtree(current_directory + '\\dist')
 os.remove(current_directory + '\\redoGUI.py')
 
-
+if os.path.exists(current_directory + '\\Installation.bat'):
+    os.remove(current_directory + '\\Installation.bat')
+if os.path.exists(current_directory + '\\python-2.7.16(32_bit_version).msi'):
+    os.remove(current_directory + '\\python-2.7.16(32_bit_version).msi')
+if os.path.exists(current_directory + '\\python-2.7.16(64_bit_version).msi'):
+    print 'yes'
+    os.remove(current_directory + '\\python-2.7.16(64_bit_version).msi')
