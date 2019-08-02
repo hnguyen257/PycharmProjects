@@ -1,8 +1,8 @@
 #Company: Emerson Process Solution
 #Name: Files comparison tool
 #Author: Hiep Nguyen
-#Released date: 07/17/2019
-#version: v1.0
+#Released date: 08/01/2019
+#version: v2.1
 
 from Tkinter import *
 import tkFileDialog
@@ -20,7 +20,7 @@ from tkColorChooser import askcolor
 
 #initialize the GUI
 root = Tk()
-root.title("Emerson files comparison tool v2.0")
+root.title("PWTTS files comparison tool v2.0")
 root.geometry("840x500")
 root.wm_minsize(860,620)
 
@@ -82,18 +82,20 @@ class Application(Frame):
         self.file_in_B_not_in_A = []
         downloaded.set(0)
         downloaded_index.set(0)
+        self.label_progress.configure(text = '')
+        self.label_progress2.configure(text = '')
         root.update()
 
     #Create 2 progress bar, one is for indexing process and the other for comparing process
     progress = ttk.Progressbar(root, orient = 'horizontal', variable= downloaded, mode = 'determinate')
     progress.pack(fill=BOTH, side = BOTTOM)
-    label_progress = Label(wraplength = 490, text = 'Comparing...')
+    label_progress = Label(wraplength = 490, text = '')
     label_progress.pack(side = BOTTOM)
 
     progress_index = ttk.Progressbar(root, orient = 'horizontal', variable= downloaded_index, mode = 'determinate')
     progress_index.pack(fill=BOTH, side = BOTTOM)
-    label_progress = Label(wraplength = 490, text = 'Indexing...')
-    label_progress.pack(side = BOTTOM)
+    label_progress2 = Label(wraplength = 490, text = '')
+    label_progress2.pack(side = BOTTOM)
 
 
 
@@ -207,7 +209,8 @@ class Application(Frame):
         if (self.file3 == 'Default: same folder of the running program' or self.file3.replace('\\','/') == dest_default) and (self.file4 == 'Default: reportH2.html' or self.file4 == 'Default: reportH2.txt' or self.file4 == 'reportH2'):
             if CheckVar2.get() == 1:
                 webbrowser.open_new_tab('file:///' + current_path)
-            self.Text_G.configure(text = '  Comparison process is completed !')
+            self.Text_G.configure(text = '')
+            self.label_progress.configure(text = 'Comparison process is completed!')
             self.Exit()
             return
 
@@ -236,7 +239,8 @@ class Application(Frame):
 
         if CheckVar2.get() == 1:
             webbrowser.open_new_tab('file:///' + dest)
-        self.Text_G.configure(text = '  Comparison process is completed !')
+        self.Text_G.configure(text = '')
+        self.label_progress.configure(text = 'Comparison process is completed!')
         self.Exit()
         return
 
@@ -371,8 +375,10 @@ class Application(Frame):
             h = open("reportH.html", "w+")
 
             #Indexing the folder, preparing for the comparing process
+            self.label_progress2.configure(text = 'Indexing...')
             self.index_folder()
-
+            self.label_progress2.configure(text = 'Indexing completed')
+            self.label_progress.configure(text = 'Comparing...')
             #Get number of files and the quantity of each type
             number_of_files = len(self.files_as_string_1)
             file_name_quantity = {i:1 for i in self.file_name_list}
@@ -639,7 +645,7 @@ class Application(Frame):
 
 
                         #If there is no similar line in B got matched with current line in A, count it as a missing line and put the missing line (a dash) on the other side
-                        h.write('  <td>' + ' - ' + '</td>' + '\n')
+                        h.write('  <td>' + 'not present' + '</td>' + '\n')
                         h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
                         h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
                         h.write(' </td>' + '\n')
@@ -649,7 +655,7 @@ class Application(Frame):
                     #since if there was a similar line in A it would have already been matched earlier
                     for current_line in line_in_B_left:
                         h.write('<tr>' + '\n')
-                        h.write('  <td>' + ' - ' + '</td>' + '\n')
+                        h.write('  <td>' + 'not present' + '</td>' + '\n')
 
                         h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
                         h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
@@ -716,7 +722,10 @@ class Application(Frame):
         h = open("reportH.html", "w+")
 
         #Index the file and prepare for comparing process
+        self.label_progress2.configure(text = 'Indexing...')
         self.index_file()
+        self.label_progress2.configure(text = 'Indexing completed')
+        self.label_progress.configure(text = 'Comparing...')
 
         #Set number of files
         number_of_files = 1
@@ -947,7 +956,7 @@ class Application(Frame):
 
 
                     #If there is no similar line in B got matched with current line in A, count it as a missing line and put the missing line (a dash) on the other side
-                    h.write('  <td>' + ' - ' + '</td>' + '\n')
+                    h.write('  <td>' + 'not present' + '</td>' + '\n')
                     h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
                     h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
                     h.write(' </td>' + '\n')
@@ -957,7 +966,7 @@ class Application(Frame):
                 #since if there was a similar line in A it would have already been matched earlier
                 for current_line in line_in_B_left:
                     h.write('<tr>' + '\n')
-                    h.write('  <td>' + ' - ' + '</td>' + '\n')
+                    h.write('  <td>' + 'not present' + '</td>' + '\n')
 
                     h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
                     h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
@@ -1144,10 +1153,11 @@ class Application(Frame):
                         '          <button class="tablinks" onmouseover="openFile(event, \'' + fileName + '\')"' + 'style="background-color:' + color + '>'  + fileName + '</button>' + "\n")
                 h.write('    </div>')
 
-                h.write(open("reportH.html", 'r').read())
                 h.write('<div id="Overall result" class="tabcontent">' + '\n')
                 h.write('<pre>' + open("reportH2.txt", 'r').read() + '</pre>' + '\n')
                 h.write('</div>')
+                h.write(open("reportH.html", 'r').read())
+
                 h.write('''
                 <div class="clearfix"></div>
                 <script>
@@ -1454,6 +1464,8 @@ class Application(Frame):
     #write the javascript accommodate the HTML file, h is the final HTML report being passed to the function
     def writeFooter(self, h):
         h.write('''
+    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent[0].style.display = "block";
     function openFile(evt, fileName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
