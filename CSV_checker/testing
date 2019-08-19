@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<h2>Cell that spans two rows</h2>
+<p>To make a cell span more than one row, use the rowspan attribute.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+
+</table>
+
+
+</body>
+</html>
+_______________________
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: "Lato", sans-serif;}
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+    }
+
+    </style>
+    </head>
+    <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<pre>
+Time: 2019-08-19 17:09:50.559000
+Overall result:
+      csv:  FL_insurance_sample.csv (ascii)  and FL_insurance_sample.csv (ascii)    -   5 differences
+Errors encountered:
+       None
+
+
+File type: csv
+Files being compare: FL_insurance_sample.csv(A)  and  FL_insurance_sample.csv(B)
+Differences:
+Line in FL_insurance_sample.csv(A) that are not in FL_insurance_sample.csv(B):
+   line 13: 894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,33962.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1
+   line 36618: 603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Mahhsonry,3
+   line 36619: 575194,FL,PINEffLLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3
+   line 36625: 592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12??2885,-82.770218,Residential,Wood,3
+   line 36633: 791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732ff86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4
+Line in FL_insurance_sample.csv(B) that are not in FL_insurance_sample.csv(A):
+   line 13: 894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,33952.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1
+   line 36618: 603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Masonry,3
+   line 36619: 575194,FL,PINELLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3
+   line 36625: 592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.122885,-82.770218,Residential,Wood,3
+   line 36633: 791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173286.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4
+
+
+
+ - End of Report -
+ </pre>
+
+
+<table style="width:100%">
+<tr>
+   <th>Line A #</th>
+   <th>FL_insurance_sample.csv</th>
+   <th>Line B #</th>
+   <th>FL_insurance_sample.csv</th>
+</tr>
+
+<tr>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">5</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1   </td>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">6</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1  </td>
+</tr>
+
+<tr>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,M<font style="background-color: #efd887">as</font>onry,3   </td>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Ma<font style="background-color: #efd887">hh</font>sonry,3  </td>
+</tr>
+
+<tr>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PIN<font style="background-color: #efd887">EL</font>LASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3   </td>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PINE<font style="background-color: #efd887">ff</font>LLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3  </td>
+</tr>
+
+<tr>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.1<font style="background-color: #efd887">22</font>885,-82.770218,Residential,Wood,3   </td>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12<font style="background-color: #efd887">??</font>2885,-82.770218,Residential,Wood,3  </td>
+</tr>
+
+<tr>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173<font style="background-color: #efd887">28</font>6.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4   </td>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732<font style="background-color: #efd887">ff</font>86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4  </td>
+</tr>
+
+<tr>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">5</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1   </td>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">6</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1  </td>
+</tr>
+
+<tr>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,M<font style="background-color: #efd887">as</font>onry,3   </td>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Ma<font style="background-color: #efd887">hh</font>sonry,3  </td>
+</tr>
+
+<tr>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PIN<font style="background-color: #efd887">EL</font>LASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3   </td>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PINE<font style="background-color: #efd887">ff</font>LLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3  </td>
+</tr>
+
+<tr>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.1<font style="background-color: #efd887">22</font>885,-82.770218,Residential,Wood,3   </td>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12<font style="background-color: #efd887">??</font>2885,-82.770218,Residential,Wood,3  </td>
+</tr>
+
+<tr>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173<font style="background-color: #efd887">28</font>6.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4   </td>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732<font style="background-color: #efd887">ff</font>86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4  </td>
+</tr>
+
+<tr>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">5</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1   </td>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">6</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1  </td>
+</tr>
+
+<tr>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,M<font style="background-color: #efd887">as</font>onry,3   </td>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Ma<font style="background-color: #efd887">hh</font>sonry,3  </td>
+</tr>
+
+<tr>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PIN<font style="background-color: #efd887">EL</font>LASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3   </td>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PINE<font style="background-color: #efd887">ff</font>LLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3  </td>
+</tr>
+
+<tr>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.1<font style="background-color: #efd887">22</font>885,-82.770218,Residential,Wood,3   </td>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12<font style="background-color: #efd887">??</font>2885,-82.770218,Residential,Wood,3  </td>
+</tr>
+
+<tr>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173<font style="background-color: #efd887">28</font>6.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4   </td>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732<font style="background-color: #efd887">ff</font>86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4  </td>
+</tr>
+
+<tr>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">5</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1   </td>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">6</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1  </td>
+</tr>
+
+<tr>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,M<font style="background-color: #efd887">as</font>onry,3   </td>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Ma<font style="background-color: #efd887">hh</font>sonry,3  </td>
+</tr>
+
+<tr>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PIN<font style="background-color: #efd887">EL</font>LASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3   </td>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PINE<font style="background-color: #efd887">ff</font>LLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3  </td>
+</tr>
+
+<tr>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.1<font style="background-color: #efd887">22</font>885,-82.770218,Residential,Wood,3   </td>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12<font style="background-color: #efd887">??</font>2885,-82.770218,Residential,Wood,3  </td>
+</tr>
+
+<tr>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173<font style="background-color: #efd887">28</font>6.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4   </td>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732<font style="background-color: #efd887">ff</font>86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4  </td>
+</tr>
+
+<tr>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">5</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1   </td>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">6</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1  </td>
+</tr>
+
+<tr>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,M<font style="background-color: #efd887">as</font>onry,3   </td>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Ma<font style="background-color: #efd887">hh</font>sonry,3  </td>
+</tr>
+
+<tr>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PIN<font style="background-color: #efd887">EL</font>LASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3   </td>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PINE<font style="background-color: #efd887">ff</font>LLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3  </td>
+</tr>
+
+<tr>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.1<font style="background-color: #efd887">22</font>885,-82.770218,Residential,Wood,3   </td>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12<font style="background-color: #efd887">??</font>2885,-82.770218,Residential,Wood,3  </td>
+</tr>
+
+<tr>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173<font style="background-color: #efd887">28</font>6.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4   </td>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732<font style="background-color: #efd887">ff</font>86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4  </td>
+</tr>
+
+<tr>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">5</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1   </td>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">6</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1  </td>
+</tr>
+
+<tr>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,M<font style="background-color: #efd887">as</font>onry,3   </td>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Ma<font style="background-color: #efd887">hh</font>sonry,3  </td>
+</tr>
+
+<tr>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PIN<font style="background-color: #efd887">EL</font>LASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3   </td>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PINE<font style="background-color: #efd887">ff</font>LLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3  </td>
+</tr>
+
+<tr>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.1<font style="background-color: #efd887">22</font>885,-82.770218,Residential,Wood,3   </td>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12<font style="background-color: #efd887">??</font>2885,-82.770218,Residential,Wood,3  </td>
+</tr>
+
+<tr>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173<font style="background-color: #efd887">28</font>6.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4   </td>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732<font style="background-color: #efd887">ff</font>86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4  </td>
+</tr>
+
+<tr>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">5</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1   </td>
+  <td>13</td>
+   <td id="csv5" style="background-color: #7949f8">894922,FL,CLAYCOUNTY,0,24059.09,0,0,24059.09,339<font style="background-color: #efd887">6</font>2.19,0,0,0,0,30.095957,-81.695099,Residential,Wood,1  </td>
+</tr>
+
+<tr>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,M<font style="background-color: #efd887">as</font>onry,3   </td>
+  <td>36618</td>
+   <td id="csv5" style="background-color: #7949f8">603769,FL,PINELLASCOUNTY,0,1541972.7,0,1541972.7,1541972.7,2064682.94,0,0,0,0,28.122885,-82.770218,Residential,Ma<font style="background-color: #efd887">hh</font>sonry,3  </td>
+</tr>
+
+<tr>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PIN<font style="background-color: #efd887">EL</font>LASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3   </td>
+  <td>36619</td>
+   <td id="csv5" style="background-color: #7949f8">575194,FL,PINE<font style="background-color: #efd887">ff</font>LLASCOUNTY,0,3759303.6,0,3759303.6,3759303.6,4209183.22,0,0,0,0,28.122885,-82.770218,Commercial,ReinforcedMasonry,3  </td>
+</tr>
+
+<tr>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.1<font style="background-color: #efd887">22</font>885,-82.770218,Residential,Wood,3   </td>
+  <td>36625</td>
+   <td id="csv5" style="background-color: #7949f8">592170,FL,PINELLASCOUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.12<font style="background-color: #efd887">??</font>2885,-82.770218,Residential,Wood,3  </td>
+</tr>
+
+<tr>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,173<font style="background-color: #efd887">28</font>6.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4   </td>
+  <td>36633</td>
+   <td id="csv5" style="background-color: #7949f8">791209,FL,PINELLASCOUNTY,173286.9,173286.9,0,0,1732<font style="background-color: #efd887">ff</font>86.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4  </td>
+</tr>
+</table>
+</div>
+
+<script>
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+</script>
+
+    </body>
+    </html>
+    
