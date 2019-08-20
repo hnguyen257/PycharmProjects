@@ -359,7 +359,8 @@ class Application(Frame):
             h.write('   <th>' + 'Line #' + '</th>' + '\n')
             header = []
             header = self.header_label.split(',')
-            print header
+            for item in header:
+                h.write('   <th>' + item + '</th>' + '\n')
 
             h.write('</tr>' + '\n\n')
 
@@ -387,7 +388,6 @@ class Application(Frame):
                     current_file_B_original[current_file_B_original.index(current_line)] = None
                     current_file_B.remove(current_line)
                 else:
-                    diff_total = diff_total + 1
                     file_A_diff.append(current_line)
 
             #if there is line remain in file A or B, there is at least some difference between them
@@ -467,10 +467,10 @@ class Application(Frame):
             for current_line in file_A_diff:
                 #Write line number of current line in file A's list of lines that are different
                 h.write('<tr>' + '\n')
+                h.write('<th rowspan = "2">' + str(diff_total + 1) + '</th>')
                 h.write('  <td>' + str(current_file_A.index(current_line)+ 1) + '</td>' + '\n')
                 current_file_A[current_file_A.index(current_line)] = None
-                #Write current line in file A
-                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
+
 
 
                 #Get index of current line in A, get the most similar line in B of current line in A
@@ -483,17 +483,16 @@ class Application(Frame):
                     #if the most similar line in B of current line in A also has current line in A as its most similar line
                     # #..., then we match them together
                     if most_similar_B[b] == a:
-                        h.write(self.character_highlight(current_file_B[b], current_line))
-                        h.write('   </td>' + '\n')
+                        h.write(self.character_highlight(current_line, current_file_B[b]))
+                        h.write('</tr>' + '\n')
 
+                        h.write('<tr>' + '\n')
                         h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
                         current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
-                        h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
-
-                        h.write(self.character_highlight(current_line, current_file_B[b]))
+                        h.write(self.character_highlight(current_file_B[b], current_line))
                         line_in_B_left.remove(current_file_B[b])
-                        h.write('  </td>' + '\n')
                         h.write('</tr>' + '\n\n')
+                        diff_total = diff_total + 1
                         continue
 
                     #Else check if the most similar line in B of current line in A has current line in A as its second most similar line
@@ -502,57 +501,62 @@ class Application(Frame):
                         #If its most similar line does not have itself as most similar line, then we match the line in B with current line in A
                         if most_similar_A[a2] != b:
                             h.write(self.character_highlight(current_line,current_file_B[b]))
-                            h.write('   </td>' + '\n')
+                            h.write('</tr>' + '\n')
 
+                            h.write('<tr>' + '\n')
                             h.write('  <td>' + str(current_file_B_original.index(current_file_B[b]) + 1) + '</td>' + '\n')
                             current_file_B_original[current_file_B_original.index(current_file_B[b])] = None
-                            h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
                             h.write(self.character_highlight(current_file_B[b],current_line))
                             line_in_B_left.remove(current_file_B[b])
-                            h.write('  </td>' + '\n')
                             h.write('</tr>' + '\n\n')
+                            diff_total = diff_total + 1
                             continue
                     else:
-                        h.write(self.escapeHtml(current_line))
-                        h.write('   </td>' + '\n')
+                        h.write(self.character_highlight(current_line,current_line))
+                        h.write('</tr>' + '\n')
+                        diff_total = diff_total + 1
                 else:
-                    h.write(self.escapeHtml(current_line))
-                    h.write('   </td>' + '\n')
+                    h.write(self.character_highlight(current_line,current_line))
+                    h.write('</tr>' + '\n')
+                    diff_total = diff_total + 1
 
 
 
 
                 #If there is no similar line in B got matched with current line in A, count it as a missing line and put the missing line (a dash) on the other side
+                h.write('<tr>' + '\n\n')
                 h.write('  <td>' + 'not present' + '</td>' + '\n')
-                h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
-                h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
-                h.write(' </td>' + '\n')
+                times = len(current_line.split(','))
+                for i in range(times):
+                    h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
+                    h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+                    h.write(' </td>' + '\n')
                 h.write('</tr>' + '\n\n')
 
                 #Now after all the remaining line in A were taken care of, whatever left in B will be missing line,
                 #since if there was a similar line in A it would have already been matched earlier
                 for current_line in line_in_B_left:
                     h.write('<tr>' + '\n')
+                    h.write('<th rowspan = "2">' + str(diff_total + 1) + '</th>')
                     h.write('  <td>' + 'not present' + '</td>' + '\n')
 
-                    h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
-                    h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
-                    h.write(' </td>' + '\n')
+                    times = len(current_line.split(','))
+                    for i in range(times):
+                        h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
+                        h.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+                        h.write(' </td>' + '\n')
+                    h.write('</tr>' + '\n')
 
+                    h.write('<tr>' + '\n')
                     h.write('  <td>' + str(current_file_B_original.index(current_line) + 1) + '</td>' + '\n')
+                    h.write(self.character_highlight(current_line, current_line))
                     current_file_B_original[current_file_B_original.index(current_line)] = None
-
-                    h.write('   <td ' + 'id="' + fileName + diff_id + '"' + ' style="background-color: ' + self.background_color + '">')
-                    h.write(self.escapeHtml(current_line))
-                    h.write('   </td>' + '\n')
-
                     diff_total = diff_total + 1
                     h.write('</tr>' + '\n\n')
 
-                #Add the total number of differences to the list of differences for each file
-                self.diff_total_list.append(diff_total)
-                h.write('</table>' + "\n")
-                h.write('</div>' + '\n\n')
+            #Add the total number of differences to the list of differences for each file
+            self.diff_total_list.append(diff_total)
+            h.write('</table>' + "\n")
 
             #If error occurs, continue checking other file and document it in the overall report
         except:
@@ -584,6 +588,80 @@ class Application(Frame):
         os.remove(current_path + 'errors.txt')
         os.remove(current_path + 'reportH.html')
 
+    #section highlight
+    def character_highlight(self, line_a, line_b):
+        ret = ''
+        temp = line_a.split(',')
+        temp2 = line_b.split(',')
+        for i in range(len(temp)):
+            if temp[i] == temp2[i]:
+                ret = ret + '<td>' + temp[i] + '</td>' + '\n'
+            else:
+                ret = ret + '   <td ' + ' style="background-color: ' + self.background_color + '">'
+                ret = ret + self.character_highlight2(temp[i],temp2[i])
+                ret = ret + '   </td>' + '\n'
+        return ret
+
+
+
+
+
+    #line by line character highlights
+    def character_highlight2(self, line_a, line_b):
+        if CheckVar1.get() == 0:
+            return self.escapeHtml(line_a)
+        #line_a = str(line_a).rstrip().lstrip()
+        #line_b = str(line_b).rstrip().lstrip()
+        ret = ''
+        len_a = len(line_a)
+        len_b = len(line_b)
+        len_used = len_a
+        top_down = 0
+        bottom_up = len_used - 1
+        if len_a > len_b:
+            len_used = len_b
+        diff = 0
+        diff_bottom = 0
+        for i in range(len_used):
+            if line_a[i] != line_b[i]:
+                diff = 1
+                top_down = i
+                break
+
+        end_b = len_b - 1
+        for i in range(len_a-1, -1, -1):
+            if line_a[i] != line_b[end_b]:
+                diff = 1
+                diff_bottom = 1
+                bottom_up = i
+                break
+            end_b = end_b - 1
+
+        flag = 0
+        if bottom_up < top_down:
+            flag = 1
+            holder = top_down
+            top_down = bottom_up
+            bottom_up = holder
+        if diff == 0 or ((bottom_up-top_down) == (len_a-1) and flag == 1):
+            for i in range(len_a):
+                ret = ret + line_a[i]
+        else:
+            for i in range(top_down):
+                ret = ret + line_a[i]
+            ret = ret + '+=^font style=#$@background-color: ' + self.diff_color + '#$@^=+'
+            if diff_bottom == 0:
+                bottom_up = top_down
+            for i in range(top_down, bottom_up+1):
+                ret = ret + line_a [i].replace(' ', '^$^nbsp;')
+            ret = ret + '+=^/font^=+'
+            for i in range(bottom_up+1, len_a):
+                ret = ret + line_a[i]
+
+
+        ret = self.escapeHtml(ret)
+        ret = ret.replace('+=^', '<').replace('^=+', '>').replace('#$@','"').replace('^$^', '&')
+        return ret
 
     #Replacing unsafe characters with acceptable ones before writing it to the HTML document
     def escapeHtml(self, unsafe):
@@ -597,6 +675,8 @@ class Application(Frame):
         f.write("Time: " + str(datetime.datetime.now()) + "\n")
         f.write("Overall result: " + "\n")
         try:
+            print len(self.file_name_list)
+            print self.file_name_list
             for i in range(len(self.file_name_list)):
                 f.write("      " + self.file_name_list[i] + ":  " + self.file_pair_list[i][0] + ' (' + self.file_format_list[i][0] + ') ' + " and " + self.file_pair_list[i][1] + ' (' + self.file_format_list[i][1] + ') ' + "   -   " + str(self.diff_total_list[i]) + " differences" + "\n")
         except:
@@ -693,9 +773,9 @@ class Application(Frame):
 
             with open(file_path_A, 'rU') as csvfile:
                 reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-                self.header_label = reader[0]
                 for row in reader:
                     current_file_as_string_list_1.append(''.join(row))
+                self.header_label = current_file_as_string_list_1[0]
 
             downloaded_index.set(2)
             root.update()
@@ -703,11 +783,11 @@ class Application(Frame):
 
             with open(file_path_B, 'rU') as csvfile:
                 reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-                if reader[0] != self.header_label:
-                    e = open('errors.txt', 'a+')
-                    e.write('Warning: Column head of two table is not the same' + '\n')
                 for row in reader:
                     current_file_as_string_list_2.append(''.join(row))
+                if current_file_as_string_list_2[0] != self.header_label:
+                    e = open('errors.txt', 'a+')
+                    e.write('Warning: Column head of two table is not the same' + '\n')
 
             downloaded_index.set(3)
             root.update()
@@ -725,6 +805,8 @@ class Application(Frame):
             current_format_pair = [char, char2]
             #Add thhe file name, pair and format pair to the overall lists
             self.file_name_list.append(current_extension)
+            print current_extension
+            print self.file_name_list
             self.file_pair_list.append(current_file_pair)
             self.file_format_list.append(current_format_pair)
 
@@ -779,6 +861,12 @@ class Application(Frame):
     
     html {
       scroll-behavior: smooth;
+    }
+    
+    table, th, td {
+        padding: 5px;
+        border: 1px solid black;
+        border-collapse: collapse;
     }
     
     #myBtn {

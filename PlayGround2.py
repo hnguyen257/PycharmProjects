@@ -1,7 +1,13 @@
 
 
-a = 'h.h.h'
-print a.split(".")
+
+a = 'hey'
+a = a + 'no' + 'yea'
+
+print a
+
+
+
 '''
 raw = open("C:\Users\E1260297\Desktop\FL_insurance_sample.csv",'r').readline()
 print raw
@@ -38,5 +44,20 @@ with open('C:\Users\E1260297\Desktop\FL_insurance_sample.csv', 'rU') as csvfile:
         print i
 
         
+________
+import csv
 
+temp = []
+with open('C:\Users\E1260297\Desktop\FL_insurance_sample.csv', 'rU') as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+    count = 0
+    print spamreader[0]
+    for row in spamreader:
+        temp.append(''.join(row))
+        count = count + 1
+        if count == 5:
+            break
+    for i in temp:
+        print i
+________
 '''
