@@ -2,8 +2,7 @@
 
 
 a = 'hey'
-a = a + 'no' + 'yea'
-
+a = a.replace('e','p')
 print a
 
 

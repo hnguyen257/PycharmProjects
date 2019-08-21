@@ -307,7 +307,7 @@ class Application(Frame):
 #Done with the GUI parts, now begin the actual comparing process
 
     #Function to compare the 2 files individually
-    def compare_file(self):
+    def compare_file_unorder(self):
         #Create and open auxiliary documents
         e = open('errors.txt', 'w+')
         e2 = open('trace_back_log.txt', 'w+')
@@ -393,6 +393,9 @@ class Application(Frame):
             #if there is line remain in file A or B, there is at least some difference between them
             if len(current_file_B) != 0 and len(current_file_A)!=0:
                 no_difference = False
+
+            total_diff = str(len(file_A_diff) + len(current_file_B))
+            print '___________________' + total_diff + '_____________________'
 
             #Create a list of lines that are still left in B that were not match up with any line in A
             line_in_B_left = [i for i in current_file_B]
@@ -588,19 +591,220 @@ class Application(Frame):
         os.remove(current_path + 'errors.txt')
         os.remove(current_path + 'reportH.html')
 
+    def compare_file(self):
+        #Create and open auxiliary documents
+        e = open('errors.txt', 'w+')
+        e2 = open('trace_back_log.txt', 'w+')
+        f = open("report_prep.txt", "w+")
+        h = open("reportH.html", "w+")
+
+        #Index the file and prepare for comparing process
+        self.label_progress2.configure(text = 'Indexing...')
+        self.index_file()
+        self.label_progress2.configure(text = 'Indexing completed')
+        self.label_progress.configure(text = 'Comparing...')
+        root.update()
+
+        #Set number of files
+        number_of_files = 1
+
+        #Set progress bar's number of portion (in this case only 1 files need to be processed)
+        Application.progress["maximum"] = 1
+
+        try:
+            no_difference = True
+            diff_total = 0
+            current_line_keeper = 0
+            fileName =  str(self.file_name_list[0])
+
+            self.Text_G.configure(text = 'Comparing ' + fileName + ' files...')
+
+
+
+            #Getting the 2 current file type being compare
+            fileA = str(self.file_pair_list[0][0])
+            fileB = str(self.file_pair_list[0][1])
+
+            # Write current file type to report_prep.txt
+            f = open("report_prep.txt", "a+")
+            f.write("\n\n")
+            f.write("File type: " + fileName + "\n")
+            file_name_difference = ''
+            if fileA != fileB:
+                file_name_difference = '  (Note: file name is difference)'
+            f.write("Files being compare: " + fileA + '(A)' + "  and  " + fileB + '(B)' + file_name_difference + "\n")
+            f.write("Differences: " + "\n")
+
+
+            # Write current file type being compare to reportH.html
+            h.write('<table style="width:100%">' + '\n')
+            h.write('<tr>' + '\n')
+            h.write('   <th>' + 'Differences #' + '</th>' + '\n')
+            h.write('   <th>' + 'Line #' + '</th>' + '\n')
+            header = []
+            header = self.header_label.split(',')
+            for item in header:
+                h.write('   <th>' + item + '</th>' + '\n')
+
+            h.write('</tr>' + '\n\n')
+
+            #Getting the content of the 2 files being compared:
+            current_file_A = self.files_as_string_1[0]
+            current_file_B = self.files_as_string_2[0]
+            current_file_B_original = [i for i in current_file_B] #Create backup of file B to keep the line number right later
+            #Note: file A's content do not need back up because instead of modifying it we are create a new list with only lines that are different
+
+            #Remove blank line from content of file B, using temp to iterate the file's content without modifying it at the same time
+            current_file_B_temp = [i for i in current_file_B]
+            for line in current_file_B_temp:
+                if len(line.replace(' ', '').replace('\n','').replace('\r','')) == 0:
+                    current_file_B_original[current_file_B_original.index(line)] = None
+                    current_file_B.remove(line)
+
+            #Prepare storage for lines that are different found in file A
+            file_A_diff = []
+
+            #Prepare storage for lines that are different found in file A
+            for current_line in current_file_A:
+                if len(current_line.replace(' ','').replace('\n','').replace('\r','')) == 0:
+                    continue
+                if current_line in current_file_B:
+                    current_file_B_original[current_file_B_original.index(current_line)] = None
+                    current_file_B.remove(current_line)
+                else:
+                    file_A_diff.append(current_line)
+
+            #if there is line remain in file A or B, there is at least some difference between them
+            if len(current_file_B) != 0 and len(current_file_A)!=0:
+                no_difference = False
+
+            total_diff = str(len(file_A_diff) + len(current_file_B))
+            print '___________________' + total_diff + '_____________________'
+
+            #Create a list of lines that are still left in B that were not match up with any line in A
+            line_in_B_left = [i for i in current_file_B]
+
+
+
+
+
+            #Get the current difference as ordinal number
+            diff_id = str(diff_total)
+
+            current_file_A_temp = [i for i in current_file_A]
+
+            #Write to the overall text report the current file being compare and the differences between them
+            f.write('Line in ' + fileA + '(A)' + ' that are not in ' + fileB + '(B)' + ':' + "\n")
+            if len(file_A_diff) == 0:
+                f.write('   None' + '\n')
+            for current_line in file_A_diff:
+                f.write('   line ' +  str(current_file_A_temp.index(current_line)+ 1) + ': ' + current_line.replace('<','&lt;').replace('>', '&gt;') + "\n")
+                current_file_A_temp[current_file_A_temp.index(current_line)] = None
+
+
+            current_file_B_original_temp = [i for i in current_file_B_original]
+            f.write('Line in ' + fileB + '(B)' + ' that are not in ' + fileA + '(A)' + ':' + "\n")
+            if len(current_file_B) == 0:
+                f.write('   None' + '\n')
+            else:
+                for current_line in current_file_B:
+                    f.write('   line ' +  str(current_file_B_original_temp.index(current_line)+ 1) + ': ' + current_line.replace('<','&lt;').replace('>', '&gt;') + "\n")
+                    current_file_B_original_temp[current_file_B_original_temp.index(current_line)] = None
+
+            #After done writing to the general text report, now writing to the html report as we sorting the lines side by side
+            for current_line in file_A_diff:
+                #Write line number of current line in file A's list of lines that are different
+                h.write('<tr>' + '\n')
+                h.write('<th rowspan = "2">' + str(diff_total + 1) + '</th>')
+                h.write('  <td>' + str(current_file_A.index(current_line)+ 1) + '</td>' + '\n')
+                current_file_A[current_file_A.index(current_line)] = None
+
+
+
+                #Get index of current line in A, get the most similar line in B of current line in A
+                a = file_A_diff.index(current_line)
+                file_A_diff[a] = None
+
+                print 'line number' + str(a)
+                h.write(self.character_highlight(current_line, current_file_B[a]))
+                h.write('</tr>' + '\n')
+
+                h.write('<tr>' + '\n')
+                h.write('  <td>' + str(current_file_B_original.index(current_file_B[a]) + 1) + '</td>' + '\n')
+                current_file_B_original[current_file_B_original.index(current_file_B[a])] = None
+                h.write(self.character_highlight(current_file_B[a], current_line))
+                line_in_B_left.remove(current_file_B[a])
+                h.write('</tr>' + '\n\n')
+                diff_total = diff_total + 1
+
+
+
+            #Add the total number of differences to the list of differences for each file
+            self.diff_total_list.append(diff_total)
+            h.write('</table>' + "\n")
+
+            #If error occurs, continue checking other file and document it in the overall report
+        except:
+            e2 = open('trace_back_log.txt', 'a+')
+            e2.write(traceback.format_exc() + '\n')
+            e = open('errors.txt', 'a+')
+            e.write('   Errors occured in file: ' + fileName + '. Manual inspection required' + '\n')
+
+
+        downloaded.set(1)
+        root.update()
+
+        #finish the current report and close auxiliary supporting document
+        f.write(' \n \n \n - End of Report -')
+        f.close()
+        h.close()
+        e.close()
+        try:
+            e2.close()
+        except:
+            pass
+
+
+        #Gather up all the document and write the final reports
+        self.writeEnding()
+
+        #Delete the auxiliary documents
+        current_path = os.getcwd().replace('\\','/') + '/'
+        os.remove(current_path + 'errors.txt')
+        os.remove(current_path + 'reportH.html')
+
     #section highlight
     def character_highlight(self, line_a, line_b):
-        ret = ''
-        temp = line_a.split(',')
-        temp2 = line_b.split(',')
-        for i in range(len(temp)):
-            if temp[i] == temp2[i]:
-                ret = ret + '<td>' + temp[i] + '</td>' + '\n'
-            else:
-                ret = ret + '   <td ' + ' style="background-color: ' + self.background_color + '">'
-                ret = ret + self.character_highlight2(temp[i],temp2[i])
-                ret = ret + '   </td>' + '\n'
-        return ret
+        try:
+            ret = ''
+            line_a = line_a.replace(',,', '*,**,*')
+            line_b = line_b.replace(',,', '*,**,*')
+            temp = line_a.split('","')
+            temp[0] = temp[0].replace('"','')
+            temp[len(temp)-1] = temp[0].replace('"','')
+            temp2 = line_b.split('","')
+            temp2[0] = temp[0].replace('"','')
+            temp2[len(temp2)-1] = temp[0].replace('"','')
+            print '_____'
+            print len(temp)
+            print len(temp2)
+            for i in range(len(temp)):
+                print temp[i] + '__and__' + temp2[i]
+                if temp[i] == temp2[i]:
+                    ret = ret + '<td>' + temp[i] + '</td>' + '\n'
+                else:
+                    print 'say yeah'
+                    ret = ret + '   <td ' + ' style="background-color: ' + self.background_color + '">'
+                    ret = ret + self.character_highlight2(temp[i],temp2[i])
+                    ret = ret + '   </td>' + '\n'
+            return ret
+        except:
+            print i
+            print temp
+            print temp2
+            print temp[i]
+            print '__' + temp2[i] + '__'
+            print 'test completed'
 
 
 
@@ -615,6 +819,16 @@ class Application(Frame):
         ret = ''
         len_a = len(line_a)
         len_b = len(line_b)
+
+        if len_a == 0 or len_b == 0:
+            ret = ret + '+=^font style=#$@background-color: ' + self.diff_color + '#$@^=+'
+            ret = ret + line_a
+            ret = ret + '+=^/font^=+'
+            ret = self.escapeHtml(ret)
+            ret = ret.replace('+=^', '<').replace('^=+', '>').replace('#$@','"').replace('^$^', '&')
+            print ret
+            return ret
+
         len_used = len_a
         top_down = 0
         bottom_up = len_used - 1
@@ -748,7 +962,7 @@ class Application(Frame):
             result = chardet.detect(raw)
             char = result['encoding']
             #If the encoding format is not the usual one we would just skip it and leave it for manual inspection
-            if char not in ['ascii', 'UTF-8','UTF-16','UTF-8-SIG']:
+            if char not in ['ASCII', 'ascii', 'UTF-8', 'utf-8', 'UTF-16', 'utf-16', 'UTF-8-SIG', 'utf-8-sig']:
                 e = open('errors.txt', 'a+')
                 e.write('   File ' + file1 + '\'s encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.' + '\n')
                 return
@@ -761,7 +975,7 @@ class Application(Frame):
             result = chardet.detect(raw)
             char2 = result['encoding']
             #If the encoding format is not the usual one we would just skip it and leave it for manual inspection
-            if char2 not in ['ascii', 'UTF-8','UTF-16','UTF-8-SIG']:
+            if char2 not in ['ASCII', 'ascii', 'UTF-8', 'utf-8', 'UTF-16', 'utf-16', 'UTF-8-SIG', 'utf-8-sig']:
                 e = open('errors.txt', 'a+')
                 e.write('   File ' + file2 + '\'s encoding is not belong to either ascii, utf-8 or utf-16. Manual inspection required.' + '\n')
                 return

@@ -713,6 +713,7 @@ class Application(Frame):
             os.remove(current_path + 'testing2.txt')
 
 
+
     #Function to compare the 2 files individually
     def compare_file(self):
         #Create and open auxiliary documents
