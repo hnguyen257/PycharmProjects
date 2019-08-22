@@ -703,6 +703,7 @@ class Application(Frame):
 
 
             current_file_B_original_temp = [i for i in current_file_B_original]
+            f.write('\n\n\n\n_________________________________________________________________________\n\n\n\n')
             f.write('Line in ' + fileB + '(B)' + ' that are not in ' + fileA + '(A)' + ':' + "\n")
             if len(current_file_B) == 0:
                 f.write('   None' + '\n')
@@ -725,7 +726,6 @@ class Application(Frame):
                 a = file_A_diff.index(current_line)
                 file_A_diff[a] = None
 
-                print 'line number' + str(a)
                 h.write(self.character_highlight(current_line, current_file_B[a]))
                 h.write('</tr>' + '\n')
 
@@ -775,36 +775,24 @@ class Application(Frame):
 
     #section highlight
     def character_highlight(self, line_a, line_b):
-        try:
-            ret = ''
-            line_a = line_a.replace(',,', '*,**,*')
-            line_b = line_b.replace(',,', '*,**,*')
-            temp = line_a.split('","')
-            temp[0] = temp[0].replace('"','')
-            temp[len(temp)-1] = temp[0].replace('"','')
-            temp2 = line_b.split('","')
-            temp2[0] = temp[0].replace('"','')
-            temp2[len(temp2)-1] = temp[0].replace('"','')
-            print '_____'
-            print len(temp)
-            print len(temp2)
-            for i in range(len(temp)):
-                print temp[i] + '__and__' + temp2[i]
-                if temp[i] == temp2[i]:
-                    ret = ret + '<td>' + temp[i] + '</td>' + '\n'
-                else:
-                    print 'say yeah'
-                    ret = ret + '   <td ' + ' style="background-color: ' + self.background_color + '">'
-                    ret = ret + self.character_highlight2(temp[i],temp2[i])
-                    ret = ret + '   </td>' + '\n'
-            return ret
-        except:
-            print i
-            print temp
-            print temp2
-            print temp[i]
-            print '__' + temp2[i] + '__'
-            print 'test completed'
+        ret = ''
+        line_a = line_a.replace(',,', '," ",')
+        line_b = line_b.replace(',,', '," ",')
+        temp = line_a.split('","')
+        temp[0] = temp[0].replace('"','')
+        temp[len(temp)-1] = temp[0].replace('"','')
+        temp2 = line_b.split('","')
+        temp2[0] = temp2[0].replace('"','')
+        temp2[len(temp2)-1] = temp2[0].replace('"','')
+        for i in range(len(temp)):
+            if temp[i] == temp2[i]:
+                ret = ret + '<td>' + temp[i] + '</td>' + '\n'
+            else:
+                ret = ret + '   <td ' + ' style="background-color: ' + self.background_color + '">'
+                ret = ret + self.character_highlight2(temp[i],temp2[i])
+                ret = ret + '   </td>' + '\n'
+        return ret
+
 
 
 
@@ -889,8 +877,6 @@ class Application(Frame):
         f.write("Time: " + str(datetime.datetime.now()) + "\n")
         f.write("Overall result: " + "\n")
         try:
-            print len(self.file_name_list)
-            print self.file_name_list
             for i in range(len(self.file_name_list)):
                 f.write("      " + self.file_name_list[i] + ":  " + self.file_pair_list[i][0] + ' (' + self.file_format_list[i][0] + ') ' + " and " + self.file_pair_list[i][1] + ' (' + self.file_format_list[i][1] + ') ' + "   -   " + str(self.diff_total_list[i]) + " differences" + "\n")
         except:
@@ -927,7 +913,7 @@ class Application(Frame):
                 #write the header for html report
                 self.writeHeader(h)
 
-                h.write('<pre>' + open("reportH2.txt", 'r').read() + '</pre>' + '\n')
+                h.write("Time: " + str(datetime.datetime.now()) + "\n")
                 h.write('</div>')
                 h.write(open("reportH.html", 'r').read())
                 #write the footer for the html report
