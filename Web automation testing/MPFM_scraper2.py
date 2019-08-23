@@ -17,7 +17,15 @@ import webbrowser
 import traceback
 from tkColorChooser import askcolor
 import csv
-
+import tkinter as tk
+from tkinter import ttk
+from tkinter.messagebox import showinfo
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 #initialize the GUI
 root = Tk()
@@ -38,11 +46,20 @@ CheckVar2.set(1)
 
 #Main application
 class Application(Frame):
+    win = root
+    var_field_input = IntVar()
+    var_field_input.set(1)
+    var_click = IntVar()
+    var_click.set(1)
+    Text_A = ''
+    Text_B = ''
+    Text_C = ''
     #local shared variables between functions
     current_text = ''
     current_text = current_text + 'from selenium import webdriver' + '\n'
     current_text = current_text + 'from selenium.webdriver.common.keys import Keys' + '\n'
     current_text = current_text + 'import time' + '\n'
+    current_text = current_text + 'from selenium.webdriver.common.by import By' + '\n'
     current_text = current_text + 'from selenium.webdriver.support.ui import WebDriverWait' + '\n'
     current_text = current_text + 'from selenium.webdriver.support import expected_conditions as EC' + '\n'
     current_text = current_text + 'driver = webdriver.Chrome("C:/Python27/chromedriver")' + '\n'
@@ -50,79 +67,227 @@ class Application(Frame):
 
     #Action to take when user click on browse folder A
     def address_goto(self):
-        address = tkSimpleDialog.askstring('Input', 'Please enter a website address: ')
+        address = tkSimpleDialog.askstring('Input', 'Please enter a website address:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t')
+
+        if address == None:
+            return
         self.current_text = self.current_text + 'driver.get("' + address + '")' + '\n' + '\n'
-        self.Text_A.delete('1.0', END)
-        self.Text_A.insert(INSERT, self.current_text) #put new value in the entry box
+        self.main_text.delete('1.0', END)
+        self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
 
-    #Action to take when user click on browse folder A
+
     def field_input(self):
-        name = tkSimpleDialog.askstring('Input', 'Please enter name of the input field: ')
-        input_info = tkSimpleDialog.askstring('Input', 'Please enter what to insert to input field: ')
-        self.current_text = self.current_text + "elem = driver.find_element_by_name('" + name + "')" + '\n'
-        self.current_text = self.current_text + "log_in.send_keys('" + input_info + "')" + '\n' + '\n'
-        self.Text_A.delete('1.0', END)
-        self.Text_A.insert(INSERT, self.current_text) #put new value in the entry box
 
-    #Action to take when user click on browse output location
+        self.win = tk.Toplevel()
+
+        win = self.win
+
+        win.geometry("400x320")
+        win.wm_minsize(400,300)
+        win.wm_title("Field input")
+
+        label_a = tk.Label(win, text="Element identification type")
+        label_a.grid(row=0, column=0)
+
+        #b = ttk.Button(win, text="Okay", command=win.destroy)
+        #b.grid(row=0, column=1)
+
+
+
+        R1 = Radiobutton(win, text="By ID", variable= self.var_field_input, value=1)
+        R1.grid(row=1, column=0)
+
+        R2 = Radiobutton(win, text="By Name", variable=self.var_field_input, value=2)
+        R2.grid(row=2, column=0)
+
+        R3 = Radiobutton(win, text="By Xpath", variable=self.var_field_input, value=3)
+        R3.grid(row=3, column=0)
+
+        label_b = tk.Label(win, text="Field element identification: ")
+        label_b.grid(row=4, column=0)
+
+        self.Text_A = Entry(win, width=60)
+        self.Text_A.grid(row = 5, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
+
+        label_c = tk.Label(win, text="What to type in the text field:")
+        label_c.grid(row=6, column=0)
+
+        self.Text_B = Entry(win, width=60)
+        self.Text_B.grid(row = 7, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
+
+        done = Button(win)
+        done["text"] = "done"
+        done["command"] = self.done_field_input
+        done.grid(row = 8, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
+
+    def done_field_input(self):
+        identification = self.Text_A.get()
+        text_input = self.Text_B.get()
+
+        identification_a = ''
+        identification_b = ''
+        if self.var_field_input.get() == 1:
+            identification_a = 'By.ID'
+            identification_b = 'by_id'
+
+        elif self.var_field_input.get() == 2:
+            identification_a = 'By.NAME'
+            identification_b = 'by_name'
+
+        elif self.var_field_input.get() == 3:
+            identification_a = 'By.XPATH'
+            identification_b = 'by_xpath'
+
+        self.current_text = self.current_text + "elem = driver.find_element_" + identification_b + "('" + identification + "')" + '\n'
+        self.current_text = self.current_text + "elem.send_keys('" + text_input + "')" + '\n' + '\n'
+        self.main_text.delete('1.0', END)
+        self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
+        self.win.destroy()
+        pass
+
+
     def click(self):
-        item = tkSimpleDialog.askstring('Input', 'Please enter id of item to be clicked ')
+
+        self.win = tk.Toplevel()
+
+        win = self.win
+
+        win.geometry("400x320")
+        win.wm_minsize(400,300)
+        win.wm_title("Click item")
+
+        label_a = tk.Label(win, text="Element identification type")
+        label_a.grid(row=0, column=0)
+
+        #b = ttk.Button(win, text="Okay", command=win.destroy)
+        #b.grid(row=0, column=1)
+
+
+        R1 = Radiobutton(win, text="by ID", variable= self.var_click, value=1)
+        R1.grid(row=1, column=0)
+
+        R2 = Radiobutton(win, text="by NAME", variable=self.var_click, value=2)
+        R2.grid(row=2, column=0)
+
+        R3 = Radiobutton(win, text="by Xpath", variable=self.var_click, value=3)
+        R3.grid(row=3, column=0)
+
+        label_b = tk.Label(win, text="Field element identification: ")
+        label_b.grid(row=4, column=0)
+
+        self.Text_C = Entry(win, width=60)
+        self.Text_C.grid(row = 5, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
+
+
+        done = Button(win)
+        done["text"] = "done"
+        done["command"] = self.done_click
+        done.grid(row = 8, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
+    def done_click(self):
+        item = self.Text_C.get()
         self.current_text = self.current_text + 'try:' + '\n'
         self.current_text = self.current_text + '\twait = WebDriverWait(driver, 10)' + '\n'
-        self.current_text = self.current_text + "\telement = wait.until(EC.element_to_be_clickable((By.ID, '" + item +  "')))" + '\n'
-        self.current_text = self.current_text + "\tdriver.find_element_by_id('" + item + "').click()" + '\n'
+
+        identification_a = ''
+        identification_b = ''
+        if self.var_click.get() == 1:
+            identification_a = 'By.ID'
+            identification_b = 'by_id'
+
+        elif self.var_click.get() == 2:
+            identification_a = 'By.NAME'
+            identification_b = 'by_name'
+
+        elif self.var_click.get() == 3:
+            identification_a = 'By.XPATH'
+            identification_b = 'by_xpath'
+
+
+
+        self.current_text = self.current_text + "\telement = wait.until(EC.element_to_be_clickable((" + identification_a + ", '" + item +  "')))" + '\n'
+        self.current_text = self.current_text + "\tdriver.find_element_" + identification_b + "('" + item + "').click()" + '\n'
         self.current_text = self.current_text + 'except:' + '\n'
         self.current_text = self.current_text + '\tpass' + '\n' + '\n'
-        self.Text_A.delete('1.0', END)
-        self.Text_A.insert(INSERT, self.current_text) #put new value in the entry box
+        self.main_text.delete('1.0', END)
+        self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
+        self.win.destroy()
+        return
+
+    #Action to take when user click on compare button
+    def wait(self):
+        self.current_text = self.current_text + 'time.sleep(10)' + '\n\n'
+        self.main_text.delete('1.0', END)
+        self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
 
 
     #Action to take when user click on compare button
     def screenshot(self):
-        self.current_text = self.current_text + 'driver.save_screenshot(\'foo.png\')' + '\n' + '\n'
-        self.Text_A.delete('1.0', END)
-        self.Text_A.insert(INSERT, self.current_text) #put new value in the entry box
-        
+        self.current_text = self.current_text + 'driver.save_screenshot(\'MPFM_test_screenshot.png\')' + '\n' + '\n'
+        self.main_text.delete('1.0', END)
+        self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
+
+    #Action to take when user click on compare button
+    def generate_script(self):
+        output = open('script.py', 'wb')
+        output.write(self.current_text)
+
 
     #Create the user interface layout
     def createWidgets(self):
         #Create browse folder A button
         self.ADDRESS_GOTO = Button(self)
-        self.ADDRESS_GOTO["text"] = "Go to address"
+        self.ADDRESS_GOTO["text"] = "    Go to address    "
         self.ADDRESS_GOTO["command"] = self.address_goto
         self.ADDRESS_GOTO.bind("<Enter>", lambda event: self.ADDRESS_GOTO.configure(bg="orange"))
         self.ADDRESS_GOTO.bind("<Leave>", lambda event: self.ADDRESS_GOTO.configure(bg="white"))
         self.ADDRESS_GOTO.grid(row = 3, column = 0, ipadx = 40, ipady = 10, pady = 10)
 
-
-        #Create browse folder B button
+        #Create browse output location button
         self.FIELD_INPUT = Button(self)
-        self.FIELD_INPUT["text"] = "Type input to field"
+        self.FIELD_INPUT["text"] = "      Type input to field      "
         self.FIELD_INPUT["command"] = self.field_input
         self.FIELD_INPUT.bind("<Enter>", lambda event: self.FIELD_INPUT.configure(bg="orange"))
         self.FIELD_INPUT.bind("<Leave>", lambda event: self.FIELD_INPUT.configure(bg="white"))
-        self.FIELD_INPUT.grid(row = 6, column = 0, ipadx = 40, ipady = 10, pady = 10)
+        self.FIELD_INPUT.grid(row = 4, column = 0, ipadx = 20, ipady = 10, pady = 10)
 
         #Create browse output location button
         self.CLICK = Button(self)
-        self.CLICK["text"] = "Click on an item"
+        self.CLICK["text"] = "        Click on an item         "
         self.CLICK["command"] = self.click
         self.CLICK.bind("<Enter>", lambda event: self.CLICK.configure(bg="orange"))
         self.CLICK.bind("<Leave>", lambda event: self.CLICK.configure(bg="white"))
-        self.CLICK.grid(row = 9, column = 0, ipadx = 20, ipady = 10, pady = 10)
+        self.CLICK.grid(row = 5, column = 0, ipadx = 20, ipady = 10, pady = 10)
+
+        #Create browse output location button
+        self.WAIT = Button(self)
+        self.WAIT["text"] = "      Wait a certain time       "
+        self.WAIT["command"] = self.wait
+        self.WAIT.bind("<Enter>", lambda event: self.WAIT.configure(bg="orange"))
+        self.WAIT.bind("<Leave>", lambda event: self.WAIT.configure(bg="white"))
+        self.WAIT.grid(row = 6, column = 0, ipadx = 20, ipady = 10, pady = 10)
 
 
         #Create start comparing button
         self.SCREENSHOT = Button(self)
-        self.SCREENSHOT["text"] = "Screenshot"
+        self.SCREENSHOT["text"] = "                Screenshot                 "
         self.SCREENSHOT["command"] = self.screenshot
-        self.SCREENSHOT.bind("<Enter>", lambda event: self.SCREENSHOT.configure(bg="green"))
+        self.SCREENSHOT.bind("<Enter>", lambda event: self.SCREENSHOT.configure(bg="orange"))
         self.SCREENSHOT.bind("<Leave>", lambda event: self.SCREENSHOT.configure(bg="white"))
-        self.SCREENSHOT.grid(row = 15, column = 0, columnspan = 1, rowspan = 3, ipadx = 10, ipady = 10, pady = 10)
+        self.SCREENSHOT.grid(row = 7, column = 0, columnspan = 1, rowspan = 3, ipadx = 10, ipady = 10, pady = 10)
+
+
+        #Create start comparing button
+        self.GENERATE_SCRIPT = Button(self)
+        self.GENERATE_SCRIPT["text"] = "                Generate Script                 "
+        self.GENERATE_SCRIPT["command"] = self.generate_script
+        self.GENERATE_SCRIPT.bind("<Enter>", lambda event: self.GENERATE_SCRIPT.configure(bg="orange"))
+        self.GENERATE_SCRIPT.bind("<Leave>", lambda event: self.GENERATE_SCRIPT.configure(bg="white"))
+        self.GENERATE_SCRIPT.grid(row = 10, column = 0, columnspan = 1, rowspan = 3, ipadx = 10, ipady = 10, pady = 10)
+
 
         #Create text entry for folder A
-        self.Text_A = Text(self, width=100)
-        self.Text_A.grid(row = 3, column = 1, columnspan = 2, rowspan = 5, ipadx = 0, ipady = 10, pady = 10, padx = 0)
+        self.main_text = Text(self, width=100)
+        self.main_text.grid(row = 3, column = 1, columnspan = 2, rowspan = 10, ipadx = 0, ipady = 10, pady = 10, padx = 0)
 
 
         #Create Emerson logo and place it in the GUI
@@ -136,9 +301,7 @@ class Application(Frame):
             self.Logo = Label(self, text = 'EMERSON PROCESS SOLUTION')
             self.Logo.grid(row = 21, columnspan = 3, padx = 300, pady = 20)
 
-        #Create label to create space
-        self.Text_K = Label(self, text = '')
-        self.Text_K.grid(row = 19, column = 0, pady = 10)
+
 
 
 

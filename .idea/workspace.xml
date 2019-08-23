@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df49fdb7-b645-471a-91a6-f1c971d03792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Web automation testing/MPFM_scraper2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web automation testing/newTestfile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web automation testing/newTestfile2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayGround2.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayGround2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web automation testing/MPFM_scraper1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web automation testing/MPFM_scraper1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web automation testing/MPFM_scraper2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web automation testing/MPFM_scraper2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,10 +29,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web automation testing/newTestfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web automation testing/newTestfile2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web automation testing/MPFM_scraper1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="76" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#1#31#0" expanded="true" />
               </folding>
@@ -38,13 +61,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web automation testing/script.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="64" lean-forward="true" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web automation testing/MPFM_scraper2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="164" />
+            <state relative-caret-position="604">
+              <caret line="231" column="38" selection-start-line="231" selection-start-column="38" selection-end-line="231" selection-end-column="38" />
               <folding>
                 <element signature="e#127#148#0" expanded="true" />
+                <element signature="e#1982#2365#0" />
+                <element signature="e#2404#3753#0" />
+                <element signature="e#3794#4391#0" />
+                <element signature="e#6866#7062#0" />
                 <element signature="e#12443#12520#0" />
               </folding>
             </state>
@@ -54,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/lib-tk/tkSimpleDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="274">
               <caret line="308" column="27" selection-start-line="308" selection-start-column="20" selection-end-line="308" selection-end-column="27" />
             </state>
           </provider>
@@ -63,36 +102,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSV_checker/csv_checker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="103" column="8" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="104" selection-end-column="73" />
+            <state relative-caret-position="308">
+              <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="241" selection-end-column="105" />
               <folding>
                 <element signature="e#128#149#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSV_checker/reportH2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1653335">
-              <caret line="97255" column="18" selection-start-line="97255" selection-start-column="18" selection-end-line="97255" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/support/wait.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web automation testing/foo.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -127,7 +143,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'#FFFF00'</find>
       <find>#FFFF00</find>
       <find>#89ED75</find>
       <find>self.backgr</find>
@@ -155,8 +170,9 @@
       <find>file_name_list</find>
       <find>diff_tota</find>
       <find>diff_total_list</find>
-      <find>simpleD</find>
       <find>BROWSE_C</find>
+      <find>simpleD</find>
+      <find>Text_A</find>
     </findStrings>
     <replaceStrings>
       <replace>openFile</replace>
@@ -172,6 +188,7 @@
       <replace>Default: reportH2.txt</replace>
       <replace>reportH2.txt</replace>
       <replace>SCREENSHOT</replace>
+      <replace>main_text</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -180,9 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 6/000026_266e_02.alert" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 5/00002626580206.mrg" />
-        <option value="$PROJECT_DIR$/DDComparisonTool/Folder 5/0206.sym" />
         <option value="$PROJECT_DIR$/DDComparisonTool/Folder 6/0201.sym" />
         <option value="$PROJECT_DIR$/DDComparisonTool/Folder 6/266E0201.mrg" />
         <option value="$PROJECT_DIR$/DDComparisonTool/Folder 5/000026_2658_02.alert" />
@@ -228,9 +242,12 @@
         <option value="$PROJECT_DIR$/Hiep/GUI.py" />
         <option value="$PROJECT_DIR$/CSV_checker/reportH2.html" />
         <option value="$PROJECT_DIR$/CSV_checker/csv_checker.py" />
-        <option value="$PROJECT_DIR$/Web automation testing/MPFM_scraper1.py" />
         <option value="$PROJECT_DIR$/PlayGround2.py" />
+        <option value="$PROJECT_DIR$/Web automation testing/newTestfile.py" />
+        <option value="$PROJECT_DIR$/Web automation testing/MPFM_scraper1.py" />
+        <option value="$PROJECT_DIR$/Web automation testing/newTestfile2.py" />
         <option value="$PROJECT_DIR$/Web automation testing/MPFM_scraper2.py" />
+        <option value="$PROJECT_DIR$/Web automation testing/script.py" />
       </list>
     </option>
   </component>
@@ -271,24 +288,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CSV_checker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Web automation testing" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\CSV_checker" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\Hiep" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
-      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\cmd_testing" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\build" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\cmd_testing" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
       <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\DDComparisonTool\RX 05-24-2017_Phase 2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\Web automation testing" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\CSV_checker" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\Hiep" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects" />
+      <recent name="C:\Users\E1260297\PycharmProjects\PycharmProjects\diff_checker_2.0" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -303,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MPFM_scraper2">
+  <component name="RunManager" selected="Python.script">
     <configuration name="MPFM_scraper1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -346,28 +363,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="PlayGround2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PycharmProjects" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlayGround2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Scraper2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="newTestfile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -379,7 +375,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web automation testing/Scraper2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web automation testing/newTestfile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -388,7 +384,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="csv_checker" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="newTestfile2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PycharmProjects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -396,11 +392,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CSV_checker" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web automation testing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CSV_checker/csv_checker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web automation testing/newTestfile2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="script" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Web automation testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Web automation testing/script.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -410,19 +427,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.PlayGround2" />
-      <item itemvalue="Python.csv_checker" />
-      <item itemvalue="Python.Scraper2" />
       <item itemvalue="Python.MPFM_scraper1" />
       <item itemvalue="Python.MPFM_scraper2" />
+      <item itemvalue="Python.newTestfile" />
+      <item itemvalue="Python.newTestfile2" />
+      <item itemvalue="Python.script" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.script" />
+        <item itemvalue="Python.newTestfile" />
         <item itemvalue="Python.MPFM_scraper2" />
-        <item itemvalue="Python.PlayGround2" />
+        <item itemvalue="Python.newTestfile2" />
         <item itemvalue="Python.MPFM_scraper1" />
-        <item itemvalue="Python.csv_checker" />
-        <item itemvalue="Python.Scraper2" />
       </list>
     </recent_temporary>
   </component>
@@ -577,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566499550597</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="scraper2">
+      <created>1566569841628</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1566569841628</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -651,7 +675,8 @@
     <MESSAGE value="cvs version done first pass" />
     <MESSAGE value="cvs version done second pass" />
     <MESSAGE value="cvs version done third pass" />
-    <option name="LAST_COMMIT_MESSAGE" value="cvs version done third pass" />
+    <MESSAGE value="scraper2" />
+    <option name="LAST_COMMIT_MESSAGE" value="scraper2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -745,24 +770,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmd_testing/redoGUI.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diff_checker_2.0/redoGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Installation folder/GUI.py" />
     <entry file="file://$PROJECT_DIR$/Installation folder/RedoGUI.cmd" />
     <entry file="file://$PROJECT_DIR$/Installation folder/redoGUI.py" />
@@ -979,30 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlayGround2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/lib-tk/tkSimpleDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="308" column="27" selection-start-line="308" selection-start-column="20" selection-end-line="308" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSV_checker/csv_checker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="103" column="8" lean-forward="true" selection-start-line="103" selection-start-column="8" selection-end-line="104" selection-end-column="73" />
-          <folding>
-            <element signature="e#128#149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/lib-tk/Tkinter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -1010,23 +993,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web automation testing/MPFM_scraper1.py">
+    <entry file="file://$PROJECT_DIR$/CSV_checker/csv_checker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="76" />
+        <state relative-caret-position="308">
+          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="241" selection-end-column="105" />
           <folding>
-            <element signature="e#1#31#0" expanded="true" />
+            <element signature="e#128#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/lib-tk/tkSimpleDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="308" column="27" selection-start-line="308" selection-start-column="20" selection-end-line="308" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlayGround2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web automation testing/newTestfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web automation testing/newTestfile2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web automation testing/script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="64" lean-forward="true" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web automation testing/MPFM_scraper2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="164" />
+        <state relative-caret-position="604">
+          <caret line="231" column="38" selection-start-line="231" selection-start-column="38" selection-end-line="231" selection-end-column="38" />
           <folding>
             <element signature="e#127#148#0" expanded="true" />
+            <element signature="e#1982#2365#0" />
+            <element signature="e#2404#3753#0" />
+            <element signature="e#3794#4391#0" />
+            <element signature="e#6866#7062#0" />
             <element signature="e#12443#12520#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web automation testing/MPFM_scraper1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#1#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
