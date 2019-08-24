@@ -1,8 +1,9 @@
 #Company: Emerson Process Solution
-#Name: Files comparison tool
+#Name: PWTTS web automation selenium script writer
 #Author: Hiep Nguyen
-#Released date: 08/19/2019
-#version: v2.1
+#Released date: 08/23/2019
+#version: v1.0
+
 import tkSimpleDialog
 from Tkinter import *
 import tkFileDialog
@@ -29,9 +30,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 #initialize the GUI
 root = Tk()
-root.title("PWTTS files comparison tool v2.0 csv version")
-root.geometry("840x500")
-root.wm_minsize(860,620)
+root.title("PWTTS web automation selenium script writer v1.0")
+root.geometry("1025x620")
+root.wm_minsize(1025,620)
 
 #global variable
 downloaded = IntVar()
@@ -51,19 +52,27 @@ class Application(Frame):
     var_field_input.set(1)
     var_click = IntVar()
     var_click.set(1)
+    var_loop = IntVar()
+    var_loop.set(1)
     Text_A = ''
     Text_B = ''
     Text_C = ''
+    Text_D = ''
     #local shared variables between functions
     current_text = ''
+    current_text = current_text + "#Note: if you manually copy this script to be used elsewhere instead of clicking the \'Generate Script\' button, \n"
+    current_text = current_text + "#remember to fix overflow sentences and add the except statements for it to work. \n\n"
     current_text = current_text + 'from selenium import webdriver' + '\n'
     current_text = current_text + 'from selenium.webdriver.common.keys import Keys' + '\n'
     current_text = current_text + 'import time' + '\n'
+    current_text = current_text + 'import traceback' + '\n'
+    current_text = current_text + 'import win32api' + '\n'
     current_text = current_text + 'from selenium.webdriver.common.by import By' + '\n'
     current_text = current_text + 'from selenium.webdriver.support.ui import WebDriverWait' + '\n'
     current_text = current_text + 'from selenium.webdriver.support import expected_conditions as EC' + '\n'
     current_text = current_text + 'driver = webdriver.Chrome("C:/Python27/chromedriver")' + '\n'
-
+    current_text = current_text + "error_log = '' \n\n\n"
+    current_text = current_text + 'try:' + '\n'
 
     #Action to take when user click on browse folder A
     def address_goto(self):
@@ -71,7 +80,7 @@ class Application(Frame):
 
         if address == None:
             return
-        self.current_text = self.current_text + 'driver.get("' + address + '")' + '\n' + '\n'
+        self.current_text = self.current_text + '\tdriver.get("' + address + '")' + '\n' + '\n'
         self.main_text.delete('1.0', END)
         self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
 
@@ -119,11 +128,9 @@ class Application(Frame):
         done["text"] = "done"
         done["command"] = self.done_field_input
         done.grid(row = 8, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
-
     def done_field_input(self):
         identification = self.Text_A.get()
         text_input = self.Text_B.get()
-
         identification_a = ''
         identification_b = ''
         if self.var_field_input.get() == 1:
@@ -138,12 +145,110 @@ class Application(Frame):
             identification_a = 'By.XPATH'
             identification_b = 'by_xpath'
 
-        self.current_text = self.current_text + "elem = driver.find_element_" + identification_b + "('" + identification + "')" + '\n'
-        self.current_text = self.current_text + "elem.send_keys('" + text_input + "')" + '\n' + '\n'
+        self.current_text = self.current_text + "\telem = driver.find_element_" + identification_b + "('" + identification + "')" + '\n'
+        self.current_text = self.current_text + "\telem.send_keys('" + text_input + "')" + '\n' + '\n'
         self.main_text.delete('1.0', END)
         self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
         self.win.destroy()
         pass
+
+
+
+
+    status = 0 # 0 mean haven't started yet
+    loop_button_color = 'white'
+    def loop(self):
+        if self.status == 0:
+            self.status = 1
+            self.loop_button_color = 'red'
+            self.LOOP["text"] = "        End Loop         "
+        else:
+            self.status = 0
+            self.loop_button_color = 'white'
+            self.LOOP["text"] = "        Start Loop         "
+        self.win = tk.Toplevel()
+        win = self.win
+
+        win.geometry("400x320")
+        win.wm_minsize(400,300)
+        win.wm_title("Click item")
+
+        label_a = tk.Label(win, text="Loop type")
+        label_a.grid(row=0, column=0)
+
+        #b = ttk.Button(win, text="Okay", command=win.destroy)
+        #b.grid(row=0, column=1)
+
+        self.Text_D = Entry(win, width=60)
+        self.Text_D.grid(row = 5, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
+
+        R1 = Radiobutton(win, text="Nonstop", variable= self.var_loop, value=1, command = self.update_loop_field())
+        R1.grid(row=1, column=0)
+
+        R2 = Radiobutton(win, text="After following number of cycles:", variable=self.var_loop, value=2, command = self.update_loop_field())
+        R2.grid(row=2, column=0)
+
+        R3 = Radiobutton(win, text="After following number of seconds:", variable=self.var_loop, value=3, command = self.update_loop_field())
+        R3.grid(row=3, column=0)
+
+
+
+
+
+
+        done = Button(win)
+        done["text"] = "done"
+        done["command"] = self.done_loop
+        done.grid(row = 8, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
+    def done_loop(self):
+        item = self.Text_D.get()
+
+        self.current_text = self.current_text + '\twait = WebDriverWait(driver, 10)' + '\n'
+
+        identification_a = ''
+        identification_b = ''
+        if self.var_click.get() == 1:
+            identification_a = 'By.ID'
+            identification_b = 'by_id'
+
+        elif self.var_click.get() == 2:
+            identification_a = 'By.NAME'
+            identification_b = 'by_name'
+
+        elif self.var_click.get() == 3:
+            identification_a = 'By.XPATH'
+            identification_b = 'by_xpath'
+
+
+
+        self.current_text = self.current_text + "\telement = wait.until(EC.element_to_be_clickable((" + identification_a + ", '" + item +  "')))" + '\n'
+        self.current_text = self.current_text + "\tdriver.find_element_" + identification_b + "('" + item + "').click()" + '\n'
+        self.main_text.delete('1.0', END)
+        self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
+        self.win.destroy()
+        return
+    a = '1'
+    b = '2'
+    c = '3'
+    def update_loop_field(self):
+        if self.var_loop.get() == 1:
+            self.Text_D.delete(0, last=len(self.Text_D.get()))  #clear current value in the entry box
+            self.Text_D.insert(0, self.a) #put new value in the entry box
+            win.update()
+
+        elif self.var_loop.get() == 2:
+            self.Text_D.delete(0, last=len(self.Text_D.get()))  #clear current value in the entry box
+            self.Text_D.insert(0, self.b) #put new value in the entry box
+            win.update()
+
+
+        elif self.var_loop.get() == 3:
+            self.Text_D.delete(0, last=len(self.Text_D.get()))  #clear current value in the entry box
+            self.Text_D.insert(0, self.c) #put new value in the entry box
+
+        return
+
+
 
 
     def click(self):
@@ -185,7 +290,7 @@ class Application(Frame):
         done.grid(row = 8, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
     def done_click(self):
         item = self.Text_C.get()
-        self.current_text = self.current_text + 'try:' + '\n'
+
         self.current_text = self.current_text + '\twait = WebDriverWait(driver, 10)' + '\n'
 
         identification_a = ''
@@ -206,30 +311,42 @@ class Application(Frame):
 
         self.current_text = self.current_text + "\telement = wait.until(EC.element_to_be_clickable((" + identification_a + ", '" + item +  "')))" + '\n'
         self.current_text = self.current_text + "\tdriver.find_element_" + identification_b + "('" + item + "').click()" + '\n'
-        self.current_text = self.current_text + 'except:' + '\n'
-        self.current_text = self.current_text + '\tpass' + '\n' + '\n'
         self.main_text.delete('1.0', END)
         self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
         self.win.destroy()
         return
 
     #Action to take when user click on compare button
+
+
+
     def wait(self):
-        self.current_text = self.current_text + 'time.sleep(10)' + '\n\n'
+        self.current_text = self.current_text + '\ttime.sleep(10)' + '\n\n'
         self.main_text.delete('1.0', END)
         self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
+
+
 
 
     #Action to take when user click on compare button
     def screenshot(self):
-        self.current_text = self.current_text + 'driver.save_screenshot(\'MPFM_test_screenshot.png\')' + '\n' + '\n'
+        self.current_text = self.current_text + '\tdriver.save_screenshot(\'MPFM_test_screenshot.png\')' + '\n' + '\n'
         self.main_text.delete('1.0', END)
         self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
 
+
+
+
     #Action to take when user click on compare button
     def generate_script(self):
+        self.current_text = self.current_text + 'except:' + '\n'
+        self.current_text = self.current_text + '\twin32api.MessageBox(0, \'Please check the recently generated error log file for more information. Thank you.\', \' \!/ Error occurs during Selenium web automation testing\')' + '\n' + '\n'
+        self.current_text = self.current_text + '\te = open(\'errors.txt\', \'w+\')' + '\n'
+        self.current_text = self.current_text + '\te.write(traceback.format_exc() + ' + '\'\\' +  'n\'' + ')' + '\n'
         output = open('script.py', 'wb')
         output.write(self.current_text)
+
+
 
 
     #Create the user interface layout
@@ -240,7 +357,7 @@ class Application(Frame):
         self.ADDRESS_GOTO["command"] = self.address_goto
         self.ADDRESS_GOTO.bind("<Enter>", lambda event: self.ADDRESS_GOTO.configure(bg="orange"))
         self.ADDRESS_GOTO.bind("<Leave>", lambda event: self.ADDRESS_GOTO.configure(bg="white"))
-        self.ADDRESS_GOTO.grid(row = 3, column = 0, ipadx = 40, ipady = 10, pady = 10)
+        self.ADDRESS_GOTO.grid(row = 2, column = 0, ipadx = 40, ipady = 10, pady = 10)
 
         #Create browse output location button
         self.FIELD_INPUT = Button(self)
@@ -256,7 +373,15 @@ class Application(Frame):
         self.CLICK["command"] = self.click
         self.CLICK.bind("<Enter>", lambda event: self.CLICK.configure(bg="orange"))
         self.CLICK.bind("<Leave>", lambda event: self.CLICK.configure(bg="white"))
-        self.CLICK.grid(row = 5, column = 0, ipadx = 20, ipady = 10, pady = 10)
+        self.CLICK.grid(row = 6, column = 0, ipadx = 20, ipady = 10, pady = 10)
+
+        #Create browse output location button
+        self.LOOP = Button(self)
+        self.LOOP["text"] = "        Start Loop         "
+        self.LOOP["command"] = self.loop
+        self.LOOP.bind("<Enter>", lambda event: self.LOOP.configure(bg="orange"))
+        self.LOOP.bind("<Leave>", lambda event: self.LOOP.configure(bg=self.loop_button_color))
+        self.LOOP.grid(row = 8, column = 0, ipadx = 20, ipady = 10, pady = 10)
 
         #Create browse output location button
         self.WAIT = Button(self)
@@ -264,7 +389,7 @@ class Application(Frame):
         self.WAIT["command"] = self.wait
         self.WAIT.bind("<Enter>", lambda event: self.WAIT.configure(bg="orange"))
         self.WAIT.bind("<Leave>", lambda event: self.WAIT.configure(bg="white"))
-        self.WAIT.grid(row = 6, column = 0, ipadx = 20, ipady = 10, pady = 10)
+        self.WAIT.grid(row = 10, column = 0, ipadx = 20, ipady = 10, pady = 10)
 
 
         #Create start comparing button
@@ -273,21 +398,21 @@ class Application(Frame):
         self.SCREENSHOT["command"] = self.screenshot
         self.SCREENSHOT.bind("<Enter>", lambda event: self.SCREENSHOT.configure(bg="orange"))
         self.SCREENSHOT.bind("<Leave>", lambda event: self.SCREENSHOT.configure(bg="white"))
-        self.SCREENSHOT.grid(row = 7, column = 0, columnspan = 1, rowspan = 3, ipadx = 10, ipady = 10, pady = 10)
+        self.SCREENSHOT.grid(row = 12, column = 0, ipadx = 10, ipady = 10, pady = 10)
 
 
         #Create start comparing button
         self.GENERATE_SCRIPT = Button(self)
         self.GENERATE_SCRIPT["text"] = "                Generate Script                 "
         self.GENERATE_SCRIPT["command"] = self.generate_script
-        self.GENERATE_SCRIPT.bind("<Enter>", lambda event: self.GENERATE_SCRIPT.configure(bg="orange"))
+        self.GENERATE_SCRIPT.bind("<Enter>", lambda event: self.GENERATE_SCRIPT.configure(bg="green"))
         self.GENERATE_SCRIPT.bind("<Leave>", lambda event: self.GENERATE_SCRIPT.configure(bg="white"))
-        self.GENERATE_SCRIPT.grid(row = 10, column = 0, columnspan = 1, rowspan = 3, ipadx = 10, ipady = 10, pady = 10)
+        self.GENERATE_SCRIPT.grid(row = 14, column = 0, ipadx = 10, ipady = 10, pady = 10)
 
 
         #Create text entry for folder A
         self.main_text = Text(self, width=100)
-        self.main_text.grid(row = 3, column = 1, columnspan = 2, rowspan = 10, ipadx = 0, ipady = 10, pady = 10, padx = 0)
+        self.main_text.grid(row = 2, column = 1, columnspan = 2, rowspan = 20, ipadx = 0, ipady = 10, pady = 10, padx = 0)
 
 
         #Create Emerson logo and place it in the GUI
