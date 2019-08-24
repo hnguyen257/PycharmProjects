@@ -6,27 +6,9 @@
 
 import tkSimpleDialog
 from Tkinter import *
-import tkFileDialog
 import os
-import ttk
-import tkMessageBox
-import datetime
-import chardet
-from difflib import SequenceMatcher
-import shutil
-import webbrowser
-import traceback
-from tkColorChooser import askcolor
-import csv
 import tkinter as tk
-from tkinter import ttk
-from tkinter.messagebox import showinfo
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 
 #initialize the GUI
 root = Tk()
@@ -182,14 +164,18 @@ class Application(Frame):
         self.Text_D = Entry(win, width=60)
         self.Text_D.grid(row = 5, column = 0, ipadx = 10, ipady = 10, pady = 10, padx = 10)
 
-        R1 = Radiobutton(win, text="Nonstop", variable= self.var_loop, value=1, command = self.update_loop_field())
-        R1.grid(row=1, column=0)
+        if self.var_loop == 1:
+            self.Text_D.delete(0, last=len(self.Text_D.get()))  #clear current value in the entry box
+            self.Text_D.insert(0, ' -  Not Available  - ') #put new value in the entry box
 
-        R2 = Radiobutton(win, text="After following number of cycles:", variable=self.var_loop, value=2, command = self.update_loop_field())
-        R2.grid(row=2, column=0)
+        R1 = Radiobutton(win, text="Nonstop", variable= self.var_loop, value=1, command = self.update_loop_field)
+        R1.grid(row=1, column=0, columnspan = 2)
 
-        R3 = Radiobutton(win, text="After following number of seconds:", variable=self.var_loop, value=3, command = self.update_loop_field())
-        R3.grid(row=3, column=0)
+        R2 = Radiobutton(win, text="After following number of cycles:", variable=self.var_loop, value=2, command = self.update_loop_field)
+        R2.grid(row=2, column=0, columnspan = 2)
+
+        R3 = Radiobutton(win, text="After following number of seconds:", variable=self.var_loop, value=3, command = self.update_loop_field)
+        R3.grid(row=3, column=0, columnspan = 2)
 
 
 
@@ -227,24 +213,21 @@ class Application(Frame):
         self.main_text.insert(INSERT, self.current_text) #put new value in the entry box
         self.win.destroy()
         return
-    a = '1'
-    b = '2'
-    c = '3'
+
     def update_loop_field(self):
         if self.var_loop.get() == 1:
             self.Text_D.delete(0, last=len(self.Text_D.get()))  #clear current value in the entry box
-            self.Text_D.insert(0, self.a) #put new value in the entry box
-            win.update()
+            self.Text_D.insert(0, ' -  Not Available  - ') #put new value in the entry box
 
         elif self.var_loop.get() == 2:
             self.Text_D.delete(0, last=len(self.Text_D.get()))  #clear current value in the entry box
-            self.Text_D.insert(0, self.b) #put new value in the entry box
-            win.update()
+            self.Text_D.insert(0, '') #put new value in the entry box
 
 
         elif self.var_loop.get() == 3:
             self.Text_D.delete(0, last=len(self.Text_D.get()))  #clear current value in the entry box
-            self.Text_D.insert(0, self.c) #put new value in the entry box
+            self.Text_D.insert(0, '') #put new value in the entry box
+
 
         return
 
@@ -377,7 +360,7 @@ class Application(Frame):
 
         #Create browse output location button
         self.LOOP = Button(self)
-        self.LOOP["text"] = "        Start Loop         "
+        self.LOOP["text"] = " Start Loop (Not Working Yet) "
         self.LOOP["command"] = self.loop
         self.LOOP.bind("<Enter>", lambda event: self.LOOP.configure(bg="orange"))
         self.LOOP.bind("<Leave>", lambda event: self.LOOP.configure(bg=self.loop_button_color))
